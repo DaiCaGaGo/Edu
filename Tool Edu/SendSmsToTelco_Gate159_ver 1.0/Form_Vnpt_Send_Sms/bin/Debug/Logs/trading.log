@@ -1,0 +1,4 @@
+2016-09-06 17:47:21,763 INFO  [LogVnptSendSms] - Application started at: 06/09/2016 17:47:21
+2016-09-06 17:47:23,468 INFO  [LogVnptSendSms] - Thread started at: 06/09/2016 17:47:23
+2016-09-06 17:49:14,477 INFO  [LogVnptSendSms] - Send to: 841256973887, smsId: 935489, sender: BETHONGMINH, timesend: 06/09/2016 5:49:09 PM, code: UNDELIVERED|-4, timelog: 06/09/2016 17:49:14
+2016-09-06 17:51:56,991 INFO  [LogVnptSendSms] - Send to: 841256973887, smsId: 935490, sender: MOIT.VN, timesend: 06/09/2016 5:51:55 PM, code: UNDELIVERED|-4, timelog: 06/09/2016 17:51:56

@@ -1,0 +1,63 @@
+2016-08-19 01:59:15,032 INFO  [LogPushToQueue] - Application started at: 19/08/2016 01:59:14
+2016-08-19 01:59:16,746 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 01:59:16
+2016-08-19 01:59:18,291 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 01:59:18!
+2016-08-19 01:59:19,009 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 01:59:19
+2016-08-19 01:59:19,642 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 01:59:19!
+2016-08-19 01:59:20,666 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 01:59:20
+2016-08-19 01:59:21,201 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 01:59:21!
+2016-08-19 02:01:12,146 INFO  [LogPushToQueue] - Application started at: 19/08/2016 02:01:12
+2016-08-19 02:01:14,338 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:01:14
+2016-08-19 02:01:16,233 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 02:01:16!
+2016-08-19 02:01:16,712 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:01:16
+2016-08-19 02:01:17,304 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 02:01:17!
+2016-08-19 02:01:17,632 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:01:17
+2016-08-19 02:01:18,080 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 02:01:18!
+2016-08-19 02:01:18,464 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:01:18
+2016-08-19 02:01:18,873 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 02:01:18!
+2016-08-19 02:01:19,272 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:01:19
+2016-08-19 02:01:19,681 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 02:01:19!
+2016-08-19 02:01:20,088 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:01:20
+2016-08-19 02:01:20,472 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 02:01:20!
+2016-08-19 02:01:20,888 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:01:20
+2016-08-19 02:01:21,345 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 02:01:21!
+2016-08-19 02:01:21,800 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:01:21
+2016-08-19 02:01:22,208 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 02:01:22!
+2016-08-19 02:01:35,183 INFO  [LogPushToQueue] - Application started at: 19/08/2016 02:01:35
+2016-08-19 02:01:36,360 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:01:36
+2016-08-19 02:01:36,760 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 02:01:36!
+2016-08-19 02:01:37,153 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:01:37
+2016-08-19 02:01:37,504 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 02:01:37!
+2016-08-19 02:01:37,898 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:01:37
+2016-08-19 02:01:38,232 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 02:01:38!
+2016-08-19 02:01:38,644 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:01:38
+2016-08-19 02:01:39,017 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 02:01:39!
+2016-08-19 02:01:39,457 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:01:39
+2016-08-19 02:01:39,913 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 02:01:39!
+2016-08-19 02:01:40,408 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:01:40
+2016-08-19 02:01:40,745 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 02:01:40!
+2016-08-19 02:01:41,105 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:01:41
+2016-08-19 02:01:41,584 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 02:01:41!
+2016-08-19 02:01:41,903 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:01:41
+2016-08-19 02:01:42,264 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 02:01:42!
+2016-08-19 02:04:05,624 INFO  [LogPushToQueue] - Application started at: 19/08/2016 02:04:05
+2016-08-19 02:04:07,199 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:04:07
+2016-08-19 02:04:08,635 INFO  [LogPushToQueue] - Added ==> SmsId: 935444, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841256973887, Count: 1, At: 19/08/2016 02:04:08, Chanel: Incom
+2016-08-19 02:04:08,949 INFO  [LogPushToQueue] - Added ==> SmsId: 935445, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 84901759114, Count: 1, At: 19/08/2016 02:04:08, Chanel: Incom
+2016-08-19 02:04:08,956 INFO  [LogPushToQueue] - Added ==> SmsId: 935446, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu lan 2!, Phone: 84901759114, Count: 1, At: 19/08/2016 02:04:08, Chanel: Incom
+2016-08-19 02:04:08,965 INFO  [LogPushToQueue] - Added ==> SmsId: 935447, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu lan 2!, Phone: 841256973887, Count: 1, At: 19/08/2016 02:04:08, Chanel: Incom
+2016-08-19 02:08:41,514 INFO  [LogPushToQueue] - Application started at: 19/08/2016 02:08:41
+2016-08-19 02:08:42,643 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:08:42
+2016-08-19 02:09:27,992 INFO  [LogPushToQueue] - Added ==> SmsId: 935448, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu lan 1!, Phone: 841256973887, Count: 1, At: 19/08/2016 02:09:26, Chanel: Incom
+2016-08-19 02:39:35,207 INFO  [LogPushToQueue] - Application started at: 19/08/2016 02:39:35
+2016-08-19 02:39:36,725 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 02:39:36
+2016-08-19 02:39:37,880 INFO  [LogPushToQueue] - Added ==> SmsId: 935452, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu lan 2!, Phone: 84901759114, Count: 1, At: 19/08/2016 02:39:37, Chanel: Incom
+2016-08-19 02:39:38,067 INFO  [LogPushToQueue] - Added ==> SmsId: 935453, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu lan 2!, Phone: 841256973887, Count: 1, At: 19/08/2016 02:39:38, Chanel: Incom
+2016-08-19 02:39:38,075 INFO  [LogPushToQueue] - Added ==> SmsId: 935454, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu lan 1!, Phone: 841256973887, Count: 1, At: 19/08/2016 02:39:38, Chanel: Incom
+2016-08-19 02:39:38,083 INFO  [LogPushToQueue] - Added ==> SmsId: 935455, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu lan 1!, Phone: 84901759114, Count: 1, At: 19/08/2016 02:39:38, Chanel: Incom
+2016-08-19 03:00:42,941 INFO  [LogPushToQueue] - Application started at: 19/08/2016 03:00:42
+2016-08-19 03:00:44,766 INFO  [LogPushToQueue] - Thread started at: 19/08/2016 03:00:44
+2016-08-19 03:00:45,914 INFO  [LogPushToQueue] - Added ==> SmsId: 935456, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu lan 1!, Phone: 84901759114, Count: 1, At: 19/08/2016 03:00:45, Chanel: Incom
+2016-08-19 03:00:46,150 INFO  [LogPushToQueue] - Added ==> SmsId: 935457, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu lan 1!, Phone: 841256973887, Count: 1, At: 19/08/2016 03:00:46, Chanel: Incom
+2016-08-19 03:00:46,161 INFO  [LogPushToQueue] - Added ==> SmsId: 935458, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu lan 2!, Phone: 841256973887, Count: 1, At: 19/08/2016 03:00:46, Chanel: Incom
+2016-08-19 03:00:46,182 INFO  [LogPushToQueue] - Added ==> SmsId: 935459, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu lan 2!, Phone: 84901759114, Count: 1, At: 19/08/2016 03:00:46, Chanel: Incom
+2016-08-19 03:00:47,415 INFO  [LogPushToQueue] - Application stoped at: 19/08/2016 03:00:47!

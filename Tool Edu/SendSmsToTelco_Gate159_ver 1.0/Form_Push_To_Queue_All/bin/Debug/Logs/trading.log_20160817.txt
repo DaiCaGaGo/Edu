@@ -1,0 +1,13 @@
+2016-08-17 10:43:08,796 INFO  [LogPushToQueue] - Application started at: 17/08/2016 10:43:08
+2016-08-17 10:43:09,700 INFO  [LogPushToQueue] - Thread started at: 17/08/2016 10:43:09
+2016-08-17 10:43:11,090 INFO  [LogPushToQueue] - Added ==> SmsId: 935437, Brand: TESVAS, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841256973887, Count: 1, At: 17/08/2016 10:43:11, Chanel: VNPT
+2016-08-17 10:44:55,756 INFO  [LogPushToQueue] - Application started at: 17/08/2016 10:44:55
+2016-08-17 10:44:56,619 INFO  [LogPushToQueue] - Thread started at: 17/08/2016 10:44:56
+2016-08-17 10:45:03,717 INFO  [LogPushToQueue] - Added ==> SmsId: 935438, Brand: TESVAS, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841256973887, Count: 1, At: 17/08/2016 10:45:03, Chanel: VNPT
+2016-08-17 10:45:49,664 INFO  [LogPushToQueue] - Added ==> SmsId: 935439, Brand: TESVAS, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 84901759114, Count: 1, At: 17/08/2016 10:45:49, Chanel: VNPT
+2016-08-17 10:46:25,668 INFO  [LogPushToQueue] - Added ==> SmsId: 935440, Brand: TESVAS, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841684567978, Count: 1, At: 17/08/2016 10:46:25, Chanel: VNPT
+2016-08-17 10:51:59,886 INFO  [LogPushToQueue] - Application started at: 17/08/2016 10:51:59
+2016-08-17 10:52:00,918 INFO  [LogPushToQueue] - Thread started at: 17/08/2016 10:52:00
+2016-08-17 10:52:02,073 INFO  [LogPushToQueue] - Added ==> SmsId: 935441, Brand: TESTVAS, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841684567978, Count: 1, At: 17/08/2016 10:52:02, Chanel: VNPT
+2016-08-17 10:52:41,943 INFO  [LogPushToQueue] - Added ==> SmsId: 935442, Brand: TESTVAS, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841256973887, Count: 1, At: 17/08/2016 10:52:41, Chanel: VNPT
+2016-08-17 10:53:12,970 INFO  [LogPushToQueue] - Added ==> SmsId: 935443, Brand: TESTVAS, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 84901759114, Count: 1, At: 17/08/2016 10:53:12, Chanel: VNPT

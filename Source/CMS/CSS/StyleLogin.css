@@ -1,0 +1,101 @@
+﻿* {
+    font-family: Roboto;
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+    background: #eeeeee;
+}
+
+body {
+    margin-bottom: 86px; /* Margin bottom by footer height */
+    background: #eeeeee;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 86px; /* Set the fixed height of the footer here */
+    line-height: 86px; /* Vertically center the text there */
+    border-top: 1px #9e9e9e solid;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+#top-login h1 {
+    color: #01579B;
+    font-weight: bold;
+    font-size: 61pt;
+    margin-top: 68px;
+}
+
+    #top-login h1 span {
+        border-bottom: 1px #9e9e9e solid;
+    }
+
+#top-login h2 {
+    color: #9e9e9e;
+    font-size: 13pt;
+    margin-top: 5px;
+}
+
+#content-login h1 {
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+#content-login .row {
+    margin-top: 10px;
+}
+
+.footer .row {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.footer h1 {
+    color: #212121;
+    font-weight: bold;
+    font-size: 11pt;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.footer h2 {
+    color: #212121;
+    font-weight: bold;
+    font-size: 11pt;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.footer h3 {
+    color: #212121;
+    font-size: 11pt;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.bt-one {
+    background-color: #01579B !important;
+    color: white !important;
+}
+
+.color-one {
+    color: #01579B !important;
+}
+
+.bt-one-google {
+    background-color: #9B2101 !important;
+    color: white !important;
+}
+
+input {
+    font-size: 13pt !important;
+}

@@ -1,0 +1,12 @@
+2016-08-19 02:59:12,244 INFO  [LogIncomSendSms] - Application started at: 19/08/2016 02:59:12
+2016-08-19 02:59:14,968 INFO  [LogIncomSendSms] - Thread started at: 19/08/2016 02:59:14
+2016-08-19 02:59:16,090 INFO  [LogIncomSendSms] - Send to: 84901759114, smsId: 935452, sender: 1SMS.VN, timesend: 19/08/2016 2:39:13 AM, code: DELIVERED|TEST, timelog: 19/08/2016 02:59:16
+2016-08-19 02:59:16,095 INFO  [LogIncomSendSms] - Send to: 841256973887, smsId: 935453, sender: 1SMS.VN, timesend: 19/08/2016 2:39:20 AM, code: DELIVERED|TEST, timelog: 19/08/2016 02:59:16
+2016-08-19 02:59:16,102 INFO  [LogIncomSendSms] - Send to: 841256973887, smsId: 935454, sender: 1SMS.VN, timesend: 19/08/2016 2:39:25 AM, code: DELIVERED|TEST, timelog: 19/08/2016 02:59:16
+2016-08-19 02:59:16,108 INFO  [LogIncomSendSms] - Send to: 84901759114, smsId: 935455, sender: 1SMS.VN, timesend: 19/08/2016 2:39:30 AM, code: DELIVERED|TEST, timelog: 19/08/2016 02:59:16
+2016-08-19 03:00:53,556 INFO  [LogIncomSendSms] - Application started at: 19/08/2016 03:00:53
+2016-08-19 03:00:54,863 INFO  [LogIncomSendSms] - Thread started at: 19/08/2016 03:00:54
+2016-08-19 03:00:56,130 INFO  [LogIncomSendSms] - Send to: 84901759114, smsId: 935456, sender: 1SMS.VN, timesend: 19/08/2016 3:00:15 AM, code: DELIVERED, timelog: 19/08/2016 03:00:56
+2016-08-19 03:00:56,147 INFO  [LogIncomSendSms] - Send to: 841256973887, smsId: 935457, sender: 1SMS.VN, timesend: 19/08/2016 3:00:26 AM, code: DELIVERED, timelog: 19/08/2016 03:00:56
+2016-08-19 03:00:56,166 INFO  [LogIncomSendSms] - Send to: 841256973887, smsId: 935458, sender: 1SMS.VN, timesend: 19/08/2016 3:00:31 AM, code: DELIVERED, timelog: 19/08/2016 03:00:56
+2016-08-19 03:00:56,184 INFO  [LogIncomSendSms] - Send to: 84901759114, smsId: 935459, sender: 1SMS.VN, timesend: 19/08/2016 3:00:37 AM, code: DELIVERED, timelog: 19/08/2016 03:00:56

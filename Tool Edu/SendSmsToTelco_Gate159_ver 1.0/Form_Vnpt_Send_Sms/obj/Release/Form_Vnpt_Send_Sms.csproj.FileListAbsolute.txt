@@ -1,0 +1,65 @@
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Form_Vnpt_Send_Sms.exe.config
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Form_Vnpt_Send_Sms.exe
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Form_Vnpt_Send_Sms.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Bus.dll
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Common.dll
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Entity.dll
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\log4net.dll
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Newtonsoft.Json.dll
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\RabbitMQ.Client.dll
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Data.dll
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Bus.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Common.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Entity.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\log4net.xml
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Newtonsoft.Json.xml
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Data.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.Main.resources
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.Properties.Resources.resources
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.csproj.GenerateResource.Cache
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.exe
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.csprojResolveAssemblyReference.cache
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Form_Vnpt_Send_Sms.exe.config
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Form_Vnpt_Send_Sms.exe
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Form_Vnpt_Send_Sms.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Bus.dll
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Common.dll
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Entity.dll
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Newtonsoft.Json.dll
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Data.dll
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Bus.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Common.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Entity.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Newtonsoft.Json.xml
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\bin\Release\Data.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.csprojResolveAssemblyReference.cache
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.Main.resources
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.Properties.Resources.resources
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.csproj.GenerateResource.Cache
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.exe
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\bin\Release\Form_Vnpt_Send_Sms.exe.config
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\bin\Release\Form_Vnpt_Send_Sms.exe
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\bin\Release\Form_Vnpt_Send_Sms.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\bin\Release\Bus.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\bin\Release\Common.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\bin\Release\Entity.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\bin\Release\Newtonsoft.Json.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\bin\Release\Data.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\bin\Release\Bus.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\bin\Release\Common.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\bin\Release\Entity.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\bin\Release\Newtonsoft.Json.xml
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\bin\Release\Data.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.Main.resources
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.Properties.Resources.resources
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.csproj.GenerateResource.cache
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.csproj.CoreCompileInputs.cache
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.csproj.CopyComplete
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.exe
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\bin\Release\log4net.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\bin\Release\RabbitMQ.Client.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\bin\Release\log4net.xml
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Vnpt_Send_Sms\obj\Release\Form_Vnpt_Send_Sms.csprojAssemblyReference.cache

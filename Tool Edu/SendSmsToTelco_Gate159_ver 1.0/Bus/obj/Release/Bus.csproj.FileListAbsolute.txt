@@ -1,0 +1,29 @@
+F:\Works\GATEWAY\Gate159_SendSms\Bus\bin\Release\Bus.dll
+F:\Works\GATEWAY\Gate159_SendSms\Bus\bin\Release\Bus.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Bus\bin\Release\Data.dll
+F:\Works\GATEWAY\Gate159_SendSms\Bus\bin\Release\Entity.dll
+F:\Works\GATEWAY\Gate159_SendSms\Bus\bin\Release\Data.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Bus\bin\Release\Entity.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Bus\obj\Release\Bus.csprojResolveAssemblyReference.cache
+F:\Works\GATEWAY\Gate159_SendSms\Bus\obj\Release\Bus.dll
+F:\Works\GATEWAY\Gate159_SendSms\Bus\obj\Release\Bus.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Bus\bin\Release\Bus.dll
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Bus\bin\Release\Bus.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Bus\bin\Release\Data.dll
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Bus\bin\Release\Entity.dll
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Bus\bin\Release\Data.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Bus\bin\Release\Entity.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Bus\obj\Release\Bus.csprojResolveAssemblyReference.cache
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Bus\obj\Release\Bus.dll
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Bus\obj\Release\Bus.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\bin\Release\Bus.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\bin\Release\Bus.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\bin\Release\Data.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\bin\Release\Entity.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\bin\Release\Data.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\bin\Release\Entity.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\obj\Release\Bus.csprojAssemblyReference.cache
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\obj\Release\Bus.csproj.CoreCompileInputs.cache
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\obj\Release\Bus.csproj.CopyComplete
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\obj\Release\Bus.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\obj\Release\Bus.pdb

@@ -1,0 +1,4 @@
+2016-09-06 17:47:30,882 INFO  [LogPushToQueue] - Application started at: 06/09/2016 17:47:30
+2016-09-06 17:47:31,812 INFO  [LogPushToQueue] - Thread started at: 06/09/2016 17:47:31
+2016-09-06 17:49:12,127 INFO  [LogPushToQueue] - Added ==> SmsId: 935489, Brand: BETHONGMINH, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841256973887, Count: 1, At: 06/09/2016 17:49:12, Chanel: VNPT
+2016-09-06 17:51:56,832 INFO  [LogPushToQueue] - Added ==> SmsId: 935490, Brand: MOIT.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841256973887, Count: 1, At: 06/09/2016 17:51:56, Chanel: VNPT

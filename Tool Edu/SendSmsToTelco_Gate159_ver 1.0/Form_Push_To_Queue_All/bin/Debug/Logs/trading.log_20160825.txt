@@ -1,0 +1,15 @@
+2016-08-25 09:20:51,642 INFO  [LogPushToQueue] - Application started at: 25/08/2016 09:20:51
+2016-08-25 09:22:30,650 INFO  [LogPushToQueue] - Thread started at: 25/08/2016 09:22:30
+2016-08-25 09:23:15,820 INFO  [LogPushToQueue] - Added ==> SmsId: 935475, Brand: MOIT.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841256973887, Count: 1, At: 25/08/2016 09:23:15, Chanel: VNPT
+2016-08-25 09:23:33,674 INFO  [LogPushToQueue] - Added ==> SmsId: 935476, Brand: MOIT.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841636341120, Count: 1, At: 25/08/2016 09:23:33, Chanel: VNPT
+2016-08-25 09:25:12,683 INFO  [LogPushToQueue] - Added ==> SmsId: 935477, Brand: MOIT.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 84945021888, Count: 1, At: 25/08/2016 09:25:12, Chanel: VNPT
+2016-08-25 09:37:19,696 INFO  [LogPushToQueue] - Added ==> SmsId: 935478, Brand: MOIT.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 84973796903, Count: 1, At: 25/08/2016 09:37:19, Chanel: VNPT
+2016-08-25 09:38:13,681 INFO  [LogPushToQueue] - Added ==> SmsId: 935479, Brand: MOIT.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 84901759114, Count: 1, At: 25/08/2016 09:38:13, Chanel: VNPT
+2016-08-25 09:38:36,676 INFO  [LogPushToQueue] - Added ==> SmsId: 935480, Brand: MOIT.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841636341120, Count: 1, At: 25/08/2016 09:38:36, Chanel: VNPT
+2016-08-25 09:38:58,688 INFO  [LogPushToQueue] - Added ==> SmsId: 935481, Brand: MOIT.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841256973887, Count: 1, At: 25/08/2016 09:38:58, Chanel: VNPT
+2016-08-25 09:42:37,701 INFO  [LogPushToQueue] - Added ==> SmsId: 935482, Brand: MOIT.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu vnpt!, Phone: 84901759114, Count: 1, At: 25/08/2016 09:42:37, Chanel: VNPT
+2016-08-25 09:43:25,688 INFO  [LogPushToQueue] - Added ==> SmsId: 935483, Brand: MOIT.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu vnpt!, Phone: 84906238192, Count: 1, At: 25/08/2016 09:43:25, Chanel: VNPT
+2016-08-25 13:05:24,661 INFO  [LogPushToQueue] - Added ==> SmsId: 935484, Brand: MOIT.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu vnpt!, Phone: 84901759114, Count: 1, At: 25/08/2016 13:05:24, Chanel: VNPT
+2016-08-25 13:20:19,678 INFO  [LogPushToQueue] - Added ==> SmsId: 935485, Brand: MOIT.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu vnpt!, Phone: 84901759114, Count: 1, At: 25/08/2016 13:20:19, Chanel: VNPT
+2016-08-25 14:39:48,685 INFO  [LogPushToQueue] - Added ==> SmsId: 935486, Brand: MOIT.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu vnpt!, Phone: 84901759114, Count: 1, At: 25/08/2016 14:39:48, Chanel: VNPT
+2016-08-25 14:58:16,693 INFO  [LogPushToQueue] - Added ==> SmsId: 935487, Brand: MOIT.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu vnpt!, Phone: 841256973887, Count: 1, At: 25/08/2016 14:58:16, Chanel: VNPT

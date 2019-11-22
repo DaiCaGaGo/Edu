@@ -1,0 +1,7 @@
+2016-08-17 10:43:23,782 INFO  [LogVnptSendSms] - Send to: 841256973887, smsId: 935437, sender: TESVAS, timesend: 17/08/2016 10:42:53 AM, code: UNDELIVERED|-5, timelog: 17/08/2016 10:43:23
+2016-08-17 10:45:09,449 INFO  [LogVnptSendSms] - Send to: 841256973887, smsId: 935438, sender: TESVAS, timesend: 17/08/2016 10:45:03 AM, code: UNDELIVERED|-5, timelog: 17/08/2016 10:45:09
+2016-08-17 10:45:52,782 INFO  [LogVnptSendSms] - Send to: 84901759114, smsId: 935439, sender: TESVAS, timesend: 17/08/2016 10:45:49 AM, code: UNDELIVERED|-5, timelog: 17/08/2016 10:45:52
+2016-08-17 10:46:31,143 INFO  [LogVnptSendSms] - Send to: 841684567978, smsId: 935440, sender: TESVAS, timesend: 17/08/2016 10:46:25 AM, code: UNDELIVERED|-5, timelog: 17/08/2016 10:46:31
+2016-08-17 10:52:19,341 INFO  [LogVnptSendSms] - Send to: 841684567978, smsId: 935441, sender: TESTVAS, timesend: 17/08/2016 10:51:54 AM, code: UNDELIVERED|-5, timelog: 17/08/2016 10:52:19
+2016-08-17 10:52:44,921 INFO  [LogVnptSendSms] - Send to: 841256973887, smsId: 935442, sender: TESTVAS, timesend: 17/08/2016 10:52:41 AM, code: UNDELIVERED|-5, timelog: 17/08/2016 10:52:44
+2016-08-17 10:53:15,969 INFO  [LogVnptSendSms] - Send to: 84901759114, smsId: 935443, sender: TESTVAS, timesend: 17/08/2016 10:53:12 AM, code: UNDELIVERED|-5, timelog: 17/08/2016 10:53:15

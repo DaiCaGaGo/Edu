@@ -1,0 +1,195 @@
+2016-08-10 03:57:50,761 INFO  [LogPushToQueue] - Application started at: 10/08/2016 03:57:50
+2016-08-10 03:57:55,088 INFO  [LogPushToQueue] - Thread started at: 10/08/2016 03:57:55
+2016-08-10 03:59:12,690 INFO  [LogPushToQueue] - Application started at: 10/08/2016 03:59:12
+2016-08-10 04:03:36,778 INFO  [LogPushToQueue] - Application started at: 10/08/2016 04:03:36
+2016-08-10 04:03:38,563 INFO  [LogPushToQueue] - Thread started at: 10/08/2016 04:03:38
+2016-08-10 04:03:39,885 INFO  [LogPushToQueue] - Added ==> SmsId: 901397, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 84901759114, Count: 1, At: 10/08/2016 04:03:39, Chanel: Incom
+2016-08-10 04:03:40,237 INFO  [LogPushToQueue] - Added ==> SmsId: 901398, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841256973887, Count: 1, At: 10/08/2016 04:03:40, Chanel: Incom
+2016-08-10 04:03:40,263 INFO  [LogPushToQueue] - Added ==> SmsId: 901399, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 84901759114, Count: 1, At: 10/08/2016 04:03:40, Chanel: Incom
+2016-08-10 04:03:40,270 INFO  [LogPushToQueue] - Added ==> SmsId: 901400, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841256973887, Count: 1, At: 10/08/2016 04:03:40, Chanel: Incom
+2016-08-10 04:14:46,429 INFO  [LogPushToQueue] - Application started at: 10/08/2016 04:14:46
+2016-08-10 04:14:47,667 INFO  [LogPushToQueue] - Thread started at: 10/08/2016 04:14:47
+2016-08-10 04:17:25,193 INFO  [LogPushToQueue] - Application started at: 10/08/2016 04:17:25
+2016-08-10 04:17:30,729 INFO  [LogPushToQueue] - Thread started at: 10/08/2016 04:17:30
+2016-08-10 04:18:02,426 INFO  [LogPushToQueue] - Application started at: 10/08/2016 04:18:02
+2016-08-10 04:18:04,343 INFO  [LogPushToQueue] - Thread started at: 10/08/2016 04:18:04
+2016-08-10 04:18:25,375 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:18:25 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:18:27,412 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:18:27 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:18:29,455 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:18:29 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:18:31,487 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:18:31 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:18:40,369 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:18:40 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:18:50,368 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:18:50 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:19:00,389 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:19:00 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:19:10,369 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:19:10 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:19:20,386 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:19:20 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:19:30,372 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:19:30 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:19:40,387 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:19:40 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:19:50,389 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:19:50 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:20:00,389 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:20:00 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:20:10,393 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:20:10 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:21:59,312 INFO  [LogPushToQueue] - Application started at: 10/08/2016 04:21:59
+2016-08-10 04:22:00,637 INFO  [LogPushToQueue] - Thread started at: 10/08/2016 04:22:00
+2016-08-10 04:22:03,812 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item!
+2016-08-10 04:22:03,817 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:22:03 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:22:05,855 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item!
+2016-08-10 04:22:05,860 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:22:05 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:22:07,893 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item!
+2016-08-10 04:22:07,899 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:22:07 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:22:09,926 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item!
+2016-08-10 04:22:09,929 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:22:09 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:22:11,959 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item!
+2016-08-10 04:22:11,970 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:22:11 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:22:14,001 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item!
+2016-08-10 04:22:14,007 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:22:14 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:22:16,372 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item!
+2016-08-10 04:22:16,385 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:22:16 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:22:18,432 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item!
+2016-08-10 04:22:18,438 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:22:18 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:22:20,485 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item!
+2016-08-10 04:22:20,495 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:22:20 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:22:22,581 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item!
+2016-08-10 04:22:22,587 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:22:22 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:22:24,616 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item!
+2016-08-10 04:22:24,619 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:22:24 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:23:19,191 INFO  [LogPushToQueue] - Application started at: 10/08/2016 04:23:19
+2016-08-10 04:23:22,388 INFO  [LogPushToQueue] - Thread started at: 10/08/2016 04:23:22
+2016-08-10 04:23:36,520 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:23:36
+2016-08-10 04:23:36,524 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:23:36 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:23:38,568 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:23:38
+2016-08-10 04:23:38,579 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:23:38 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:23:41,428 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:23:41
+2016-08-10 04:23:41,439 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:23:41 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:23:46,404 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:23:46
+2016-08-10 04:23:46,407 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:23:46 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:23:49,413 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:23:49
+2016-08-10 04:23:49,419 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:23:49 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:23:51,472 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:23:51
+2016-08-10 04:23:51,481 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:23:51 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:23:56,419 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:23:56
+2016-08-10 04:23:56,430 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:23:56 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:23:59,405 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:23:59
+2016-08-10 04:23:59,418 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:23:59 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:24:01,448 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:24:01
+2016-08-10 04:24:01,451 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:24:01 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:24:06,414 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:24:06
+2016-08-10 04:24:06,418 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:24:06 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:24:09,410 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:24:09
+2016-08-10 04:24:09,413 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:24:09 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:24:11,440 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:24:11
+2016-08-10 04:24:11,444 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:24:11 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:24:16,421 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:24:16
+2016-08-10 04:24:16,430 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:24:16 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:24:19,400 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:24:19
+2016-08-10 04:24:19,430 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:24:19 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:24:21,463 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:24:21
+2016-08-10 04:24:21,468 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:24:21 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:24:26,411 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:24:26
+2016-08-10 04:24:26,416 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:24:26 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:24:29,423 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:24:29
+2016-08-10 04:24:29,429 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:24:29 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:24:31,466 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:24:31
+2016-08-10 04:24:31,469 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:24:31 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:24:36,436 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:24:36
+2016-08-10 04:24:36,446 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:24:36 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:24:39,420 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:24:39
+2016-08-10 04:24:39,432 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:24:39 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:24:41,483 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:24:41
+2016-08-10 04:24:41,494 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:24:41 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:24:46,412 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:24:46
+2016-08-10 04:24:46,417 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:24:46 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:24:49,413 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:24:49
+2016-08-10 04:24:49,417 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:24:49 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:24:51,454 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:24:51
+2016-08-10 04:24:51,462 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:24:51 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:24:56,422 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:24:56
+2016-08-10 04:24:56,434 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:24:56 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:24:58,498 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:24:58
+2016-08-10 04:24:58,502 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:24:58 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:25:01,427 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:25:01
+2016-08-10 04:25:01,438 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:25:01 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:25:06,425 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:25:06
+2016-08-10 04:25:06,431 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:25:06 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:25:09,411 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:25:09
+2016-08-10 04:25:09,414 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:25:09 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:25:11,439 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:25:11
+2016-08-10 04:25:11,444 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:25:11 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:25:16,430 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:25:16
+2016-08-10 04:25:16,443 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:25:16 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:25:18,487 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:25:18
+2016-08-10 04:25:18,494 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:25:18 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:25:21,438 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:25:21
+2016-08-10 04:25:21,446 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:25:21 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:25:35,046 INFO  [LogPushToQueue] - Application started at: 10/08/2016 04:25:35
+2016-08-10 04:25:36,259 INFO  [LogPushToQueue] - Thread started at: 10/08/2016 04:25:36
+2016-08-10 04:25:39,416 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 4 item at: 10/08/2016 04:25:39
+2016-08-10 04:25:39,420 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:25:39 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:25:41,531 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 4 item at: 10/08/2016 04:25:41
+2016-08-10 04:25:41,536 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:25:41 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:25:49,293 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:25:49
+2016-08-10 04:25:49,304 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:25:49 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:25:51,354 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:25:51
+2016-08-10 04:25:51,358 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:25:51 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:25:59,284 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:25:59
+2016-08-10 04:25:59,288 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:25:59 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:26:01,323 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:26:01
+2016-08-10 04:26:01,327 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:26:01 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:26:09,279 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:26:09
+2016-08-10 04:26:09,283 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:26:09 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:26:11,332 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:26:11
+2016-08-10 04:26:11,343 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:26:11 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:26:19,280 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:26:19
+2016-08-10 04:26:19,283 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:26:19 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:26:21,307 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:26:21
+2016-08-10 04:26:21,310 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:26:21 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:26:29,280 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:26:29
+2016-08-10 04:26:29,283 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:26:29 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:26:31,323 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:26:31
+2016-08-10 04:26:31,334 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:26:31 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:26:31,483 INFO  [LogPushToQueue] - Application stoped at: 10/08/2016 04:26:31!
+2016-08-10 04:27:02,298 INFO  [LogPushToQueue] - Application started at: 10/08/2016 04:27:02
+2016-08-10 04:27:03,609 INFO  [LogPushToQueue] - Thread started at: 10/08/2016 04:27:03
+2016-08-10 04:27:06,764 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 4 item at: 10/08/2016 04:27:06
+2016-08-10 04:27:06,768 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:27:06 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:27:08,794 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 4 item at: 10/08/2016 04:27:08
+2016-08-10 04:27:08,800 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:27:08 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:27:10,849 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 4 item at: 10/08/2016 04:27:10
+2016-08-10 04:27:10,855 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:27:10 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:27:12,888 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 4 item at: 10/08/2016 04:27:12
+2016-08-10 04:27:12,895 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:27:12 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:27:18,657 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:27:18
+2016-08-10 04:27:18,668 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:27:18 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:27:21,660 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:27:21
+2016-08-10 04:27:21,666 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:27:21 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:27:28,662 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:27:28
+2016-08-10 04:27:28,667 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:27:28 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:27:31,664 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:27:31
+2016-08-10 04:27:31,675 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:27:31 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:27:38,664 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:27:38
+2016-08-10 04:27:38,676 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:27:38 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:27:41,648 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:27:41
+2016-08-10 04:27:41,656 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:27:41 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:27:48,652 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:27:48
+2016-08-10 04:27:48,656 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:27:48 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:27:51,662 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:27:51
+2016-08-10 04:27:51,673 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:27:51 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:27:58,663 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:27:58
+2016-08-10 04:27:58,668 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:27:58 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:28:01,655 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:28:01
+2016-08-10 04:28:01,668 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:28:01 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:28:08,660 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:28:08
+2016-08-10 04:28:08,665 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:28:08 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:28:11,672 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:28:11
+2016-08-10 04:28:11,683 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:28:11 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:28:18,676 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:28:18
+2016-08-10 04:28:18,682 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:28:18 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:28:21,668 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:28:21
+2016-08-10 04:28:21,679 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:28:21 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:28:28,642 INFO  [LogPushToQueue] - Can't add data to queue, rollback: 2 item at: 10/08/2016 04:28:28
+2016-08-10 04:28:28,645 ERROR [LogPushToQueue] - _bgCheckData_DoWork error at: 8/10/2016 4:28:28 AM, error detail: None of the specified endpoints were reachable
+2016-08-10 04:29:07,460 INFO  [LogPushToQueue] - Application started at: 10/08/2016 04:29:07
+2016-08-10 04:29:08,664 INFO  [LogPushToQueue] - Thread started at: 10/08/2016 04:29:08
+2016-08-10 04:29:09,899 INFO  [LogPushToQueue] - Added ==> SmsId: 901409, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 84901759114, Count: 1, At: 10/08/2016 04:29:09, Chanel: Incom
+2016-08-10 04:29:09,915 INFO  [LogPushToQueue] - Added ==> SmsId: 901410, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841256973887, Count: 1, At: 10/08/2016 04:29:09, Chanel: Incom
+2016-08-10 04:29:09,941 INFO  [LogPushToQueue] - Added ==> SmsId: 901413, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 84901759114, Count: 1, At: 10/08/2016 04:29:09, Chanel: Incom
+2016-08-10 04:29:09,959 INFO  [LogPushToQueue] - Added ==> SmsId: 901414, Brand: 1SMS.VN, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841256973887, Count: 1, At: 10/08/2016 04:29:09, Chanel: Incom
+2016-08-10 04:30:25,808 INFO  [LogPushToQueue] - Application stoped at: 10/08/2016 04:30:25!

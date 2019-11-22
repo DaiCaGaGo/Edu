@@ -1,0 +1,2365 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E7973951-E503-4510-8AA5-0F6D9B0DFF9A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMS</RootNamespace>
+    <AssemblyName>CMS</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ASPSnippets.GoogleAPI, Version=2.0.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ASPSnippets.GoogleAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.69.1.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ClosedXML.0.93.1\lib\net40\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Export, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.Resources.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.1.Web, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <HintPath>..\packages\Oracle.DataAccess.x86.2.112.1.0\lib\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.18.3.0\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.Web, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.Web.12.2.1100\lib\net40\Oracle.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.AppContext.4.3.0\lib\net46\System.AppContext.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.3.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.4.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.0\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2017.3.913.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2017.3.913.45\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Tesseract, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tesseract.3.3.0\lib\net45\Tesseract.dll</HintPath>
+    </Reference>
+    <Reference Include="vng.zalo.ZaloCSharpSDK, Version=1.0.12.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\vng.zalo.ZaloCSharpSDK.1.0.12\lib\net452\vng.zalo.ZaloCSharpSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.4\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccessDenied.aspx" />
+    <Content Include="BaoCaoThongKe\HocSinhDetail.aspx" />
+    <Content Include="BaoCaoThongKe\ThongKeTongHocSinh.aspx" />
+    <Content Include="BaoCaoThongKe\TimKiemHocSinh.aspx" />
+    <Content Include="CSS\styleStudentInfo.css" />
+    <Content Include="HocSinh\LenLop.aspx" />
+    <Content Include="Report\BangTheoDoiTinhTrangHS_THCS_NoPhone.aspx" />
+    <Content Include="Report\BangTheoDoiTinhTrangHS_TH_NoPhone.aspx" />
+    <Content Include="Report\BangTheoDoiTinhTrangHS1_he.aspx" />
+    <Content Include="Report\InPhieuLienLac_TH.aspx" />
+    <Content Include="Report\InPhieuLienLac_TH1.aspx" />
+    <Content Include="Report\PhieuDoiSoatHocSinh.aspx" />
+    <Content Include="Report\ReportBangTheoDoiHS_HaiBaTrung.aspx" />
+    <Content Include="Report\ReportBangTheoDoiHS_NguyenPhongSac.aspx" />
+    <Content Include="Report\ReportBangTheoDoiHS_NguyenTruongTo.aspx" />
+    <Content Include="Report\ReportBangTheoDoiHS_THCS_Mau2.aspx" />
+    <Content Include="Report\ReportBangTheoDoiHS_TH_NghiaTan.aspx" />
+    <Content Include="SMS\GuiThongBaoTheoKhoi.aspx" />
+    <Content Include="SMS\GuiThongBaoTheoLop.aspx" />
+    <Content Include="SMS\NhanTinDiemTongHop.aspx" />
+    <Content Include="ThongKeTinNhan\DoiSoatTinTheoNgay.aspx" />
+    <Content Include="TraCuuDanhBaGV.aspx" />
+    <Content Include="TraCuuDanhBaPhuHuynh.aspx" />
+    <Content Include="Truong\GuiTinNhanThuongHieu.aspx" />
+    <Content Include="ViewBaiTapVeNha.aspx" />
+    <Content Include="BaoCaoThongKe\ThongKeHocSinhTheoTruong.aspx" />
+    <Content Include="bin\ASPSnippets.GoogleAPI.dll" />
+    <Content Include="bin\ClosedXML.dll" />
+    <Content Include="bin\CMS.dll" />
+    <Content Include="bin\CMS.pdb" />
+    <Content Include="bin\de\DevExpress.Data.v18.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.DataAccess.v18.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.Office.v18.2.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.Pdf.v18.2.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.PivotGrid.v18.2.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.Printing.v18.2.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.RichEdit.v18.2.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.Sparkline.v18.2.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.Web.Resources.v18.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.Web.v18.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.Xpo.v18.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.XtraCharts.v18.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.XtraGauges.v18.2.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.XtraReports.v18.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.XtraReports.v18.2.Web.resources.dll" />
+    <Content Include="bin\DotNetOpenAuth.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\es\DevExpress.Data.v18.2.resources.dll" />
+    <Content Include="bin\es\DevExpress.DataAccess.v18.2.resources.dll" />
+    <Content Include="bin\es\DevExpress.Office.v18.2.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Pdf.v18.2.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.PivotGrid.v18.2.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Printing.v18.2.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.RichEdit.v18.2.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Sparkline.v18.2.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Web.Resources.v18.2.resources.dll" />
+    <Content Include="bin\es\DevExpress.Web.v18.2.resources.dll" />
+    <Content Include="bin\es\DevExpress.Xpo.v18.2.resources.dll" />
+    <Content Include="bin\es\DevExpress.XtraCharts.v18.2.resources.dll" />
+    <Content Include="bin\es\DevExpress.XtraGauges.v18.2.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.XtraReports.v18.2.resources.dll" />
+    <Content Include="bin\es\DevExpress.XtraReports.v18.2.Web.resources.dll" />
+    <Content Include="bin\HiQPdf.dll" />
+    <Content Include="bin\ja\DevExpress.Data.v18.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.DataAccess.v18.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Office.v18.2.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Pdf.v18.2.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.PivotGrid.v18.2.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Printing.v18.2.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.RichEdit.v18.2.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Sparkline.v18.2.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Web.Resources.v18.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Web.v18.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Xpo.v18.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.XtraCharts.v18.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.XtraGauges.v18.2.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.XtraReports.v18.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.XtraReports.v18.2.Web.resources.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.Win32.Primitives.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\NPOI.dll" />
+    <Content Include="bin\NPOI.OOXML.dll" />
+    <Content Include="bin\NPOI.OpenXml4Net.dll" />
+    <Content Include="bin\NPOI.OpenXmlFormats.dll" />
+    <Content Include="bin\OneEduDataAccess.dll" />
+    <Content Include="bin\OneEduDataAccess.pdb" />
+    <Content Include="bin\OpenIdRelyingPartyWebForms.dll" />
+    <Content Include="bin\Oracle.DataAccess.dll" />
+    <Content Include="bin\Oracle.ManagedDataAccess.dll" />
+    <Content Include="bin\Oracle.ManagedDataAccess.EntityFramework.dll" />
+    <Content Include="bin\Oracle.Web.dll" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\Microsoft.Win32.Primitives.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.Process.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.DriveInfo.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Security.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.Security.Claims.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.Threading.Thread.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\ru\DevExpress.Data.v18.2.resources.dll" />
+    <Content Include="bin\ru\DevExpress.DataAccess.v18.2.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Office.v18.2.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Pdf.v18.2.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.PivotGrid.v18.2.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Printing.v18.2.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.RichEdit.v18.2.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Sparkline.v18.2.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Web.Resources.v18.2.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Web.v18.2.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Xpo.v18.2.resources.dll" />
+    <Content Include="bin\ru\DevExpress.XtraCharts.v18.2.resources.dll" />
+    <Content Include="bin\ru\DevExpress.XtraGauges.v18.2.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.XtraReports.v18.2.resources.dll" />
+    <Content Include="bin\ru\DevExpress.XtraReports.v18.2.Web.resources.dll" />
+    <Content Include="bin\System.AppContext.dll" />
+    <Content Include="bin\System.Console.dll" />
+    <Content Include="bin\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\System.Diagnostics.DiagnosticSource.xml" />
+    <Content Include="bin\System.Globalization.Calendars.dll" />
+    <Content Include="bin\System.IO.Compression.dll" />
+    <Content Include="bin\System.IO.Compression.ZipFile.dll" />
+    <Content Include="bin\System.IO.FileSystem.dll" />
+    <Content Include="bin\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\System.IO.Packaging.dll" />
+    <Content Include="bin\System.Net.Http.dll" />
+    <Content Include="bin\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\System.Net.Sockets.dll" />
+    <Content Include="bin\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="bin\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\System.Web.Http.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.dll" />
+    <Content Include="bin\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\Telerik.Web.UI.dll" />
+    <Content Include="bin\Telerik.Web.UI.Skins.dll" />
+    <Content Include="CapTin\CapTinDoiTac.aspx" />
+    <Content Include="CapTin\CapTinDoiTacDetail.aspx" />
+    <Content Include="CapTin\CapTinTruong.aspx" />
+    <Content Include="CapTin\CapTinTruongDetail.aspx" />
+    <Content Include="CauHinhCaHoc\LichDayGiaoVien.aspx" />
+    <Content Include="CauHinhCaHoc\PhanLichDay.aspx" />
+    <Content Include="CauHinh\ChonTruong_Cap.aspx" />
+    <Content Include="CauHinh\NamHoc_HocKy.aspx" />
+    <Content Include="ChotSo\ChotSoTheoMon.aspx" />
+    <Content Include="Close.aspx" />
+    <Content Include="Content\all.css" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Control\SYSMenu.ascx" />
+    <Content Include="Control\MainMenu.ascx" />
+    <Content Include="CSS\AdminLTE.min.css" />
+    <Content Include="CSS\awesomplete.css" />
+    <Content Include="CSS\banner.css" />
+    <Content Include="CSS\fontawesome.min.css" />
+    <Content Include="CSS\ionicons.min.css" />
+    <Content Include="CSS\select2.min.css" />
+    <Content Include="CSS\StyleForm.css" />
+    <Content Include="CSS\StyleLogin.css" />
+    <Content Include="CSS\toastr.min.css" />
+    <Content Include="Customer\Customer.aspx" />
+    <Content Include="Customer\CustomerDetail.aspx" />
+    <Content Include="Customer\CustomerImportExcel.aspx" />
+    <Content Include="Customer\CustomerInTo.aspx" />
+    <Content Include="Customer\ToCustomer.aspx" />
+    <Content Include="Customer\ToCustomerDetail.aspx" />
+    <Content Include="DangKyZaloMobile.aspx" />
+    <Content Include="DangKyZaloMobileConfirm.aspx" />
+    <Content Include="DangKyZalo\ImportZaloID.aspx" />
+    <Content Include="DangKyZalo\PluginQuanTamOA.aspx" />
+    <Content Include="DinhDuong\ChamAn.aspx" />
+    <Content Include="DinhDuong\ChiTietPhieuNhapKho.aspx" />
+    <Content Include="DinhDuong\ChiTietPhieuXuatKho.aspx" />
+    <Content Include="DinhDuong\DangKyAn.aspx" />
+    <Content Include="DinhDuong\DanhSachPhieuNhapKho.aspx" />
+    <Content Include="DinhDuong\DanhSachPhieuXuatKho.aspx" />
+    <Content Include="DinhDuong\DMBuaAn.aspx" />
+    <Content Include="DinhDuong\DMBuAnDetail.aspx" />
+    <Content Include="DinhDuong\DonViTinh.aspx" />
+    <Content Include="DinhDuong\DonViTinhDetail.aspx" />
+    <Content Include="DinhDuong\KhoThucPham.aspx" />
+    <Content Include="DinhDuong\NhaCungCapThucPham.aspx" />
+    <Content Include="DinhDuong\NhaCungCapThucPhamDetail.aspx" />
+    <Content Include="DinhDuong\NhomThucPham.aspx" />
+    <Content Include="DinhDuong\NhomThucPhamDetail.aspx" />
+    <Content Include="DinhDuong\PhieuNhapKho.aspx" />
+    <Content Include="DinhDuong\PhieuXuatKho.aspx" />
+    <Content Include="DinhDuong\SuatAn.aspx" />
+    <Content Include="DinhDuong\SuatAnDetail.aspx" />
+    <Content Include="DinhDuong\SuatAn_ThemThucPham.aspx" />
+    <Content Include="DinhDuong\ThemThucPhamThucDon.aspx" />
+    <Content Include="DinhDuong\ThucDon.aspx" />
+    <Content Include="DinhDuong\ThucDonDetail.aspx" />
+    <Content Include="DinhDuong\ThucPham.aspx" />
+    <Content Include="DinhDuong\ThucPhamDetail.aspx" />
+    <Content Include="HocPhi\DotThu.aspx" />
+    <Content Include="HocPhi\DotThuDetail.aspx" />
+    <Content Include="HocPhi\DotThuLop.aspx" />
+    <Content Include="HocPhi\DotThuLopDetail.aspx" />
+    <Content Include="HocPhi\PhieuThuHocSinh.aspx" />
+    <Content Include="HocPhi\PhieuThuHocSinhDetail.aspx" />
+    <Content Include="HocPhi\ReportPhieuThuHocSinh.aspx" />
+    <Content Include="img\dangKyZalo\buoc1.PNG" />
+    <Content Include="img\dangKyZalo\buoc1_1.png" />
+    <Content Include="img\dangKyZalo\buoc1_2.png" />
+    <Content Include="img\dangKyZalo\buoc1_3.png" />
+    <Content Include="img\dangKyZalo\buoc1_4.png" />
+    <Content Include="img\dangKyZalo\buoc1_5.png" />
+    <Content Include="img\dangKyZalo\buoc2_1.png" />
+    <Content Include="img\dangKyZalo\buoc2_2.png" />
+    <Content Include="img\dangKyZalo\buoc2_3.png" />
+    <Content Include="img\dangKyZalo\H10.PNG" />
+    <Content Include="img\dangKyZalo\H11.PNG" />
+    <Content Include="img\dangKyZalo\H12.PNG" />
+    <Content Include="img\dangKyZalo\H13.PNG" />
+    <Content Include="img\dangKyZalo\H9.PNG" />
+    <Content Include="img\dangKyZalo\Hinh1.png" />
+    <Content Include="img\dangKyZalo\Hinh13.png" />
+    <Content Include="img\dangKyZalo\Hinh2.png" />
+    <Content Include="img\dangKyZalo\Hinh3_1.png" />
+    <Content Include="img\dangKyZalo\Hinh4.png" />
+    <Content Include="img\dangKyZalo\Hinh5.png" />
+    <Content Include="img\dangKyZalo\Hinh6.png" />
+    <Content Include="img\dangKyZalo\Hinh7.png" />
+    <Content Include="img\dangKyZalo\Hinh8.png" />
+    <Content Include="img\dangKyZalo\icon_ho_ten.png" />
+    <Content Include="img\dangKyZalo\icon_lop.png" />
+    <Content Include="img\dangKyZalo\icon_truong.png" />
+    <Content Include="img\dangKyZalo\Picture1.png" />
+    <Content Include="img\ZaloQR_OA.PNG" />
+    <Content Include="img\zalo\DangKy.png" />
+    <Content Include="img\zalo\LoiChaoOA.jpg" />
+    <Content Include="img\zalo\PageDangKy.png" />
+    <Content Include="img\zalo\QuanTamOA.jpg" />
+    <Content Include="img\zalo\QuanTamOA.png" />
+    <Content Include="QRCodeScan.aspx" />
+    <Content Include="QuanLySach\BaiTapVeNha.aspx" />
+    <Content Include="QuanLySach\BaiTapVeNhaDetail.aspx" />
+    <Content Include="QuanLySach\DanhMucSach.aspx" />
+    <Content Include="QuanLySach\DanhMucSachDetail.aspx" />
+    <Content Include="QuanLySach\NoiDungBaiHoc.aspx" />
+    <Content Include="QuanLySach\NoiDungBaiHocDetail.aspx" />
+    <Content Include="QuanLySach\NoiDungSach.aspx" />
+    <Content Include="QuanLySach\NoiDungSachDetail.aspx" />
+    <Content Include="Report\PhieuHuongDanQuanTamOAZalo.aspx" />
+    <Content Include="Report\PhieuThuTienHocPhiHocSinh.aspx" />
+    <Content Include="Report\HuongDanDangKyZalo.aspx" />
+    <Content Include="Scripts\instascan.min.js" />
+    <Content Include="Scripts\qr_packed.js" />
+    <Content Include="ThoiKhoaBieuGiaoVien.aspx" />
+    <Content Include="ThoiKhoaBieuLop.aspx" />
+    <Content Include="TinTuc\TinTuc.aspx" />
+    <Content Include="TinTuc\TinTucDetail.aspx" />
+    <Content Include="Zalo_TraCuuDanhBa.aspx" />
+    <Content Include="DanhMucMaNhanXet\MaNXHN_ImportExcel.aspx" />
+    <Content Include="DataMaNX.aspx" />
+    <Content Include="DataMaNXHN.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="DoiTac\DoiTac.aspx" />
+    <Content Include="DoiTac\DoiTacDetail.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="GiaoVien\GiaoVien.aspx" />
+    <Content Include="GiaoVien\GiaoVienDetail.aspx" />
+    <Content Include="GiaoVien\GiaoVIenImportExcel.aspx" />
+    <Content Include="GiaoVien\ToGiaoVien.aspx" />
+    <Content Include="GiaoVien\ToGiaoVienDetail.aspx" />
+    <Content Include="GiaoVien\ToGiaoVienOfGiaoVien.aspx" />
+    <Content Include="GoiTin\GoiTin.aspx" />
+    <Content Include="GoiTin\GoiTinDetail.aspx" />
+    <Content Include="HocSinh\ChuyenLop.aspx" />
+    <Content Include="HocSinh\HocSinh.aspx" />
+    <Content Include="HocSinh\HocSinhDetail.aspx" />
+    <Content Include="HocSinh\HocSinhImportExcel.aspx" />
+    <Content Include="HocSinh\NhapHanhKiem.aspx" />
+    <Content Include="HocSinh\NhapTongHop.aspx" />
+    <Content Include="HocSinh\TongKetTrungBinhMonTHCS.aspx" />
+    <Content Include="HocSinh\TongKetTrungBinhMonTHPT.aspx" />
+    <Content Include="img\cho_gui.jpg" />
+    <Content Include="img\collapsed.gif" />
+    <Content Include="img\error.png" />
+    <Content Include="img\expanded.gif" />
+    <Content Include="img\firework_animated.gif" />
+    <Content Include="img\icondanhmuckhac.png" />
+    <Content Include="img\IconMenu\55e39a60-9fd0-481f-8763-b468d06fa76eemail.png" />
+    <Content Include="img\IconMenu\6a1c7e63-7574-4cd0-b1d7-294f4902d8d790751656-8e77-470d-addc-acf35dd544baline-chart.png" />
+    <Content Include="img\IconMenu\90751656-8e77-470d-addc-acf35dd544baline-chart.png" />
+    <Content Include="img\IconMenu\dd0c05e5-8ede-404c-9df9-4d794a1c955emanagement.png" />
+    <Content Include="img\IconMenu\eb234816-7a41-46d2-9463-dba3689f7c05settings-work-tool.png" />
+    <Content Include="img\IconMenu\f2a20eb3-76b4-448d-a3a5-fbe559a324bemail-send.png" />
+    <Content Include="img\IconMenu\open-book.png" />
+    <Content Include="img\IconMenu\school.png" />
+    <Content Include="img\logo.ico" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\logo1.jpg" />
+    <Content Include="img\Onedu_logo.jpg" />
+    <Content Include="img\read_more.png" />
+    <Content Include="img\sua.png" />
+    <Content Include="img\success.png" />
+    <Content Include="img\xoa.png" />
+    <Content Include="CauHinhCaHoc\CauHinhCaHoc.aspx" />
+    <Content Include="CauHinhCaHoc\CauHinhCaHocDetail.aspx" />
+    <Content Include="KetQuaHocTap\NhapDanhGiaDinhKyTH.aspx" />
+    <Content Include="KetQuaHocTap\NhapDanhGiaMonDinhKyTH.aspx" />
+    <Content Include="KetQuaHocTap\NhapDiemGDTX.aspx" />
+    <Content Include="KetQuaHocTap\NhapDiem.aspx" />
+    <Content Include="Khoi\Khoi.aspx" />
+    <Content Include="Khoi\KhoiDetail.aspx" />
+    <Content Include="LichSuTinNhan\LichSuTinLoi_HoanTin.aspx" />
+    <Content Include="LichSuTinNhan\LichSuTinNhan.aspx" />
+    <Content Include="LoginEmail.aspx" />
+    <Content Include="LoginFacebook.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Lop\Lop.aspx" />
+    <Content Include="Lop\LopDetail.aspx" />
+    <Content Include="Lop\LopImportExcel.aspx" />
+    <Content Include="Lop\LopMon.aspx" />
+    <Content Include="Manage\Manage.aspx" />
+    <Content Include="Manage\ManageCache.aspx" />
+    <Content Include="Menu\Menu.aspx" />
+    <Content Include="MonHoc\MonHoc.aspx" />
+    <Content Include="MonHoc\MonHocDetail.aspx" />
+    <Content Include="MonHoc\MonTruong.aspx" />
+    <Content Include="MonHoc\MonTruongDetail.aspx" />
+    <Content Include="DanhMucMaNhanXet\MaNXDinhKy.aspx" />
+    <Content Include="DanhMucMaNhanXet\MaNXDKDetail.aspx" />
+    <Content Include="DanhMucMaNhanXet\MaNXHN.aspx" />
+    <Content Include="DanhMucMaNhanXet\MaNXHNDetail.aspx" />
+    <Content Include="ChuyenCan\NhapChuyenCan.aspx" />
+    <Content Include="NhanXetHangNgay\NhanXetHangNgayHS.aspx" />
+    <Content Include="Profile\ChangePassword.aspx" />
+    <Content Include="Profile\HoSo.aspx" />
+    <Content Include="QuanTri\NguoiDungDonViDetail.aspx" />
+    <Content Include="QuanTri\QuanLyMaNXHNDetail.aspx" />
+    <Content Include="QuanTri\QuanLyMaNXHN.aspx" />
+    <Content Include="QuanTri\NguoiDungDonVi.aspx" />
+    <Content Include="QuanTri\NguoiDungImportExcel.aspx" />
+    <Content Include="QuanTri\NguoiDung.aspx" />
+    <Content Include="QuanTri\NguoiDungDetail.aspx" />
+    <Content Include="QuanTri\NguoiDungMenu.aspx" />
+    <Content Include="QuanTri\NguoiDungTruong.aspx" />
+    <Content Include="QuanTri\NhomQuyen.aspx" />
+    <Content Include="QuanTri\NhomQuyenDetail.aspx" />
+    <Content Include="QuanTri\NhomQuyenMenu.aspx" />
+    <Content Include="QuanTri\PhanQuyenMenuNguoiDungDonVi.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="Report\BangTheoDoiTinhTrangHS1.aspx" />
+    <Content Include="Report\BienLaiThuTienHS.aspx" />
+    <Content Include="Report\ReportBangTheoDoiHS_LanguageLink.aspx" />
+    <Content Include="Report\ReportBangTheoDoiHS_LanguageLink_TH.aspx" />
+    <Content Include="Report\ReportBangTheoDoiHS_THCS.aspx" />
+    <Content Include="Report\ReportView.aspx" />
+    <Content Include="Scripts\awesomplete.js" />
+    <Content Include="Scripts\Main.js" />
+    <Content Include="Scripts\npm.js" />
+    <Content Include="SMS\GuiTinHangNgay.aspx" />
+    <Content Include="SMS\LichSuTinNhan.aspx" />
+    <Content Include="SMS\NhanTinThongBao.aspx" />
+    <Content Include="SMS\NhanTinToCustomer.aspx" />
+    <Content Include="SMS\QuyTinTruong.aspx" />
+    <Content Include="SMS\SMSImportExcel.aspx" />
+    <Content Include="SMS\SMSThongBaoGiaoVien.aspx" />
+    <Content Include="StudentInfor.aspx" />
+    <Content Include="Test.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="LoginMaster.Master" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="App_Data\RadUploadTemp\RadUploadTestFile" />
+    <Content Include="ExportTemplates\FileDynamic.xlsx" />
+    <Content Include="bin\OneEduDataAccess.dll.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="bin\CMS.dll.config" />
+    <Content Include="ThongKeTinNhan\TongHopSoTinTheoTruongNgay.aspx" />
+    <Content Include="zalocallback.aspx" />
+    <Content Include="libman.json" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-3.0.0.js" />
+    <Content Include="Scripts\jquery-3.0.0.min.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="Scripts\js.cookie.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\select2.full.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Scripts\Validate.js" />
+    <Content Include="ThongKeTinNhan\ThongKeSoTin1LanGuiTheoLop.aspx" />
+    <Content Include="ThongKeTinNhan\ThongKeTinNhan.aspx" />
+    <Content Include="ThongKeTinNhan\ThongKeTinNhanLop.aspx" />
+    <Content Include="ThongKeTinNhan\ThongKeTinNhanTheoCTV.aspx" />
+    <Content Include="ThongKeTinNhan\ThongKeTinNhanTheoDoiTac.aspx" />
+    <Content Include="ThongKeTinNhan\ThongKeTinNhanTheoThuongHieu.aspx" />
+    <Content Include="ThongKeTinNhan\ThongKeTinNhan_SYS.aspx" />
+    <Content Include="Truong\CapNhatTruong.aspx" />
+    <Content Include="Truong\TruongImportExcel.aspx" />
+    <Content Include="Truong\Truong.aspx" />
+    <Content Include="Truong\TruongDetail.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccessDenied.aspx.designer.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoThongKe\HocSinhDetail.aspx.cs">
+      <DependentUpon>HocSinhDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoCaoThongKe\HocSinhDetail.aspx.designer.cs">
+      <DependentUpon>HocSinhDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoThongKe\ThongKeTongHocSinh.aspx.cs">
+      <DependentUpon>ThongKeTongHocSinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoCaoThongKe\ThongKeTongHocSinh.aspx.designer.cs">
+      <DependentUpon>ThongKeTongHocSinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoThongKe\TimKiemHocSinh.aspx.cs">
+      <DependentUpon>TimKiemHocSinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoCaoThongKe\TimKiemHocSinh.aspx.designer.cs">
+      <DependentUpon>TimKiemHocSinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HocSinh\LenLop.aspx.cs">
+      <DependentUpon>LenLop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HocSinh\LenLop.aspx.designer.cs">
+      <DependentUpon>LenLop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiHS_HaiBaTrung.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiHS_NguyenPhongSac.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiHS_NguyenTruongTo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiHS_THCS_Mau2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiHS_THCS_NoPhone.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiHS_TH_he.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiHS_TH_NghiaTan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiTinhTrangHS_THCS_NoPhone.aspx.cs">
+      <DependentUpon>BangTheoDoiTinhTrangHS_THCS_NoPhone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiTinhTrangHS_THCS_NoPhone.aspx.designer.cs">
+      <DependentUpon>BangTheoDoiTinhTrangHS_THCS_NoPhone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiTinhTrangHS_TH_NoPhone.aspx.cs">
+      <DependentUpon>BangTheoDoiTinhTrangHS_TH_NoPhone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiTinhTrangHS_TH_NoPhone.aspx.designer.cs">
+      <DependentUpon>BangTheoDoiTinhTrangHS_TH_NoPhone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiHS_TH_NoPhone.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiTinhTrangHS1_he.aspx.cs">
+      <DependentUpon>BangTheoDoiTinhTrangHS1_he.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiTinhTrangHS1_he.aspx.designer.cs">
+      <DependentUpon>BangTheoDoiTinhTrangHS1_he.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\InPhieuLienLac_TH.aspx.cs">
+      <DependentUpon>InPhieuLienLac_TH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\InPhieuLienLac_TH.aspx.designer.cs">
+      <DependentUpon>InPhieuLienLac_TH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\InPhieuLienLac_TH1.aspx.cs">
+      <DependentUpon>InPhieuLienLac_TH1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\InPhieuLienLac_TH1.aspx.designer.cs">
+      <DependentUpon>InPhieuLienLac_TH1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PhieuDoiSoatHocSinh.aspx.cs">
+      <DependentUpon>PhieuDoiSoatHocSinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\PhieuDoiSoatHocSinh.aspx.designer.cs">
+      <DependentUpon>PhieuDoiSoatHocSinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PhieuDoiSoatHS.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PhieuLienLac_TH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PhieuLienLac_TH1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportBangTheoDoiHS_HaiBaTrung.aspx.cs">
+      <DependentUpon>ReportBangTheoDoiHS_HaiBaTrung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportBangTheoDoiHS_HaiBaTrung.aspx.designer.cs">
+      <DependentUpon>ReportBangTheoDoiHS_HaiBaTrung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportBangTheoDoiHS_NguyenPhongSac.aspx.cs">
+      <DependentUpon>ReportBangTheoDoiHS_NguyenPhongSac.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportBangTheoDoiHS_NguyenPhongSac.aspx.designer.cs">
+      <DependentUpon>ReportBangTheoDoiHS_NguyenPhongSac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportBangTheoDoiHS_NguyenTruongTo.aspx.cs">
+      <DependentUpon>ReportBangTheoDoiHS_NguyenTruongTo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportBangTheoDoiHS_NguyenTruongTo.aspx.designer.cs">
+      <DependentUpon>ReportBangTheoDoiHS_NguyenTruongTo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportBangTheoDoiHS_THCS_Mau2.aspx.cs">
+      <DependentUpon>ReportBangTheoDoiHS_THCS_Mau2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportBangTheoDoiHS_THCS_Mau2.aspx.designer.cs">
+      <DependentUpon>ReportBangTheoDoiHS_THCS_Mau2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportBangTheoDoiHS_TH_NghiaTan.aspx.cs">
+      <DependentUpon>ReportBangTheoDoiHS_TH_NghiaTan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportBangTheoDoiHS_TH_NghiaTan.aspx.designer.cs">
+      <DependentUpon>ReportBangTheoDoiHS_TH_NghiaTan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SMS\GuiThongBaoTheoKhoi.aspx.cs">
+      <DependentUpon>GuiThongBaoTheoKhoi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SMS\GuiThongBaoTheoKhoi.aspx.designer.cs">
+      <DependentUpon>GuiThongBaoTheoKhoi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SMS\GuiThongBaoTheoLop.aspx.cs">
+      <DependentUpon>GuiThongBaoTheoLop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SMS\GuiThongBaoTheoLop.aspx.designer.cs">
+      <DependentUpon>GuiThongBaoTheoLop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SMS\NhanTinDiemTongHop.aspx.cs">
+      <DependentUpon>NhanTinDiemTongHop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SMS\NhanTinDiemTongHop.aspx.designer.cs">
+      <DependentUpon>NhanTinDiemTongHop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeTinNhan\DoiSoatTinTheoNgay.aspx.cs">
+      <DependentUpon>DoiSoatTinTheoNgay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThongKeTinNhan\DoiSoatTinTheoNgay.aspx.designer.cs">
+      <DependentUpon>DoiSoatTinTheoNgay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuuDanhBaGV.aspx.cs">
+      <DependentUpon>TraCuuDanhBaGV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TraCuuDanhBaGV.aspx.designer.cs">
+      <DependentUpon>TraCuuDanhBaGV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuuDanhBaPhuHuynh.aspx.cs">
+      <DependentUpon>TraCuuDanhBaPhuHuynh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TraCuuDanhBaPhuHuynh.aspx.designer.cs">
+      <DependentUpon>TraCuuDanhBaPhuHuynh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Truong\GuiTinNhanThuongHieu.aspx.cs">
+      <DependentUpon>GuiTinNhanThuongHieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Truong\GuiTinNhanThuongHieu.aspx.designer.cs">
+      <DependentUpon>GuiTinNhanThuongHieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBaiTapVeNha.aspx.cs">
+      <DependentUpon>ViewBaiTapVeNha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewBaiTapVeNha.aspx.designer.cs">
+      <DependentUpon>ViewBaiTapVeNha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoThongKe\ThongKeHocSinhTheoTruong.aspx.cs">
+      <DependentUpon>ThongKeHocSinhTheoTruong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoCaoThongKe\ThongKeHocSinhTheoTruong.aspx.designer.cs">
+      <DependentUpon>ThongKeHocSinhTheoTruong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapTin\CapTinDoiTac.aspx.cs">
+      <DependentUpon>CapTinDoiTac.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapTin\CapTinDoiTac.aspx.designer.cs">
+      <DependentUpon>CapTinDoiTac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapTin\CapTinDoiTacDetail.aspx.cs">
+      <DependentUpon>CapTinDoiTacDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapTin\CapTinDoiTacDetail.aspx.designer.cs">
+      <DependentUpon>CapTinDoiTacDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapTin\CapTinTruong.aspx.cs">
+      <DependentUpon>CapTinTruong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapTin\CapTinTruong.aspx.designer.cs">
+      <DependentUpon>CapTinTruong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapTin\CapTinTruongDetail.aspx.cs">
+      <DependentUpon>CapTinTruongDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapTin\CapTinTruongDetail.aspx.designer.cs">
+      <DependentUpon>CapTinTruongDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CauHinhCaHoc\LichDayGiaoVien.aspx.cs">
+      <DependentUpon>LichDayGiaoVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CauHinhCaHoc\LichDayGiaoVien.aspx.designer.cs">
+      <DependentUpon>LichDayGiaoVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CauHinhCaHoc\PhanLichDay.aspx.cs">
+      <DependentUpon>PhanLichDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CauHinhCaHoc\PhanLichDay.aspx.designer.cs">
+      <DependentUpon>PhanLichDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CauHinh\ChonTruong_Cap.aspx.cs">
+      <DependentUpon>ChonTruong_Cap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CauHinh\ChonTruong_Cap.aspx.designer.cs">
+      <DependentUpon>ChonTruong_Cap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CauHinh\NamHoc_HocKy.aspx.cs">
+      <DependentUpon>NamHoc_HocKy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CauHinh\NamHoc_HocKy.aspx.designer.cs">
+      <DependentUpon>NamHoc_HocKy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChotSo\ChotSoTheoMon.aspx.cs">
+      <DependentUpon>ChotSoTheoMon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChotSo\ChotSoTheoMon.aspx.designer.cs">
+      <DependentUpon>ChotSoTheoMon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SYSMenu.ascx.cs">
+      <DependentUpon>SYSMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\SYSMenu.ascx.designer.cs">
+      <DependentUpon>SYSMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MainMenu.ascx.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\MainMenu.ascx.designer.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Customer.aspx.cs">
+      <DependentUpon>Customer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Customer.aspx.designer.cs">
+      <DependentUpon>Customer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerDetail.aspx.cs">
+      <DependentUpon>CustomerDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerDetail.aspx.designer.cs">
+      <DependentUpon>CustomerDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerImportExcel.aspx.cs">
+      <DependentUpon>CustomerImportExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerImportExcel.aspx.designer.cs">
+      <DependentUpon>CustomerImportExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerInTo.aspx.cs">
+      <DependentUpon>CustomerInTo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerInTo.aspx.designer.cs">
+      <DependentUpon>CustomerInTo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ToCustomer.aspx.cs">
+      <DependentUpon>ToCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\ToCustomer.aspx.designer.cs">
+      <DependentUpon>ToCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ToCustomerDetail.aspx.cs">
+      <DependentUpon>ToCustomerDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\ToCustomerDetail.aspx.designer.cs">
+      <DependentUpon>ToCustomerDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DangKyZaloMobile.aspx.cs">
+      <DependentUpon>DangKyZaloMobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangKyZaloMobile.aspx.designer.cs">
+      <DependentUpon>DangKyZaloMobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DangKyZaloMobileConfirm.aspx.cs">
+      <DependentUpon>DangKyZaloMobileConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangKyZaloMobileConfirm.aspx.designer.cs">
+      <DependentUpon>DangKyZaloMobileConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DangKyZalo\ImportZaloID.aspx.cs">
+      <DependentUpon>ImportZaloID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangKyZalo\ImportZaloID.aspx.designer.cs">
+      <DependentUpon>ImportZaloID.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DangKyZalo\PluginQuanTamOA.aspx.cs">
+      <DependentUpon>PluginQuanTamOA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangKyZalo\PluginQuanTamOA.aspx.designer.cs">
+      <DependentUpon>PluginQuanTamOA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\ChamAn.aspx.cs">
+      <DependentUpon>ChamAn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\ChamAn.aspx.designer.cs">
+      <DependentUpon>ChamAn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\ChiTietPhieuNhapKho.aspx.cs">
+      <DependentUpon>ChiTietPhieuNhapKho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\ChiTietPhieuNhapKho.aspx.designer.cs">
+      <DependentUpon>ChiTietPhieuNhapKho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\ChiTietPhieuXuatKho.aspx.cs">
+      <DependentUpon>ChiTietPhieuXuatKho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\ChiTietPhieuXuatKho.aspx.designer.cs">
+      <DependentUpon>ChiTietPhieuXuatKho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\DangKyAn.aspx.cs">
+      <DependentUpon>DangKyAn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\DangKyAn.aspx.designer.cs">
+      <DependentUpon>DangKyAn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\DanhSachPhieuNhapKho.aspx.cs">
+      <DependentUpon>DanhSachPhieuNhapKho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\DanhSachPhieuNhapKho.aspx.designer.cs">
+      <DependentUpon>DanhSachPhieuNhapKho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\DanhSachPhieuXuatKho.aspx.cs">
+      <DependentUpon>DanhSachPhieuXuatKho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\DanhSachPhieuXuatKho.aspx.designer.cs">
+      <DependentUpon>DanhSachPhieuXuatKho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\DMBuaAn.aspx.cs">
+      <DependentUpon>DMBuaAn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\DMBuaAn.aspx.designer.cs">
+      <DependentUpon>DMBuaAn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\DMBuAnDetail.aspx.cs">
+      <DependentUpon>DMBuAnDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\DMBuAnDetail.aspx.designer.cs">
+      <DependentUpon>DMBuAnDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\DonViTinh.aspx.cs">
+      <DependentUpon>DonViTinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\DonViTinh.aspx.designer.cs">
+      <DependentUpon>DonViTinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\DonViTinhDetail.aspx.cs">
+      <DependentUpon>DonViTinhDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\DonViTinhDetail.aspx.designer.cs">
+      <DependentUpon>DonViTinhDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\KhoThucPham.aspx.cs">
+      <DependentUpon>KhoThucPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\KhoThucPham.aspx.designer.cs">
+      <DependentUpon>KhoThucPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\NhaCungCapThucPham.aspx.cs">
+      <DependentUpon>NhaCungCapThucPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\NhaCungCapThucPham.aspx.designer.cs">
+      <DependentUpon>NhaCungCapThucPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\NhaCungCapThucPhamDetail.aspx.cs">
+      <DependentUpon>NhaCungCapThucPhamDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\NhaCungCapThucPhamDetail.aspx.designer.cs">
+      <DependentUpon>NhaCungCapThucPhamDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\NhomThucPham.aspx.cs">
+      <DependentUpon>NhomThucPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\NhomThucPham.aspx.designer.cs">
+      <DependentUpon>NhomThucPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\NhomThucPhamDetail.aspx.cs">
+      <DependentUpon>NhomThucPhamDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\NhomThucPhamDetail.aspx.designer.cs">
+      <DependentUpon>NhomThucPhamDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\PhieuNhapKho.aspx.cs">
+      <DependentUpon>PhieuNhapKho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\PhieuNhapKho.aspx.designer.cs">
+      <DependentUpon>PhieuNhapKho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\PhieuXuatKho.aspx.cs">
+      <DependentUpon>PhieuXuatKho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\PhieuXuatKho.aspx.designer.cs">
+      <DependentUpon>PhieuXuatKho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\SuatAn.aspx.cs">
+      <DependentUpon>SuatAn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\SuatAn.aspx.designer.cs">
+      <DependentUpon>SuatAn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\SuatAnDetail.aspx.cs">
+      <DependentUpon>SuatAnDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\SuatAnDetail.aspx.designer.cs">
+      <DependentUpon>SuatAnDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\SuatAn_ThemThucPham.aspx.cs">
+      <DependentUpon>SuatAn_ThemThucPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\SuatAn_ThemThucPham.aspx.designer.cs">
+      <DependentUpon>SuatAn_ThemThucPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\ThemThucPhamThucDon.aspx.cs">
+      <DependentUpon>ThemThucPhamThucDon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\ThemThucPhamThucDon.aspx.designer.cs">
+      <DependentUpon>ThemThucPhamThucDon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\ThucDon.aspx.cs">
+      <DependentUpon>ThucDon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\ThucDon.aspx.designer.cs">
+      <DependentUpon>ThucDon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\ThucDonDetail.aspx.cs">
+      <DependentUpon>ThucDonDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\ThucDonDetail.aspx.designer.cs">
+      <DependentUpon>ThucDonDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\ThucPham.aspx.cs">
+      <DependentUpon>ThucPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\ThucPham.aspx.designer.cs">
+      <DependentUpon>ThucPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDuong\ThucPhamDetail.aspx.cs">
+      <DependentUpon>ThucPhamDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DinhDuong\ThucPhamDetail.aspx.designer.cs">
+      <DependentUpon>ThucPhamDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HocPhi\DotThu.aspx.cs">
+      <DependentUpon>DotThu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HocPhi\DotThu.aspx.designer.cs">
+      <DependentUpon>DotThu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HocPhi\DotThuDetail.aspx.cs">
+      <DependentUpon>DotThuDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HocPhi\DotThuDetail.aspx.designer.cs">
+      <DependentUpon>DotThuDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HocPhi\DotThuLop.aspx.cs">
+      <DependentUpon>DotThuLop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HocPhi\DotThuLop.aspx.designer.cs">
+      <DependentUpon>DotThuLop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HocPhi\DotThuLopDetail.aspx.cs">
+      <DependentUpon>DotThuLopDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HocPhi\DotThuLopDetail.aspx.designer.cs">
+      <DependentUpon>DotThuLopDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HocPhi\PhieuThuHocSinh.aspx.cs">
+      <DependentUpon>PhieuThuHocSinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HocPhi\PhieuThuHocSinh.aspx.designer.cs">
+      <DependentUpon>PhieuThuHocSinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HocPhi\PhieuThuHocSinhDetail.aspx.cs">
+      <DependentUpon>PhieuThuHocSinhDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HocPhi\PhieuThuHocSinhDetail.aspx.designer.cs">
+      <DependentUpon>PhieuThuHocSinhDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HocPhi\ReportPhieuThuHocSinh.aspx.cs">
+      <DependentUpon>ReportPhieuThuHocSinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HocPhi\ReportPhieuThuHocSinh.aspx.designer.cs">
+      <DependentUpon>ReportPhieuThuHocSinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HocPhi\ReportPhieuThuHocSinh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QRCodeScan.aspx.cs">
+      <DependentUpon>QRCodeScan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QRCodeScan.aspx.designer.cs">
+      <DependentUpon>QRCodeScan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLySach\BaiTapVeNha.aspx.cs">
+      <DependentUpon>BaiTapVeNha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanLySach\BaiTapVeNha.aspx.designer.cs">
+      <DependentUpon>BaiTapVeNha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLySach\BaiTapVeNhaDetail.aspx.cs">
+      <DependentUpon>BaiTapVeNhaDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanLySach\BaiTapVeNhaDetail.aspx.designer.cs">
+      <DependentUpon>BaiTapVeNhaDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLySach\DanhMucSach.aspx.cs">
+      <DependentUpon>DanhMucSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanLySach\DanhMucSach.aspx.designer.cs">
+      <DependentUpon>DanhMucSach.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLySach\DanhMucSachDetail.aspx.cs">
+      <DependentUpon>DanhMucSachDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanLySach\DanhMucSachDetail.aspx.designer.cs">
+      <DependentUpon>DanhMucSachDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLySach\NoiDungBaiHoc.aspx.cs">
+      <DependentUpon>NoiDungBaiHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanLySach\NoiDungBaiHoc.aspx.designer.cs">
+      <DependentUpon>NoiDungBaiHoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLySach\NoiDungBaiHocDetail.aspx.cs">
+      <DependentUpon>NoiDungBaiHocDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanLySach\NoiDungBaiHocDetail.aspx.designer.cs">
+      <DependentUpon>NoiDungBaiHocDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLySach\NoiDungSach.aspx.cs">
+      <DependentUpon>NoiDungSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanLySach\NoiDungSach.aspx.designer.cs">
+      <DependentUpon>NoiDungSach.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLySach\NoiDungSachDetail.aspx.cs">
+      <DependentUpon>NoiDungSachDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanLySach\NoiDungSachDetail.aspx.designer.cs">
+      <DependentUpon>NoiDungSachDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PhieuHuongDanQuanTamOAZalo.aspx.cs">
+      <DependentUpon>PhieuHuongDanQuanTamOAZalo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\PhieuHuongDanQuanTamOAZalo.aspx.designer.cs">
+      <DependentUpon>PhieuHuongDanQuanTamOAZalo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PhieuThuTienHocPhiHocSinh.aspx.cs">
+      <DependentUpon>PhieuThuTienHocPhiHocSinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\PhieuThuTienHocPhiHocSinh.aspx.designer.cs">
+      <DependentUpon>PhieuThuTienHocPhiHocSinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PhieuThuTongTienHocSinhTheoLop.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDangKyOneduTrenZalo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDangKyZalo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\HuongDanDangKyZalo.aspx.cs">
+      <DependentUpon>HuongDanDangKyZalo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\HuongDanDangKyZalo.aspx.designer.cs">
+      <DependentUpon>HuongDanDangKyZalo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThoiKhoaBieuGiaoVien.aspx.cs">
+      <DependentUpon>ThoiKhoaBieuGiaoVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThoiKhoaBieuGiaoVien.aspx.designer.cs">
+      <DependentUpon>ThoiKhoaBieuGiaoVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThoiKhoaBieuLop.aspx.cs">
+      <DependentUpon>ThoiKhoaBieuLop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThoiKhoaBieuLop.aspx.designer.cs">
+      <DependentUpon>ThoiKhoaBieuLop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TinTuc\TinTuc.aspx.cs">
+      <DependentUpon>TinTuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TinTuc\TinTuc.aspx.designer.cs">
+      <DependentUpon>TinTuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TinTuc\TinTucDetail.aspx.cs">
+      <DependentUpon>TinTucDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TinTuc\TinTucDetail.aspx.designer.cs">
+      <DependentUpon>TinTucDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Zalo_TraCuuDanhBa.aspx.cs">
+      <DependentUpon>Zalo_TraCuuDanhBa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Zalo_TraCuuDanhBa.aspx.designer.cs">
+      <DependentUpon>Zalo_TraCuuDanhBa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMucMaNhanXet\MaNXHN_ImportExcel.aspx.cs">
+      <DependentUpon>MaNXHN_ImportExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DanhMucMaNhanXet\MaNXHN_ImportExcel.aspx.designer.cs">
+      <DependentUpon>MaNXHN_ImportExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaNX.aspx.cs">
+      <DependentUpon>DataMaNX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaNX.aspx.designer.cs">
+      <DependentUpon>DataMaNX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaNXHN.aspx.cs">
+      <DependentUpon>DataMaNXHN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaNXHN.aspx.designer.cs">
+      <DependentUpon>DataMaNXHN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoiTac\DoiTac.aspx.cs">
+      <DependentUpon>DoiTac.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoiTac\DoiTac.aspx.designer.cs">
+      <DependentUpon>DoiTac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoiTac\DoiTacDetail.aspx.cs">
+      <DependentUpon>DoiTacDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoiTac\DoiTacDetail.aspx.designer.cs">
+      <DependentUpon>DoiTacDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVien\GiaoVien.aspx.cs">
+      <DependentUpon>GiaoVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiaoVien\GiaoVien.aspx.designer.cs">
+      <DependentUpon>GiaoVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVien\GiaoVienDetail.aspx.cs">
+      <DependentUpon>GiaoVienDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiaoVien\GiaoVienDetail.aspx.designer.cs">
+      <DependentUpon>GiaoVienDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVien\GiaoVienImportExcel.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>GiaoVIenImportExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVien\GiaoVienImportExcel.aspx.designer.cs">
+      <DependentUpon>GiaoVIenImportExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVien\ToGiaoVien.aspx.cs">
+      <DependentUpon>ToGiaoVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiaoVien\ToGiaoVien.aspx.designer.cs">
+      <DependentUpon>ToGiaoVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVien\ToGiaoVienDetail.aspx.cs">
+      <DependentUpon>ToGiaoVienDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiaoVien\ToGiaoVienDetail.aspx.designer.cs">
+      <DependentUpon>ToGiaoVienDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVien\ToGiaoVienOfGiaoVien.aspx.cs">
+      <DependentUpon>ToGiaoVienOfGiaoVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiaoVien\ToGiaoVienOfGiaoVien.aspx.designer.cs">
+      <DependentUpon>ToGiaoVienOfGiaoVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GoiTin\GoiTin.aspx.cs">
+      <DependentUpon>GoiTin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GoiTin\GoiTin.aspx.designer.cs">
+      <DependentUpon>GoiTin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GoiTin\GoiTinDetail.aspx.cs">
+      <DependentUpon>GoiTinDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GoiTin\GoiTinDetail.aspx.designer.cs">
+      <DependentUpon>GoiTinDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HocSinh\ChuyenLop.aspx.cs">
+      <DependentUpon>ChuyenLop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HocSinh\ChuyenLop.aspx.designer.cs">
+      <DependentUpon>ChuyenLop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HocSinh\HocSinh.aspx.cs">
+      <DependentUpon>HocSinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HocSinh\HocSinh.aspx.designer.cs">
+      <DependentUpon>HocSinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HocSinh\HocSinhDetail.aspx.cs">
+      <DependentUpon>HocSinhDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HocSinh\HocSinhDetail.aspx.designer.cs">
+      <DependentUpon>HocSinhDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CauHinhCaHoc\CauHinhCaHoc.aspx.cs">
+      <DependentUpon>CauHinhCaHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CauHinhCaHoc\CauHinhCaHoc.aspx.designer.cs">
+      <DependentUpon>CauHinhCaHoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CauHinhCaHoc\CauHinhCaHocDetail.aspx.cs">
+      <DependentUpon>CauHinhCaHocDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CauHinhCaHoc\CauHinhCaHocDetail.aspx.designer.cs">
+      <DependentUpon>CauHinhCaHocDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HocSinh\HocSinhImportExcel.aspx.cs">
+      <DependentUpon>HocSinhImportExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HocSinh\HocSinhImportExcel.aspx.designer.cs">
+      <DependentUpon>HocSinhImportExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HocSinh\NhapHanhKiem.aspx.cs">
+      <DependentUpon>NhapHanhKiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HocSinh\NhapHanhKiem.aspx.designer.cs">
+      <DependentUpon>NhapHanhKiem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HocSinh\NhapTongHop.aspx.cs">
+      <DependentUpon>NhapTongHop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HocSinh\NhapTongHop.aspx.designer.cs">
+      <DependentUpon>NhapTongHop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HocSinh\TongKetTrungBinhMonTHCS.aspx.cs">
+      <DependentUpon>TongKetTrungBinhMonTHCS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HocSinh\TongKetTrungBinhMonTHCS.aspx.designer.cs">
+      <DependentUpon>TongKetTrungBinhMonTHCS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HocSinh\TongKetTrungBinhMonTHPT.aspx.cs">
+      <DependentUpon>TongKetTrungBinhMonTHPT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HocSinh\TongKetTrungBinhMonTHPT.aspx.designer.cs">
+      <DependentUpon>TongKetTrungBinhMonTHPT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KetQuaHocTap\NhapDanhGiaDinhKyTH.aspx.cs">
+      <DependentUpon>NhapDanhGiaDinhKyTH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KetQuaHocTap\NhapDanhGiaDinhKyTH.aspx.designer.cs">
+      <DependentUpon>NhapDanhGiaDinhKyTH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KetQuaHocTap\NhapDanhGiaMonDinhKyTH.aspx.cs">
+      <DependentUpon>NhapDanhGiaMonDinhKyTH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KetQuaHocTap\NhapDanhGiaMonDinhKyTH.aspx.designer.cs">
+      <DependentUpon>NhapDanhGiaMonDinhKyTH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KetQuaHocTap\NhapDiemGDTX.aspx.cs">
+      <DependentUpon>NhapDiemGDTX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KetQuaHocTap\NhapDiemGDTX.aspx.designer.cs">
+      <DependentUpon>NhapDiemGDTX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KetQuaHocTap\NhapDiem.aspx.cs">
+      <DependentUpon>NhapDiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KetQuaHocTap\NhapDiem.aspx.designer.cs">
+      <DependentUpon>NhapDiem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Khoi\Khoi.aspx.cs">
+      <DependentUpon>Khoi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Khoi\Khoi.aspx.designer.cs">
+      <DependentUpon>Khoi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Khoi\KhoiDetail.aspx.cs">
+      <DependentUpon>KhoiDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Khoi\KhoiDetail.aspx.designer.cs">
+      <DependentUpon>KhoiDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LichSuTinNhan\LichSuTinLoi_HoanTin.aspx.cs">
+      <DependentUpon>LichSuTinLoi_HoanTin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LichSuTinNhan\LichSuTinLoi_HoanTin.aspx.designer.cs">
+      <DependentUpon>LichSuTinLoi_HoanTin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LichSuTinNhan\LichSuTinNhan.aspx.cs">
+      <DependentUpon>LichSuTinNhan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LichSuTinNhan\LichSuTinNhan.aspx.designer.cs">
+      <DependentUpon>LichSuTinNhan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginEmail.aspx.cs">
+      <DependentUpon>LoginEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginEmail.aspx.designer.cs">
+      <DependentUpon>LoginEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lop\Lop.aspx.cs">
+      <DependentUpon>Lop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lop\Lop.aspx.designer.cs">
+      <DependentUpon>Lop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lop\LopDetail.aspx.cs">
+      <DependentUpon>LopDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lop\LopDetail.aspx.designer.cs">
+      <DependentUpon>LopDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lop\LopImportExcel.aspx.cs">
+      <DependentUpon>LopImportExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lop\LopImportExcel.aspx.designer.cs">
+      <DependentUpon>LopImportExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lop\LopMon.aspx.cs">
+      <DependentUpon>LopMon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lop\LopMon.aspx.designer.cs">
+      <DependentUpon>LopMon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ManageCache.aspx.cs">
+      <DependentUpon>ManageCache.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ManageCache.aspx.designer.cs">
+      <DependentUpon>ManageCache.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MonHoc\MonHoc.aspx.cs">
+      <DependentUpon>MonHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MonHoc\MonHoc.aspx.designer.cs">
+      <DependentUpon>MonHoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MonHoc\MonHocDetail.aspx.cs">
+      <DependentUpon>MonHocDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MonHoc\MonHocDetail.aspx.designer.cs">
+      <DependentUpon>MonHocDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MonHoc\MonTruong.aspx.cs">
+      <DependentUpon>MonTruong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MonHoc\MonTruong.aspx.designer.cs">
+      <DependentUpon>MonTruong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MonHoc\MonTruongDetail.aspx.cs">
+      <DependentUpon>MonTruongDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MonHoc\MonTruongDetail.aspx.designer.cs">
+      <DependentUpon>MonTruongDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMucMaNhanXet\MaNXDinhKy.aspx.cs">
+      <DependentUpon>MaNXDinhKy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DanhMucMaNhanXet\MaNXDinhKy.aspx.designer.cs">
+      <DependentUpon>MaNXDinhKy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMucMaNhanXet\MaNXDKDetail.aspx.cs">
+      <DependentUpon>MaNXDKDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DanhMucMaNhanXet\MaNXDKDetail.aspx.designer.cs">
+      <DependentUpon>MaNXDKDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMucMaNhanXet\MaNXHN.aspx.cs">
+      <DependentUpon>MaNXHN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DanhMucMaNhanXet\MaNXHN.aspx.designer.cs">
+      <DependentUpon>MaNXHN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMucMaNhanXet\MaNXHNDetail.aspx.cs">
+      <DependentUpon>MaNXHNDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DanhMucMaNhanXet\MaNXHNDetail.aspx.designer.cs">
+      <DependentUpon>MaNXHNDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChuyenCan\NhapChuyenCan.aspx.cs">
+      <DependentUpon>NhapChuyenCan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChuyenCan\NhapChuyenCan.aspx.designer.cs">
+      <DependentUpon>NhapChuyenCan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NhanXetHangNgay\NhanXetHangNgayHS.aspx.cs">
+      <DependentUpon>NhanXetHangNgayHS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NhanXetHangNgay\NhanXetHangNgayHS.aspx.designer.cs">
+      <DependentUpon>NhanXetHangNgayHS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\HoSo.aspx.cs">
+      <DependentUpon>HoSo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile\HoSo.aspx.designer.cs">
+      <DependentUpon>HoSo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\NguoiDungDonViDetail.aspx.cs">
+      <DependentUpon>NguoiDungDonViDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\NguoiDungDonViDetail.aspx.designer.cs">
+      <DependentUpon>NguoiDungDonViDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\QuanLyMaNXHNDetail.aspx.cs">
+      <DependentUpon>QuanLyMaNXHNDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\QuanLyMaNXHNDetail.aspx.designer.cs">
+      <DependentUpon>QuanLyMaNXHNDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\QuanLyMaNXHN.aspx.cs">
+      <DependentUpon>QuanLyMaNXHN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\QuanLyMaNXHN.aspx.designer.cs">
+      <DependentUpon>QuanLyMaNXHN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\NguoiDungDonVi.aspx.cs">
+      <DependentUpon>NguoiDungDonVi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\NguoiDungDonVi.aspx.designer.cs">
+      <DependentUpon>NguoiDungDonVi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\NguoiDungImportExcel.aspx.cs">
+      <DependentUpon>NguoiDungImportExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\NguoiDungImportExcel.aspx.designer.cs">
+      <DependentUpon>NguoiDungImportExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\NguoiDung.aspx.cs">
+      <DependentUpon>NguoiDung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\NguoiDung.aspx.designer.cs">
+      <DependentUpon>NguoiDung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\NguoiDungDetail.aspx.cs">
+      <DependentUpon>NguoiDungDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\NguoiDungDetail.aspx.designer.cs">
+      <DependentUpon>NguoiDungDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\NguoiDungMenu.aspx.cs">
+      <DependentUpon>NguoiDungMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\NguoiDungMenu.aspx.designer.cs">
+      <DependentUpon>NguoiDungMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\NguoiDungTruong.aspx.cs">
+      <DependentUpon>NguoiDungTruong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\NguoiDungTruong.aspx.designer.cs">
+      <DependentUpon>NguoiDungTruong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\NhomQuyen.aspx.cs">
+      <DependentUpon>NhomQuyen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\NhomQuyen.aspx.designer.cs">
+      <DependentUpon>NhomQuyen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\NhomQuyenDetail.aspx.cs">
+      <DependentUpon>NhomQuyenDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\NhomQuyenDetail.aspx.designer.cs">
+      <DependentUpon>NhomQuyenDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\NhomQuyenMenu.aspx.cs">
+      <DependentUpon>NhomQuyenMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\NhomQuyenMenu.aspx.designer.cs">
+      <DependentUpon>NhomQuyenMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\PhanQuyenMenuNguoiDungDonVi.aspx.cs">
+      <DependentUpon>PhanQuyenMenuNguoiDungDonVi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\PhanQuyenMenuNguoiDungDonVi.aspx.designer.cs">
+      <DependentUpon>PhanQuyenMenuNguoiDungDonVi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiHS_TH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiHS_THCS.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiLanguageLink.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiLanguageLink_TH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiTinhTrangHS1.aspx.cs">
+      <DependentUpon>BangTheoDoiTinhTrangHS1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\BangTheoDoiTinhTrangHS1.aspx.designer.cs">
+      <DependentUpon>BangTheoDoiTinhTrangHS1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BienLaiThuTienHS.aspx.cs">
+      <DependentUpon>BienLaiThuTienHS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\BienLaiThuTienHS.aspx.designer.cs">
+      <DependentUpon>BienLaiThuTienHS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportBangTheoDoiHS_LanguageLink.aspx.cs">
+      <DependentUpon>ReportBangTheoDoiHS_LanguageLink.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportBangTheoDoiHS_LanguageLink.aspx.designer.cs">
+      <DependentUpon>ReportBangTheoDoiHS_LanguageLink.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportBangTheoDoiHS_LanguageLink_TH.aspx.cs">
+      <DependentUpon>ReportBangTheoDoiHS_LanguageLink_TH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportBangTheoDoiHS_LanguageLink_TH.aspx.designer.cs">
+      <DependentUpon>ReportBangTheoDoiHS_LanguageLink_TH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportBangTheoDoiHS_THCS.aspx.cs">
+      <DependentUpon>ReportBangTheoDoiHS_THCS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportBangTheoDoiHS_THCS.aspx.designer.cs">
+      <DependentUpon>ReportBangTheoDoiHS_THCS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportView.aspx.cs">
+      <DependentUpon>ReportView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportView.aspx.designer.cs">
+      <DependentUpon>ReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMasterSYS.Master.cs">
+      <DependentUpon>SiteMasterSYS.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMasterSYS.Master.designer.cs">
+      <DependentUpon>SiteMasterSYS.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMasterPopup.Master.cs">
+      <DependentUpon>SiteMasterPopup.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMasterPopup.Master.designer.cs">
+      <DependentUpon>SiteMasterPopup.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SMS\GuiTinHangNgay.aspx.cs">
+      <DependentUpon>GuiTinHangNgay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SMS\GuiTinHangNgay.aspx.designer.cs">
+      <DependentUpon>GuiTinHangNgay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SMS\LichSuTinNhan.aspx.cs">
+      <DependentUpon>LichSuTinNhan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SMS\LichSuTinNhan.aspx.designer.cs">
+      <DependentUpon>LichSuTinNhan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SMS\NhanTinThongBao.aspx.cs">
+      <DependentUpon>NhanTinThongBao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SMS\NhanTinThongBao.aspx.designer.cs">
+      <DependentUpon>NhanTinThongBao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SMS\NhanTinToCustomer.aspx.cs">
+      <DependentUpon>NhanTinToCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SMS\NhanTinToCustomer.aspx.designer.cs">
+      <DependentUpon>NhanTinToCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SMS\QuyTinTruong.aspx.cs">
+      <DependentUpon>QuyTinTruong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SMS\QuyTinTruong.aspx.designer.cs">
+      <DependentUpon>QuyTinTruong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SMS\SMSImportExcel.aspx.cs">
+      <DependentUpon>SMSImportExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SMS\SMSImportExcel.aspx.designer.cs">
+      <DependentUpon>SMSImportExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SMS\SMSThongBaoGiaoVien.aspx.cs">
+      <DependentUpon>SMSThongBaoGiaoVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SMS\SMSThongBaoGiaoVien.aspx.designer.cs">
+      <DependentUpon>SMSThongBaoGiaoVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentInfor.aspx.cs">
+      <DependentUpon>StudentInfor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentInfor.aspx.designer.cs">
+      <DependentUpon>StudentInfor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeTinNhan\ThongKeSoTin1LanGuiTheoLop.aspx.cs">
+      <DependentUpon>ThongKeSoTin1LanGuiTheoLop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThongKeTinNhan\ThongKeSoTin1LanGuiTheoLop.aspx.designer.cs">
+      <DependentUpon>ThongKeSoTin1LanGuiTheoLop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeTinNhan\ThongKeTinNhan.aspx.cs">
+      <DependentUpon>ThongKeTinNhan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThongKeTinNhan\ThongKeTinNhan.aspx.designer.cs">
+      <DependentUpon>ThongKeTinNhan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeTinNhan\ThongKeTinNhanLop.aspx.cs">
+      <DependentUpon>ThongKeTinNhanLop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThongKeTinNhan\ThongKeTinNhanLop.aspx.designer.cs">
+      <DependentUpon>ThongKeTinNhanLop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeTinNhan\ThongKeTinNhanTheoCTV.aspx.cs">
+      <DependentUpon>ThongKeTinNhanTheoCTV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThongKeTinNhan\ThongKeTinNhanTheoCTV.aspx.designer.cs">
+      <DependentUpon>ThongKeTinNhanTheoCTV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeTinNhan\ThongKeTinNhanTheoDoiTac.aspx.cs">
+      <DependentUpon>ThongKeTinNhanTheoDoiTac.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThongKeTinNhan\ThongKeTinNhanTheoDoiTac.aspx.designer.cs">
+      <DependentUpon>ThongKeTinNhanTheoDoiTac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeTinNhan\ThongKeTinNhanTheoThuongHieu.aspx.cs">
+      <DependentUpon>ThongKeTinNhanTheoThuongHieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThongKeTinNhan\ThongKeTinNhanTheoThuongHieu.aspx.designer.cs">
+      <DependentUpon>ThongKeTinNhanTheoThuongHieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeTinNhan\ThongKeTinNhan_SYS.aspx.cs">
+      <DependentUpon>ThongKeTinNhan_SYS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThongKeTinNhan\ThongKeTinNhan_SYS.aspx.designer.cs">
+      <DependentUpon>ThongKeTinNhan_SYS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeTinNhan\TongHopSoTinTheoTruongNgay.aspx.cs">
+      <DependentUpon>TongHopSoTinTheoTruongNgay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThongKeTinNhan\TongHopSoTinTheoTruongNgay.aspx.designer.cs">
+      <DependentUpon>TongHopSoTinTheoTruongNgay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Truong\CapNhatTruong.aspx.cs">
+      <DependentUpon>CapNhatTruong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Truong\CapNhatTruong.aspx.designer.cs">
+      <DependentUpon>CapNhatTruong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Truong\TruongImportExcel.aspx.cs">
+      <DependentUpon>TruongImportExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Truong\TruongImportExcel.aspx.designer.cs">
+      <DependentUpon>TruongImportExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Truong\Truong.aspx.cs">
+      <DependentUpon>Truong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Truong\Truong.aspx.designer.cs">
+      <DependentUpon>Truong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Truong\TruongDetail.aspx.cs">
+      <DependentUpon>TruongDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Truong\TruongDetail.aspx.designer.cs">
+      <DependentUpon>TruongDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XuLy\Common.cs" />
+    <Compile Include="XuLy\CommonValidate.cs" />
+    <Compile Include="XuLy\LocalAPI.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="App_Code\AuthenticatePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Close.aspx.cs">
+      <DependentUpon>Close.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Close.aspx.designer.cs">
+      <DependentUpon>Close.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginFacebook.aspx.cs">
+      <DependentUpon>LoginFacebook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginFacebook.aspx.designer.cs">
+      <DependentUpon>LoginFacebook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\SYS_Profile.cs" />
+    <Compile Include="App_Code\SYS_Cookies.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\LoginHelper.cs" />
+    <Compile Include="App_Code\MyPrincipal.cs" />
+    <Compile Include="LoginMaster.Master.cs">
+      <DependentUpon>LoginMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginMaster.Master.designer.cs">
+      <DependentUpon>LoginMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SiteMaster.Master.cs">
+      <DependentUpon>SiteMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMaster.Master.designer.cs">
+      <DependentUpon>SiteMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="XuLy\UtilsHelper.cs" />
+    <Compile Include="zalocallback.aspx.cs">
+      <DependentUpon>zalocallback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zalocallback.aspx.designer.cs">
+      <DependentUpon>zalocallback.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="SiteMaster.Master" />
+    <Content Include="SiteMasterPopup.Master" />
+    <Content Include="SiteMasterSYS.Master" />
+    <Content Include="Tmps\Template-GiaoVien.xls" />
+    <Content Include="Tmps\Template-HocSinh.xls" />
+    <Content Include="Tmps\Template-NguoiDung.xls" />
+    <Content Include="Tmps\Template-LopHoc.xls" />
+    <Content Include="Tmps\Template-SMSTuyBien.xls" />
+    <Content Include="Tmps\Template-Truong.xls" />
+    <Content Include="Tmps\Template-GiaoVien-ToGV.xls" />
+    <Content Include="Tmps\Template-NhanXetHangNgay.xls" />
+    <Content Include="Tmps\Template-Customer.xls" />
+    <Content Include="Tmps\Template-Customer-ToCustomer.xls" />
+    <Content Include="Tmps\Template-ThuPhiHocSinh.xls" />
+    <Content Include="Tmps\Template-ZaloID.xls" />
+    <Content Include="tessdata\eng.cube.bigrams">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tessdata\eng.cube.fold">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tessdata\eng.cube.lm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tessdata\eng.cube.nn">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tessdata\eng.cube.params">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tessdata\eng.cube.size">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tessdata\eng.cube.word-freq">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tessdata\eng.tesseract_cube.nn">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tessdata\eng.traineddata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tessdata\vie.traineddata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="ExportTemps\" />
+    <Folder Include="img\AnhNguoiDung\" />
+    <Folder Include="InSoHocSinh\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OneEduDataAccess\OneEduDataAccess.csproj">
+      <Project>{362ca777-179d-4b4e-8af9-3fa82a28171c}</Project>
+      <Name>OneEduDataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Report\BangTheoDoiHS_HaiBaTrung.resx">
+      <DependentUpon>BangTheoDoiHS_HaiBaTrung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BangTheoDoiHS_NguyenPhongSac.resx">
+      <DependentUpon>BangTheoDoiHS_NguyenPhongSac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BangTheoDoiHS_NguyenTruongTo.resx">
+      <DependentUpon>BangTheoDoiHS_NguyenTruongTo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BangTheoDoiHS_TH.resx">
+      <DependentUpon>BangTheoDoiHS_TH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BangTheoDoiHS_THCS.resx">
+      <DependentUpon>BangTheoDoiHS_THCS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BangTheoDoiHS_THCS_Mau2.resx">
+      <DependentUpon>BangTheoDoiHS_THCS_Mau2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BangTheoDoiHS_THCS_NoPhone.resx">
+      <DependentUpon>BangTheoDoiHS_THCS_NoPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BangTheoDoiHS_TH_he.resx">
+      <DependentUpon>BangTheoDoiHS_TH_he.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BangTheoDoiHS_TH_NghiaTan.resx">
+      <DependentUpon>BangTheoDoiHS_TH_NghiaTan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BangTheoDoiHS_TH_NoPhone.resx">
+      <DependentUpon>BangTheoDoiHS_TH_NoPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BangTheoDoiLanguageLink.resx">
+      <DependentUpon>BangTheoDoiLanguageLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BangTheoDoiLanguageLink_TH.resx">
+      <DependentUpon>BangTheoDoiLanguageLink_TH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PhieuDoiSoatHS.resx">
+      <DependentUpon>PhieuDoiSoatHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PhieuLienLac_TH.resx">
+      <DependentUpon>PhieuLienLac_TH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PhieuLienLac_TH1.resx">
+      <DependentUpon>PhieuLienLac_TH1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PhieuThuTongTienHocSinhTheoLop.resx">
+      <DependentUpon>PhieuThuTongTienHocSinhTheoLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDangKyOneduTrenZalo.resx">
+      <DependentUpon>ReportDangKyOneduTrenZalo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDangKyZalo.resx">
+      <DependentUpon>ReportDangKyZalo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51793</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51793/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\MSBuild.NugetContentRestore.0.1.6\build\net40\MSBuild.NugetContentRestore.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuild.NugetContentRestore.0.1.6\build\net40\MSBuild.NugetContentRestore.targets'))" />
+    <Error Condition="!Exists('..\packages\Tesseract.3.3.0\build\Tesseract.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Tesseract.3.3.0\build\Tesseract.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSBuild.NugetContentRestore.0.1.6\build\net40\MSBuild.NugetContentRestore.targets" Condition="Exists('..\packages\MSBuild.NugetContentRestore.0.1.6\build\net40\MSBuild.NugetContentRestore.targets')" />
+  <Target Name="BeforeBuild">
+    <NugetContentRestoreTask SolutionDir="$(SolutionDir)" ProjectDir="$(ProjectDir)" />
+  </Target>
+  <Import Project="..\packages\Tesseract.3.3.0\build\Tesseract.targets" Condition="Exists('..\packages\Tesseract.3.3.0\build\Tesseract.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

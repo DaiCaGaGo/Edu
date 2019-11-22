@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMasterPopup.master.cs" Inherits="CMS.SiteMasterPopup" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>SỔ LIÊN LẠC ĐIỆN TỬ EDU SMS</title>
+    <%--<meta name="viewport" content="width=device-width, initial-scale=1" />--%>
+    <telerik:RadCodeBlock ID="RadCodeBlock1" runat="server">
+        <link href="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Content/bootstrap.css?"+ localAPI.GetVerionCss()  %>" rel="stylesheet" />
+        <link href="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/CSS/select2.min.css?"+ localAPI.GetVerionCss()  %>" rel="stylesheet" />
+        <link href="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/CSS/toastr.min.css?"+ localAPI.GetVerionCss()  %>" rel="stylesheet" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
+        <link href="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/CSS/StyleForm.css?"+ localAPI.GetVerionCss()  %>" rel="stylesheet" />
+        <script src="<%=  "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/jquery-3.0.0.js?"+ localAPI.GetVerionJava() %>"></script>
+        <script src="<%=  "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/select2.full.js?"+ localAPI.GetVerionJava() %>"></script>
+        <script src="<%=  "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/toastr.min.js?"+ localAPI.GetVerionJava() %>"></script>
+        <script src="<%=  "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/Main.js?"+ localAPI.GetVerionJava() %>"></script>
+        <script src="<%=  "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/Validate.js?"+ localAPI.GetVerionJava() %>"></script>
+    </telerik:RadCodeBlock>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script type="text/javascript">
+        toastr.options.closeButton = true;
+        toastr.options.positionClass = "toast-bottom-right";
+        function notification(type, message) {
+            if (type == 'success') {
+                toastr.success(message, '<i>Success</i>');
+            } else if (type == 'error') {
+                toastr.error(message, 'Error');
+            } else if (type == 'warning') {
+                toastr.warning(message, 'Warning');
+            } else {
+                toastr.info(message, 'Information');
+            }
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
+        <div>
+            <div id="content">
+                <div class="">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+2016-07-20 00:08:09,574 INFO  [LogPushToQueue] - Application started at: 20/07/2016 00:08:09
+2016-07-20 00:10:21,214 INFO  [LogPushToQueue] - Application started at: 20/07/2016 00:10:21
+2016-07-20 00:10:22,880 INFO  [LogPushToQueue] - Thread started at: 20/07/2016 00:10:22
+2016-07-20 00:31:23,069 INFO  [LogPushToQueue] - Application started at: 20/07/2016 00:31:23
+2016-07-20 00:31:26,029 INFO  [LogPushToQueue] - Thread started at: 20/07/2016 00:31:26
+2016-07-20 00:32:14,678 INFO  [LogPushToQueue] - Added ==> SmsId: 901383, Brand: 1SMS.VN, Sms: Tien kiem tra tin nhan lan 1, Phone: 84901759114, Count: 1, At: 20/07/2016 00:32:14, Chanel: Incom
+2016-07-20 00:33:54,409 INFO  [LogPushToQueue] - Application started at: 20/07/2016 00:33:54
+2016-07-20 00:33:55,922 INFO  [LogPushToQueue] - Thread started at: 20/07/2016 00:33:55
+2016-07-20 00:33:58,283 INFO  [LogPushToQueue] - Added ==> SmsId: 901384, Brand: 1SMS.VN, Sms: Tien kiem tra tin nhan lan 2, Phone: 84901759114, Count: 1, At: 20/07/2016 00:33:58, Chanel: Incom
+2016-07-20 00:34:09,951 INFO  [LogPushToQueue] - Added ==> SmsId: 901385, Brand: 1SMS.VN, Sms: Tien kiem tra tin nhan lan 3, Phone: 84901759114, Count: 1, At: 20/07/2016 00:34:09, Chanel: Incom
+2016-07-20 00:34:19,935 INFO  [LogPushToQueue] - Added ==> SmsId: 901386, Brand: 1SMS.VN, Sms: Tien kiem tra tin nhan lan 4, Phone: 84901759114, Count: 1, At: 20/07/2016 00:34:19, Chanel: Incom
+2016-07-20 00:34:23,955 INFO  [LogPushToQueue] - Added ==> SmsId: 901387, Brand: 1SMS.VN, Sms: Tien kiem tra tin nhan lan 5, Phone: 84901759114, Count: 1, At: 20/07/2016 00:34:23, Chanel: Incom
+2016-07-20 01:13:55,260 INFO  [LogPushToQueue] - Application started at: 20/07/2016 01:13:55
+2016-07-20 01:14:06,815 INFO  [LogPushToQueue] - Thread started at: 20/07/2016 01:14:06
+2016-07-20 01:16:13,639 INFO  [LogPushToQueue] - Added ==> SmsId: 901388, Brand: 1SMS.VN, Sms: Tien kiem tra tin nhan lan 6, Phone: 84901759114, Count: 1, At: 20/07/2016 01:16:13, Chanel: Incom
+2016-07-20 02:00:43,188 INFO  [LogPushToQueue] - Application started at: 20/07/2016 02:00:43
+2016-07-20 02:01:14,784 INFO  [LogPushToQueue] - Thread started at: 20/07/2016 02:01:14
+2016-07-20 02:01:39,010 INFO  [LogPushToQueue] - Added ==> SmsId: 901389, Brand: 1SMS.VN, Sms: Tien kiem tra tin nhan lan 7, Phone: 84901759114, Count: 1, At: 20/07/2016 02:01:39, Chanel: Incom
+2016-07-20 02:02:05,718 INFO  [LogPushToQueue] - Added ==> SmsId: 901390, Brand: 1SMS.VN, Sms: Tien kiem tra tin nhan lan 8, Phone: 84901759114, Count: 1, At: 20/07/2016 02:02:05, Chanel: Incom
+2016-07-20 02:02:41,183 INFO  [LogPushToQueue] - Application stoped at: 20/07/2016 02:02:41!
+2016-07-20 02:02:54,714 INFO  [LogPushToQueue] - Thread started at: 20/07/2016 02:02:54
+2016-07-20 02:02:56,741 INFO  [LogPushToQueue] - Added ==> SmsId: 901391, Brand: 1SMS.VN, Sms: Tien kiem tra tin nhan lan 9, Phone: 84901759114, Count: 1, At: 20/07/2016 02:02:56, Chanel: Incom

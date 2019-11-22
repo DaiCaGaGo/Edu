@@ -1,0 +1,4 @@
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Zalo_Send_Sms\obj\Release\Form_Zalo_Send_Sms.csprojResolveAssemblyReference.cache
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Zalo_Send_Sms\obj\Release\Form_Zalo_Send_Sms.Main.resources
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Zalo_Send_Sms\obj\Release\Form_Zalo_Send_Sms.Properties.Resources.resources
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Zalo_Send_Sms\obj\Release\Form_Zalo_Send_Sms.csproj.GenerateResource.Cache

@@ -1,0 +1,16 @@
+2016-08-24 13:50:50,282 INFO  [LogUpdateSuccess] - Application started at: 24/08/2016 13:50:50
+2016-08-24 13:50:51,945 INFO  [LogUpdateSuccess] - Thread started at: 24/08/2016 13:50:51
+2016-08-24 13:50:53,542 INFO  [LogUpdateSuccess] - Updated 2 item! At: 24/08/2016 13:50:53
+2016-08-24 13:51:52,849 INFO  [LogUpdateSuccess] - Application stoped at: 24/08/2016 13:51:52!
+2016-08-24 13:52:41,798 INFO  [LogUpdateSuccess] - Application started at: 24/08/2016 13:52:41
+2016-08-24 13:52:42,607 INFO  [LogUpdateSuccess] - Thread started at: 24/08/2016 13:52:42
+2016-08-24 13:59:48,897 INFO  [LogUpdateSuccess] - Updated 1 item! At: 24/08/2016 13:59:48
+2016-08-24 14:19:58,729 INFO  [LogUpdateSuccess] - Updated 1 item! At: 24/08/2016 14:19:58
+2016-08-24 14:20:29,705 INFO  [LogUpdateSuccess] - Updated 1 item! At: 24/08/2016 14:20:29
+2016-08-24 14:43:41,731 INFO  [LogUpdateSuccess] - Updated 1 item! At: 24/08/2016 14:43:41
+2016-08-24 14:53:21,770 INFO  [LogUpdateSuccess] - Updated 1 item! At: 24/08/2016 14:53:21
+2016-08-24 15:02:47,726 INFO  [LogUpdateSuccess] - Updated 1 item! At: 24/08/2016 15:02:47
+2016-08-24 15:11:17,745 INFO  [LogUpdateSuccess] - Updated 1 item! At: 24/08/2016 15:11:17
+2016-08-24 15:12:00,711 INFO  [LogUpdateSuccess] - Updated 1 item! At: 24/08/2016 15:12:00
+2016-08-24 17:38:35,664 INFO  [LogUpdateSuccess] - Updated 1 item! At: 24/08/2016 17:38:35
+2016-08-24 17:41:33,937 INFO  [LogUpdateSuccess] - Updated 1 item! At: 24/08/2016 17:41:33

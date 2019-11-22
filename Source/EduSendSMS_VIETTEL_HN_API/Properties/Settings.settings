@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EduSendSMS_VIETTEL_HN_API.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="EduSendSMS_VIETTEL_HN_API_vn_tinnhanthuonghieu_ams_CcApi" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://ams.tinnhanthuonghieu.vn:8009/bulkapi</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

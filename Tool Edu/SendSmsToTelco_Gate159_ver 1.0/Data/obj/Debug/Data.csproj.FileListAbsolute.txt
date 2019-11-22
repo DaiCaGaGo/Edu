@@ -1,0 +1,15 @@
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Data\bin\Debug\Data.dll
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Data\bin\Debug\Data.pdb
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Data\obj\Debug\Data.dll
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Data\obj\Debug\Data.pdb
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+F:\Works\GATEWAY\Gate159_SendSms\Data\bin\Debug\Data.dll
+F:\Works\GATEWAY\Gate159_SendSms\Data\bin\Debug\Data.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Data\obj\Debug\Data.dll
+F:\Works\GATEWAY\Gate159_SendSms\Data\obj\Debug\Data.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Data\bin\Debug\Data.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Data\bin\Debug\Data.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Data\obj\Debug\Data.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Data\obj\Debug\Data.pdb

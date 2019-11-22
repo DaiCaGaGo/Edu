@@ -1,0 +1,11 @@
+2016-07-19 14:02:37,238 INFO  [LogPushToQueue] - Application started at: 19/07/2016 14:02:37
+2016-07-19 14:02:49,808 INFO  [LogPushToQueue] - Thread started at: 19/07/2016 14:02:49
+2016-07-19 14:02:51,790 INFO  [LogPushToQueue] - Thread started at: 19/07/2016 14:02:51
+2016-07-19 14:03:33,416 INFO  [LogPushToQueue] - Application started at: 19/07/2016 14:03:33
+2016-07-19 14:03:35,830 INFO  [LogPushToQueue] - Thread started at: 19/07/2016 14:03:35
+2016-07-19 14:04:06,199 INFO  [LogPushToQueue] - Application started at: 19/07/2016 14:04:06
+2016-07-19 14:04:07,837 INFO  [LogPushToQueue] - Thread started at: 19/07/2016 14:04:07
+2016-07-19 14:04:25,230 INFO  [LogPushToQueue] - Application started at: 19/07/2016 14:04:25
+2016-07-19 14:04:41,435 INFO  [LogPushToQueue] - Thread started at: 19/07/2016 14:04:31
+2016-07-19 14:07:46,013 INFO  [LogPushToQueue] - Application started at: 19/07/2016 14:07:45
+2016-07-19 14:07:47,884 INFO  [LogPushToQueue] - Thread started at: 19/07/2016 14:07:47

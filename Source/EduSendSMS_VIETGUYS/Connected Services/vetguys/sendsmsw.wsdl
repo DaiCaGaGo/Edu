@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="sms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="sms" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="sms">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="sms">
+        <xsd:all>
+          <xsd:element name="phone" type="xsd:string" />
+          <xsd:element name="passcode" type="xsd:string" />
+          <xsd:element name="sms" type="xsd:string" />
+          <xsd:element name="account" type="xsd:string" />
+          <xsd:element name="password" type="xsd:string" />
+          <xsd:element name="contenttype" type="xsd:string" />
+          <xsd:element name="messagetype" type="xsd:string" />
+          <xsd:element name="messageid" type="xsd:string" />
+          <xsd:element name="transactionid" type="xsd:string" />
+          <xsd:element name="service_id" type="xsd:string" />
+          <xsd:element name="json" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="sendRequest">
+    <wsdl:part name="sms" type="tns:sms" />
+  </wsdl:message>
+  <wsdl:message name="sendResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="smsPortType">
+    <wsdl:operation name="send">
+      <wsdl:input message="tns:sendRequest" />
+      <wsdl:output message="tns:sendResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="smsBinding" type="tns:smsPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="send">
+      <soap:operation soapAction="send" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="sms" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="sms" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="sms">
+    <wsdl:port name="smsPort" binding="tns:smsBinding">
+      <soap:address location="http://cloudsms.vietguys.biz:8090/webservices/sendsmsw.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

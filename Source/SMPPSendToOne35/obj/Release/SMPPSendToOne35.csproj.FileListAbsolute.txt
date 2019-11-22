@@ -1,0 +1,11 @@
+E:\OneEdu\Source\SMPPSendToOne35\bin\Release\SMPPSendToOne35.exe
+E:\OneEdu\Source\SMPPSendToOne35\bin\Release\SMPPSendToOne35.pdb
+E:\OneEdu\Source\SMPPSendToOne35\obj\Release\SMPPSendToOne35.csprojAssemblyReference.cache
+E:\OneEdu\Source\SMPPSendToOne35\obj\Release\SMPPSendToOne35.ProjectInstaller.resources
+E:\OneEdu\Source\SMPPSendToOne35\obj\Release\SMPPSendToOne35.csproj.GenerateResource.cache
+E:\OneEdu\Source\SMPPSendToOne35\obj\Release\SMPPSendToOne35.csproj.CoreCompileInputs.cache
+E:\OneEdu\Source\SMPPSendToOne35\obj\Release\SMPPSendToOne35.exe
+E:\OneEdu\Source\SMPPSendToOne35\obj\Release\SMPPSendToOne35.pdb
+E:\OneEdu\Source\SMPPSendToOne35\bin\Release\SMPPSendToOne35.exe.config
+E:\OneEdu\Source\SMPPSendToOne35\bin\Release\Inetlab.SMPP.dll
+E:\OneEdu\Source\SMPPSendToOne35\obj\Release\SMPPSendToOne35.csproj.CopyComplete

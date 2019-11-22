@@ -1,0 +1,148 @@
+﻿#banner ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    border: 0px !important;
+}
+    #banner ul #one-logo img {
+        /*float: left;*/
+        width: 70%;
+    }
+
+#banner #one-logo {
+    height: 55px;
+    line-height: 54px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#banner #one-menu {
+    height: 55px;
+    line-height: 54px;
+    float: left;
+}
+
+#banner #one-name-truong {
+    /*height: 54px;*/
+    line-height: 17px;
+    float: right;
+    top: 10px;
+    text-align: center;
+}
+
+#banner #one-danh-muc-khac {
+    cursor: pointer;
+    float: right;
+    margin-left: 5px;
+}
+
+    #banner #one-danh-muc-khac:hover {
+        background-color: #084582;
+    }
+
+#banner #one-hot-line {
+    height: 55px;
+    line-height: 54px;
+    float: right;
+    margin-right: 15px;
+}
+
+#banner ul li {
+    position: relative;
+}
+
+#banner .one-menu-re ul {
+    left: -340px;
+    z-index: 9999;
+}
+
+#banner .one-menu-re {
+    display: none;
+    width: 100%;
+}
+
+    #banner .one-menu-re ul:before {
+        border-bottom: 9px solid rgba(255, 255, 255, 0.98);
+        border-left: 9px solid transparent;
+        border-right: 9px solid transparent;
+        content: '';
+        display: inline-block;
+        left: 354px;
+        position: absolute;
+        top: -9px;
+    }
+
+    #banner .one-menu-re ul {
+        background: #FFFFFF;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+        display: none;
+        padding: 10px 0;
+        position: absolute;
+        top: 63px;
+        width: 382px;
+        z-index: 9999999;
+    }
+
+        #banner .one-menu-re ul li {
+            background-color: #f1f1f1;
+            border-bottom: 1px solid #e5e5e5;
+            cursor: pointer;
+            line-height: 24px;
+            padding: 5px 0;
+        }
+
+            #banner .one-menu-re ul li:first-child {
+                background-color: #ffffff;
+            }
+
+                #banner .one-menu-re ul li:first-child a {
+                    color: #eb4a3f;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+
+                    #banner .one-menu-re ul li:first-child a:hover {
+                        text-decoration: none;
+                    }
+
+            #banner .one-menu-re ul li:last-child {
+                border-bottom: none;
+            }
+
+            #banner .one-menu-re ul li a {
+                color: #666666;
+                font-family: Arial;
+                font-size: 13px;
+                margin-left: 20px;
+                text-decoration: none;
+            }
+
+                #banner .one-menu-re ul li a:hover {
+                    text-decoration: underline;
+                }
+
+            #banner .one-menu-re ul li .titleItem {
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+                #banner .one-menu-re ul li .titleItem:hover {
+                    text-decoration: none;
+                }
+
+#banner ul li a {
+    color: white;
+    font-family: Arial;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+    #banner ul li a:hover {
+        text-decoration: underline;
+    }
+
+.rmSlide .rmItem {
+    height: 45px !important;
+    line-height: 40px !important;
+}

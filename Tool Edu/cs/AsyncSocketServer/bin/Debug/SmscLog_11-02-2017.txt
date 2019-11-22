@@ -1,0 +1,127 @@
+11/02/2017 9:54:54 AM: Goi timercallback xu ly canh bao 10 phut Thanh cong.error email:haonx@hdbank.com.vn,An asynchronous call is already in progress. It must be completed or canceled before you can call this method.error email:binhlh@hdbank.com.vn,An asynchronous call is already in progress. It must be completed or canceled before you can call this method.
+11/02/2017 9:54:54 AM: Xoa cac phien lam viec ko gui enquire link trong 5 phut at: 11/02/2017 9:54:54 AM
+11/02/2017 9:54:54 AM: Number of session be cleared when not send enquire link over 5 minute: (0/0)
+Detais:
+
+11/02/2017 9:55:57 AM: a Client connection accepted from ip: 127.0.0.1. There are 1 clients connected to the server.
+11/02/2017 9:55:57 AM: [bind_resp] IP connected 127.0.0.1, systemid smpptest, password smpptest, systemtype partner, interface_version 52, _addr_ton 0, _addr_npi 0, bin status: 72, bindType:TR, bind state: 4 
+11/02/2017 9:55:57 AM: Sending PDU : 00000010800000090000000000000001
+11/02/2017 9:55:57 AM: Sent: 16 bytes
+11/02/2017 9:56:13 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 2,messid: 80758930], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: Kiem tra tin nhan thuong hieu, dcs:0, validity_period:, CommandStatus:0
+11/02/2017 9:56:13 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:80758930,cmdstatus: 0,sequence: 2
+11/02/2017 9:56:13 AM: Sending PDU : 00000019800000040000000000000002383037353839333000
+11/02/2017 9:56:13 AM: Sent: 25 bytes
+11/02/2017 9:56:15 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 3,messid: 80758931], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: Kiem tra tin nhan thuong hieu, dcs:0, validity_period:, CommandStatus:0
+11/02/2017 9:56:15 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:80758931,cmdstatus: 0,sequence: 3
+11/02/2017 9:56:15 AM: Sending PDU : 00000019800000040000000000000003383037353839333100
+11/02/2017 9:56:15 AM: Sent: 25 bytes
+11/02/2017 9:56:17 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 4,messid: -5], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: Kiem tra tin nhan thuong hieu, dcs:0, validity_period:, CommandStatus:0
+11/02/2017 9:56:17 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:-5,cmdstatus: 105,sequence: 4
+11/02/2017 9:56:17 AM: Sending PDU : 000000138000000400000069000000042D3500
+11/02/2017 9:56:17 AM: Sent: 19 bytes
+11/02/2017 9:56:19 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 5,messid: -5], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: Kiem tra tin nhan thuong hieu, dcs:0, validity_period:, CommandStatus:0
+11/02/2017 9:56:19 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:-5,cmdstatus: 105,sequence: 5
+11/02/2017 9:56:19 AM: Sending PDU : 000000138000000400000069000000052D3500
+11/02/2017 9:56:19 AM: Sent: 19 bytes
+11/02/2017 9:56:23 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 6,messid: -5], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: Kiem tra tin nhan thuong hieu, dcs:0, validity_period:, CommandStatus:0
+11/02/2017 9:56:23 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:-5,cmdstatus: 105,sequence: 6
+11/02/2017 9:56:23 AM: Sending PDU : 000000138000000400000069000000062D3500
+11/02/2017 9:56:23 AM: Sent: 19 bytes
+11/02/2017 9:56:51 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 7,messid: 80758985], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: Kiem tra tin nhan thuong hieu lan 1, dcs:0, validity_period:, CommandStatus:0
+11/02/2017 9:56:51 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:80758985,cmdstatus: 0,sequence: 7
+11/02/2017 9:56:51 AM: Sending PDU : 00000019800000040000000000000007383037353839383500
+11/02/2017 9:56:51 AM: Sent: 25 bytes
+11/02/2017 9:56:53 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 8,messid: 80758986], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: Kiem tra tin nhan thuong hieu lan 1, dcs:0, validity_period:, CommandStatus:0
+11/02/2017 9:56:53 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:80758986,cmdstatus: 0,sequence: 8
+11/02/2017 9:56:53 AM: Sending PDU : 00000019800000040000000000000008383037353839383600
+11/02/2017 9:56:53 AM: Sent: 25 bytes
+11/02/2017 9:56:55 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 9,messid: -5], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: Kiem tra tin nhan thuong hieu lan 1, dcs:0, validity_period:, CommandStatus:0
+11/02/2017 9:56:55 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:-5,cmdstatus: 105,sequence: 9
+11/02/2017 9:56:55 AM: Sending PDU : 000000138000000400000069000000092D3500
+11/02/2017 9:56:55 AM: Sent: 19 bytes
+11/02/2017 9:56:57 AM: [enquired link resp]: TokenId: 2, sequence:10, PartnerName: smpptest, IP: 127.0.0.1
+11/02/2017 9:56:57 AM: Sending PDU : 0000001080000015000000000000000A
+11/02/2017 9:56:57 AM: Sent: 16 bytes
+11/02/2017 9:57:17 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 11,messid: 80758997], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: Kiem tra tin nhan thuong hieu check loop., dcs:0, validity_period:, CommandStatus:0
+11/02/2017 9:57:17 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:80758997,cmdstatus: 0,sequence: 11
+11/02/2017 9:57:17 AM: Sending PDU : 0000001980000004000000000000000B383037353839393700
+11/02/2017 9:57:17 AM: Sent: 25 bytes
+11/02/2017 9:57:24 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 12,messid: -5], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: Kiem tra tin nhan thuong hieu check loop., dcs:0, validity_period:, CommandStatus:0
+11/02/2017 9:57:24 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:-5,cmdstatus: 105,sequence: 12
+11/02/2017 9:57:24 AM: Sending PDU : 0000001380000004000000690000000C2D3500
+11/02/2017 9:57:24 AM: Sent: 19 bytes
+11/02/2017 9:57:44 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 13,messid: -5], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: Kiem tra tin nhan thuong hieu check loop., dcs:0, validity_period:, CommandStatus:0
+11/02/2017 9:57:44 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:-5,cmdstatus: 105,sequence: 13
+11/02/2017 9:57:44 AM: Sending PDU : 0000001380000004000000690000000D2D3500
+11/02/2017 9:57:44 AM: Sent: 19 bytes
+11/02/2017 9:57:57 AM: [enquired link resp]: TokenId: 2, sequence:14, PartnerName: smpptest, IP: 127.0.0.1
+11/02/2017 9:57:57 AM: Sending PDU : 0000001080000015000000000000000E
+11/02/2017 9:57:57 AM: Sent: 16 bytes
+11/02/2017 9:58:39 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 15,messid: -5], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: Kiem tra tin nhan thuong hieu check loop., dcs:0, validity_period:, CommandStatus:0
+11/02/2017 9:58:39 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:-5,cmdstatus: 105,sequence: 15
+11/02/2017 9:58:39 AM: Sending PDU : 0000001380000004000000690000000F2D3500
+11/02/2017 9:58:39 AM: Sent: 19 bytes
+11/02/2017 10:10:20 AM: Goi timercallback xu ly canh bao 10 phut Thanh cong.
+11/02/2017 10:10:20 AM: Xoa cac phien lam viec ko gui enquire link trong 5 phut at: 11/02/2017 10:10:20 AM
+11/02/2017 10:10:20 AM: Number of session be cleared when not send enquire link over 5 minute: (0/0)
+Detais:
+
+11/02/2017 10:11:08 AM: a Client connection accepted from ip: 127.0.0.1. There are 1 clients connected to the server.
+11/02/2017 10:11:08 AM: [bind_resp] IP connected 127.0.0.1, systemid smpptest, password smpptest, systemtype partner, interface_version 52, _addr_ton 0, _addr_npi 0, bin status: 72, bindType:TR, bind state: 4 
+11/02/2017 10:11:08 AM: Sending PDU : 00000010800000090000000000000001
+11/02/2017 10:11:08 AM: Sent: 16 bytes
+11/02/2017 10:11:19 AM: Read 0 bytes or read error from client socket. Client Socket Closed: tokenid:2, systemid:smpptest, partnerid:72.
+11/02/2017 10:11:19 AM: CloseClientSocket: There are 0 clients connected to the server. TokenInfo: SystemId:smpptest, tokenid:2, partnerid:127.0.0.1
+11/02/2017 10:11:19 AM: Number of session be cleared by TokenId:(0): 1/1
+11/02/2017 10:12:11 AM: a Client connection accepted from ip: 127.0.0.1. There are 1 clients connected to the server.
+11/02/2017 10:12:11 AM: [bind_resp] IP connected 127.0.0.1, systemid smpptest, password smpptest, systemtype partner, interface_version 52, _addr_ton 0, _addr_npi 0, bin status: 72, bindType:TR, bind state: 4 
+11/02/2017 10:12:11 AM: Sending PDU : 00000010800000090000000000000001
+11/02/2017 10:12:11 AM: Sent: 16 bytes
+11/02/2017 10:12:33 AM: [Submit_sm: Partner:smpptest, tokenid:3, sequen: 2,messid: 80760667], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: OneSMS - Kiem tra tin nhan smpp lan 1, dcs:0, validity_period:, CommandStatus:0
+11/02/2017 10:12:33 AM: [submit_sm_resp] partner:smpptest,tokenid:3, smsid:80760667,cmdstatus: 0,sequence: 2
+11/02/2017 10:12:33 AM: Sending PDU : 00000019800000040000000000000002383037363036363700
+11/02/2017 10:12:33 AM: Sent: 25 bytes
+11/02/2017 10:12:37 AM: [Submit_sm: Partner:smpptest, tokenid:3, sequen: 3,messid: 80760668], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: OneSMS - Kiem tra tin nhan smpp lan 1, dcs:0, validity_period:, CommandStatus:0
+11/02/2017 10:12:37 AM: [submit_sm_resp] partner:smpptest,tokenid:3, smsid:80760668,cmdstatus: 0,sequence: 3
+11/02/2017 10:12:37 AM: Sending PDU : 00000019800000040000000000000003383037363036363800
+11/02/2017 10:12:37 AM: Sent: 25 bytes
+11/02/2017 10:12:39 AM: [Submit_sm: Partner:smpptest, tokenid:3, sequen: 4,messid: 80760669], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: OneSMS - Kiem tra tin nhan smpp lan 1, dcs:0, validity_period:, CommandStatus:0
+11/02/2017 10:12:39 AM: [submit_sm_resp] partner:smpptest,tokenid:3, smsid:80760669,cmdstatus: 0,sequence: 4
+11/02/2017 10:12:39 AM: Sending PDU : 00000019800000040000000000000004383037363036363900
+11/02/2017 10:12:39 AM: Sent: 25 bytes
+11/02/2017 10:12:42 AM: [Submit_sm: Partner:smpptest, tokenid:3, sequen: 5,messid: 80760671], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: OneSMS - Kiem tra tin nhan smpp lan 1, dcs:0, validity_period:, CommandStatus:0
+11/02/2017 10:12:42 AM: [submit_sm_resp] partner:smpptest,tokenid:3, smsid:80760671,cmdstatus: 0,sequence: 5
+11/02/2017 10:12:42 AM: Sending PDU : 00000019800000040000000000000005383037363036373100
+11/02/2017 10:12:42 AM: Sent: 25 bytes
+11/02/2017 10:13:11 AM: [enquired link resp]: TokenId: 3, sequence:6, PartnerName: smpptest, IP: 127.0.0.1
+11/02/2017 10:13:11 AM: Sending PDU : 00000010800000150000000000000006
+11/02/2017 10:13:11 AM: Sent: 16 bytes
+11/02/2017 10:14:11 AM: [enquired link resp]: TokenId: 3, sequence:7, PartnerName: smpptest, IP: 127.0.0.1
+11/02/2017 10:14:11 AM: Sending PDU : 00000010800000150000000000000007
+11/02/2017 10:14:11 AM: Sent: 16 bytes
+11/02/2017 10:15:03 AM: [Submit_sm: Partner:smpptest, tokenid:3, sequen: 8,messid: -5], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: OneSMS - Kiem tra tin nhan smpp lan 1, dcs:0, validity_period:, CommandStatus:0
+11/02/2017 10:15:03 AM: [submit_sm_resp] partner:smpptest,tokenid:3, smsid:-5,cmdstatus: 105,sequence: 8
+11/02/2017 10:15:03 AM: Sending PDU : 000000138000000400000069000000082D3500
+11/02/2017 10:15:03 AM: Sent: 19 bytes
+11/02/2017 10:15:05 AM: Read 0 bytes or read error from client socket. Client Socket Closed: tokenid:3, systemid:smpptest, partnerid:72.
+11/02/2017 10:15:05 AM: CloseClientSocket: There are 0 clients connected to the server. TokenInfo: SystemId:smpptest, tokenid:3, partnerid:127.0.0.1
+11/02/2017 10:15:05 AM: Number of session be cleared by TokenId:(0): 1/1
+11/02/2017 10:15:26 AM: a Client connection accepted from ip: 127.0.0.1. There are 1 clients connected to the server.
+11/02/2017 10:15:26 AM: [bind_resp] IP connected 127.0.0.1, systemid smpptest, password smpptest, systemtype partner, interface_version 52, _addr_ton 0, _addr_npi 0, bin status: 72, bindType:TR, bind state: 4 
+11/02/2017 10:15:26 AM: Sending PDU : 00000010800000090000000000000001
+11/02/2017 10:15:26 AM: Sent: 16 bytes
+11/02/2017 10:15:45 AM: [Submit_sm: Partner:smpptest, tokenid:4, sequen: 2,messid: 80760760], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: OneSMS - Kiem tra tin nhan smpp lan 2, dcs:0, validity_period:, CommandStatus:0
+11/02/2017 10:15:45 AM: [submit_sm_resp] partner:smpptest,tokenid:4, smsid:80760760,cmdstatus: 0,sequence: 2
+11/02/2017 10:15:45 AM: Sending PDU : 00000019800000040000000000000002383037363037363000
+11/02/2017 10:15:45 AM: Sent: 25 bytes
+11/02/2017 10:15:47 AM: [Submit_sm: Partner:smpptest, tokenid:4, sequen: 3,messid: -5], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: OneSMS - Kiem tra tin nhan smpp lan 2, dcs:0, validity_period:, CommandStatus:0
+11/02/2017 10:15:47 AM: [submit_sm_resp] partner:smpptest,tokenid:4, smsid:-5,cmdstatus: 105,sequence: 3
+11/02/2017 10:15:47 AM: Sending PDU : 000000138000000400000069000000032D3500
+11/02/2017 10:15:47 AM: Sent: 19 bytes
+11/02/2017 10:15:48 AM: [Submit_sm: Partner:smpptest, tokenid:4, sequen: 4,messid: -5], SenderName 1SMS.VN, Phone 84901759114, isUnicode: False, Message: OneSMS - Kiem tra tin nhan smpp lan 2, dcs:0, validity_period:, CommandStatus:0
+11/02/2017 10:15:48 AM: [submit_sm_resp] partner:smpptest,tokenid:4, smsid:-5,cmdstatus: 105,sequence: 4
+11/02/2017 10:15:48 AM: Sending PDU : 000000138000000400000069000000042D3500
+11/02/2017 10:15:48 AM: Sent: 19 bytes
+11/02/2017 10:15:50 AM: Read 0 bytes or read error from client socket. Client Socket Closed: tokenid:4, systemid:smpptest, partnerid:72.
+11/02/2017 10:15:50 AM: CloseClientSocket: There are 0 clients connected to the server. TokenInfo: SystemId:smpptest, tokenid:4, partnerid:127.0.0.1
+11/02/2017 10:15:50 AM: Number of session be cleared by TokenId:(0): 1/1

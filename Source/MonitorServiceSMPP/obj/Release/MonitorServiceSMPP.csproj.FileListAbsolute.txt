@@ -1,0 +1,26 @@
+E:\SendSmsToTelco_Gate159_ver 1.0\MonitorServiceSMPP\bin\Release\MonitorServiceSMPP.exe.config
+E:\SendSmsToTelco_Gate159_ver 1.0\MonitorServiceSMPP\bin\Release\MonitorServiceSMPP.exe
+E:\SendSmsToTelco_Gate159_ver 1.0\MonitorServiceSMPP\bin\Release\MonitorServiceSMPP.pdb
+E:\SendSmsToTelco_Gate159_ver 1.0\MonitorServiceSMPP\obj\Release\MonitorServiceSMPP.csprojAssemblyReference.cache
+E:\SendSmsToTelco_Gate159_ver 1.0\MonitorServiceSMPP\obj\Release\MonitorServiceSMPP.ProjectInstaller.resources
+E:\SendSmsToTelco_Gate159_ver 1.0\MonitorServiceSMPP\obj\Release\MonitorServiceSMPP.csproj.GenerateResource.cache
+E:\SendSmsToTelco_Gate159_ver 1.0\MonitorServiceSMPP\obj\Release\MonitorServiceSMPP.csproj.CoreCompileInputs.cache
+E:\SendSmsToTelco_Gate159_ver 1.0\MonitorServiceSMPP\obj\Release\MonitorServiceSMPP.exe
+E:\SendSmsToTelco_Gate159_ver 1.0\MonitorServiceSMPP\obj\Release\MonitorServiceSMPP.pdb
+E:\OneEdu\Source\MonitorServiceSMPP\bin\Release\MonitorServiceSMPP.exe.config
+E:\OneEdu\Source\MonitorServiceSMPP\bin\Release\MonitorServiceSMPP.exe
+E:\OneEdu\Source\MonitorServiceSMPP\bin\Release\MonitorServiceSMPP.pdb
+E:\OneEdu\Source\MonitorServiceSMPP\obj\Release\MonitorServiceSMPP.ProjectInstaller.resources
+E:\OneEdu\Source\MonitorServiceSMPP\obj\Release\MonitorServiceSMPP.csproj.GenerateResource.cache
+E:\OneEdu\Source\MonitorServiceSMPP\obj\Release\MonitorServiceSMPP.csproj.CoreCompileInputs.cache
+E:\OneEdu\Source\MonitorServiceSMPP\obj\Release\MonitorServiceSMPP.exe
+E:\OneEdu\Source\MonitorServiceSMPP\obj\Release\MonitorServiceSMPP.pdb
+D:\Edu\Source\MonitorServiceSMPP\bin\Release\MonitorServiceSMPP.exe.config
+D:\Edu\Source\MonitorServiceSMPP\bin\Release\MonitorServiceSMPP.exe
+D:\Edu\Source\MonitorServiceSMPP\bin\Release\MonitorServiceSMPP.pdb
+D:\Edu\Source\MonitorServiceSMPP\obj\Release\MonitorServiceSMPP.csprojAssemblyReference.cache
+D:\Edu\Source\MonitorServiceSMPP\obj\Release\MonitorServiceSMPP.ProjectInstaller.resources
+D:\Edu\Source\MonitorServiceSMPP\obj\Release\MonitorServiceSMPP.csproj.GenerateResource.cache
+D:\Edu\Source\MonitorServiceSMPP\obj\Release\MonitorServiceSMPP.csproj.CoreCompileInputs.cache
+D:\Edu\Source\MonitorServiceSMPP\obj\Release\MonitorServiceSMPP.exe
+D:\Edu\Source\MonitorServiceSMPP\obj\Release\MonitorServiceSMPP.pdb

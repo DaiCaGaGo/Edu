@@ -1,0 +1,3 @@
+2016-09-01 09:17:24,954 INFO  [LogVnptSendSms] - Application started at: 01/09/2016 09:17:24
+2016-09-01 09:17:26,001 INFO  [LogVnptSendSms] - Thread started at: 01/09/2016 09:17:26
+2016-09-01 09:20:21,888 INFO  [LogVnptSendSms] - Send to: 841256973887, smsId: 935488, sender: BETHONGMINH, timesend: 01/09/2016 9:20:22 AM, code: UNDELIVERED|-4, timelog: 01/09/2016 09:20:21

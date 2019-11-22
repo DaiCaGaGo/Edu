@@ -1,0 +1,15 @@
+F:\Works\GATEWAY\Gate159_SendSms\Entity\bin\Release\Entity.dll
+F:\Works\GATEWAY\Gate159_SendSms\Entity\bin\Release\Entity.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Entity\obj\Release\Entity.dll
+F:\Works\GATEWAY\Gate159_SendSms\Entity\obj\Release\Entity.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Entity\bin\Release\Entity.dll
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Entity\bin\Release\Entity.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Entity\obj\Release\Entity.dll
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Entity\obj\Release\Entity.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Entity\obj\Release\Entity.csprojResolveAssemblyReference.cache
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Entity\bin\Release\Entity.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Entity\bin\Release\Entity.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Entity\obj\Release\Entity.csproj.CoreCompileInputs.cache
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Entity\obj\Release\Entity.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Entity\obj\Release\Entity.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Entity\obj\Release\Entity.csprojAssemblyReference.cache

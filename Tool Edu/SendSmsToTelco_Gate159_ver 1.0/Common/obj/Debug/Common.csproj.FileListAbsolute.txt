@@ -1,0 +1,20 @@
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Common\bin\Debug\Common.dll
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Common\bin\Debug\Common.pdb
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Common\obj\Debug\Common.dll
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Common\obj\Debug\Common.pdb
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+F:\Works\GATEWAY\Gate159_SendSms\Common\bin\Debug\Common.dll
+F:\Works\GATEWAY\Gate159_SendSms\Common\bin\Debug\Common.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Common\obj\Debug\Common.dll
+F:\Works\GATEWAY\Gate159_SendSms\Common\obj\Debug\Common.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Common\bin\Debug\Common.dll
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Common\bin\Debug\Common.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Common\obj\Debug\Common.dll
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Common\obj\Debug\Common.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Common\bin\Debug\Common.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Common\bin\Debug\Common.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Common\obj\Debug\Common.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Common\obj\Debug\Common.pdb

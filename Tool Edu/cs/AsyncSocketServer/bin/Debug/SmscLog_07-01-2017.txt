@@ -1,0 +1,22 @@
+07/01/2017 10:01:31 AM: Goi timercallback xu ly canh bao 10 phut Thanh cong.error email:haonx@hdbank.com.vn,An asynchronous call is already in progress. It must be completed or canceled before you can call this method.error email:binhlh@hdbank.com.vn,An asynchronous call is already in progress. It must be completed or canceled before you can call this method.
+07/01/2017 10:01:31 AM: Xoa cac phien lam viec ko gui enquire link trong 5 phut at: 07/01/2017 10:01:31 AM
+07/01/2017 10:01:31 AM: Number of session be cleared when not send enquire link over 5 minute: (0/0)
+Detais:
+
+07/01/2017 10:02:13 AM: a Client connection accepted from ip: 127.0.0.1. There are 1 clients connected to the server.
+07/01/2017 10:06:28 AM: Goi timercallback xu ly canh bao 10 phut Thanh cong.error email:haonx@hdbank.com.vn,An asynchronous call is already in progress. It must be completed or canceled before you can call this method.error email:binhlh@hdbank.com.vn,An asynchronous call is already in progress. It must be completed or canceled before you can call this method.
+07/01/2017 10:06:28 AM: Xoa cac phien lam viec ko gui enquire link trong 5 phut at: 07/01/2017 10:06:28 AM
+07/01/2017 10:06:28 AM: Number of session be cleared when not send enquire link over 5 minute: (0/0)
+Detais:
+
+07/01/2017 10:06:55 AM: a Client connection accepted from ip: 127.0.0.1. There are 1 clients connected to the server.
+07/01/2017 10:06:55 AM: [bind_resp] IP connected 127.0.0.1, systemid HDBankAPIOneSMS, password HDBank, systemtype partner, interface_version 52, _addr_ton 0, _addr_npi 0, bin status: 49, bindType:TR, bind state: 4 
+07/01/2017 10:06:55 AM: Sending PDU : 00000010800000090000000000000001
+07/01/2017 10:06:55 AM: Sent: 16 bytes
+07/01/2017 10:07:18 AM: [Submit_sm: Partner:HDBankAPIOneSMS, tokenid:2, sequen: 2,messid: 77288357], SenderName HDBank, Phone 841256973887, isUnicode: False, Message: OneSMS - Kiem tra tin nhan thuong hieu lan 1, dcs:0, validity_period:, CommandStatus:0
+07/01/2017 10:07:19 AM: [submit_sm_resp] partner:HDBankAPIOneSMS,tokenid:2, smsid:77288357,cmdstatus: 0,sequence: 2
+07/01/2017 10:07:19 AM: Sending PDU : 00000019800000040000000000000002373732383833353700
+07/01/2017 10:07:19 AM: Sent: 25 bytes
+07/01/2017 10:07:39 AM: Read 0 bytes or read error from client socket. Client Socket Closed: tokenid:2, systemid:HDBankAPIOneSMS, partnerid:49.
+07/01/2017 10:07:39 AM: CloseClientSocket: There are 0 clients connected to the server. TokenInfo: SystemId:HDBankAPIOneSMS, tokenid:2, partnerid:127.0.0.1
+07/01/2017 10:07:40 AM: Number of session be cleared by TokenId:(0): 1/1

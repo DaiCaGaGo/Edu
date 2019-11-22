@@ -1,0 +1,61 @@
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Form_Rollback_Fail_All.exe.config
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Form_Rollback_Fail_All.exe
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Form_Rollback_Fail_All.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Bus.dll
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Common.dll
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Entity.dll
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\log4net.dll
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Newtonsoft.Json.dll
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\RabbitMQ.Client.dll
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Data.dll
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Bus.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Common.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Entity.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\log4net.xml
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Newtonsoft.Json.xml
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Data.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.Main.resources
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.Properties.Resources.resources
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.csproj.GenerateResource.Cache
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.exe
+F:\Works\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Form_Rollback_Fail_All.exe.config
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Form_Rollback_Fail_All.exe
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Form_Rollback_Fail_All.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Bus.dll
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Common.dll
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Entity.dll
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Newtonsoft.Json.dll
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Data.dll
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Bus.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Common.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Entity.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Newtonsoft.Json.xml
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\bin\Release\Data.pdb
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.csprojResolveAssemblyReference.cache
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.Main.resources
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.Properties.Resources.resources
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.csproj.GenerateResource.Cache
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.exe
+F:\Works\ONESMS\GATEWAY\Gate159_SendSms\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\bin\Release\Form_Rollback_Fail_All.exe.config
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\bin\Release\Form_Rollback_Fail_All.exe
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\bin\Release\Form_Rollback_Fail_All.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\bin\Release\Bus.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\bin\Release\Common.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\bin\Release\Entity.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\bin\Release\Newtonsoft.Json.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\bin\Release\Data.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\bin\Release\Bus.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\bin\Release\Common.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\bin\Release\Entity.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\bin\Release\Newtonsoft.Json.xml
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\bin\Release\Data.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.Main.resources
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.Properties.Resources.resources
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.csproj.GenerateResource.cache
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.csproj.CoreCompileInputs.cache
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.csproj.CopyComplete
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.exe
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Form_Rollback_Fail_All\obj\Release\Form_Rollback_Fail_All.csprojAssemblyReference.cache

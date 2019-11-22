@@ -1,0 +1,128 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMaster.master.cs" Inherits="CMS.SiteMaster" %>
+
+<%@ Register Src="~/Control/MainMenu.ascx" TagPrefix="uc1" TagName="MainMenu" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>SỔ LIÊN LẠC ĐIỆN TỬ EDU SMS</title>
+    <%-- <meta name="viewport" content="width=device-width, initial-scale=1" />--%>
+    <telerik:RadCodeBlock ID="RadCodeBlock1" runat="server">
+        <link rel="shortcut icon" href="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/img/logo.ico"  %>" />
+        <link href="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Content/bootstrap.css?"+ localAPI.GetVerionCss()  %>" rel="stylesheet" />
+        <link href="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/CSS/select2.min.css?"+ localAPI.GetVerionCss()  %>" rel="stylesheet" />
+        <link href="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/CSS/toastr.min.css?"+ localAPI.GetVerionCss()  %>" rel="stylesheet" />
+        <link href="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/CSS/StyleForm.css?"+ localAPI.GetVerionCss()  %>" rel="stylesheet" />
+        <link href="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/CSS/banner.css?"+ localAPI.GetVerionCss()  %>" rel="stylesheet" />
+        <link href="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/CSS/awesomplete.css?"+ localAPI.GetVerionCss()  %>" rel="stylesheet" />
+        <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/jquery-3.0.0.js?"+ localAPI.GetVerionJava() %>"></script>
+        <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/js.cookie.js?"+ localAPI.GetVerionJava() %>"></script>
+        <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/select2.full.js?"+ localAPI.GetVerionJava() %>"></script>
+        <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/toastr.min.js?"+ localAPI.GetVerionJava() %>"></script>
+        <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/awesomplete.js?"+ localAPI.GetVerionJava() %>"></script>
+        <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/Main.js?"+ localAPI.GetVerionJava() %>"></script>
+        <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/bootstrap.min.js?"+ localAPI.GetVerionJava() %>"></script>
+        <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/Validate.js?"+ localAPI.GetVerionJava() %>"></script>
+    </telerik:RadCodeBlock>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script type="text/javascript">
+        var iskhac;
+        iskhac = 0;
+        var containerK = $("#one-menu-danh-muc-khac");
+        $(document).ready(function () {
+            $(document).mouseup(function (e) {
+                // Danh mục khác
+                if (!containerK.is(e.target)
+                    && containerK.has(e.target).length === 0) {
+                    iskhac = 0;
+                    $("#one-menu-danh-muc-khac").hide();
+                }
+            });
+            $("#one-image-danh-muc-khac").click(function () {
+                try {
+                    if (iskhac === 0) {
+                        $("#one-menu-danh-muc-khac").show();
+                    } else {
+                        $("#one-menu-danh-muc-khac").hide();
+                    }
+                    iskhac = 1 - iskhac;
+                } catch (err) {
+                    console.log(err);
+                }
+            });
+
+        });
+        toastr.options.closeButton = true;
+        toastr.options.positionClass = "toast-bottom-right";
+        function notification(type, message) {
+            if (type == 'success') {
+                toastr.success(message, '<i>Success</i>');
+            } else if (type == 'error') {
+                toastr.error(message, 'Error');
+            } else if (type == 'warning') {
+                toastr.warning(message, 'Warning');
+            } else {
+                toastr.info(message, 'Information');
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
+        <div class="body-content">
+            <div id="banner">
+                <ul>
+                    <li id="one-logo"><a href='<%="http://"+HttpContext.Current.Request.Url.Authority+ "/Default.aspx" %>'>
+                        <img src="./img/Onedu_logo.jpg" runat="server" style="width: 110px; height: 50px;" /></a></li>
+                    <li id="one-menu">
+                        <uc1:MainMenu runat="server" ID="MainMenu" />
+                    </li>
+                    <li id="one-danh-muc-khac">
+                        <img id="one-image-danh-muc-khac" style="height: 54px" src='<%= "http://"+HttpContext.Current.Request.Url.Authority+"/img/icondanhmuckhac.png" %>' title="Hệ thống" />
+                        <div class="one-menu-re" id="one-menu-danh-muc-khac">
+                            <!--Add new div "menu-respon"-->
+                            <ul style="display: block;">
+                                <li><a href="#"><%=Sys_User.TEN_DANG_NHAP %></a></li>
+                                <li><a href='<%="http://"+HttpContext.Current.Request.Url.Authority+ "/CauHinh/ChonTruong_Cap.aspx?returnUrl=" + Request.AppRelativeCurrentExecutionFilePath.Split('?')[0] + Request.Url.Query %>' title="Chọn cấp">
+                                    <span><%="Cấp "+ Sys_This_Cap_Hoc %></span>
+                                </a></li>
+                                <li><a href='<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Profile/HoSo.aspx"%>'>Thông tin tài khoản</a></li>
+                                <li><a href='<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Profile/ChangePassword.aspx"%>'>Đổi mật khẩu</a></li>
+                                <%
+                                    if (Sys_User.IS_ROOT != null && Sys_User.IS_ROOT == true)
+                                    {
+                                %>
+                                <li><a href='<%= "http://" + HttpContext.Current.Request.Url.Authority + "/Manage/Manage.aspx" %>'>Super Root</a></li>
+                                <%
+                                    }
+                                %>
+                                <li><a onclick='<%= "logout(\""+"http://"+HttpContext.Current.Request.Url.Authority+"/Logout.aspx"+"\")" %>'>Thoát</a></li>
+                            </ul>
+                            <a href="#" class="one-link-menu-respon"></a>
+                        </div>
+                    </li>
+                    <li id="one-name-truong">
+                        <a href='<%="http://"+HttpContext.Current.Request.Url.Authority+ "/CauHinh/ChonTruong_Cap.aspx?returnUrl=" + Request.AppRelativeCurrentExecutionFilePath.Split('?')[0] + Request.Url.Query %>' title="Chọn Trường"><span><%= Sys_This_Truong!=null?Sys_This_Truong.TEN:"Chọn trường" %></span></a><br />
+                        <a href='<%="http://"+HttpContext.Current.Request.Url.Authority+ "/CauHinh/NamHoc_HocKy.aspx?returnUrl=" + Request.AppRelativeCurrentExecutionFilePath.Split('?')[0] + Request.Url.Query %>' title="Chọn năm học, học kỳ"><span><%= " (HK "+Sys_Hoc_Ky+", "+Sys_Ten_Nam_Hoc+")" %></span></a>
+                    </li>
+                    <li id="one-hot-line" style="line-height: 54px; float: right; margin-right: 15px;">
+                        <span>Hotline: Mr.Duy 090.620.5385</span>
+                    </li>
+                </ul>
+                <div style="clear: both"></div>
+            </div>
+            <div id="content">
+                <div class="">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

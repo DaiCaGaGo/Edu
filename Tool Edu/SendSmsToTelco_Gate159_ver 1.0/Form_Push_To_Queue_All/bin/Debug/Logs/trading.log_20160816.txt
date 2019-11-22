@@ -1,0 +1,14 @@
+2016-08-16 14:29:34,691 INFO  [LogPushToQueue] - Application started at: 16/08/2016 14:29:34
+2016-08-16 14:29:37,191 INFO  [LogPushToQueue] - Thread started at: 16/08/2016 14:29:37
+2016-08-16 14:29:39,445 INFO  [LogPushToQueue] - Added ==> SmsId: 935431, Brand: TESVAS, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 84901759114, Count: 1, At: 16/08/2016 14:29:39, Chanel: VNPT
+2016-08-16 14:34:34,084 INFO  [LogPushToQueue] - Application started at: 16/08/2016 14:34:34
+2016-08-16 14:44:46,188 INFO  [LogPushToQueue] - Application started at: 16/08/2016 14:44:46
+2016-08-16 14:44:47,133 INFO  [LogPushToQueue] - Thread started at: 16/08/2016 14:44:47
+2016-08-16 14:44:53,247 INFO  [LogPushToQueue] - Added ==> SmsId: 935432, Brand: TESVAS, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 84901759114, Count: 1, At: 16/08/2016 14:44:53, Chanel: VNPT
+2016-08-16 14:46:20,146 INFO  [LogPushToQueue] - Added ==> SmsId: 935433, Brand: TESVAS, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841256973887, Count: 1, At: 16/08/2016 14:46:20, Chanel: VNPT
+2016-08-16 14:47:47,166 INFO  [LogPushToQueue] - Added ==> SmsId: 935434, Brand: TESVAS, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841256973887, Count: 1, At: 16/08/2016 14:47:47, Chanel: VNPT
+2016-08-16 16:12:14,162 INFO  [LogPushToQueue] - Application started at: 16/08/2016 16:12:14
+2016-08-16 16:12:15,341 INFO  [LogPushToQueue] - Thread started at: 16/08/2016 16:12:15
+2016-08-16 16:12:16,618 INFO  [LogPushToQueue] - Added ==> SmsId: 935435, Brand: TESVAS, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841256973887, Count: 1, At: 16/08/2016 16:12:16, Chanel: VNPT
+2016-08-16 16:13:04,376 INFO  [LogPushToQueue] - Added ==> SmsId: 935436, Brand: TESVAS, Sms: OneSMS - Tienlm - Kiem tra tin nhan thuong hieu!, Phone: 841256973887, Count: 1, At: 16/08/2016 16:13:04, Chanel: VNPT
+2016-08-16 16:27:05,157 INFO  [LogPushToQueue] - Application stoped at: 16/08/2016 16:27:05!

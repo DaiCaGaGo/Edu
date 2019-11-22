@@ -1,0 +1,73 @@
+04/02/2017 9:31:10 AM: Goi timercallback xu ly canh bao 10 phut Thanh cong.error email:haonx@hdbank.com.vn,An asynchronous call is already in progress. It must be completed or canceled before you can call this method.error email:binhlh@hdbank.com.vn,An asynchronous call is already in progress. It must be completed or canceled before you can call this method.
+04/02/2017 9:31:10 AM: Xoa cac phien lam viec ko gui enquire link trong 5 phut at: 04/02/2017 9:31:10 AM
+04/02/2017 9:31:10 AM: Number of session be cleared when not send enquire link over 5 minute: (0/0)
+Detais:
+
+04/02/2017 9:32:46 AM: a Client connection accepted from ip: 127.0.0.1. There are 1 clients connected to the server.
+04/02/2017 9:32:46 AM: [bind_resp] IP connected 127.0.0.1, systemid smpptest, password smpptest, systemtype partner, interface_version 52, _addr_ton 0, _addr_npi 0, bin status: 72, bindType:TR, bind state: 4 
+04/02/2017 9:32:46 AM: Sending PDU : 00000010800000090000000000000001
+04/02/2017 9:32:46 AM: Sent: 16 bytes
+04/02/2017 9:33:02 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 2,messid: 80125244], SenderName 1SMS.VN, Phone 841256973887, isUnicode: False, Message: OneSMS - Kiem tra tin nhan!, dcs:0, validity_period:, CommandStatus:0
+04/02/2017 9:33:02 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:80125244,cmdstatus: 0,sequence: 2
+04/02/2017 9:33:02 AM: Sending PDU : 00000019800000040000000000000002383031323532343400
+04/02/2017 9:33:02 AM: Sent: 25 bytes
+04/02/2017 9:33:05 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 3,messid: 80125246], SenderName 1SMS.VN, Phone 841256973887, isUnicode: False, Message: OneSMS - Kiem tra tin nhan!, dcs:0, validity_period:, CommandStatus:0
+04/02/2017 9:33:05 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:80125246,cmdstatus: 0,sequence: 3
+04/02/2017 9:33:05 AM: Sending PDU : 00000019800000040000000000000003383031323532343600
+04/02/2017 9:33:05 AM: Sent: 25 bytes
+04/02/2017 9:33:07 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 4,messid: 80125247], SenderName 1SMS.VN, Phone 841256973887, isUnicode: False, Message: OneSMS - Kiem tra tin nhan!, dcs:0, validity_period:, CommandStatus:0
+04/02/2017 9:33:07 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:80125247,cmdstatus: 0,sequence: 4
+04/02/2017 9:33:07 AM: Sending PDU : 00000019800000040000000000000004383031323532343700
+04/02/2017 9:33:07 AM: Sent: 25 bytes
+04/02/2017 9:33:08 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 5,messid: 80125248], SenderName 1SMS.VN, Phone 841256973887, isUnicode: False, Message: OneSMS - Kiem tra tin nhan!, dcs:0, validity_period:, CommandStatus:0
+04/02/2017 9:33:08 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:80125248,cmdstatus: 0,sequence: 5
+04/02/2017 9:33:08 AM: Sending PDU : 00000019800000040000000000000005383031323532343800
+04/02/2017 9:33:08 AM: Sent: 25 bytes
+04/02/2017 9:38:01 AM: a Client connection accepted from ip: 127.0.0.1. There are 2 clients connected to the server.
+04/02/2017 9:38:01 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 6,messid: 80125335], SenderName 1SMS.VN, Phone 841256973887, isUnicode: False, Message: OneSMS - Kiem tra tin nhan!, dcs:0, validity_period:, CommandStatus:0
+04/02/2017 9:38:01 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:80125335,cmdstatus: 0,sequence: 6
+04/02/2017 9:38:01 AM: Sending PDU : 00000019800000040000000000000006383031323533333500
+04/02/2017 9:38:01 AM: Send Error | System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.BeginSend(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags, AsyncCallback callback, Object state)
+   at AsyncSocketSample.Server.Send(Byte[] data, Int32 n, Socket s) in F:\Works\ONESMS\GATEWAY\ONESMS_GateWay\SMPP SERVER\cs\AsyncSocketServer\Server.cs:line 774
+04/02/2017 9:38:01 AM: Read 0 bytes or read error from client socket. Client Socket Closed: tokenid:2, systemid:smpptest, partnerid:72.
+04/02/2017 9:38:01 AM: CloseClientSocket: There are 1 clients connected to the server. TokenInfo: SystemId:smpptest, tokenid:2, partnerid:127.0.0.1
+04/02/2017 9:38:01 AM: Number of session be cleared by TokenId:(0): 1/1
+04/02/2017 9:38:01 AM: [bind_resp] IP connected 127.0.0.1, systemid smpptest, password smpptest, systemtype partner, interface_version 52, _addr_ton 0, _addr_npi 0, bin status: 72, bindType:TR, bind state: 4 
+04/02/2017 9:38:01 AM: Sending PDU : 00000010800000090000000000000008
+04/02/2017 9:38:01 AM: Sent: 16 bytes
+04/02/2017 9:38:46 AM: [enquired link resp]: TokenId: 3, sequence:9, PartnerName: smpptest, IP: 127.0.0.1
+04/02/2017 9:38:46 AM: Sending PDU : 00000010800000150000000000000009
+04/02/2017 9:38:46 AM: Sent: 16 bytes
+04/02/2017 9:39:46 AM: [enquired link resp]: TokenId: 3, sequence:10, PartnerName: smpptest, IP: 127.0.0.1
+04/02/2017 9:39:46 AM: Sending PDU : 0000001080000015000000000000000A
+04/02/2017 9:39:46 AM: Sent: 16 bytes
+04/02/2017 9:56:11 AM: Goi timercallback xu ly canh bao 10 phut Thanh cong.error email:haonx@hdbank.com.vn,An asynchronous call is already in progress. It must be completed or canceled before you can call this method.error email:binhlh@hdbank.com.vn,An asynchronous call is already in progress. It must be completed or canceled before you can call this method.
+04/02/2017 9:56:11 AM: Xoa cac phien lam viec ko gui enquire link trong 5 phut at: 04/02/2017 9:56:11 AM
+04/02/2017 9:56:11 AM: Number of session be cleared when not send enquire link over 5 minute: (0/0)
+Detais:
+
+04/02/2017 9:56:39 AM: a Client connection accepted from ip: 127.0.0.1. There are 1 clients connected to the server.
+04/02/2017 9:56:39 AM: [bind_resp] IP connected 127.0.0.1, systemid smpptest, password smpptest, systemtype partner, interface_version 52, _addr_ton 0, _addr_npi 0, bin status: 72, bindType:TR, bind state: 4 
+04/02/2017 9:56:39 AM: Sending PDU : 00000010800000090000000000000001
+04/02/2017 9:56:39 AM: Sent: 16 bytes
+04/02/2017 9:56:57 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 2,messid: 80125787], SenderName 1SMS.VN, Phone 841256973887, isUnicode: False, Message: OneSMS - Kiem tra tin nhan thuong hieu lan 1!, dcs:0, validity_period:, CommandStatus:0
+04/02/2017 9:56:57 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:80125787,cmdstatus: 0,sequence: 2
+04/02/2017 9:56:57 AM: Sending PDU : 00000019800000040000000000000002383031323537383700
+04/02/2017 9:56:57 AM: Sent: 25 bytes
+04/02/2017 9:57:19 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 3,messid: 80125793], SenderName 1SMS.VN, Phone 841256973887, isUnicode: False, Message: OneSMS - Kiem tra tin nhan thuong hieu lan 2!, dcs:0, validity_period:, CommandStatus:0
+04/02/2017 9:57:19 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:80125793,cmdstatus: 0,sequence: 3
+04/02/2017 9:57:19 AM: Sending PDU : 00000019800000040000000000000003383031323537393300
+04/02/2017 9:57:19 AM: Sent: 25 bytes
+04/02/2017 9:57:23 AM: [Submit_sm: Partner:smpptest, tokenid:2, sequen: 4,messid: 80125794], SenderName 1SMS.VN, Phone 841256973887, isUnicode: False, Message: OneSMS - Kiem tra tin nhan thuong hieu lan 3!, dcs:0, validity_period:, CommandStatus:0
+04/02/2017 9:57:23 AM: [submit_sm_resp] partner:smpptest,tokenid:2, smsid:80125794,cmdstatus: 0,sequence: 4
+04/02/2017 9:57:23 AM: Sending PDU : 00000019800000040000000000000004383031323537393400
+04/02/2017 9:57:23 AM: Sent: 25 bytes
+04/02/2017 9:57:39 AM: [enquired link resp]: TokenId: 2, sequence:5, PartnerName: smpptest, IP: 127.0.0.1
+04/02/2017 9:57:39 AM: Sending PDU : 00000010800000150000000000000005
+04/02/2017 9:57:39 AM: Sent: 16 bytes
+04/02/2017 10:00:26 AM: Goi timercallback xu ly canh bao 10 phut Thanh cong.error email:haonx@hdbank.com.vn,An asynchronous call is already in progress. It must be completed or canceled before you can call this method.error email:binhlh@hdbank.com.vn,An asynchronous call is already in progress. It must be completed or canceled before you can call this method.
+04/02/2017 10:00:26 AM: Xoa cac phien lam viec ko gui enquire link trong 5 phut at: 04/02/2017 10:00:26 AM
+04/02/2017 10:00:26 AM: Number of session be cleared when not send enquire link over 5 minute: (0/0)
+Detais:
+

@@ -1,0 +1,613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{362CA777-179D-4B4E-8AF9-3FA82A28171C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OneEduDataAccess</RootNamespace>
+    <AssemblyName>OneEduDataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML">
+      <HintPath>bin\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>bin\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>bin\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>bin\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>bin\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>bin\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>bin\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>bin\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <HintPath>..\packages\Oracle.DataAccess.x86.2.112.1.0\lib\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.12.2.1100\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>bin\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BangTheoDoiHocSinhTHEntity.cs" />
+    <Compile Include="BienLaiThuTienHSEntity.cs" />
+    <Compile Include="BIEU_DO_Entity.cs" />
+    <Compile Include="BO\BaiTapVeNhaBO.cs" />
+    <Compile Include="BO\BaiTapVeNhaChiTietBO.cs" />
+    <Compile Include="BO\CaHocBO.cs" />
+    <Compile Include="BO\CapTinDoiTacBO.cs" />
+    <Compile Include="BO\CapTinTruongBO.cs" />
+    <Compile Include="BO\CauHinhCaHocBO.cs" />
+    <Compile Include="BO\ChamAnBO.cs" />
+    <Compile Include="BO\ChuyenCanBO.cs" />
+    <Compile Include="BO\ChuyenMangGiuSoBO.cs" />
+    <Compile Include="BO\CPTelCoBO.cs" />
+    <Compile Include="BO\CustomerBO.cs" />
+    <Compile Include="BO\CustomerToBO.cs" />
+    <Compile Include="BO\CustomerToCustomerBO.cs" />
+    <Compile Include="BO\DangKyAnBO.cs" />
+    <Compile Include="BO\DanhGiaDinhKyMonTHBO.cs" />
+    <Compile Include="BO\DanhGiaDinhKyTHBO.cs" />
+    <Compile Include="BO\DiemChiTietBO.cs" />
+    <Compile Include="BO\DiemTongKetBO.cs" />
+    <Compile Include="BO\DMBuaAnBO.cs" />
+    <Compile Include="BO\DMChucVuBO.cs" />
+    <Compile Include="BO\DmDanTocBO.cs" />
+    <Compile Include="BO\DmDoiTuongCSBO.cs" />
+    <Compile Include="BO\DmKhuVucBO.cs" />
+    <Compile Include="BO\DmQuanHuyenBO.cs" />
+    <Compile Include="BO\DmQuocTichBO.cs" />
+    <Compile Include="BO\DMSachBO.cs" />
+    <Compile Include="BO\DMSachChiTietBO.cs" />
+    <Compile Include="BO\DMSachNoiDungBO.cs" />
+    <Compile Include="BO\DmTinhThanhBO.cs" />
+    <Compile Include="BO\DmToGiaoVienBO.cs" />
+    <Compile Include="BO\DmXaPhuongBO.cs" />
+    <Compile Include="BO\DoiTacBO.cs" />
+    <Compile Include="BO\DonViTinhBO.cs" />
+    <Compile Include="BO\GiaoVienBO.cs" />
+    <Compile Include="BO\GioiTinhBO.cs" />
+    <Compile Include="BO\GoiTinBO.cs" />
+    <Compile Include="BO\GVLopMonBO.cs" />
+    <Compile Include="BO\HocKyBO.cs" />
+    <Compile Include="BO\HocPhiDotThuBO.cs" />
+    <Compile Include="BO\HocPhiDotThuLopBO.cs" />
+    <Compile Include="BO\HocPhiPhieuThuHocSinhBO.cs" />
+    <Compile Include="BO\HocSinhBO.cs" />
+    <Compile Include="BO\KhoaSoBO.cs" />
+    <Compile Include="BO\KhoiBO.cs" />
+    <Compile Include="BO\KhoThucPhamBO.cs" />
+    <Compile Include="BO\KyDGTHBO.cs" />
+    <Compile Include="BO\LichSuTinNhanBO.cs" />
+    <Compile Include="BO\LoaiLopGDTXBO.cs" />
+    <Compile Include="BO\LogUserBO.cs" />
+    <Compile Include="BO\LopBO.cs" />
+    <Compile Include="BO\LopMonBO.cs" />
+    <Compile Include="BO\DmMaNhanXetBO.cs" />
+    <Compile Include="BO\MaNhanXetBO.cs" />
+    <Compile Include="BO\MaNXDinhKyBO.cs" />
+    <Compile Include="BO\MapPhuHuynhHocSinhBO.cs" />
+    <Compile Include="BO\MenuBO.cs" />
+    <Compile Include="BO\MonHocBO.cs" />
+    <Compile Include="BO\MonHocTruongBO.cs" />
+    <Compile Include="BO\NamHocBO.cs" />
+    <Compile Include="BO\NangLuongTrongNgayBO.cs" />
+    <Compile Include="BO\NguoiDungBO.cs" />
+    <Compile Include="BO\NguoiDungTruongBO.cs" />
+    <Compile Include="BO\NguoiDungMenuBO.cs" />
+    <Compile Include="BO\NhaCungCapThucPhamBO.cs" />
+    <Compile Include="BO\NhanXetHangNgayBO.cs" />
+    <Compile Include="BO\NhomQuyenBO.cs" />
+    <Compile Include="BO\NhomQuyenMenuBO.cs" />
+    <Compile Include="BO\NhomThucPhamBO.cs" />
+    <Compile Include="BO\NhomTuoiMNBO.cs" />
+    <Compile Include="BO\PhieuNhapKhoBO.cs" />
+    <Compile Include="BO\PhieuNhapKhoChiTietBO.cs" />
+    <Compile Include="BO\PhieuXuatKhoBO.cs" />
+    <Compile Include="BO\PhieuXuatKhoChiTietBO.cs" />
+    <Compile Include="BO\QuyTinBO.cs" />
+    <Compile Include="BO\SuatAnBO.cs" />
+    <Compile Include="BO\SuatAnChiTietBO.cs" />
+    <Compile Include="BO\ThucDonBO.cs" />
+    <Compile Include="BO\ThucDonChiTietBO.cs" />
+    <Compile Include="BO\ThucPhamBO.cs" />
+    <Compile Include="BO\ThuongHieuBO.cs" />
+    <Compile Include="BO\TinNhanBO.cs" />
+    <Compile Include="BO\TinTucBO.cs" />
+    <Compile Include="BO\TongHopNXHNBO.cs" />
+    <Compile Include="BO\TrangThaiGVBO.cs" />
+    <Compile Include="BO\TrangThaiHSBO.cs" />
+    <Compile Include="BO\TruongBO.cs" />
+    <Compile Include="CaHocEntity.cs" />
+    <Compile Include="CaHocPivotEntity.cs" />
+    <Compile Include="CauHinhCaHocEntity.cs" />
+    <Compile Include="ChamAnEntity.cs" />
+    <Compile Include="ChuyenCanEntity.cs" />
+    <Compile Include="CustomerEntity.cs" />
+    <Compile Include="DanhGiaDinhKyMonTHEntity.cs" />
+    <Compile Include="DanhGiaDinhKyTHEntity.cs" />
+    <Compile Include="DanhSachMonByLopEntity.cs" />
+    <Compile Include="DataAccessAPI.cs" />
+    <Compile Include="DataJsonEntity.cs" />
+    <Compile Include="DBOracleUtils.cs" />
+    <Compile Include="DefaultCacheProvider.cs" />
+    <Compile Include="DiemChiTietEntity.cs" />
+    <Compile Include="DiemChiTietTheoHocSinhEntity.cs" />
+    <Compile Include="DiemTongKetEntity.cs" />
+    <Compile Include="DiemTongKetHocKyEntity.cs" />
+    <Compile Include="DSGiaoVienTheoToEntity.cs" />
+    <Compile Include="ExcelEntity.cs" />
+    <Compile Include="ExcelHeaderEntity.cs" />
+    <Compile Include="GiaoVienEntity.cs" />
+    <Compile Include="GiaoVienInToEntity.cs" />
+    <Compile Include="HocPhiDotThuLopEntity.cs" />
+    <Compile Include="HocPhiDotThuTheoLopEntity.cs" />
+    <Compile Include="HocSinhDangKyAnEntity.cs" />
+    <Compile Include="HocSinhLopEntity.cs" />
+    <Compile Include="HocSinhEntity.cs" />
+    <Compile Include="HP_PhieuThuHocSinhEntity.cs" />
+    <Compile Include="ItemComboEntity.cs" />
+    <Compile Include="ItemDanhMuc.cs" />
+    <Compile Include="KhoiHocSinhEntity.cs" />
+    <Compile Include="KhoThucPhamEntity.cs" />
+    <Compile Include="LichDayEntity.cs" />
+    <Compile Include="LopEntity.cs" />
+    <Compile Include="KhoaSoTheoMonEntity.cs" />
+    <Compile Include="LopMonEntity.cs" />
+    <Compile Include="LopMonTruongEntity.cs" />
+    <Compile Include="Model\BAI_TAP_VE_NHA.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BAI_TAP_VE_NHA_CHI_TIET.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CAP_TIN_DOI_TAC.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CAP_TIN_TRUONG.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CAU_HINH_CA_HOC.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CA_HOC.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CHAM_AN.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CHUYEN_CAN.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CHUYEN_MANG_GIU_SO.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CP_TELCO.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CUSTOMER.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CUSTOMER_TO.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CUSTOMER_TO_CUSTOMER.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DANG_KY_AN.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DANH_GIA_DINH_KY_MON_TH.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DANH_GIA_DINH_KY_TH.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DIEM_CHI_TIET.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DIEM_TONG_KET.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_BUA_AN.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_CHUC_VU.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_DAN_TOC.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_DOI_TUONG_CHINH_SACH.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_DON_VI_TINH.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_KHU_VUC.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_LOAI_NX.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_MA_NX.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_NGAN_HANG.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_NHA_CUNG_CAP_THUC_PHAM.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_NHOM_THUC_PHAM.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_QUAN_HUYEN.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_QUOC_TICH.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_SACH.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_SACH_CHI_TIET.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_SACH_NOI_DUNG.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_THUC_PHAM.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_TINH_THANH.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DM_XA_PHUONG.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DOI_TAC.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GIAO_VIEN.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GIOI_TINH.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GOI_TIN.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GV_LOP_MON.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOC_KY.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOC_PHI_DOT_THU.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOC_PHI_DOT_THU_LOP.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOC_PHI_PHIEU_THU_HOC_SINH.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOC_SINH.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KHOA_SO_THEO_LOP.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KHOA_SO_THEO_MON.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KHOA_SO_THEO_TRUONG.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KHOI.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KHO_THUC_PHAM.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KY_DG_TH.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LICH_AN.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LOAI_LOP_GDTX.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LOG_USER.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LOP.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LOP_MON.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MAP_PH_HS.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MA_NXHN.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MA_NX_DINH_KY.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MENU.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MON_HOC.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MON_HOC_TRUONG.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NAM_HOC.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NANG_LUONG_TRONG_NGAY.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NGUOI_DUNG.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NGUOI_DUNG_MENU.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NGUOI_DUNG_TRUONG.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NHAN_XET_HANG_NGAY.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NHOM_QUYEN.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NHOM_QUYEN_MENU.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NHOM_TUOI_MN.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NHU_CAU_NANG_LUONG.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NHU_CAU_NANG_LUONG_TRUONG.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\oneduModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>oneduModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\oneduModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\oneduModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>oneduModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PHIEU_NHAP_KHO.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PHIEU_NHAP_KHO_DETAIL.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PHIEU_XUAT_KHO.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PHIEU_XUAT_KHO_DETAIL.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\QUY_TIN.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SUAT_AN.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SUAT_AN_CHI_TIET.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\THUC_DON.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\THUC_DON_CHI_TIET.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\THU_TRONG_TUAN.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TIN_NHAN.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TIN_NHAN_CU.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TIN_TUC.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TONG_HOP_NHAN_XET_HANG_NGAY.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TO_GIAO_VIEN.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TO_GIAO_VIEN_GV.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TRANG_THAI_GV.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TRANG_THAI_HS.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TRUONG.cs">
+      <DependentUpon>oneduModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MonHocEntity.cs" />
+    <Compile Include="MonHocTruongCauHinhEntity.cs" />
+    <Compile Include="Mon_MonTruongEntity.cs" />
+    <Compile Include="NGUOI_DUNGEntity.cs" />
+    <Compile Include="NguoiDungMenuEntity.cs" />
+    <Compile Include="NhanXetHangNgayEntity.cs" />
+    <Compile Include="NhomQuyenMenuEntity.cs" />
+    <Compile Include="PartialClass.cs" />
+    <Compile Include="PhieuDanhGiaDinhKy_TH.cs" />
+    <Compile Include="PhieuThuHocPhiHocSinhEntity.cs" />
+    <Compile Include="PhuHuynhHocSinhEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultEntity.cs" />
+    <Compile Include="ResultError.cs" />
+    <Compile Include="Static\SYS_Cap_Hoc.cs" />
+    <Compile Include="Static\SYS_Loai_Tin.cs" />
+    <Compile Include="Static\SYS_Type_Access.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="SuatAnChiTietEntity.cs" />
+    <Compile Include="ThoiKhoaBieuLopEntity.cs" />
+    <Compile Include="ThongKeHocSinhTheoTruongEntity.cs" />
+    <Compile Include="ThongkeQuyTinEntiy.cs" />
+    <Compile Include="ThongKeSoTin1LanGuiEntity.cs" />
+    <Compile Include="ThongKeTinNhanEntity.cs" />
+    <Compile Include="ThongKeTinNhanTheoCongTacVienEntity.cs" />
+    <Compile Include="ThongKeTinNhanTheoThuongHieuEntity.cs" />
+    <Compile Include="thongKeTongTinGuiQuaCPEntity.cs" />
+    <Compile Include="ThucDonChiTietEntity.cs" />
+    <Compile Include="ThucPhamInSuatAnEntity.cs" />
+    <Compile Include="ThucPhamInThucDonEntity.cs" />
+    <Compile Include="ThuongHieuEntity.cs" />
+    <Compile Include="TinNhanEntity.cs" />
+    <Compile Include="ToGiaoVienEntity.cs" />
+    <Compile Include="TongHopNhanXetHangNgayEntity.cs" />
+    <Compile Include="TongHopSoTinTheoTruongNgayEntity.cs" />
+    <Compile Include="TongKetDiemEntity.cs" />
+    <Compile Include="TongKeTinNhanTheoDoiTacEntity.cs" />
+    <Compile Include="TruongEntity.cs" />
+    <Compile Include="ViewBaiTapVeNhaEntity.cs" />
+    <Compile Include="ZaloTraCuuEntity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\OneEduDataAccess.dll.config" />
+    <EntityDeploy Include="Model\oneduModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>oneduModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\oneduModel.edmx.diagram">
+      <DependentUpon>oneduModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\ClosedXML.dll" />
+    <Content Include="bin\ClosedXML.xml" />
+    <Content Include="bin\Debug\DotNetOpenAuth.dll" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\OneEduDataAccess.dll" />
+    <Content Include="bin\Debug\OneEduDataAccess.pdb" />
+    <Content Include="bin\Debug\OpenIdRelyingPartyWebForms.dll" />
+    <Content Include="bin\Debug\Oracle.Web.dll" />
+    <Content Include="bin\Microsoft.Owin.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\NPOI.dll" />
+    <Content Include="bin\NPOI.OOXML.dll" />
+    <Content Include="bin\NPOI.OpenXml4Net.dll" />
+    <Content Include="bin\NPOI.OpenXmlFormats.dll" />
+    <Content Include="bin\Owin.dll" />
+    <Content Include="Model\oneduModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>oneduModel.edmx</DependentUpon>
+      <LastGenOutput>oneduModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\oneduModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>oneduModel.edmx</DependentUpon>
+      <LastGenOutput>oneduModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

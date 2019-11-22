@@ -1,0 +1,27 @@
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Bus\bin\Debug\Bus.dll
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Bus\bin\Debug\Bus.pdb
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Bus\bin\Debug\Data.dll
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Bus\bin\Debug\Entity.dll
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Bus\bin\Debug\Data.pdb
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Bus\bin\Debug\Entity.pdb
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Bus\obj\Debug\Bus.csprojResolveAssemblyReference.cache
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Bus\obj\Debug\Bus.dll
+C:\Users\devel\Documents\Visual Studio 2015\Projects\Gate159_SendSms\Bus\obj\Debug\Bus.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Bus\bin\Debug\Bus.dll
+F:\Works\GATEWAY\Gate159_SendSms\Bus\bin\Debug\Bus.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Bus\bin\Debug\Data.dll
+F:\Works\GATEWAY\Gate159_SendSms\Bus\bin\Debug\Entity.dll
+F:\Works\GATEWAY\Gate159_SendSms\Bus\bin\Debug\Data.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Bus\bin\Debug\Entity.pdb
+F:\Works\GATEWAY\Gate159_SendSms\Bus\obj\Debug\Bus.csprojResolveAssemblyReference.cache
+F:\Works\GATEWAY\Gate159_SendSms\Bus\obj\Debug\Bus.dll
+F:\Works\GATEWAY\Gate159_SendSms\Bus\obj\Debug\Bus.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\bin\Debug\Bus.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\bin\Debug\Bus.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\bin\Debug\Data.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\bin\Debug\Entity.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\bin\Debug\Data.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\bin\Debug\Entity.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\obj\Debug\Bus.csprojResolveAssemblyReference.cache
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\obj\Debug\Bus.dll
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gatewayconek\Source\SendSmsToTelco_Gate159_ver 1.0\Bus\obj\Debug\Bus.pdb

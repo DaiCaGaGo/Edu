@@ -1,0 +1,2 @@
+2016-08-23 17:34:33,203 INFO  [LogVnptSendSms] - Send to: 841684567978, smsId: 935463, sender: MOIT.VN, timesend: 23/08/2016 5:34:27 PM, code: UNDELIVERED|-5, timelog: 23/08/2016 17:34:33
+2016-08-23 17:35:17,292 INFO  [LogVnptSendSms] - Send to: 841684567978, smsId: 935464, sender: MOIT.VN, timesend: 23/08/2016 5:35:09 PM, code: UNDELIVERED|-5, timelog: 23/08/2016 17:35:17

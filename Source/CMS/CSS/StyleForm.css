@@ -1,0 +1,287 @@
+﻿* {
+    font-family: Roboto;
+    font-size: 13pt;
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+    background: #eeeeee;
+}
+
+body {
+    /*margin-bottom: 86px;*/ /* Margin bottom by footer height */
+    background: #eeeeee;
+}
+
+#banner {
+    background-image: url("/img/firework_animated.gif");
+    background-color: rgb(234, 7, 49);
+    color: #fff;
+    background-position: center center;
+    /*text-transform: uppercase;*/
+}
+
+.main-menu {
+    /*background-color: #01579B !important;*/
+    /*text-transform: uppercase;*/
+    border: 0px !important;
+}
+
+    .main-menu .rmVertical {
+        background-color: #01579B !important;
+        border: 1px solid #ddd;
+        box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    .main-menu .rmSelected, .main-menu .rmSelected:hover, .main-menu .rmExpanded, .main-menu .rmExpanded:hover {
+        color: #fff !important;
+        background-color: #205867 !important;
+        opacity: 0.8;
+    }
+
+    .main-menu a:hover {
+        color: #fff !important;
+        background-color: #205867;
+        opacity: 0.8;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    .main-menu ul li ul a:hover {
+        text-decoration: none !important;
+        /*background-color: #eeeeee;*/
+    }
+
+#one-logo a:hover {
+    text-decoration: none !important;
+}
+
+.RadMenu .rmLeftImage {
+    margin: 0px 8px 0px -6px !important;
+    height: 20px !important;
+}
+
+.bt-one {
+    background-color: #01579B !important;
+    color: white !important;
+}
+
+.color-one {
+    color: #01579B !important;
+}
+
+.bt-one-google {
+    background-color: #9B2101 !important;
+    color: white !important;
+}
+
+input {
+    font-size: 13pt !important;
+}
+
+#content {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.item-content {
+    background: #FFFFFF;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 0px 20px;
+    word-wrap: break-word;
+}
+
+.item-header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 60px;
+    line-height: 50px;
+    border-bottom: 1px #eceaea solid;
+}
+
+.item-title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.item-data {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.item-filter {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.head-list-grid {
+    background-color: #01579B !important;
+    color: white !important;
+}
+
+    .head-list-grid a {
+        color: white !important;
+    }
+
+.rmItem {
+    /*background: #01579b !important;*/
+    color: white !important;
+}
+
+    .rmItem a {
+        color: white !important;
+    }
+
+.rmVertical .rmItem a {
+    color: #394d76 !important;
+}
+
+.rmExpandDown:after {
+    border-top-color: #fff !important;
+}
+
+.btn {
+    min-width: 100px;
+}
+
+.control-label {
+    font-weight: normal !important;
+}
+
+.RadGrid_Bootstrap .rgRow [type="text"], .RadGrid_Bootstrap .rgAltRow [type="text"], .RadGrid_Bootstrap .rgEditForm [type="text"] {
+    border: none !important;
+}
+
+.TelerikModalOverlay {
+    z-index: 7900 !important;
+}
+
+.RadWindow {
+    z-index: 8000 !important;
+}
+
+.RadGrid_Bootstrap .rgMasterTable .rgSelectedCell, .RadGrid_Bootstrap .rgSelectedRow > td, .RadGrid_Bootstrap td.rgEditRow .rgSelectedRow, .RadGrid_Bootstrap .rgSelectedRow td.rgSorted {
+    background: #d0ecff !important;
+    color: #000 !important;
+}
+
+.RadGrid_Bootstrap .rgMasterTable .rgSelectedCell, .RadGrid_Bootstrap .rgSelectedRowHover > td, .RadGrid_Bootstrap td.rgEditRow .rgSelectedRowHover, .RadGrid_Bootstrap .rgSelectedRowHover td.rgSorted {
+    background: #d0ecff !important;
+    color: #000 !important;
+}
+
+.RadUpload_Bootstrap .ruSelectWrap .ruButton {
+    height: 33px;
+    padding: 6px 12px;
+}
+
+.grid-control {
+    padding: 1px !important;
+}
+
+.note-form .content-note-form {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.one-checkbox {
+    height: 31px;
+    line-height: 31px;
+}
+
+    .one-checkbox label {
+        font-weight: normal;
+        margin-left: 5px !important;
+    }
+
+input[type="checkbox"], input[type="radio"] {
+    width: 18px;
+    height: 18px !important;
+}
+
+.one-checkbox input[type="checkbox"], .one-checkbox input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.form-control {
+    font-size: 13pt !important;
+}
+
+.RadMenu a.rmLink {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.rmVertical .rmLink {
+    min-width: 150px;
+    background-color: #fff !important;
+}
+/*.rmVertical .rmLink > ul > li > a:hover {
+        background-color: #ddd !important;
+    }*/
+
+input[type="file"] {
+    display: unset !important;
+}
+
+.modal-content {
+    padding: 20px !important;
+}
+
+.modal {
+    top: 10px;
+    z-index: 99999;
+}
+
+.modal-backdrop {
+    z-index: 9999;
+}
+
+.grid-col-nd {
+    min-width: 300px;
+}
+
+.col-hoten {
+    min-width: 200px !important;
+}
+
+#ctl00_ContentPlaceHolder1_ctl00_ContentPlaceHolder1_lblSDT_GVPanel {
+    margin-left: 2px;
+    margin-top: -9px;
+}
+
+.control-label-last {
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: left;
+    padding-left: 0px;
+}
+
+.RadMenu_Bootstrap {
+    background-color: inherit !important;
+}
+
+.RadMenu {
+    line-height: 26px !important;
+}
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (max-width: 980px) {
+    .body-content {
+        width: 100%;
+    }
+    .rgMasterTable.rgClipCells {
+        min-width: 150%;
+    }
+    .RadGrid.RadGrid_Bootstrap > .rgMasterTable {
+        min-width: 100%;
+    }
+}
+
+

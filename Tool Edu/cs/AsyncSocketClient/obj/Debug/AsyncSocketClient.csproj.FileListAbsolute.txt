@@ -1,0 +1,47 @@
+C:\Users\Trauvang\Desktop\socketexample\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.exe
+C:\Users\Trauvang\Desktop\socketexample\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.exe.config
+C:\Users\Trauvang\Desktop\socketexample\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.pdb
+C:\Users\Trauvang\Desktop\socketexample\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.exe
+C:\Users\Trauvang\Desktop\socketexample\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.pdb
+C:\Users\Trauvang\Desktop\socketexample\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.csprojResolveAssemblyReference.cache
+D:\Code\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.exe.config
+D:\Code\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.exe
+D:\Code\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.pdb
+D:\Code\SMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.exe
+D:\Code\SMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.pdb
+D:\HOANG CHIEN\SMMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.exe.config
+D:\HOANG CHIEN\SMMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.exe
+D:\HOANG CHIEN\SMMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.pdb
+D:\HOANG CHIEN\SMMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.exe
+D:\HOANG CHIEN\SMMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.pdb
+D:\HOANG CHIEN\Gateway\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.exe.config
+D:\HOANG CHIEN\Gateway\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.exe
+D:\HOANG CHIEN\Gateway\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.pdb
+D:\HOANG CHIEN\Gateway\SMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.exe
+D:\HOANG CHIEN\Gateway\SMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.pdb
+C:\code1\Code\Partner BrandName\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.exe.config
+C:\code1\Code\Partner BrandName\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.exe
+C:\code1\Code\Partner BrandName\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.pdb
+C:\code1\Code\Partner BrandName\SMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.exe
+C:\code1\Code\Partner BrandName\SMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.pdb
+E:\Works\ONESMS_GateWay\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.exe.config
+E:\Works\ONESMS_GateWay\SMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.exe
+E:\Works\ONESMS_GateWay\SMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.pdb
+E:\Works\ONESMS_GateWay\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.exe
+E:\Works\ONESMS_GateWay\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.pdb
+F:\Works\ONESMS_GateWay\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.exe.config
+F:\Works\ONESMS_GateWay\SMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.exe
+F:\Works\ONESMS_GateWay\SMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.pdb
+F:\Works\ONESMS\GATEWAY\ONESMS_GateWay\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.exe.config
+F:\Works\ONESMS\GATEWAY\ONESMS_GateWay\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.exe
+F:\Works\ONESMS\GATEWAY\ONESMS_GateWay\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.pdb
+F:\Works\ONESMS\GATEWAY\ONESMS_GateWay\SMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.csprojResolveAssemblyReference.cache
+F:\Works\ONESMS\GATEWAY\ONESMS_GateWay\SMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.exe
+F:\Works\ONESMS\GATEWAY\ONESMS_GateWay\SMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gateway Old\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.exe.config
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gateway Old\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.exe
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gateway Old\SMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.exe
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gateway Old\SMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gateway Old\SMPP SERVER\cs\AsyncSocketClient\bin\Debug\AsyncSocketClient.pdb
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gateway Old\SMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.csprojAssemblyReference.cache
+E:\MOIT\WorkOneSms\WorkOneSms\Gateway\Gateway Old\SMPP SERVER\cs\AsyncSocketClient\obj\Debug\AsyncSocketClient.csproj.CoreCompileInputs.cache

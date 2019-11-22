@@ -1,0 +1,3 @@
+2016-09-01 09:17:33,387 INFO  [LogUpdateSuccess] - Application started at: 01/09/2016 09:17:33
+2016-09-01 09:17:34,376 INFO  [LogUpdateSuccess] - Thread started at: 01/09/2016 09:17:34
+2016-09-01 09:20:22,779 INFO  [LogUpdateSuccess] - Updated 1 item! At: 01/09/2016 09:20:22

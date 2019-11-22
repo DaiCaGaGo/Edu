@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    font-family: "Open Sans",sans-serif;
+}
+
+.transition {
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+    .clearfix:after {
+        clear: both;
+        content: " ";
+        display: block;
+        height: 0;
+        line-height: 0;
+        visibility: hidden;
+    }
+/** Customer **/
+.cpn-table, .cpn-table-response {
+    box-shadow: 1px 1px 4px #ccc;
+}
+
+.cpn-table, .cpn-table-response {
+    width: 100%;
+    text-align: center;
+}
+
+    .cpn-table table, .cpn-table-response table {
+        width: 100%;
+        border: 1px solid #ddd;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    .cpn-table table {
+        table-layout: fixed;
+        vertical-align: baseline;
+    }
+
+        .cpn-table table thead {
+        }
+
+        .cpn-table table tbody {
+        }
+
+        .cpn-table table tr {
+        }
+
+            .cpn-table table tr td, .cpn-table table tr th {
+                border: 1px solid #ddd;
+                padding: 8px;
+                line-height: 1.42857143;
+                vertical-align: top;
+            }
+
+                .cpn-table table tr td.zoom, .cpn-table-response table tr td {
+                    cursor: pointer;
+                }
+
+                    .cpn-table table tr td.zoom:hover, .cpn-table-response table tr td.zoom:hover {
+                        background-color: #FFF842;
+                        color: #403E10;
+                        font-weight: bold;
+                        box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+                        transform: translate3d(6px, -6px, 0);
+                        transition-delay: 0s;
+                        transition-duration: 0.4s;
+                        transition-property: all;
+                        transition-timing-function: line;
+                    }
+
+            .cpn-table table tr th {
+                color: #333;
+                font-weight: bold;
+                padding: 20px 15px;
+                text-align: left;
+                font-weight: 500;
+                font-size: 12px;
+                text-transform: uppercase;
+            }
+
+    .cpn-table .cp-table-left {
+        box-shadow: 8px 0px 10px 0px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: 8px 0px 10px 0px rgba(0, 0, 0, 0.05);
+        -webkit-box-shadow: 8px 0px 10px 0px rgba(0, 0, 0, 0.05);
+        -o-box-shadow: 8px 0px 10px 0px rgba(0, 0, 0, 0.05);
+        -ms-box-shadow: 8px 0px 10px 0px rgba(0, 0, 0, 0.05);
+        background-color: #fff;
+        width: 200px;
+    }
+
+        .cpn-table .cp-table-left table {
+            min-width: 200px;
+            color: #fff;
+            background-color: #1ac6ff;
+        }
+
+            .cpn-table .cp-table-left table tr td:nth-child(1) {
+                width: 50px;
+            }
+
+            .cpn-table .cp-table-left table tr td:nth-child(2) {
+                white-space: nowrap;
+            }
+
+    .cpn-table .cp-table-right, .cpn-table-response {
+        overflow-y: scroll;
+        background: url('../img/child.png');
+        background-position: center center;
+        background-repeat: repeat-y;
+    }
+
+        .cpn-table .cp-table-right::-webkit-scrollbar-corner {
+            display: none;
+            height: 0px;
+            width: 0px;
+        }
+
+        .cpn-table .cp-table-right::-webkit-scrollbar {
+            width: 6px;
+            background-color: #F5F5F5;
+            height: 6px;
+            height: 10px;
+            border-radius: 35px;
+        }
+
+        .cpn-table .cp-table-right::-webkit-scrollbar-thumb {
+            background-color: #1ac6ff;
+            border-radius: 8px;
+        }
+
+        .cpn-table .cp-table-right::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            background-color: #F5F5F5;
+        }
+
+        .cpn-table .cp-table-right table {
+            min-width: 650px;
+            width: 100%;
+        }
+
+.cpn-info {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+    .cpn-info * {
+        padding: 10px;
+        margin: 0px;
+        margin-bottom: 5px;
+        padding: 5px;
+    }
+
+    .cpn-info > div {
+        padding: 10px;
+    }
+
+.cpn-table-response table {
+    width: 100%;
+    min-width: 650px;
+    overflow-y: scroll;
+}
+
+    .cpn-table-response table tr td, .cpn-table-response table tr th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+    }
+
+    .cpn-table-response table tr th {
+        color: #333;
+        font-weight: bold;
+        padding: 20px 15px;
+        text-align: left;
+        font-weight: 500;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+.cpn-table-response table {
+}
+
+.cpn-table-response table {
+}
+
+    .cpn-table-response table tr:nth-child(1) td {
+        white-space: nowrap;
+    }
+
+.cpn-table-response::-webkit-scrollbar-corner {
+    display: none;
+    height: 0px;
+    width: 0px;
+}
+
+.cpn-table-response::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+    height: 6px;
+    height: 10px;
+    border-radius: 35px;
+}
+
+.cpn-table-response::-webkit-scrollbar-thumb {
+    background-color: #1ac6ff;
+    border-radius: 8px;
+}
+
+.cpn-table-response::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+.cpn-table-left-content-left {
+    text-align: left;
+    vertical-align: middle !important;
+    font-weight: normal;
+}
+
+.cpn-table-left-content-center {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-callphone {
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+    margin: 0px auto;
+    background: url(https://edu.onesms.vn/img/calling.jpg) center 0px no-repeat;
+    text-decoration: none;
+    background-size: 100% 100%;
+    margin: 0;
+}
+
+.input-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+    margin: 0px auto;
+    text-decoration: none;
+    background-size: 100% 100%;
+    margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .cpn-info {
+        flex-wrap: wrap;
+    }
+
+        .cpn-info > div {
+            width: 100%;
+        }
+
+    .cpn-table, .cpn-table-response {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+        .cpn-table .cp-table-left table {
+            min-width: 140px;
+        }
+    .cpn-info .image-book {
+        display:none;
+    }
+}

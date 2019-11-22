@@ -1,0 +1,4 @@
+2016-08-10 04:31:45,051 INFO  [LogUpdateSuccess] - Application started at: 10/08/2016 04:31:45
+2016-08-10 04:31:46,341 INFO  [LogUpdateSuccess] - Thread started at: 10/08/2016 04:31:46
+2016-08-10 04:31:48,042 INFO  [LogUpdateSuccess] - Updated 8 item! At: 10/08/2016 04:31:48
+2016-08-10 04:31:50,549 INFO  [LogUpdateSuccess] - Application stoped at: 10/08/2016 04:31:50!

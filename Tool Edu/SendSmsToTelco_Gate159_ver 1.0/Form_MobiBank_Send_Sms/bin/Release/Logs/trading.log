@@ -1,0 +1,5 @@
+2016-09-08 18:46:21,534 INFO  [LogIncomSendSms] - Application started at: 08/09/2016 18:46:21
+2016-09-08 18:46:22,608 INFO  [LogIncomSendSms] - Thread started at: 08/09/2016 18:46:22
+2016-09-08 18:48:23,135 INFO  [LogIncomSendSms] - Send to: 84901759114, smsId: 935491, sender: 1SMS.VN, timesend: 08/09/2016 6:48:23 PM, code: DELIVERED, timelog: 08/09/2016 18:48:23
+2016-09-08 18:56:28,692 INFO  [LogIncomSendSms] - Send to: 841256973887, smsId: 935508, sender: 1SMS.VN, timesend: 08/09/2016 6:56:30 PM, code: DELIVERED, timelog: 08/09/2016 18:56:28
+2016-09-08 18:59:35,585 INFO  [LogIncomSendSms] - Send to: 84901759114, smsId: 935521, sender: 1SMS.VN, timesend: 08/09/2016 6:59:37 PM, code: DELIVERED, timelog: 08/09/2016 18:59:35
