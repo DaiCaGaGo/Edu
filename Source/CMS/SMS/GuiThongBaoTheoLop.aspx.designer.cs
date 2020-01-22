@@ -112,6 +112,15 @@ namespace CMS.SMS {
         protected global::System.Web.UI.WebControls.CheckBox cboGuiGVCN;
         
         /// <summary>
+        /// cboGuiZalo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cboGuiZalo;
+        
+        /// <summary>
         /// cbHenGioGuiTin control.
         /// </summary>
         /// <remarks>

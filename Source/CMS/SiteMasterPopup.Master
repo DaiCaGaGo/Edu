@@ -13,11 +13,58 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
         <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
         <link href="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/CSS/StyleForm.css?"+ localAPI.GetVerionCss()  %>" rel="stylesheet" />
-        <script src="<%=  "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/jquery-3.0.0.js?"+ localAPI.GetVerionJava() %>"></script>
-        <script src="<%=  "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/select2.full.js?"+ localAPI.GetVerionJava() %>"></script>
-        <script src="<%=  "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/toastr.min.js?"+ localAPI.GetVerionJava() %>"></script>
-        <script src="<%=  "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/Main.js?"+ localAPI.GetVerionJava() %>"></script>
-        <script src="<%=  "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/Validate.js?"+ localAPI.GetVerionJava() %>"></script>
+        <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/jquery-3.0.0.js?"+ localAPI.GetVerionJava() %>"></script>
+        <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/select2.full.js?"+ localAPI.GetVerionJava() %>"></script>
+        <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/toastr.min.js?"+ localAPI.GetVerionJava() %>"></script>
+        <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/Main.js?"+ localAPI.GetVerionJava() %>"></script>
+        <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/Validate.js?"+ localAPI.GetVerionJava() %>"></script>
+        <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Assets/ckeditor/ckeditor.js?"+ localAPI.GetVerionJava()  %>"></script>
+        <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Assets/ckfinder/ckfinder.js?"+ localAPI.GetVerionJava()  %>"></script>
+        <style>
+            .box-list-images {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+                .box-list-images .image {
+                    width: auto;
+                    margin-right: 20px;
+                    position: relative;
+                }
+
+                .box-list-images .thumbnail {
+                }
+
+                .box-list-images .image img {
+                    width: 100px;
+                    height: 100px;
+                }
+
+            .btn-upload-image {
+            }
+
+                .btn-upload-image img {
+                    width: 25px;
+                }
+
+            .remove-node {
+                position: absolute;
+                top: -10px;
+                right: -6px;
+                color: #f94444;
+                font-size: 18px;
+            }
+
+                .remove-node i {
+                }
+        </style>
+        <script>
+            function removeNodeParent(e) {
+                console.log(e.parentNode.remove());
+                //var parent = e.parent.hide();
+
+            }
+        </script>
     </telerik:RadCodeBlock>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
     </asp:ContentPlaceHolder>

@@ -66,7 +66,7 @@
                 <span class="item-title">Cấu Hình Ca Học</span>
             </div>
             <div class="col-sm-8 text-right">
-                <input type="button" id="btAddNew" runat="server" class="btn bt-one" value="Thêm mới" onclick="openRadWin('CauHinhCaHocDetail.aspx', 990, 470, 1)" />
+                <input type="button" id="btAddNew" runat="server" class="btn bt-one" value="Thêm mới" onclick="openRadWin('CauHinhCaHocDetail.aspx', 100, 50)" />
                 <asp:Button ID="btExport" runat="server" CssClass="btn bt-one" OnClick="btExport_Click" Text="Xuất excel" />
                 <asp:Button ID="btDeleteChon" runat="server" CssClass="btn bt-one" OnClick="btDeleteChon_Click" Text="Xóa" OnClientClick="if(!btDeteleClick()) return false;" />
             </div>
@@ -137,7 +137,7 @@
                         </telerik:GridBoundColumn>
                         <telerik:GridTemplateColumn HeaderText="Sửa" HeaderStyle-Width="60px" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="SUA">
                             <ItemTemplate>
-                                <img src="../img/sua.png" onclick='<%# "openRadWin(\"CauHinhCaHocDetail.aspx?id_hoso=" + Eval("ID") + "\",990, 470, 1)" %>' style="cursor: pointer;" />
+                                <img src="../img/sua.png" onclick='<%# "openRadWin(\"CauHinhCaHocDetail.aspx?id_hoso=" + Eval("ID") + "\", 100, 50)" %>' style="cursor: pointer;" />
                             </ItemTemplate>
                         </telerik:GridTemplateColumn>
                     </Columns>

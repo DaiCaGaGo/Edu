@@ -27,6 +27,7 @@ namespace CMS.HocSinh
         TongHopNXHNBO thBO = new TongHopNXHNBO();
         TruongBO truongBO = new TruongBO();
         QuyTinBO quyTinBO = new QuyTinBO();
+        BaiTapVeNhaBO btvnBO = new BaiTapVeNhaBO();
         public DataAccessAPI dataAccessAPI = new DataAccessAPI();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -415,6 +416,34 @@ namespace CMS.HocSinh
                 #endregion
                 if (res.Res) success++;
             }
+
+            #region "Lưu thông tin chung hiển thị trong Zalo"
+            ResultEntity resBTVN = new ResultEntity();
+            string strThongBao = tbNoiDungChen.Text.Trim();
+            if (ma_khoi != null && id_lop != null && !string.IsNullOrEmpty(strThongBao))
+            {
+                BAI_TAP_VE_NHA btvn = new BAI_TAP_VE_NHA();
+                btvn = btvnBO.getBaiTapVeNhaByNgay(Sys_This_Truong.ID, (Int16)Sys_Ma_Nam_hoc, id_lop.Value, DateTime.Now.ToString("yyyyMMdd"));
+                if (btvn == null)
+                {
+                    btvn = new BAI_TAP_VE_NHA();
+                    btvn.ID_TRUONG = Sys_This_Truong.ID;
+                    btvn.MA_CAP_HOC = Sys_This_Cap_Hoc;
+                    btvn.ID_KHOI = ma_khoi.Value;
+                    btvn.ID_NAM_HOC = (Int16)Sys_Ma_Nam_hoc;
+                    btvn.ID_LOP = id_lop.Value;
+                    btvn.NGAY_BTVN = DateTime.Now;
+                    btvn.NOI_DUNG = strThongBao;
+                    resBTVN = btvnBO.insert(btvn, Sys_User.ID);
+                }
+                else
+                {
+                    btvn.NOI_DUNG = strThongBao;
+                    resBTVN = btvnBO.update(btvn, Sys_User.ID);
+                }
+            }
+            #endregion
+
             string strMsg = "";
             if (success == 0)
             {
@@ -2108,7 +2137,41 @@ namespace CMS.HocSinh
                     }
                 }
             }
-            
+
+            #endregion
+
+            #region "Lưu thông tin chung hiển thị trong Zalo"
+            ResultEntity res1 = new ResultEntity();
+            res1.Res = true;
+            res1.Msg = "Thành công";
+            string strThongBao = tbNoiDungChen.Text.Trim();
+            if (ma_khoi != null && id_lop != null && !string.IsNullOrEmpty(strThongBao) && cboGuiZalo.Checked)
+            {
+                BAI_TAP_VE_NHA btvn = new BAI_TAP_VE_NHA();
+                btvn = btvnBO.getBaiTapVeNhaByNgay(Sys_This_Truong.ID, (Int16)Sys_Ma_Nam_hoc, id_lop.Value, DateTime.Now.ToString("yyyyMMdd"));
+                if (btvn == null)
+                {
+                    btvn = new BAI_TAP_VE_NHA();
+                    btvn.ID_TRUONG = Sys_This_Truong.ID;
+                    btvn.MA_CAP_HOC = Sys_This_Cap_Hoc;
+                    btvn.ID_KHOI = ma_khoi.Value;
+                    btvn.ID_NAM_HOC = (Int16)Sys_Ma_Nam_hoc;
+                    btvn.ID_LOP = id_lop.Value;
+                    btvn.NGAY_BTVN = DateTime.Now;
+                    btvn.NOI_DUNG = strThongBao;
+                    res1 = btvnBO.insert(btvn, Sys_User.ID);
+                }
+                else
+                {
+                    btvn.NOI_DUNG = strThongBao;
+                    res1 = btvnBO.update(btvn, Sys_User.ID);
+                }
+            }
+            string strBTVN = "";
+            if (res1.Res)
+                strBTVN = "Gửi Zalo thành công";
+            else
+                strBTVN = "Nội dung gửi Zalo bị lỗi. Vui long kiểm tra lại";
             #endregion
 
             #region save sms
@@ -2186,19 +2249,23 @@ namespace CMS.HocSinh
             #endregion
 
             string strMsg = "";
-            if (!result.Res && countSms > 0)
-            {
-                strMsg = result.Msg;
-            }
-            else if (countSms == 0)
-            {
-                strMsg = " notification('warning', 'Không có tin nào được gửi đi.');";
-            }
+            //if (!result.Res && countSms > 0)
+            //{
+            //    strMsg = result.Msg;
+            //}
+            //else if (countSms == 0)
+            //{
+            //    strMsg = " notification('warning', 'Không có tin nào được gửi đi.');";
+            //}
+            //else
+            //{
+            //    strMsg = " notification('success', 'Có " + countSms + " tin nhắn được gửi.');";
+            //    logUserBO.insert(Sys_This_Truong.ID, "SMS", "Gửi tin nhắn tổng hợp lớp " + id_lop, Sys_User.ID, DateTime.Now);
+            //}
+            if (result.Res && countSms > 0)
+                strMsg = " notification('success', 'Có " + countSms + " tin nhắn SMS được gửi. " + strBTVN + "');";
             else
-            {
-                strMsg = " notification('success', 'Có " + countSms + " tin nhắn được gửi.');";
-                logUserBO.insert(Sys_This_Truong.ID, "SMS", "Gửi tin nhắn tổng hợp lớp " + id_lop, Sys_User.ID, DateTime.Now);
-            }
+                strMsg = " notification('warning', 'Không có tin nhắn SMS nào được gửi đi! " + strBTVN + "');";
             ScriptManager.RegisterStartupScript(Page, typeof(Page), "myalert", strMsg, true);
 
             RadGrid1.Rebind();

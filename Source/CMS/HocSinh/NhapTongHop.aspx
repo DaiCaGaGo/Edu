@@ -283,18 +283,40 @@
                 <div class="col-sm-6">
                     <asp:TextBox ID="tbNoiDungChen" ClientIDMode="Static" runat="server" placeholder="Nhập nội dung" CssClass="form-control text-box ndc" TextMode="MultiLine" Rows="2"></asp:TextBox>
                 </div>
-                <div class="col-sm-6" style="margin-top: 12px;">
-                    <label class="one-checkbox">
-                        <asp:RadioButton ID="rbtChenTruoc" ClientIDMode="Static" runat="server" Text="Chèn trước" GroupName="is_chen" Checked="true" />
-                        &nbsp;&nbsp;
-                                <asp:RadioButton ID="rbtChenSau" ClientIDMode="Static" runat="server" Text="Chèn sau" GroupName="is_chen" />
-                    </label>
-                    &nbsp;&nbsp;
-                    <label>
-                        <asp:CheckBox ID="cboGuiGVCN" runat="server" Text="Gửi GVCN" Checked="true" /></label>
-                    &nbsp;&nbsp;
-                    <input type="button" id="btnChen" class="btn btn-infolg" value="Chèn" onclick="btnChenClick()" />
-                </div>
+                <div class="col-sm-2">
+                        <div class="form-group">
+                            <div class="one-checkbox col-sm-12">
+                                <table style="margin-left: -15px;">
+                                    <tr>
+                                        <td>
+                                            <label>
+                                                <asp:CheckBox ID="cboGuiZalo" runat="server" Text="Gửi Zalo" /></label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label>
+                                                <asp:CheckBox ID="cboGuiGVCN" runat="server" Text="Gửi GVCN" Checked="true" /></label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <div class="one-checkbox col-sm-12">
+                                <label>
+                                    <asp:RadioButton ID="rbtChenTruoc" ClientIDMode="Static" runat="server" Text="Chèn trước" GroupName="is_chen" Checked="true" />
+                                    &nbsp;&nbsp;
+                                    <asp:RadioButton ID="rbtChenSau" ClientIDMode="Static" runat="server" Text="Chèn sau" GroupName="is_chen" />
+                                </label>
+                                &nbsp;&nbsp;
+                                <input type="button" id="btnChen" class="btn bt-infolg" value="Chèn" onclick="btnChenClick()" />
+                            </div>
+
+                        </div>
+                    </div>
             </div>
         </div>
         <div class="item-data">

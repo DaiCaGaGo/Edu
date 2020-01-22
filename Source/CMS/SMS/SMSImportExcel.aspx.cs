@@ -238,7 +238,7 @@ namespace CMS.SMS
                 #region Change Name column
                 #region Set data theo khối và đợt dữ liệu
                 int max_cot = myDataTable.Columns.Count;
-                if (max_cot > 10) max_cot = 10;
+                if (max_cot > 15) max_cot = 15;
                 lstTitle = new List<string>();
                 for (int i = 0; i < max_cot; i++)
                 {

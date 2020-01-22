@@ -19,6 +19,7 @@ namespace CMS.CauHinhCaHoc
         CaHocBO caHocBO = new CaHocBO();
         LocalAPI localAPI = new LocalAPI();
         CauHinhCaHocBO chchBO = new CauHinhCaHocBO();
+        private LopMonBO lopMonBO = new LopMonBO();
         protected void Page_Load(object sender, EventArgs e)
         {
             checkChonTruong();
@@ -396,6 +397,40 @@ namespace CMS.CauHinhCaHoc
             listCell.Add(new ExcelHeaderEntity { name = hocKyNamHoc, colM = lstColumn.Count + 1, rowM = 1, colName = "A", rowIndex = 4, fontSize = 14, Align = XLAlignmentHorizontalValues.Center });
             string nameFileOutput = newName;
             localAPI.ExportExcelDynamic(serverPath, path, newName, nameFileOutput, 1, listCell, rowHeaderStart, rowStart, colStart, colEnd, dt, lstHeader, lstColumn, false);
+        }
+
+        protected void btCopy_Click(object sender, EventArgs e)
+        {
+            if (!is_access(SYS_Type_Access.SUA))
+            {
+                ScriptManager.RegisterStartupScript(Page, typeof(Page), "myalert", "notification('error', 'Bạn không có quyền thực hiện thao tác này!');", true);
+                return;
+            }
+            long? id_lop = localAPI.ConvertStringTolong(rcbLop.SelectedValue);
+            if (id_lop != null)
+            {
+                try
+                {
+                    #region Xét môn học cho lớp
+                    ResultEntity res = lopMonBO.copyMonLopKy1SangKy2(id_lop, Sys_User.ID);
+                    res = lopMonBO.copyMonLopKy1SangKy2_capNhatTrangThai(id_lop.Value);
+                    #endregion
+                    #region Copy lịch học từ kỳ 1 sang kỳ 2
+                    caHocBO.insertFirstData(Sys_This_Truong.ID, Convert.ToInt16(rcbHocKy.SelectedValue), (Int16)Sys_Ma_Nam_hoc, null);
+                    #endregion
+                    #region Update dữ liệu kỳ 2
+                    res = caHocBO.copyLichHocTheoKy(Sys_This_Truong.ID, (Int16)Sys_Ma_Nam_hoc, id_lop.Value);
+                    if (res.Res)
+                        ScriptManager.RegisterStartupScript(Page, typeof(Page), "myalert", "notification('success', 'Cập nhật dữ liệu thành công!')", true);
+                    else ScriptManager.RegisterStartupScript(Page, typeof(Page), "myalert", "notification('error', 'Có lỗi xảy ra!')", true);
+                    #endregion
+                    RadGrid1.Rebind();
+                }
+                catch(Exception ex)
+                {
+                    ScriptManager.RegisterStartupScript(Page, typeof(Page), "myalert", "notification('error', " + ex.ToString() + ")", true);
+                }
+            }
         }
     }
 }

@@ -26,7 +26,7 @@
                 <span class="item-title">GỬI TIN NHẮN THÔNG BÁO</span>
             </div>
             <div class="col-sm-8 text-right">
-                <asp:Button ID="btnGuiTuyChon" runat="server" CssClass="btn bt-one" Text="Gửi tùy chọn" OnClientClick="if(!btLuuClick()) return false;" OnClick="btnGuiTuyChon_Click"/>
+                <asp:Button ID="btnGuiTuyChon" runat="server" CssClass="btn bt-one" Text="Gửi tùy chọn" OnClientClick="if(!btLuuClick()) return false;" OnClick="btnGuiTuyChon_Click" />
                 <asp:Button ID="btnGuiAll" runat="server" CssClass="btn bt-one" Text="Gửi toàn trường" OnClientClick="if(!btLuuClick()) return false;" OnClick="btnGuiAll_Click" />
                 <asp:Button ID="btGuiSoDinhKem" runat="server" CssClass="btn bt-one" Text="Gửi SMS đính kèm" OnClientClick="if(!btLuuClick()) return false;" OnClick="btGuiSoDinhKem_Click" />
                 <asp:LinkButton runat="server" ID="btnSmsTuyBien" href="\SMS\SMSImportExcel.aspx" CssClass="btn bt-one" Font-Size="17px">Gửi SMS tùy biến</asp:LinkButton>
@@ -67,24 +67,37 @@
                             </SelectParameters>
                         </asp:ObjectDataSource>
                     </div>
-                    <div class="one-checkbox col-sm-3">
+                    <div class="one-checkbox col-sm-2">
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="one-checkbox col-md-3 col-sm-5" style="margin-left: -20px;">
+                                <label>
+                                    <asp:CheckBox ID="cbHenGioGuiTin" runat="server" Text="Hẹn Giờ" OnCheckedChanged="cbHenGioGuiTin_CheckedChanged" AutoPostBack="true" />
+                                </label>
+                            </div>
+                            <div class="col-md-9 col-sm-7">
+                                <div runat="server" id="divTime" visible="false">
+                                    <asp:TextBox ID="tbTime" runat="server" CssClass="form-control text-box nd-nx-nl" TextMode="DateTimeLocal"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 15px;">
+                    <div class="one-checkbox col-sm-12">
                         <label>
                             <asp:CheckBox ID="cboGuiGVCN" runat="server" Text="Gửi GVCN" Checked="true" />
-                        </label>&nbsp;&nbsp;&nbsp;
+                        </label>
+                        &nbsp;&nbsp;&nbsp;
                         <label>
                             <asp:CheckBox ID="cboGuiGV" runat="server" Text="Gửi GV toàn trường" Checked="false" />
                         </label>
+                        &nbsp;&nbsp;&nbsp;
+                        <label>
+                            <asp:CheckBox ID="cboGuiZalo" runat="server" Text="Gửi Zalo" /></label>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="one-checkbox col-sm-4" style="margin-left: -20px;">
-                            <label>
-                                <asp:CheckBox ID="cbHenGioGuiTin" runat="server" Text="Hẹn Giờ" OnCheckedChanged="cbHenGioGuiTin_CheckedChanged" AutoPostBack="true" />
-                            </label>
-                        </div>
-                        <div class="col-sm-8" runat="server" id="divTime" visible="false">
-                            <asp:TextBox ID="tbTime" runat="server" CssClass="form-control text-box nd-nx-nl" TextMode="DateTimeLocal" Style="margin-left: 35px;"></asp:TextBox>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="row" style="margin-top: 15px;">
                     <div class="col-sm-6">

@@ -12,12 +12,13 @@
 </head>
 <body>
     <section class="cpn-info">
-        <h3><span><asp:Label ID="lblDanhBaGV" runat="server"></asp:Label></span></h3>
+        <h3><span>
+            <asp:Label ID="lblDanhBaGV" runat="server"></asp:Label></span></h3>
     </section>
     <asp:Literal ID="ltrGoiGVCN" runat="server"></asp:Literal>
     <p><b>Giáo viên bộ môn</b></p>
-    <div class="cpn-table-response" style="width:100%;margin:0px auto;">
-        <table border="1" cellpadding="0" cellspacing="0" dir="ltr" style="min-width:0px;">
+    <div class="cpn-table-response" style="width: 100%; margin: 0px auto;">
+        <table border="1" cellpadding="0" cellspacing="0" dir="ltr" style="min-width: 0px;">
             <tbody>
                 <tr>
                     <td>STT</td>
@@ -37,5 +38,14 @@
             </tbody>
         </table>
     </div>
+    <footer class="main-footer" style="position: fixed; bottom: 0px; width: 100%; background: #fff;">
+        <div>
+            <p><span style="font-size: 20px;"><b>CÔNG TY CPTM CÔNG NGHỆ THÔNG TIN DI ĐỘNG ONE-SMS</b></span></p>
+            <p>
+                Địa chỉ: Coneck Building, 6/61 Phạm Tuấn Tài, Hà Nội<br>
+                Điện thoại: 0901 707 069-Nhánh 2&nbsp;- Kinh Doanh: 0901 707 069-Nhánh 1
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

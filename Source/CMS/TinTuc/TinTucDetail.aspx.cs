@@ -20,6 +20,7 @@ namespace CMS.TinTuc
         LogUserBO logUserBO = new LogUserBO();
         protected void Page_Load(object sender, EventArgs e)
         {
+            cbTaoBai_CheckedChanged(sender, e);
             if (Request.QueryString.Get("id") != null)
             {
                 try
@@ -37,16 +38,21 @@ namespace CMS.TinTuc
                     if (detail != null)
                     {
                         tbTieuDe.Text = detail.TIEU_DE;
-                        tbNoiDung.Text = detail.NOI_DUNG_TOM_TAT;
+                        tbTomtat.Text = detail.NOI_DUNG_TOM_TAT;
+                        tbNoiDung.Text = detail.NOI_DUNG != null ? detail.NOI_DUNG : "";
                         tbLink.Text = detail.LINK;
                         imgAnh.ImageUrl = detail.ANH_DAI_DIEN != null ? detail.ANH_DAI_DIEN.ToString() : "";
-                        if (detail.NGAY_SU_KIEN != null) rdNgaySuKien.SelectedDate = detail.NGAY_SU_KIEN;
-                        else rdNgaySuKien.SelectedDate = null;
                         if (detail.NGAY_HIEU_LUC != null) rdNgayHieuLuc.SelectedDate = detail.NGAY_HIEU_LUC;
                         else rdNgayHieuLuc.SelectedDate = null;
                         if (detail.THU_TU != null) tbThuTu.Text = detail.THU_TU.ToString();
                         btEdit.Visible = is_access(SYS_Type_Access.SUA);
                         btAdd.Visible = false;
+
+                        if (!string.IsNullOrEmpty(detail.NOI_DUNG) && detail.LINK.Contains("https://demo.1sms.vn/TinTuc/ViewPost.aspx"))
+                        {
+                            cbTaoBai.Checked = true;
+                            cbTaoBai_CheckedChanged(sender, e);
+                        }
                     }
                     else
                     {
@@ -83,8 +89,29 @@ namespace CMS.TinTuc
             detail.MA_CAP_HOC = Sys_This_Cap_Hoc;
             detail.ID_NAM_HOC = Convert.ToInt16(Sys_Ma_Nam_hoc);
             detail.TIEU_DE = tbTieuDe.Text.Trim();
-            detail.NOI_DUNG_TOM_TAT = tbNoiDung.Text.Trim();
+            detail.NOI_DUNG_TOM_TAT = tbTomtat.Text.Trim();
+            detail.NOI_DUNG = Server.HtmlDecode(tbNoiDung.Text.Trim());
             detail.LINK = tbLink.Text.Trim();
+            if (cbTaoBai.Checked)
+            {
+                if (string.IsNullOrEmpty(tbNoiDung.Text.Trim()))
+                {
+                    ScriptManager.RegisterStartupScript(Page, typeof(Page), "myalert", "notification('warning', 'Nội dung tin bài không được để trống!');", true);
+                    return;
+                }
+                detail.NOI_DUNG = Server.HtmlDecode(tbNoiDung.Text.Trim());
+                detail.LINK = "https://demo.1sms.vn/TinTuc/ViewPost.aspx";
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(tbLink.Text.Trim()))
+                {
+                    ScriptManager.RegisterStartupScript(Page, typeof(Page), "myalert", "notification('warning', 'Link tin bài không được để trống!');", true);
+                    return;
+                }
+                detail.NOI_DUNG = null;
+                detail.LINK = tbLink.Text.Trim();
+            }
             foreach (UploadedFile f in rauAnh.UploadedFiles)
             {
                 Guid strGuid = Guid.NewGuid();
@@ -93,11 +120,6 @@ namespace CMS.TinTuc
                 f.SaveAs(path);
                 detail.ANH_DAI_DIEN = "~/img/AnhTinTuc/" + fileName;
             }
-            try
-            {
-                detail.NGAY_SU_KIEN = rdNgaySuKien.SelectedDate.Value;
-            }
-            catch { }
             try
             {
                 detail.NGAY_HIEU_LUC = rdNgayHieuLuc.SelectedDate.Value;
@@ -144,8 +166,29 @@ namespace CMS.TinTuc
             detail.MA_CAP_HOC = Sys_This_Cap_Hoc;
             detail.ID_NAM_HOC = Convert.ToInt16(Sys_Ma_Nam_hoc);
             detail.TIEU_DE = tbTieuDe.Text.Trim();
-            detail.NOI_DUNG_TOM_TAT = tbNoiDung.Text.Trim();
-            detail.LINK = tbLink.Text.Trim();
+            detail.NOI_DUNG_TOM_TAT = tbTomtat.Text.Trim();
+            //detail.NOI_DUNG = Server.HtmlDecode(tbNoiDung.Text.Trim());
+            //detail.LINK = tbLink.Text.Trim();
+            if (cbTaoBai.Checked)
+            {
+                if (string.IsNullOrEmpty(tbNoiDung.Text.Trim()))
+                {
+                    ScriptManager.RegisterStartupScript(Page, typeof(Page), "myalert", "notification('warning', 'Nội dung tin bài không được để trống!');", true);
+                    return;
+                }
+                detail.NOI_DUNG = Server.HtmlDecode(tbNoiDung.Text.Trim());
+                detail.LINK = "https://demo.1sms.vn/TinTuc/ViewPost.aspx?id=" + id.Value;
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(tbLink.Text.Trim()))
+                {
+                    ScriptManager.RegisterStartupScript(Page, typeof(Page), "myalert", "notification('warning', 'Link tin bài không được để trống!');", true);
+                    return;
+                }
+                detail.NOI_DUNG = null;
+                detail.LINK = tbLink.Text.Trim();
+            }
             foreach (UploadedFile f in rauAnh.UploadedFiles)
             {
                 Guid strGuid = Guid.NewGuid();
@@ -154,11 +197,6 @@ namespace CMS.TinTuc
                 f.SaveAs(path);
                 detail.ANH_DAI_DIEN = "~/img/AnhTinTuc/" + fileName;
             }
-            try
-            {
-                detail.NGAY_SU_KIEN = rdNgaySuKien.SelectedDate.Value;
-            }
-            catch { }
             try
             {
                 detail.NGAY_HIEU_LUC = rdNgayHieuLuc.SelectedDate.Value;
@@ -177,6 +215,19 @@ namespace CMS.TinTuc
                 strMsg = "notification('error', '" + res.Msg + "');";
             }
             ScriptManager.RegisterStartupScript(Page, typeof(Page), "myalert", strMsg, true);
+        }
+        protected void cbTaoBai_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbTaoBai.Checked)
+            {
+                divNoiDung.Visible = true;
+                divLink.Visible = false;
+            }
+            else
+            {
+                divNoiDung.Visible = false;
+                divLink.Visible = true;
+            }
         }
     }
 }

@@ -38,7 +38,8 @@ namespace CMS.HocSinh
         List<string> lstText = new List<string> { "Họ và tên", "SĐT nhắn tin", "Khối", "Lớp", "Ngày sinh", "Giới tính", "Trạng thái học", "Thứ tự", "Con giáo viên", "Đăng ký SMS kỳ 1", "Đăng ký SMS kỳ 2", "Miễn phí SMS kỳ 1", "Miễn phí SMS kỳ 2", "Quốc tịch", "Dân tộc", "Đối tượng chính sách", "Khu vực", "Tỉnh/Thành phố", "Quận/Huyện", "Xã/Phường", "Nơi sinh", "Địa chỉ thường trú", "Số CMND", "Nơi cấp", "Ngày cấp", "Họ tên bố", "Năm sinh bố", "SĐT bố", "Họ tên mẹ", "Năm sinh mẹ", "SĐT mẹ", "Họ tên người bảo hộ", "Năm sinh người bảo hộ", "SĐT người bảo hộ" };
         protected void Page_Load(object sender, EventArgs e)
         {
-            checkChonTruong();
+            if (Sys_This_Truong == null && Sys_This_Cap_Hoc == null)
+                checkChonTruong();
             bt_EXCELtoSQL.Visible = is_access(SYS_Type_Access.THEM);
             if (!IsPostBack)
             {
@@ -735,6 +736,7 @@ namespace CMS.HocSinh
                     if (!string.IsNullOrEmpty(strNamSinhNBH)) entity.NAM_SINH_NGUOI_BAO_HO = Convert.ToInt16(strNamSinhNBH);
                     if (!string.IsNullOrEmpty(strSDTNBH)) entity.SDT_NBH = strSDTNBH;
                     #endregion
+
                     #region Set Entity
                     List<string> lstSDT = new List<string>();
                     if (!string.IsNullOrEmpty(entity.SDT_NHAN_TIN))
@@ -834,6 +836,7 @@ namespace CMS.HocSinh
                     hocSinh.ID_NAM_HOC = Convert.ToInt16(Sys_Ma_Nam_hoc);
                     hocSinh.MA_CAP_HOC = Sys_This_Cap_Hoc;
                     #endregion
+
                     string strMsg = string.Empty;
                     if (resEntity.Res)
                     {

@@ -209,15 +209,27 @@
                 if ($(this).val().length == 0) $(nextTd).html('');
                 else $(nextTd).html($(this).val().length);
             });
+            
             function getCot(i) {
-                grid = $find("<%=RadGrid1.ClientID%>");
+
+                var textNoiDung = document.getElementById("tbNoiDung")
+                textNoiDung.focus()
+                var ss = textNoiDung.selectionStart
+                var se = textNoiDung.selectionEnd
+
+                var temp = " @cot" + i +"@ ";
+                textNoiDung.value = textNoiDung.value.substring(0, ss) + temp + textNoiDung.value.substring(se, textNoiDung.value.length)
+                textNoiDung.setSelectionRange(ss + temp.length, ss + temp.length)
+
+                <%--grid = $find("<%=RadGrid1.ClientID%>");
                 var ndChung = $('#tbNoiDung').val();
                 var strNoiDung = ndChung;
                 strNoiDung = strNoiDung.trim();
                 strNoiDung += " @cot" + i + "@ ";
                 document.getElementById("tbNoiDung").value = strNoiDung;
-                document.getElementById("tbNoiDung").focus();
+                document.getElementById("tbNoiDung").focus();--%>
             }
+
             function guiTuyChonClick() {
                 grid = $find("<%=RadGrid1.ClientID%>");
                 if (grid.get_masterTableView().get_selectedItems().length > 0) {
@@ -347,7 +359,7 @@
                             </ItemTemplate>
                             <HeaderStyle HorizontalAlign="Center" />
                         </telerik:GridTemplateColumn>
-                        <telerik:GridTemplateColumn HeaderText="COT_3" HeaderStyle-Width="100px" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_3">
+                        <telerik:GridTemplateColumn HeaderText="COT_3" HeaderStyle-Width="120px" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_3">
                             <HeaderTemplate>
                                 <asp:Label runat="server" ID="lblCOT_3" onclick="getCot(3)" Text="acb"></asp:Label>
                             </HeaderTemplate>
@@ -357,7 +369,7 @@
                             </ItemTemplate>
                             <HeaderStyle HorizontalAlign="Center" />
                         </telerik:GridTemplateColumn>
-                        <telerik:GridTemplateColumn HeaderText="COT_4" HeaderStyle-Width="120px" HeaderStyle-HorizontalAlign="Center" UniqueName="COT_4">
+                        <telerik:GridTemplateColumn HeaderText="COT_4" HeaderStyle-HorizontalAlign="Center" UniqueName="COT_4">
                             <HeaderTemplate>
                                 <asp:Label runat="server" ID="lblCOT_4" onclick="getCot(4)" Text="acb"></asp:Label>
                             </HeaderTemplate>
@@ -366,7 +378,7 @@
                             </ItemTemplate>
                             <HeaderStyle HorizontalAlign="Center" />
                         </telerik:GridTemplateColumn>
-                        <telerik:GridTemplateColumn HeaderText="COT_5" HeaderStyle-Width="80px" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_5">
+                        <telerik:GridTemplateColumn HeaderText="COT_5" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_5">
                             <HeaderTemplate>
                                 <asp:Label runat="server" ID="lblCOT_5" onclick="getCot(5)" Text="acb"></asp:Label>
                             </HeaderTemplate>
@@ -375,7 +387,7 @@
                             </ItemTemplate>
                             <HeaderStyle HorizontalAlign="Center" />
                         </telerik:GridTemplateColumn>
-                        <telerik:GridTemplateColumn HeaderText="COT_6" HeaderStyle-Width="200px" HeaderStyle-HorizontalAlign="Center" UniqueName="COT_6">
+                        <telerik:GridTemplateColumn HeaderText="COT_6" HeaderStyle-HorizontalAlign="Center" UniqueName="COT_6">
                             <HeaderTemplate>
                                 <asp:Label runat="server" ID="lblCOT_6" onclick="getCot(6)" Text="acb"></asp:Label>
                             </HeaderTemplate>
@@ -384,7 +396,7 @@
                             </ItemTemplate>
                             <HeaderStyle HorizontalAlign="Center" />
                         </telerik:GridTemplateColumn>
-                        <telerik:GridTemplateColumn HeaderText="COT_7" HeaderStyle-Width="80px" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_7">
+                        <telerik:GridTemplateColumn HeaderText="COT_7" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_7">
                             <HeaderTemplate>
                                 <asp:Label runat="server" ID="lblCOT_7" onclick="getCot(7)" Text="acb"></asp:Label>
                             </HeaderTemplate>
@@ -393,7 +405,7 @@
                             </ItemTemplate>
                             <HeaderStyle HorizontalAlign="Center" />
                         </telerik:GridTemplateColumn>
-                        <telerik:GridTemplateColumn HeaderText="COT_8" HeaderStyle-Width="80px" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_8">
+                        <telerik:GridTemplateColumn HeaderText="COT_8" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_8">
                             <HeaderTemplate>
                                 <asp:Label runat="server" ID="lblCOT_8" onclick="getCot(8)" Text="acb"></asp:Label>
                             </HeaderTemplate>
@@ -402,7 +414,7 @@
                             </ItemTemplate>
                             <HeaderStyle HorizontalAlign="Center" />
                         </telerik:GridTemplateColumn>
-                        <telerik:GridTemplateColumn HeaderText="COT_9" HeaderStyle-Width="80px" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_9">
+                        <telerik:GridTemplateColumn HeaderText="COT_9" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_9">
                             <HeaderTemplate>
                                 <asp:Label runat="server" ID="lblCOT_9" onclick="getCot(9)" Text="acb"></asp:Label>
                             </HeaderTemplate>
@@ -411,7 +423,7 @@
                             </ItemTemplate>
                             <HeaderStyle HorizontalAlign="Center" />
                         </telerik:GridTemplateColumn>
-                        <telerik:GridTemplateColumn HeaderText="COT_10" HeaderStyle-Width="80px" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_10">
+                        <telerik:GridTemplateColumn HeaderText="COT_10" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_10">
                             <HeaderTemplate>
                                 <asp:Label runat="server" ID="lblCOT_10" onclick="getCot(10)" Text="acb"></asp:Label>
                             </HeaderTemplate>
@@ -420,52 +432,52 @@
                             </ItemTemplate>
                             <HeaderStyle HorizontalAlign="Center" />
                         </telerik:GridTemplateColumn>
-                        <telerik:GridTemplateColumn HeaderText="COT_11" HeaderStyle-Width="80px" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_11">
+                        <telerik:GridTemplateColumn HeaderText="COT_11" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_11">
                             <HeaderTemplate>
-                                <asp:Label runat="server" ID="lblCOT_11" onclick="getCot(10)" Text="acb"></asp:Label>
+                                <asp:Label runat="server" ID="lblCOT_11" onclick="getCot(11)" Text="acb"></asp:Label>
                             </HeaderTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="lblCOT_11" runat="server" Text='<%# Eval("COT_11")%>'></asp:Label>
                             </ItemTemplate>
                             <HeaderStyle HorizontalAlign="Center" />
                         </telerik:GridTemplateColumn>
-                        <telerik:GridTemplateColumn HeaderText="COT_12" HeaderStyle-Width="80px" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_12">
+                        <telerik:GridTemplateColumn HeaderText="COT_12" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_12">
                             <HeaderTemplate>
-                                <asp:Label runat="server" ID="lblCOT_12" onclick="getCot(10)" Text="acb"></asp:Label>
+                                <asp:Label runat="server" ID="lblCOT_12" onclick="getCot(12)" Text="acb"></asp:Label>
                             </HeaderTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="lblCOT_12" runat="server" Text='<%# Eval("COT_12")%>'></asp:Label>
                             </ItemTemplate>
                             <HeaderStyle HorizontalAlign="Center" />
                         </telerik:GridTemplateColumn>
-                        <telerik:GridTemplateColumn HeaderText="COT_13" HeaderStyle-Width="80px" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_13">
+                        <telerik:GridTemplateColumn HeaderText="COT_13" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_13">
                             <HeaderTemplate>
-                                <asp:Label runat="server" ID="lblCOT_13" onclick="getCot(10)" Text="acb"></asp:Label>
+                                <asp:Label runat="server" ID="lblCOT_13" onclick="getCot(13)" Text="acb"></asp:Label>
                             </HeaderTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="lblCOT_13" runat="server" Text='<%# Eval("COT_13")%>'></asp:Label>
                             </ItemTemplate>
                             <HeaderStyle HorizontalAlign="Center" />
                         </telerik:GridTemplateColumn>
-                        <telerik:GridTemplateColumn HeaderText="COT_14" HeaderStyle-Width="80px" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_14">
+                        <telerik:GridTemplateColumn HeaderText="COT_14" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_14">
                             <HeaderTemplate>
-                                <asp:Label runat="server" ID="lblCOT_14" onclick="getCot(10)" Text="acb"></asp:Label>
+                                <asp:Label runat="server" ID="lblCOT_14" onclick="getCot(14)" Text="acb"></asp:Label>
                             </HeaderTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="lblCOT_14" runat="server" Text='<%# Eval("COT_14")%>'></asp:Label>
                             </ItemTemplate>
                             <HeaderStyle HorizontalAlign="Center" />
                         </telerik:GridTemplateColumn>
-                        <telerik:GridTemplateColumn HeaderText="COT_15" HeaderStyle-Width="80px" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_15">
+                        <telerik:GridTemplateColumn HeaderText="COT_15" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="COT_15">
                             <HeaderTemplate>
-                                <asp:Label runat="server" ID="lblCOT_15" onclick="getCot(10)" Text="acb"></asp:Label>
+                                <asp:Label runat="server" ID="lblCOT_15" onclick="getCot(15)" Text="acb"></asp:Label>
                             </HeaderTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="lblCOT_15" runat="server" Text='<%# Eval("COT_15")%>'></asp:Label>
                             </ItemTemplate>
                             <HeaderStyle HorizontalAlign="Center" />
                         </telerik:GridTemplateColumn>
-                        <telerik:GridTemplateColumn DataField="NOI_DUNG_TONG_HOP" FilterControlAltText="Filter NOI_DUNG_TONG_HOP column" HeaderText="Nội dung tổng hợp" SortExpression="NOI_DUNG_TONG_HOP" UniqueName="NOI_DUNG_TONG_HOP" HeaderStyle-HorizontalAlign="Center">
+                        <telerik:GridTemplateColumn DataField="NOI_DUNG_TONG_HOP" HeaderStyle-Width="200px" FilterControlAltText="Filter NOI_DUNG_TONG_HOP column" HeaderText="Nội dung tổng hợp" SortExpression="NOI_DUNG_TONG_HOP" UniqueName="NOI_DUNG_TONG_HOP" HeaderStyle-HorizontalAlign="Center">
                             <ItemTemplate>
                                 <asp:TextBox ID="tbNoiDungTongHop" runat="server" CssClass="form-control nd-th" TextMode="MultiLine" Rows="2" ClientIDMode="Static" MaxLength="306" onkeyup="changeNoiDungRow(this);" onkeydown="changeNoiDungRow(this);" onchange="changeNoiDungRow(this);"></asp:TextBox>
                             </ItemTemplate>

@@ -13,6 +13,8 @@
 
 
     <form id="form1" runat="server" class="form-horizontal" role="form">
+        <asp:Label ID="lbl1" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="lbl2" runat="server" Text="Label"></asp:Label>
         <%--<input id="text" type="text" value="http://jindo.dev.naver.com/collie" style="width: 80%" /><br />
         <div id="qrcode" style="width: 100px; height: 100px; margin-top: 15px;"></div>
         <div class="zalo-follow-button" data-oaid="2687558107438251665" data-cover="no" data-article="3" data-width="500" data-height="628"></div>--%>
@@ -47,7 +49,6 @@
                     }
                 });
 </script>--%>
-        <asp:Label ID="lblText" runat="server" Text="Label"></asp:Label>
     </form>
 </body>
 </html>

@@ -157,6 +157,24 @@ namespace CMS.HocSinh {
         protected global::System.Web.UI.WebControls.TextBox tbNoiDungChen;
         
         /// <summary>
+        /// cboGuiZalo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cboGuiZalo;
+        
+        /// <summary>
+        /// cboGuiGVCN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cboGuiGVCN;
+        
+        /// <summary>
         /// rbtChenTruoc control.
         /// </summary>
         /// <remarks>
@@ -173,15 +191,6 @@ namespace CMS.HocSinh {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton rbtChenSau;
-        
-        /// <summary>
-        /// cboGuiGVCN control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cboGuiGVCN;
         
         /// <summary>
         /// RadGrid1 control.

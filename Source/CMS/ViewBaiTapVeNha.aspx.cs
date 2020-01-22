@@ -22,7 +22,6 @@ namespace CMS
         public List<ViewBaiTapVeNhaEntity> lstBTVN = new List<ViewBaiTapVeNhaEntity>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblBTVN.Text = "Bài tập về nhà ngày " + DateTime.Now.ToString("dd/MM/yyyy");
             if (Request.QueryString.Get("id_lop") != null)
             {
                 try
@@ -33,20 +32,31 @@ namespace CMS
             }
             if (!IsPostBack)
             {
-                if (id_lop != null)
+                rdNgay.SelectedDate = DateTime.Now;
+                ngay_bai_tap = Convert.ToDateTime(rdNgay.SelectedDate).ToString("ddMMyyyy");
+                loadData();
+            }
+        }
+
+        protected void rdNgay_SelectedDateChanged(object sender, Telerik.Web.UI.Calendar.SelectedDateChangedEventArgs e)
+        {
+            ngay_bai_tap = Convert.ToDateTime(rdNgay.SelectedDate).ToString("ddMMyyyy");
+            loadData();
+        }
+
+        protected void loadData()
+        {
+            if (id_lop != null)
+            {
+                LOP lop = lopBO.getLopById(id_lop.Value);
+                if (lop != null)
                 {
-                    LOP lop = lopBO.getLopById(id_lop.Value);
-                    if (lop != null)
-                    {
-                        ngay_bai_tap = DateTime.Now.ToString("ddMMyyyy");
+                    List<BAI_TAP_VE_NHA> title = btvnChiTietBO.getBaiTapVeNhaChung(lop.ID_TRUONG, lop.ID_NAM_HOC, id_lop.Value, ngay_bai_tap);
+                    if (title.Count > 0) lblMes.Text = title[0].NOI_DUNG;
+                    else lblMes.Text = "Không có dữ liệu";
 
-                        List<BAI_TAP_VE_NHA> title = btvnChiTietBO.getBaiTapVeNhaChung(lop.ID_TRUONG, lop.ID_NAM_HOC, id_lop.Value, ngay_bai_tap);
-                        if (title.Count > 0) lblMes.Text = title[0].NOI_DUNG;
-                        else lblMes.Text = "Không có dữ liệu";
+                    lstBTVN = btvnChiTietBO.getBaiTapVeNhaByHocSinh(lop.ID_TRUONG, lop.ID_NAM_HOC, id_lop.Value, ngay_bai_tap);
 
-                        lstBTVN = btvnChiTietBO.getBaiTapVeNhaByHocSinh(lop.ID_TRUONG, lop.ID_NAM_HOC, id_lop.Value, ngay_bai_tap);
-                        
-                    }
                 }
             }
         }

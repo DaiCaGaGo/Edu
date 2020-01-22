@@ -419,6 +419,7 @@ namespace CMS.SMS
 
                 string noi_dung = tbNoiDung.Text.Trim();
                 string noi_dung_en = localAPI.chuyenTiengVietKhongDau(noi_dung);
+                //noi_dung_en = noi_dung_en.Replace("nbsp;", "");
                 int so_tin = 0;
                 if (!string.IsNullOrEmpty(noi_dung_en)) so_tin = localAPI.demSoTin(noi_dung_en);
 

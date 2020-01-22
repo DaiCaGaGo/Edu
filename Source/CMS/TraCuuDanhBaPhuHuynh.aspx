@@ -35,5 +35,14 @@
             </tbody>
         </table>
     </div>
+    <footer class="main-footer">
+        <div>
+            <p><span style="font-size: 20px;"><b>CÔNG TY CPTM CÔNG NGHỆ THÔNG TIN DI ĐỘNG ONE-SMS</b></span></p>
+            <p>
+                Địa chỉ: Coneck Building, 6/61 Phạm Tuấn Tài, Hà Nội<br>
+                Điện thoại: 0901 707 069-Nhánh 2&nbsp;- Kinh Doanh: 0901 707 069-Nhánh 1
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

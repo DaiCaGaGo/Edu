@@ -67,40 +67,22 @@ namespace CMS.TinTuc {
         protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
         
         /// <summary>
-        /// tbNoiDung control.
+        /// tbTomtat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbNoiDung;
+        protected global::System.Web.UI.WebControls.TextBox tbTomtat;
         
         /// <summary>
-        /// CustomValidator3 control.
+        /// CustomValidator5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator3;
-        
-        /// <summary>
-        /// tbLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbLink;
-        
-        /// <summary>
-        /// CustomValidator4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator4;
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator5;
         
         /// <summary>
         /// rauAnh control.
@@ -121,13 +103,58 @@ namespace CMS.TinTuc {
         protected global::System.Web.UI.WebControls.Image imgAnh;
         
         /// <summary>
-        /// rdNgaySuKien control.
+        /// cbTaoBai control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadDatePicker rdNgaySuKien;
+        protected global::System.Web.UI.WebControls.CheckBox cbTaoBai;
+        
+        /// <summary>
+        /// divNoiDung control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divNoiDung;
+        
+        /// <summary>
+        /// tbNoiDung control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbNoiDung;
+        
+        /// <summary>
+        /// divLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divLink;
+        
+        /// <summary>
+        /// tbLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbLink;
+        
+        /// <summary>
+        /// CustomValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator4;
         
         /// <summary>
         /// rdNgayHieuLuc control.

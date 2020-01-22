@@ -60,7 +60,7 @@ namespace CMS.TinTuc
                         if (res.Res)
                         {
                             success++;
-                            logUserBO.insert(Sys_This_Truong.ID, "DELETE", "Xóa mã NXHN " + ten + " (" + id + ")", Sys_User.ID, DateTime.Now);
+                            logUserBO.insert(Sys_This_Truong.ID, "DELETE", "Xóa tin tức " + ten + " (" + id + ")", Sys_User.ID, DateTime.Now);
                         }
                         else
                             error++;

@@ -128,9 +128,9 @@
                 <asp:CustomValidator ID="CustomValidator2" ControlToValidate="tbSDTMap" ClientValidationFunction="validateDienThoai" ValidateEmptyText="false" runat="server" SetFocusOnError="true" CssClass="valid-control" ForeColor="Red" Display="Dynamic" ErrorMessage="Dữ liệu không hợp lệ." />
             </div>
         </div>
-        <div class="row" style="margin-top: 20px">
+        <div class="row" style="margin-top: 0px">
             <div class="col-sm-12">
-                <asp:TextBox ID="tbSDTNhanSMS" CssClass="form-control" runat="server" placeholder="Nhập SĐT nhận SMS hàng ngày" Visible="false" Style="margin-top: 10px"></asp:TextBox>
+                <asp:TextBox ID="tbSDTNhanSMS" CssClass="form-control" runat="server" placeholder="Nhập SĐT nhận SMS hàng ngày" Style="margin-top: 10px"></asp:TextBox>
                 <asp:CustomValidator ID="CustomValidator1" ControlToValidate="tbSDTNhanSMS" ClientValidationFunction="validateDienThoai" ValidateEmptyText="false" runat="server" SetFocusOnError="true" CssClass="valid-control" ForeColor="Red" Display="Dynamic" ErrorMessage="Dữ liệu không hợp lệ." />
             </div>
         </div>
@@ -140,20 +140,15 @@
             </div>
         </div>
         <div class="row" style="margin-top: 20px">
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-m-12">
                 <asp:Button ID="btn1" runat="server" Text="" OnClientClick="if(!btnXacNhan()) return false;" OnClick="btn1_Click" Visible="false" />
                 <asp:HiddenField ID="hddHS1" runat="server" Value="" />
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-md-12">
                 <asp:Button ID="btn2" runat="server" Text="" OnClientClick="if(!btnXacNhan()) return false;" OnClick="btn2_Click" Visible="false" />
                 <asp:HiddenField ID="hddHS2" runat="server" Value="" />
             </div>
         </div>
-        <%--<div class="row" style="margin-top: 20px">
-            <div class="col-sm-12">
-                <asp:TextBox ID="tbSDTNhanTin" CssClass="form-control" runat="server" placeholder="Nhập SĐT nhận SMS hàng ngày" Visible="false"></asp:TextBox>
-            </div>
-        </div>--%>
         <div class="row" runat="server" visible="false">
             <div class="col-sm-12">
                 <table style="width: 100%">
@@ -175,15 +170,10 @@
                 </table>
             </div>
         </div>
-        <%--<div class="row" runat="server" id="divDangKy" visible="false">
-            <div class="col-sm-12">
-                <asp:Button ID="btDangKy" runat="server" Text="Đăng ký" CssClass="btn bt-one" Width="100%" OnClick="btDangKy_Click" />
-            </div>
-        </div>--%>
         <div class="row" runat="server">
             <div class="col-sm-12">
                 <span style="color: red;">
-                    <asp:Label runat="server" ID="lblThongBao" Style="font-size: 20px"></asp:Label>
+                    <asp:Label runat="server" ID="lblThongBao" Style="font-size: 16px"></asp:Label>
                 </span>
             </div>
         </div>
@@ -198,7 +188,6 @@
                     var jsonString = JSON.stringify(obj);
                     var parseJson = JSON.parse(jsonString);
                     var userID = parseJson.userId;
-
                     $('#HduserID').val(userID);
                 },
                 function error(err) {

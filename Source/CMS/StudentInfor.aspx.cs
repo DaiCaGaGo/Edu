@@ -45,7 +45,7 @@ namespace CMS
                         lbHoTen.Text = hocSinh.HO_TEN;
                         lbLop.Text = lopBO.getLopById(hocSinh.ID_LOP).TEN;
                         #region kqht
-                        lstDiemChiTiet = hsBO.getDiemChiTietByHocSinh(hocSinh.ID_TRUONG, hocSinh.MA_CAP_HOC, Convert.ToInt16(id_nam_hoc), hocSinh.ID_LOP, 2, id_hs.Value);
+                        lstDiemChiTiet = hsBO.getDiemChiTietByHocSinh(hocSinh.ID_TRUONG, hocSinh.MA_CAP_HOC, Convert.ToInt16(id_nam_hoc), hocSinh.ID_LOP, (Int16)hoc_ky, id_hs.Value);
                         #endregion
                     }
                 }

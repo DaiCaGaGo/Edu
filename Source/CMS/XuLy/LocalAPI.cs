@@ -259,6 +259,7 @@ namespace CMS.XuLy
             }
             str = RemoveSpecialCharacters(str);
             str = RemoveDiacritics(str);
+            str = str.Replace("nbsp;", "");
             return str;
         }
 
@@ -306,6 +307,8 @@ namespace CMS.XuLy
         {
             try
             {
+                if (string.IsNullOrEmpty(Phone))
+                    return "";
                 #region check 10 số đầu 0
                 if (Phone.IndexOf("84") != 0 && Phone.Length == 10)
                     return "84" + Phone.Substring(1, Phone.Length - 1);

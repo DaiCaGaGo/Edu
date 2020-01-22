@@ -383,14 +383,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
                         <div class="form-group">
-                            <div class="one-checkbox col-sm-3">
+                            <div class="one-checkbox col-sm-4">
                                 <label>
                                     <asp:CheckBox ID="cbHenGioGuiTin" runat="server" Text="Hẹn Giờ" OnCheckedChanged="cbHenGioGuiTin_CheckedChanged" AutoPostBack="true" />
                                 </label>
                             </div>
-                            <div class="col-sm-9" id="divTime" runat="server" visible="false">
+                            <div class="col-sm-8" id="divTime" runat="server" visible="false">
                                 <asp:TextBox ID="tbTime" runat="server" CssClass="form-control text-box nd-nx-nl" TextMode="DateTimeLocal"></asp:TextBox>
                             </div>
 
@@ -410,6 +410,12 @@
                         <div class="form-group">
                             <div class="one-checkbox col-sm-12">
                                 <table>
+                                    <tr>
+                                        <td colspan="2">
+                                            <label>
+                                                <asp:CheckBox ID="cboGuiZalo" runat="server" Text="Gửi Zalo" /></label>
+                                        </td>
+                                    </tr>
                                     <tr>
                                         <td>
                                             <label>

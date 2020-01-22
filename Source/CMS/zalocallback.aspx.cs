@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using OneEduDataAccess;
 using OneEduDataAccess.BO;
+using OneEduDataAccess.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -22,8 +23,6 @@ namespace CMS
         MapPhuHuynhHocSinhBO mapPhuHuynhHocSinhBO = new MapPhuHuynhHocSinhBO();
         protected void Page_Load(object sender, EventArgs e)
         {
-            //ZaloOaInfo zaloOaInfo = new ZaloOaInfo(2687558107438251665, "q5BKPirYTV1K4G24t9bS");
-            //ZaloOaClient oaClient = new ZaloOaClient(zaloOaInfo);
             try
             {
                 ghilog("CallbackZalo", Request.Url.ToString());
@@ -33,31 +32,28 @@ namespace CMS
                 string oaid = Request.QueryString.Get("oaid");
                 string appid = Request.QueryString.Get("appid");
                 ghilog("getDAtafromCallback", "event=" + strEvent + ", message=" + str_message + ", fromuid=" + fromuid);
+
+                int id_nam_hoc = Convert.ToInt16(DateTime.Now.Year);
+                int hoc_ky = 1;
+                int thang = DateTime.Now.Month;
+                if (thang >= 1 && thang < 9)
+                {
+                    id_nam_hoc = id_nam_hoc - 1;
+                    hoc_ky = 2;
+                }
+
                 if (!string.IsNullOrEmpty(strEvent) && !string.IsNullOrEmpty(fromuid))
                 {
-                    HttpWebRequest req = null;
-                    HttpWebResponse res = null;
-                    req = (HttpWebRequest)WebRequest.Create("https://openapi.zalo.me/v2.0/oa/message?access_token=UHaCG824G55s7Gz2Z8H0KtiT3aA4cWKfSc4nPekPBpCRGW5qijy8A2G_FI2HsWDaDHaeR8FYC2iF9XXcaVSG17DpFapax2eV1ZTYJuRdLXa08KbwjUzFFafqSd3kjtXWOsPH4l-MLtPlQde6pf0pJ4zGF2tKg3W-QL1yVU2wP6mOHrK1jQbQTY0p4cM6o0qd0I05JvZlC0GD9JLiihG0FnGmAa-Mm64v3YPxHFJgS1bhDc9mb_CfPmu53J6RnY4vB1qCTuxT7m8CHL9mpwby9OMUH5G");
-                    req.Method = "POST";
-                    req.ContentType = "application/json";
                     #region Thao tác menu
                     if (strEvent == "sendmsg")
                     {
                         try
                         {
-                            #region Xem kết quả học tập
-                            if (str_message == "@kqht")
+                            #region Xem điểm
+                            if (str_message == "#diem")
                             {
-                                #region đăng ký sử dụng IP
-                                //var dangKy = new
-                                //{
-                                //    ip = "115.84.178.66",
-                                //    name = "Công ty cổ phần thương mại Công nghệ Thông tin Di động (MOIT-OneSMS)"
-                                //};
-                                //getData(dangKy);
-                                #endregion
-                                #region post zalo
-                                List<ZaloTraCuuEntity> lstHocSinhButton = mapPhuHuynhHocSinhBO.traCuuKetQuaHocTap(fromuid);
+                                HocSinhBO hocSinhBO = new HocSinhBO();
+                                List<ZaloTraCuuEntity> lstHocSinhButton = mapPhuHuynhHocSinhBO.traCuuKetQuaHocTap(fromuid, (Int16)id_nam_hoc);
                                 if (lstHocSinhButton.Count > 0)
                                 {
                                     JObject jObject = new
@@ -98,18 +94,17 @@ namespace CMS
                                         },
                                         message = new
                                         {
-                                            text = "Bạn chưa đăng ký. Vui lòng chọn 'Khác' -> 'Đăng ký' để xem thông tin của con!"
+                                            text = "Bạn chưa đăng ký. Vui lòng chọn menu 'Đăng ký' để đăng ký xem thông tin của con!"
                                         }
                                     };
                                     getData(postData);
                                 }
-                                #endregion
                             }
                             #endregion
                             #region "danh bạ GV"
-                            else if (str_message == "@danhbagv")
+                            else if (str_message == "#danhbagv")
                             {
-                                List<ZaloTraCuuEntity> lstLop = mapPhuHuynhHocSinhBO.traCuuDanhBaGiaoVien(fromuid);
+                                List<ZaloTraCuuEntity> lstLop = mapPhuHuynhHocSinhBO.traCuuDanhBaGiaoVien(fromuid, (Int16)id_nam_hoc);
                                 if (lstLop.Count > 0)
                                 {
                                     JObject jObject = new
@@ -150,7 +145,7 @@ namespace CMS
                                         },
                                         message = new
                                         {
-                                            text = "Bạn chưa đăng ký. Vui lòng chọn 'Khác' -> 'Đăng ký' để xem thông tin của con!"
+                                            text = "Bạn chưa đăng ký. Vui lòng chọn menu 'Đăng ký' để đăng ký xem thông tin của con!"
                                         }
                                     };
                                     getData(postData);
@@ -158,9 +153,9 @@ namespace CMS
                             }
                             #endregion
                             #region danh bạ Chi hội PH
-                            else if (str_message == "@danhbachph")
+                            else if (str_message == "#danhbaph")
                             {
-                                List<ZaloTraCuuEntity> lstLop = mapPhuHuynhHocSinhBO.traCuuDanhBaChiHoiPhuHuynh(fromuid);
+                                List<ZaloTraCuuEntity> lstLop = mapPhuHuynhHocSinhBO.traCuuDanhBaChiHoiPhuHuynh(fromuid, (Int16)id_nam_hoc);
                                 if (lstLop.Count > 0)
                                 {
                                     JObject jObject = new
@@ -201,7 +196,7 @@ namespace CMS
                                         },
                                         message = new
                                         {
-                                            text = "Bạn chưa đăng ký. Vui lòng chọn 'Khác' -> 'Đăng ký' để xem thông tin của con!"
+                                            text = "Bạn chưa đăng ký. Vui lòng chọn menu 'Đăng ký' để đăng ký xem thông tin của con!"
                                         }
                                     };
                                     getData(postData);
@@ -209,9 +204,9 @@ namespace CMS
                             }
                             #endregion
                             #region Thời khóa biểu lớp
-                            else if (str_message == "@tkb")
+                            else if (str_message == "#tkb")
                             {
-                                List<ZaloTraCuuEntity> lstLop = mapPhuHuynhHocSinhBO.traCuuThoiKhoaBieuLop(fromuid);
+                                List<ZaloTraCuuEntity> lstLop = mapPhuHuynhHocSinhBO.traCuuThoiKhoaBieuLop(fromuid, (Int16)id_nam_hoc);
                                 if (lstLop.Count > 0)
                                 {
                                     JObject jObject = new
@@ -252,7 +247,7 @@ namespace CMS
                                         },
                                         message = new
                                         {
-                                            text = "Bạn chưa đăng ký. Vui lòng chọn 'Khác' -> 'Đăng ký' để xem thông tin của con!"
+                                            text = "Bạn chưa đăng ký. Vui lòng chọn menu 'Đăng ký' để đăng ký xem thông tin của con!"
                                         }
                                     };
                                     getData(postData);
@@ -260,9 +255,9 @@ namespace CMS
                             }
                             #endregion
                             #region Tin tức, sự kiện theo trường
-                            else if (str_message == "@tintuc")
+                            else if (str_message == "#tintuc")
                             {
-                                List<ZaloTraCuuEntity> lstLop = mapPhuHuynhHocSinhBO.traCuuTinTucTheoUser(fromuid);
+                                List<ZaloTraCuuEntity> lstLop = mapPhuHuynhHocSinhBO.traCuuTinTucTheoUser(fromuid, (Int16)id_nam_hoc);
                                 if (lstLop.Count > 0)
                                 {
                                     JObject jObject = new
@@ -282,9 +277,9 @@ namespace CMS
                                                                     from p in lstLop
                                                                     select new JObject(
                                                                         new JProperty("title", p.title),
-                                                                        new JProperty("subtitle",p.subtitle),
+                                                                        new JProperty("subtitle", p.subtitle),
                                                                         new JProperty("image_url", p.image_url),
-                                                                        new JProperty("default_action", 
+                                                                        new JProperty("default_action",
                                                                             new JObject(new JProperty("type", p.type),
                                                                                         new JProperty("url", p.url))
                                                                         )
@@ -317,9 +312,9 @@ namespace CMS
                             }
                             #endregion
                             #region Bài tập về nhà
-                            else if (str_message == "@de_cuong_2019")
+                            else if (str_message == "#btvn")
                             {
-                                List<ZaloTraCuuEntity> lstLop = mapPhuHuynhHocSinhBO.viewBaiTapVeNha(fromuid, DateTime.Now.ToString("ddMMyyyy"));
+                                List<ZaloTraCuuEntity> lstLop = mapPhuHuynhHocSinhBO.viewBaiTapVeNha(fromuid, (Int16)id_nam_hoc);
                                 if (lstLop.Count > 0)
                                 {
                                     JObject jObject = new
@@ -360,7 +355,163 @@ namespace CMS
                                         },
                                         message = new
                                         {
-                                            text = "Bạn chưa đăng ký. Vui lòng chọn 'Khác' -> 'Đăng ký' để xem thông tin của con!"
+                                            text = "Bạn chưa đăng ký. Vui lòng chọn menu 'Đăng ký' để đăng ký xem thông tin của con!"
+                                        }
+                                    };
+                                    getData(postData);
+                                }
+                            }
+                            #endregion
+                            #region Lich thi
+                            else if (str_message == "#lichthi")
+                            {
+
+                                List<ZaloTraCuuEntity> lstLop = mapPhuHuynhHocSinhBO.traLichThiLop(fromuid, (Int16)id_nam_hoc);
+                                if (lstLop.Count > 0)
+                                {
+                                    JObject jObject = new
+                                    JObject(
+                                        new JProperty("recipient",
+                                            new JObject(new JProperty("user_id", fromuid))
+                                        ),
+                                        new JProperty("message",
+                                            new JObject(
+                                                new JProperty("text", "Chọn lớp để xem lịch thi"),
+                                                new JProperty("attachment",
+                                                    new JObject(
+                                                        new JProperty("type", "template"),
+                                                        new JProperty("payload", new JObject(
+                                                            new JProperty("buttons",
+                                                                new JArray(
+                                                                    from p in lstLop
+                                                                    select new JObject(
+                                                                        new JProperty("title", p.title),
+                                                                        new JProperty("payload", new JObject(new JProperty("url", p.url))),
+                                                                        new JProperty("type", p.type)
+                                                                        )
+                                                                ))
+                                                            ))
+                                                    )
+                                                )
+                                            )
+                                    ));
+                                    getData1(jObject);
+                                }
+                                else
+                                {
+                                    var postData = new
+                                    {
+                                        recipient = new
+                                        {
+                                            user_id = fromuid
+                                        },
+                                        message = new
+                                        {
+                                            text = "Bạn chưa đăng ký. Vui lòng chọn menu 'Đăng ký' để đăng ký xem thông tin của con!"
+                                        }
+                                    };
+                                    getData(postData);
+                                }
+                            }
+                            #endregion
+                            #region Thông báo chung
+                            else if (str_message == "#thongbao")
+                            {
+
+                                List<ZaloTraCuuEntity> lstLop = mapPhuHuynhHocSinhBO.traThongBaoTruong(fromuid, (Int16)id_nam_hoc, 1);
+                                if (lstLop.Count > 0)
+                                {
+                                    JObject jObject = new
+                                    JObject(
+                                        new JProperty("recipient",
+                                            new JObject(new JProperty("user_id", fromuid))
+                                        ),
+                                        new JProperty("message",
+                                            new JObject(
+                                                new JProperty("text", "Chọn trường để xem thông báo"),
+                                                new JProperty("attachment",
+                                                    new JObject(
+                                                        new JProperty("type", "template"),
+                                                        new JProperty("payload", new JObject(
+                                                            new JProperty("buttons",
+                                                                new JArray(
+                                                                    from p in lstLop
+                                                                    select new JObject(
+                                                                        new JProperty("title", p.title),
+                                                                        new JProperty("payload", new JObject(new JProperty("url", p.url))),
+                                                                        new JProperty("type", p.type)
+                                                                        )
+                                                                ))
+                                                            ))
+                                                    )
+                                                )
+                                            )
+                                    ));
+                                    getData1(jObject);
+                                }
+                                else
+                                {
+                                    var postData = new
+                                    {
+                                        recipient = new
+                                        {
+                                            user_id = fromuid
+                                        },
+                                        message = new
+                                        {
+                                            text = "Bạn chưa đăng ký. Vui lòng chọn menu 'Đăng ký' để đăng ký xem thông tin của con!"
+                                        }
+                                    };
+                                    getData(postData);
+                                }
+                            }
+                            #endregion
+                            #region Giờ vào lớp, đưa đón học sinh
+                            else if (str_message == "#giogiac")
+                            {
+
+                                List<ZaloTraCuuEntity> lstLop = mapPhuHuynhHocSinhBO.traThongBaoTruong(fromuid, (Int16)id_nam_hoc, 2);
+                                if (lstLop.Count > 0)
+                                {
+                                    JObject jObject = new
+                                    JObject(
+                                        new JProperty("recipient",
+                                            new JObject(new JProperty("user_id", fromuid))
+                                        ),
+                                        new JProperty("message",
+                                            new JObject(
+                                                new JProperty("text", "Chọn trường để xem giờ đưa đón con"),
+                                                new JProperty("attachment",
+                                                    new JObject(
+                                                        new JProperty("type", "template"),
+                                                        new JProperty("payload", new JObject(
+                                                            new JProperty("buttons",
+                                                                new JArray(
+                                                                    from p in lstLop
+                                                                    select new JObject(
+                                                                        new JProperty("title", p.title),
+                                                                        new JProperty("payload", new JObject(new JProperty("url", p.url))),
+                                                                        new JProperty("type", p.type)
+                                                                        )
+                                                                ))
+                                                            ))
+                                                    )
+                                                )
+                                            )
+                                    ));
+                                    getData1(jObject);
+                                }
+                                else
+                                {
+                                    var postData = new
+                                    {
+                                        recipient = new
+                                        {
+                                            user_id = fromuid
+                                        },
+                                        message = new
+                                        {
+                                            text = "Bạn chưa đăng ký. Vui lòng chọn menu 'Đăng ký' để đăng ký xem thông tin của con!"
                                         }
                                     };
                                     getData(postData);

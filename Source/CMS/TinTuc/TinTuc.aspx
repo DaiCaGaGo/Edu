@@ -26,7 +26,7 @@
     <telerik:RadWindowManager RenderMode="Lightweight" ID="RadWindowManager1" runat="server" EnableShadow="true" OnClientClose="RadWindowManager1_OnClientClose">
         <Windows>
             <telerik:RadWindow RenderMode="Lightweight" ID="RadWindow1" runat="server" ShowContentDuringLoad="false" Width="400px"
-                Height="400px" Title="Chi tiết mã nhận xét" Behaviors="Reload,Close,Maximize" Modal="true" VisibleStatusbar="false">
+                Height="400px" Title="Chi tiết tin tức" Behaviors="Reload,Close,Maximize" Modal="true" VisibleStatusbar="false">
             </telerik:RadWindow>
         </Windows>
     </telerik:RadWindowManager>
@@ -67,7 +67,7 @@
             </div>
             <div class="col-sm-8 text-right">
                 <asp:Button ID="btTimKiem" runat="server" Text="Tìm kiếm" CssClass="btn bt-one" OnClick="btTimKiem_Click"/>
-                <input type="button" id="btAddNew" runat="server" class="btn bt-one" value="Thêm mới" onclick="openRadWin('TinTucDetail.aspx', 860, 600, 1)" />
+                <input type="button" id="btAddNew" runat="server" class="btn bt-one" value="Thêm mới" onclick="openRadWin('TinTucDetail.aspx', 100, 50)" />
                 <asp:Button ID="btDeleteChon" runat="server" CssClass="btn bt-one" OnClick="btDeleteChon_Click" Text="Xóa" OnClientClick="if(!btDeteleClick()) return false;" />
             </div>
             <div style="clear: both"></div>
@@ -122,7 +122,7 @@
                         </telerik:GridBoundColumn>
                         <telerik:GridTemplateColumn HeaderText="Sửa" HeaderStyle-Width="60px" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="SUA">
                             <ItemTemplate>
-                                <img src="../img/sua.png" onclick='<%# "openRadWin(\"TinTucDetail.aspx?id=" + Eval("ID") + "\", 860, 600, 1)" %>' style="cursor: pointer;" />
+                                <img src="../img/sua.png" onclick='<%# "openRadWin(\"TinTucDetail.aspx?id=" + Eval("ID") + "\", 100, 50)" %>' style="cursor: pointer;" />
                             </ItemTemplate>
                         </telerik:GridTemplateColumn>
                     </Columns>

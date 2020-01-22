@@ -22,6 +22,7 @@ namespace CMS.SMS
         private LocalAPI localAPI = new LocalAPI();
         private QuyTinBO quyTinBO = new QuyTinBO();
         private TinNhanBO tinNhanBO = new TinNhanBO();
+        BaiTapVeNhaBO btvnBO = new BaiTapVeNhaBO();
         TruongBO truongBO = new TruongBO();
         LopBO lopBO = new LopBO();
         LogUserBO logUserBO = new LogUserBO();
@@ -501,6 +502,40 @@ namespace CMS.SMS
                                 {
                                     logUserBO.insert(Sys_This_Truong.ID, "SMS", "Gửi thông báo toàn trường " + tong_tin_gui + " tin nhắn", Sys_User.ID, DateTime.Now);
                                 }
+                            }
+                        }
+                    }
+                }
+                #endregion
+
+                #region lưu thông báo hiển thị dặn dò trong Zalo
+                if (cboGuiZalo.Checked && lstTinNhan.Count > 0 && !string.IsNullOrEmpty(tbNoiDung.Text.Trim()))
+                {
+                    List<LopEntity> lstLopInTruong = lopBO.getLopGVCNByTruongCapNamHoc(Sys_This_Cap_Hoc, Sys_This_Truong.ID, Convert.ToInt16(Sys_Ma_Nam_hoc));
+                    for (int i = 0; i < lstLopInTruong.Count; i++)
+                    {
+                        long? id_lop = localAPI.ConvertStringTolong(lstLopInTruong[i].ID_LOP.ToString());
+                        short? id_khoi = localAPI.ConvertStringToShort(lstLopInTruong[i].ID_KHOI.ToString());
+                        if (id_lop != null && id_khoi != null)
+                        {
+                            BAI_TAP_VE_NHA btvn = new BAI_TAP_VE_NHA();
+                            btvn = btvnBO.getBaiTapVeNhaByNgay(Sys_This_Truong.ID, (Int16)Sys_Ma_Nam_hoc, id_lop.Value, DateTime.Now.ToString("yyyyMMdd"));
+                            if (btvn == null)
+                            {
+                                btvn = new BAI_TAP_VE_NHA();
+                                btvn.ID_TRUONG = Sys_This_Truong.ID;
+                                btvn.MA_CAP_HOC = Sys_This_Cap_Hoc;
+                                btvn.ID_KHOI = id_khoi.Value;
+                                btvn.ID_NAM_HOC = (Int16)Sys_Ma_Nam_hoc;
+                                btvn.ID_LOP = id_lop.Value;
+                                btvn.NGAY_BTVN = DateTime.Now;
+                                btvn.NOI_DUNG = tbNoiDung.Text.Trim();
+                                btvnBO.insert(btvn, Sys_User.ID);
+                            }
+                            else
+                            {
+                                btvn.NOI_DUNG = tbNoiDung.Text.Trim();
+                                btvnBO.update(btvn, Sys_User.ID);
                             }
                         }
                     }
@@ -1054,7 +1089,7 @@ namespace CMS.SMS
                     }
                 }
                 #endregion
-
+                
                 #region gui tin nhan
                 if (lstTinNhan.Count > 0)
                 {
@@ -1137,6 +1172,39 @@ namespace CMS.SMS
                                 {
                                     logUserBO.insert(Sys_This_Truong.ID, "SMS", "Gửi thông báo toàn trường " + tong_tin_gui + " tin nhắn", Sys_User.ID, DateTime.Now);
                                 }
+                            }
+                        }
+                    }
+                }
+                #endregion
+
+                #region lưu thông báo hiển thị dặn dò trong Zalo
+                if (cboGuiZalo.Checked && lst_id_lop.Count > 0 && lstTinNhan.Count > 0 && !string.IsNullOrEmpty(tbNoiDung.Text.Trim()))
+                {
+                    for (int i = 0; i < lst_id_lop.Count; i++)
+                    {
+                        long? id_lop = localAPI.ConvertStringTolong(lst_id_lop[i].ToString());
+                        if (id_lop != null)
+                        {
+                            BAI_TAP_VE_NHA btvn = new BAI_TAP_VE_NHA();
+                            btvn = btvnBO.getBaiTapVeNhaByNgay(Sys_This_Truong.ID, (Int16)Sys_Ma_Nam_hoc, id_lop.Value, DateTime.Now.ToString("yyyyMMdd"));
+                            LOP lop = lopBO.getLopById(id_lop.Value);
+                            if (btvn == null)
+                            {
+                                btvn = new BAI_TAP_VE_NHA();
+                                btvn.ID_TRUONG = Sys_This_Truong.ID;
+                                btvn.MA_CAP_HOC = Sys_This_Cap_Hoc;
+                                btvn.ID_KHOI = lop.ID_KHOI;
+                                btvn.ID_NAM_HOC = (Int16)Sys_Ma_Nam_hoc;
+                                btvn.ID_LOP = id_lop.Value;
+                                btvn.NGAY_BTVN = DateTime.Now;
+                                btvn.NOI_DUNG = tbNoiDung.Text.Trim();
+                                btvnBO.insert(btvn, Sys_User.ID);
+                            }
+                            else
+                            {
+                                btvn.NOI_DUNG = tbNoiDung.Text.Trim();
+                                btvnBO.update(btvn, Sys_User.ID);
                             }
                         }
                     }

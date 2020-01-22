@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Reflection;
@@ -22,58 +23,40 @@ namespace CMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            //HocSinhBO hsBO = new HocSinhBO();
-            //List<DiemChiTietTheoHocSinhEntity> lst = hsBO.getDiemChiTietByHocSinh(236, "THCS", 2018, 1101, 2, 45886);
-            //string sms = RemoveSpecialCharacters("T/B: Nha truong phoi hop voi Trung tam TDTT to chuc lop boi loi va phong tranh duoi nuoc. PH  dang ky cho con tham gia lop boi day du và dung han, có xe đưa đón tại trường. Han cuoi la 31/5/2019. Lien he thay Le Minh (0912048386) Tran trong!");
-
-            //MapPhuHuynhHocSinhBO mapPhuHuynhHocSinhBO = new MapPhuHuynhHocSinhBO();
-            //string fromuid = "336483556759542047";
-            //List<ZaloTraCuuEntity> lstLop = mapPhuHuynhHocSinhBO.traCuuTinTucTheoUser(fromuid);
-            //int count = lstLop.Count;
-
-            //var ENGLISH_LANGUAGE = @"eng";
-
-            //var blogPostImage = @"E:\test_ocr\img1.jpg";
-            //string dataPath = @"D:\Edu\Source\CMS\tessdata";
-
-            //using (var ocrEngine = new TesseractEngine(Server.MapPath(@"~/tessdata"), ENGLISH_LANGUAGE, EngineMode.Default))
+            //string FilePath = Server.MapPath("~/PdfLinkFile/Attachment.pdf");
+            //WebClient User = new WebClient();
+            //Byte[] FileBuffer = User.DownloadData(FilePath);
+            //if (FileBuffer != null)
             //{
-            //    using (var imageWithText = Pix.LoadFromFile(blogPostImage))
-            //    {
-            //        using (var page = ocrEngine.Process(imageWithText))
-            //        {
-            //            var text = page.GetText();
-            //            Console.WriteLine(text);
-            //            Console.ReadLine();
-            //        }
-            //    }
+            //    Response.ContentType = "application/pdf";
+            //    Response.AddHeader("content-length", FileBuffer.Length.ToString());
+            //    Response.BinaryWrite(FileBuffer);
             //}
 
-            //Bitmap img = new Bitmap("E:/test_ocr/test_1.jpg");
-            //TesseractEngine engine = new TesseractEngine(Server.MapPath(@"~/tessdata"), "vie", EngineMode.Default);
-            //Page page = engine.Process(img, PageSegMode.Auto);
-            //string result = page.GetText();
-            //lblText.Text = result;
-            //Console.WriteLine(result);
-
-            LocalAPI localAPI = new LocalAPI();
-            string phone = "84794990188";
-            string sd = localAPI.getLoaiNhaMang(phone);
-
-            DiemChiTietBO diemChiTietBO = new DiemChiTietBO();
-            List<DiemChiTietEntity> lstDiem = diemChiTietBO.getDiemGuiTinHangNgay(2019, 197, 6, 5605, 1, DateTime.Now, 211391);
-            
-
-            //MaNhanXetBO maNXBO = new MaNhanXetBO();
-            //List<DataJsonEntity> lst = new List<DataJsonEntity>();
-            //lst = maNXBO.getMaNhanXetToDataJson(237);
-            //var json = new JavaScriptSerializer().Serialize(lst);
-            //lblText.Text = json.ToString();
+            HocSinhBO hocSinhBO = new HocSinhBO();
+            List<HocSinhEntity> lstHocSinh = hocSinhBO.getHocSinhByPhoneDangKyZalo("84919882638", 2019, "");
+            if (lstHocSinh.Count > 0)
+            {
+                for (int i = 0; i < lstHocSinh.Count; i++)
+                {
+                    if (i == 0)
+                    {
+                        lbl1.Text = lstHocSinh[i].HO_TEN;
+                        lbl1.Visible = true;
+                        lbl2.Visible = false;
+                    }
+                    else if (i == 1)
+                    {
+                        lbl2.Text = lstHocSinh[i].HO_TEN;
+                        lbl2.Visible = true;
+                    }
+                }
+            }
         }
         public string RemoveSpecialCharacters(string str)
         {
             return Regex.Replace(str, "[!@#$%^&*]", "", RegexOptions.Compiled);
         }
+        
     }
 }

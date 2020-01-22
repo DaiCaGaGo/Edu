@@ -28,6 +28,11 @@ namespace CMS.Report
                     List<BangTheoDoiHocSinhTHEntity> lstBTDHS1 = (List<BangTheoDoiHocSinhTHEntity>)Session["DatareportBTDHS1" + reportID];
                     report.DataSource = lstBTDHS1;
                     break;
+                case "BTDHS_Mau2":
+                    report = new BangTheoDoiHS_TH_mau2();
+                    List<BangTheoDoiHocSinhTHEntity> lstBTD_mau2 = (List<BangTheoDoiHocSinhTHEntity>)Session["DatareportBTDHS_Mau2" + reportID];
+                    report.DataSource = lstBTD_mau2;
+                    break;
                 case "BTDHS_THCS":
                     report = new BangTheoDoiHS_THCS();
                     List<BangTheoDoiHocSinhTHEntity> lstBTDHS_THCS = (List<BangTheoDoiHocSinhTHEntity>)Session["DatareportBTDHS_THCS" + reportID];

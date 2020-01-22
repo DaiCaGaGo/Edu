@@ -40,17 +40,17 @@
     <form id="form1" runat="server">
         <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
         <div>
-            <div id="top-login" class="text-center">
+            <div id="top-login" class="text-center head-top">
                 <%--<h1><span>ONESMS</span></h1>
                 <h2><span>ONE MESSAGE, WORTH THOUSAND WORDS</span></h2>--%>
-                <asp:Image ID="imLogo" runat="server" src="./img/logo1.jpg" />
+                <asp:Image ID="imLogo" runat="server" src="./img/logo1.jpg" CssClass="logo-top" />
             </div>
             <div id="content-login">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
             <footer class="footer">
-                <div class="container-fluid">
+                <div class="container-fluid container-mb">
                     <div class="row" style="margin-top: 8px;">
                         <div class="col-sm-12">
                             <h1>
@@ -61,34 +61,25 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-4">
-
                             <h2>
                                 <span>Địa chỉ</span>
                             </h2>
-                        </div>
-                        <div class="col-sm-4">
-
-                            <h2>
-                                <span>Hotline</span>
-                            </h2>
-                        </div>
-                        <div class="col-sm-4">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4">
-
                             <h3>
                                 <span>Coneck Building, 6/61 Phạm Tuấn Tài, Hà Nội</span>
                             </h3>
                         </div>
                         <div class="col-sm-4">
-
+                            <h2>
+                                <span>Hotline</span>
+                            </h2>
                             <h3>
                                 <span>Hỗ trợ  CSKH: 0901 707 069-Nhánh 2</span>
                             </h3>
                         </div>
                         <div class="col-sm-4">
+                            <h2>
+                                <span class="none-head">&nbsp</span>
+                            </h2>
                             <h3>
                                 <span>Kinh Doanh: 0901 707 069-Nhánh 1</span>
                             </h3>

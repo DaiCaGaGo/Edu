@@ -134,6 +134,7 @@
                         </td>
                         <td>
                             <asp:Button ID="btExport" runat="server" CssClass="btn bt-one" OnClick="btExport_Click" Text="Xuất excel" />
+                            <asp:LinkButton runat="server" ID="btnImportExcel" href="\KetQuaHocTap\DiemImportExcel.aspx" CssClass="btn bt-one" Font-Size="17px">Import excel</asp:LinkButton>
                         </td>
                     </tr>
                 </table>

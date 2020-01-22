@@ -94,19 +94,23 @@
                             </SelectParameters>
                         </asp:ObjectDataSource>
                     </div>
-                    <div class="one-checkbox col-sm-2">
+                    <div class="one-checkbox col-sm-4">
                         <label>
                             <asp:CheckBox ID="cboGuiGVCN" runat="server" Text="Gửi GVCN" Checked="true" />
-                        </label>
+                        </label>&nbsp;&nbsp;&nbsp;
+                        <label>
+                            <asp:CheckBox ID="cboGuiZalo" runat="server" Text="Gửi Zalo" /></label>
                     </div>
                     <div class="col-sm-4">
-                        <div class="one-checkbox col-sm-4" style="margin-left: -20px;">
-                            <label>
-                                <asp:CheckBox ID="cbHenGioGuiTin" runat="server" Text="Hẹn Giờ" OnCheckedChanged="cbHenGioGuiTin_CheckedChanged" AutoPostBack="true" />
-                            </label>
-                        </div>
-                        <div class="col-sm-8" runat="server" id="divTime" visible="false">
-                            <asp:TextBox ID="tbTime" runat="server" CssClass="form-control text-box nd-nx-nl" TextMode="DateTimeLocal" Style="margin-left: 35px;"></asp:TextBox>
+                        <div class="row">
+                            <div class="one-checkbox col-md-3 col-sm-5">
+                                <label>
+                                    <asp:CheckBox ID="cbHenGioGuiTin" runat="server" Text="Hẹn Giờ" OnCheckedChanged="cbHenGioGuiTin_CheckedChanged" AutoPostBack="true" />
+                                </label>
+                            </div>
+                            <div class="col-md-9 col-sm-7" runat="server" id="divTime" visible="false">
+                                <asp:TextBox ID="tbTime" runat="server" CssClass="form-control text-box nd-nx-nl" TextMode="DateTimeLocal"></asp:TextBox>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -116,16 +120,20 @@
                         <span style="position: absolute; padding-top: 5px">Nội dung tin nhắn (<span id="numberCharConfirm">0</span> ký tự) (<span id="numberSMSConfirm">0</span>/2 tin)</span>
                     </div>
                     <div class="col-sm-2">
-                        <div class="one-checkbox col-sm-12" style="padding-left: 0px; padding-right: 0px;">
-                            <label>
-                                <asp:CheckBox ID="rcbChenThem" ClientIDMode="Static" runat="server" Text="Chèn thêm" />
-                            </label>
+                        <div class="row">
+                            <div class="one-checkbox col-sm-12">
+                                <label>
+                                    <asp:CheckBox ID="rcbChenThem" ClientIDMode="Static" runat="server" Text="Chèn thêm" />
+                                </label>
+                            </div>
                         </div>
-                        <div class="one-checkbox col-sm-6" style="padding-left: 0px; padding-right: 0px;">
-                            <input type="button" id="btCopy" class="btn bt-infolg" value="Copy" onclick="btCopyClick()" />
-                        </div>
-                        <div class="one-checkbox col-sm-6" style="padding-left: 2px; padding-right: 0px;">
-                            <input type="button" id="btnRemove" class="btn bt-infolg" value="Xóa" onclick="btnRemoveClick()" />
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <input type="button" id="btCopy" class="btn bt-infolg" value="Copy" onclick="btCopyClick()" />
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="button" id="btnRemove" class="btn bt-infolg" value="Xóa" onclick="btnRemoveClick()" />
+                            </div>
                         </div>
                     </div>
                     <div class="col-sm-4">

@@ -112,24 +112,6 @@ namespace CMS.SMS {
         protected global::System.Web.UI.WebControls.ObjectDataSource objLop;
         
         /// <summary>
-        /// cboGuiGVCN control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cboGuiGVCN;
-        
-        /// <summary>
-        /// cboGuiGV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cboGuiGV;
-        
-        /// <summary>
         /// cbHenGioGuiTin control.
         /// </summary>
         /// <remarks>
@@ -155,6 +137,33 @@ namespace CMS.SMS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbTime;
+        
+        /// <summary>
+        /// cboGuiGVCN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cboGuiGVCN;
+        
+        /// <summary>
+        /// cboGuiGV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cboGuiGV;
+        
+        /// <summary>
+        /// cboGuiZalo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cboGuiZalo;
         
         /// <summary>
         /// tbNoiDung control.

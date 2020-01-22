@@ -79,7 +79,9 @@
             <div class="col-sm-8 text-right">
                 <asp:Button ID="btnLuu" runat="server" Text="Lưu" CssClass="btn bt-one" OnClick="btnLuu_Click" />
                 <asp:Button ID="btDeleteChon" runat="server" CssClass="btn bt-one" OnClick="btDeleteChon_Click" Text="Xóa tất cả" OnClientClick="if (!confirm('Bạn có muốn xóa thông tin dữ liệu này không?')) return false;" />
+                <asp:LinkButton runat="server" ID="btnImportExcel" href="\CauHinhCaHoc\ThoiKhoaBieuImportExcel.aspx" CssClass="btn bt-one" Font-Size="17px">Import excel</asp:LinkButton>
                 <asp:Button ID="btExport" runat="server" CssClass="btn bt-one" OnClick="btExport_Click" Text="Xuất excel" />
+                <asp:Button ID="btCopy" runat="server" CssClass="btn bt-one" Text="Copy kỳ I sang kỳ II" OnClientClick="if (confirm('Bạn chắc chắn muốn copy?')) return true; else return false;" OnClick="btCopy_Click" />
             </div>
             <div style="clear: both"></div>
         </div>

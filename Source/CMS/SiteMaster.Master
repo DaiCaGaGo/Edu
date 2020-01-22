@@ -25,6 +25,8 @@
         <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/Main.js?"+ localAPI.GetVerionJava() %>"></script>
         <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/bootstrap.min.js?"+ localAPI.GetVerionJava() %>"></script>
         <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Scripts/Validate.js?"+ localAPI.GetVerionJava() %>"></script>
+        <script src="<%= "http://"+HttpContext.Current.Request.Url.Authority+"/Assets/ckeditor/ckeditor.js?"+ localAPI.GetVerionJava()  %>"></script>
+        
     </telerik:RadCodeBlock>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>

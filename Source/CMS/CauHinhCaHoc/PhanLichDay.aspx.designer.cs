@@ -67,6 +67,15 @@ namespace CMS.CauHinhCaHoc {
         protected global::System.Web.UI.WebControls.Button btDeleteChon;
         
         /// <summary>
+        /// btnImportExcel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnImportExcel;
+        
+        /// <summary>
         /// btExport control.
         /// </summary>
         /// <remarks>
@@ -74,6 +83,15 @@ namespace CMS.CauHinhCaHoc {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btExport;
+        
+        /// <summary>
+        /// btCopy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btCopy;
         
         /// <summary>
         /// rcbKhoi control.

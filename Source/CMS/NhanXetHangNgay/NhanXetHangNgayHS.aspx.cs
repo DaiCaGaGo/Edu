@@ -1,5 +1,7 @@
 ﻿using ClosedXML.Excel;
 using CMS.XuLy;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using OneEduDataAccess;
 using OneEduDataAccess.BO;
 using OneEduDataAccess.Model;
@@ -8,7 +10,10 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -27,6 +32,7 @@ namespace CMS.NhanXetHangNgay
         public LocalAPI localAPI = new LocalAPI();
         TruongBO truongBO = new TruongBO();
         LogUserBO logUserBO = new LogUserBO();
+        BaiTapVeNhaBO btvnBO = new BaiTapVeNhaBO();
         protected void Page_Load(object sender, EventArgs e)
         {
             checkChonTruong();
@@ -242,6 +248,33 @@ namespace CMS.NhanXetHangNgay
                 }
 
             }
+
+            #region "Lưu thông tin chung hiển thị trong Zalo"
+            string strThongBao = tbNoiDungChen.Text.Trim();
+            if (ma_khoi != null && id_lop != null && !string.IsNullOrEmpty(strThongBao))
+            {
+                BAI_TAP_VE_NHA btvn = new BAI_TAP_VE_NHA();
+                btvn = btvnBO.getBaiTapVeNhaByNgay(Sys_This_Truong.ID, (Int16)Sys_Ma_Nam_hoc, id_lop.Value, DateTime.Now.ToString("yyyyMMdd"));
+                if (btvn == null)
+                {
+                    btvn = new BAI_TAP_VE_NHA();
+                    btvn.ID_TRUONG = Sys_This_Truong.ID;
+                    btvn.MA_CAP_HOC = Sys_This_Cap_Hoc;
+                    btvn.ID_KHOI = ma_khoi.Value;
+                    btvn.ID_NAM_HOC = (Int16)Sys_Ma_Nam_hoc;
+                    btvn.ID_LOP = id_lop.Value;
+                    btvn.NGAY_BTVN = DateTime.Now;
+                    btvn.NOI_DUNG = strThongBao;
+                    res = btvnBO.insert(btvn, Sys_User.ID);
+                }
+                else
+                {
+                    btvn.NOI_DUNG = strThongBao;
+                    res = btvnBO.update(btvn, Sys_User.ID);
+                }
+            }
+            #endregion
+
             string strMsg = "";
             if (count_change + insert - success > 0)
             {
@@ -598,6 +631,7 @@ namespace CMS.NhanXetHangNgay
                     if (Sys_This_Truong.ID != 209)
                         noi_dung_nx = !string.IsNullOrEmpty(tien_to) ? (tien_to + " " + noi_dung_nx) : noi_dung_nx;
                     string noi_dung_en = localAPI.chuyenTiengVietKhongDau(noi_dung_nx);
+                    noi_dung_en = noi_dung_en.Replace("nbsp;", "");
                     int so_tin = localAPI.demSoTin(noi_dung_en);
 
                     TIN_NHAN checkExists = new TIN_NHAN();
@@ -692,14 +726,14 @@ namespace CMS.NhanXetHangNgay
             sdt_gv = localAPI.Add84(sdt_gv);
             string telco_gv = localAPI.getLoaiNhaMang(sdt_gv);
             string noi_dung_gv = tbNoiDungChen.Text.Trim();
-            string noi_dung_gv_end = localAPI.chuyenTiengVietKhongDau(noi_dung_gv);
-            int so_tin_gv = localAPI.demSoTin(noi_dung_gv_end);
+            string noi_dung_gv_en = localAPI.chuyenTiengVietKhongDau(noi_dung_gv);
+            int so_tin_gv = localAPI.demSoTin(noi_dung_gv_en);
 
 
-            if (cboGuiGVCN.Checked && !string.IsNullOrEmpty(sdt_gv) && !string.IsNullOrEmpty(noi_dung_gv_end) && lstTinNhan.Count > 0)
+            if (cboGuiGVCN.Checked && !string.IsNullOrEmpty(sdt_gv) && !string.IsNullOrEmpty(noi_dung_gv_en) && lstTinNhan.Count > 0)
             {
                 TIN_NHAN checkSmsGV = new TIN_NHAN();
-                checkSmsGV = tinNhanBO.checkExistsSms(Sys_This_Truong.ID, nam_gui, thang_gui, null, sdt_gv, (is_checkHenGio && dt != null) ? dt : null, Sys_Time_Send, noi_dung_gv_end);
+                checkSmsGV = tinNhanBO.checkExistsSms(Sys_This_Truong.ID, nam_gui, thang_gui, null, sdt_gv, (is_checkHenGio && dt != null) ? dt : null, Sys_Time_Send, noi_dung_gv_en);
                 LOP lop = lopBO.getLopById(id_lop.Value);
                 if (checkSmsGV == null && lop != null)
                 {
@@ -716,7 +750,7 @@ namespace CMS.NhanXetHangNgay
                     tinNhanDetail.THANG_GUI = thang_gui;
                     tinNhanDetail.TUAN_GUI = tuan_gui;
                     tinNhanDetail.NOI_DUNG = noi_dung_gv;
-                    tinNhanDetail.NOI_DUNG_KHONG_DAU = noi_dung_gv_end;
+                    tinNhanDetail.NOI_DUNG_KHONG_DAU = noi_dung_gv_en;
                     tinNhanDetail.SO_TIN = so_tin_gv;
                     tinNhanDetail.LOAI_NHA_MANG = telco_gv;
                     brandname = ""; cp = "";
@@ -727,6 +761,53 @@ namespace CMS.NhanXetHangNgay
                     tong_tin_gui += so_tin_gv;
                 }
             }
+            #endregion
+
+            #region "Lưu thông tin chung hiển thị trong Zalo"
+            ResultEntity res1 = new ResultEntity();
+            res1.Res = true;
+            res1.Msg = "Thành công";
+            string strThongBao = tbNoiDungChen.Text.Trim();
+            if (ma_khoi != null && id_lop != null && !string.IsNullOrEmpty(strThongBao) && cboGuiZalo.Checked)
+            {
+                //string fromuid = "336483556759542047";
+                //JObject jObject = new
+                //                    JObject(
+                //                        new JProperty("recipient",
+                //                            new JObject(new JProperty("user_id", fromuid))
+                //                        ),
+                //                        new JProperty("message",
+                //                            new JObject(
+                //                                new JProperty("text", strThongBao)
+                //                            )
+                //                    ));
+                //getData1(jObject);
+
+                BAI_TAP_VE_NHA btvn = new BAI_TAP_VE_NHA();
+                btvn = btvnBO.getBaiTapVeNhaByNgay(Sys_This_Truong.ID, (Int16)Sys_Ma_Nam_hoc, id_lop.Value, DateTime.Now.ToString("yyyyMMdd"));
+                if (btvn == null)
+                {
+                    btvn = new BAI_TAP_VE_NHA();
+                    btvn.ID_TRUONG = Sys_This_Truong.ID;
+                    btvn.MA_CAP_HOC = Sys_This_Cap_Hoc;
+                    btvn.ID_KHOI = ma_khoi.Value;
+                    btvn.ID_NAM_HOC = (Int16)Sys_Ma_Nam_hoc;
+                    btvn.ID_LOP = id_lop.Value;
+                    btvn.NGAY_BTVN = DateTime.Now;
+                    btvn.NOI_DUNG = strThongBao;
+                    res1 = btvnBO.insert(btvn, Sys_User.ID);
+                }
+                else
+                {
+                    btvn.NOI_DUNG = strThongBao;
+                    res1 = btvnBO.update(btvn, Sys_User.ID);
+                }
+            }
+            string strBTVN = "";
+            if (res.Res)
+                strBTVN = "Gửi Zalo thành công";
+            else
+                strBTVN = "Nội dung gửi Zalo bị lỗi. Vui long kiểm tra lại";
             #endregion
 
             #region save sms
@@ -819,13 +900,65 @@ namespace CMS.NhanXetHangNgay
 
             string strMsg = "";
             if (res.Res && tong_tin_gui > 0)
-                strMsg = " notification('success', 'Có " + tong_tin_gui + " tin nhắn được gửi.');";
+                strMsg = " notification('success', 'Có " + tong_tin_gui + " tin nhắn SMS được gửi. " + strBTVN + "');";
             else
-                strMsg = " notification('warning', 'Không có tin nào được gửi đi!');";
+                strMsg = " notification('warning', 'Không có tin nhắn SMS nào được gửi đi! " + strBTVN + "');";
+
             ScriptManager.RegisterStartupScript(Page, typeof(Page), "myalert", strMsg, true);
             RadGrid1.Rebind();
             lblTongTinSuDung.Text = "Số tin vừa gửi: <b>" + tong_tin_gui + "</b>";
             viewQuyTinCon();
+        }
+
+        protected void getData1(JObject postData)
+        {
+            HttpWebRequest req = null;
+            HttpWebResponse res = null;
+            req = (HttpWebRequest)WebRequest.Create("https://openapi.zalo.me/v2.0/oa/message?access_token=UHaCG824G55s7Gz2Z8H0KtiT3aA4cWKfSc4nPekPBpCRGW5qijy8A2G_FI2HsWDaDHaeR8FYC2iF9XXcaVSG17DpFapax2eV1ZTYJuRdLXa08KbwjUzFFafqSd3kjtXWOsPH4l-MLtPlQde6pf0pJ4zGF2tKg3W-QL1yVU2wP6mOHrK1jQbQTY0p4cM6o0qd0I05JvZlC0GD9JLiihG0FnGmAa-Mm64v3YPxHFJgS1bhDc9mb_CfPmu53J6RnY4vB1qCTuxT7m8CHL9mpwby9OMUH5G");
+            req.Method = "POST";
+            req.ContentType = "application/json";
+
+            //var dataJson = new JavaScriptSerializer().Serialize(postData);
+            var dataJson = JsonConvert.SerializeObject(postData);
+            ghilog("getDAtafromCallback", dataJson);
+            byte[] bytes = Encoding.UTF8.GetBytes(dataJson);
+            req.ContentLength = bytes.Length;
+
+            Stream dataStream = req.GetRequestStream();
+            dataStream.Write(bytes, 0, bytes.Length);
+            dataStream.Close();
+
+            res = (HttpWebResponse)req.GetResponse();
+            Console.WriteLine(((HttpWebResponse)res).StatusDescription);
+            dataStream = res.GetResponseStream();
+            StreamReader reader = new StreamReader(dataStream);
+            string responseFromServer = reader.ReadToEnd();
+            Console.WriteLine(responseFromServer);
+            ghilog("getDAtafromCallback", responseFromServer);
+            reader.Close();
+            dataStream.Close();
+            res.Close();
+        }
+
+        public static void ghilog(string nameFile, string msg)
+        {
+            try
+            {
+                string path = "";
+                DateTime dt = new DateTime();
+                dt = DateTime.Now;
+                string foldername = dt.ToString();
+                path = "D:/LogEduZalo/" + dt.Year.ToString() + dt.Month.ToString() + dt.Day.ToString() + dt.Hour.ToString() + nameFile + ".txt";
+                using (StreamWriter sw = new StreamWriter(path, true))
+                {
+                    string str = msg;
+                    sw.WriteLine(str);
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }
