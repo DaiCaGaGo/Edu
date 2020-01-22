@@ -1,0 +1,22 @@
+.menuMobile{ display: block;padding: 30px 0px;background-color: rgba(255,255,255,.95);width: 260px;position: fixed;z-index: 505;height: 100%;overflow-y: scroll;left: -260px; }
+.menuMobile .formSearchMb{ margin-bottom: 30px; }
+.menuMobile .menu_toggle{ height: auto;width: 45px;line-height: 1;box-shadow: none!important;padding: 0;color: currentColor;opacity: .6;margin: 0 5px 0 0;font-size: 18px;transition: transform .3s,border .3s,background .3s,box-shadow .3s,opacity .3s,color .3s;position: absolute;right: 10px;top: 0px;padding: 10px; }
+.menuMobile ul{ font-size: 13px;margin: 0px;padding: 0px; }
+.menuMobile ul li{ padding-left: 20px;/*padding-top: 15px;padding-bottom: 15px;*/border-bottom: 1px solid #ececec;list-style: none;position: relative; }
+.menuMobile ul li a{ text-transform: uppercase;font-weight: bolder;color: rgba(102,102,102,.85);transition: all .2s;line-height: 50px;padding-top: 15px;padding-bottom: 15px; }
+.menuMobile ul li ul{ display: none; }
+.menuMobile ul li ul li a{ color: rgba(102,102,102,.85); }
+.menuMobile{  }
+.toggetXoay{ -ms-transform: rotate(-180deg);transform: rotate(-180deg); }
+
+.bgMenuMb{ top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 504;
+overflow: hidden;
+position: fixed;
+background: #0b0b0b;
+opacity: 0.6;
+transition: opacity .25s;display: none; }
+.block{ display: block; }

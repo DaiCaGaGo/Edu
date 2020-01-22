@@ -1,0 +1,136 @@
+@media screen and (max-width: 20000px) and (min-width: 1100px){
+	
+}
+
+@media only screen and (max-width: 1180px) {
+	.main-header .center-head ul li a{ padding: 0 0.5rem 0 1.5rem; }
+}
+
+@media only screen and (max-width: 1024px) {
+	.main-header .center-head{ display: none; }
+	.main-header .right-head{ display: none; }
+	.btnMenuMobile{ top: 0px; }
+}
+
+@media only screen and (max-width: 1000px) {
+	
+}
+ 
+@media only screen and (max-width: 980px) {
+	
+}
+
+@media only screen and (max-width: 992px){
+	
+}
+
+@media only screen and (max-width: 880px) {
+	.slide-home .slide-fixed{ top: 40%; }
+}
+ 
+@media only screen and (max-width: 800px) {
+	
+}
+ 
+@media only screen and (max-width: 780px) {
+	
+}
+ 
+/*Ipad dọc(768 x 1024)*/
+@media only screen and (max-width: 768px) {
+	.about-us .inner-box{ margin-bottom: 0.9375rem; }
+	.my-service .inner-box .text{ flex-wrap: wrap; }
+	.my-service .inner-box .text .image-icon{ width: 100%;text-align: center; }
+	.my-service .inner-box .text .box-right{ padding-left: 0px; }
+	.my-service .inner-box h3{ text-align: center; }
+	.team-us .inner-box{ margin-bottom: 20px; }
+	.main-header .left-head{ width: 37%; }
+	.btnMenuMobile{ top: 6%; }
+	.page-sigle .cpn-archive-page .cpn-right{ border-left: none;padding-left: 0px; }
+    .main-header .head-foot .mini-box.date-time{ width: 40%; }
+}
+ 
+@media only screen and (max-width: 720px) {
+	
+}
+
+@media only screen and (max-width: 668px) {
+	
+}
+ 
+@media only screen and (max-width: 640px) {
+	
+}
+ 
+@media only screen and (max-width: 600px) {
+	
+}
+ 
+@media only screen and (max-width: 568px) {
+	.slide-home .slide-fixed{ top: 20%; }
+	.slide-home .slide-fixed .support-slide ul li a{ padding: 0.35rem 1rem; }
+	.page-sigle .cpn-list-product .image img{ height: auto; }
+}
+ 
+@media only screen and (max-width: 563px) {
+	
+}
+ 
+@media only screen and (max-width: 549px) {
+ 
+}
+ 
+@media only screen and (max-width: 534px) {
+	
+}
+
+/*Tablet nhỏ(480 x 640)*/
+@media only screen and (max-width: 480px) {
+	.btnMenuMobile{ top: 4%; }
+	.title-global{ line-height: 40px;font-size: 30px; }
+}
+
+/*Iphone(480 x 640)*/
+@media only screen and (max-width: 435px) {
+	.slide-home .slide-fixed .support-slide{ display: none; }
+}
+
+/*Iphone(480 x 640)*/
+@media only screen and (max-width: 411px) {
+	
+}
+
+/*Iphone6(480 x 640)*/
+@media only screen and (max-width: 375px) {
+	.slide-home .slide-fixed{ top: 10%; }
+	.slide-home .slide-fixed .text-fixed{ font-size: 16px;margin-bottom: 0.6rem; }
+	.main-header .left-head{ width: 50%; }
+	.btnMenuMobile{ top: 1%; }
+}
+	
+
+@media only screen and (max-width: 360px) {
+	
+}
+ 
+@media only screen and (max-width: 338px) {
+	
+}
+ 
+@media only screen and (max-width: 330px) {
+
+}
+
+/*Smart phone nhỏ iphone5*/
+@media only screen and (max-width: 320px) {
+	
+}
+
+@media only screen and (max-width: 306px) {
+	
+}
+
+/*Smart phone nhỏ*/
+@media only screen and (max-width: 240px) {
+	
+}
