@@ -396,7 +396,33 @@ end as diemHocKy
             }
             return data;
         }
-        
+        public DIEM_CHI_TIET getDiemMonHocSinh(long id_truong, short id_nam_hoc, long id_lop, short hoc_ky, long id_mon_truong, long id_hoc_sinh)
+        {
+            DIEM_CHI_TIET data = new DIEM_CHI_TIET();
+            var QICache = new DefaultCacheProvider();
+            string strKeyCache = QICache.BuildCachedKey("DIEM_CHI_TIET", "getDiemMonHocSinh", id_truong, id_nam_hoc, id_lop, hoc_ky, id_mon_truong, id_hoc_sinh);
+            if (!QICache.IsSet(strKeyCache))
+            {
+                using (oneduEntities context = new oneduEntities())
+                {
+                    data = (from p in context.DIEM_CHI_TIET where p.ID_TRUONG == id_truong && p.ID_NAM_HOC == id_nam_hoc && p.ID_LOP == id_lop && p.HOC_KY == hoc_ky && p.ID_MON_HOC_TRUONG == id_mon_truong && p.ID_HOC_SINH == id_hoc_sinh &&  p.IS_DELETE != true select p).FirstOrDefault();
+                    QICache.Set(strKeyCache, data, 300000);
+                }
+            }
+            else
+            {
+                try
+                {
+                    data = QICache.Get(strKeyCache) as DIEM_CHI_TIET;
+                }
+                catch
+                {
+                    QICache.Invalidate(strKeyCache);
+                }
+            }
+            return data;
+        }
+
         public DIEM_CHI_TIET getDiemChiTietByID(long id)
         {
             DIEM_CHI_TIET data = new DIEM_CHI_TIET();

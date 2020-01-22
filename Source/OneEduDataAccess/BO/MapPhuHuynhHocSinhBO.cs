@@ -36,6 +36,58 @@ namespace OneEduDataAccess.BO
             }
             return data;
         }
+        public MAP_PH_HS getHocSinhByMaAndPhone(string sdt_map, string ma_hs)
+        {
+            MAP_PH_HS data = new MAP_PH_HS();
+            var QICache = new DefaultCacheProvider();
+            string strKeyCache = QICache.BuildCachedKey("MAP_PH_HS", "getDuLieuMap", sdt_map, ma_hs);
+            if (!QICache.IsSet(strKeyCache))
+            {
+                using (oneduEntities context = new oneduEntities())
+                {
+                    data = (from p in context.MAP_PH_HS where p.SDT_MAP == sdt_map && p.MA_HOC_SINH == ma_hs select p).FirstOrDefault();
+                    QICache.Set(strKeyCache, data, 300000);
+                }
+            }
+            else
+            {
+                try
+                {
+                    data = QICache.Get(strKeyCache) as MAP_PH_HS;
+                }
+                catch
+                {
+                    QICache.Invalidate(strKeyCache);
+                }
+            }
+            return data;
+        }
+        public List<MAP_PH_HS> getPhoneMapSuccess(string sdt_map, string zaloID)
+        {
+            List<MAP_PH_HS> data = new List<MAP_PH_HS>();
+            var QICache = new DefaultCacheProvider();
+            string strKeyCache = QICache.BuildCachedKey("MAP_PH_HS", "getPhoneMapSuccess", sdt_map, zaloID);
+            if (!QICache.IsSet(strKeyCache))
+            {
+                using (oneduEntities context = new oneduEntities())
+                {
+                    data = (from p in context.MAP_PH_HS where p.SDT_MAP == sdt_map && p.ZALO_USER_ID == zaloID && p.TRANG_THAI == true select p).ToList();
+                    QICache.Set(strKeyCache, data, 300000);
+                }
+            }
+            else
+            {
+                try
+                {
+                    data = QICache.Get(strKeyCache) as List<MAP_PH_HS>;
+                }
+                catch
+                {
+                    QICache.Invalidate(strKeyCache);
+                }
+            }
+            return data;
+        }
         public MAP_PH_HS getMapDuLieuByID(long id)
         {
             MAP_PH_HS data = new MAP_PH_HS();
@@ -88,7 +140,7 @@ namespace OneEduDataAccess.BO
             }
             return data;
         }
-        public List<ZaloTraCuuEntity> traCuuKetQuaHocTap(string fromuid)
+        public List<ZaloTraCuuEntity> traCuuKetQuaHocTap(string fromuid, short id_nam_hoc)
         {
             List<ZaloTraCuuEntity> data = new List<ZaloTraCuuEntity>();
             var QICache = new DefaultCacheProvider();
@@ -101,7 +153,7 @@ namespace OneEduDataAccess.BO
                     string hoc_sinh = "";
                     for (int i = 0; i < lstHocSinh.Count; i++)
                     {
-                        HOC_SINH detail = detail = hocSinhBO.getHocSinhByMa(lstHocSinh[i].MA_HOC_SINH);
+                        HOC_SINH detail = detail = hocSinhBO.getHocSinhByMaAndNamHoc(lstHocSinh[i].MA_HOC_SINH, id_nam_hoc);
                         if (detail != null) hoc_sinh += detail.ID + ",";
                     }
                     hoc_sinh = hoc_sinh.TrimEnd(',');
@@ -109,16 +161,16 @@ namespace OneEduDataAccess.BO
                     {
                         strQuery = @"select ho_ten as title 
                             ,'oa.open.url' as type
-                            ,'http://edu.onesms.vn/StudentInfor.aspx?id_hs=' || id as url
+                            ,'https://edu.onesms.vn/StudentInfor.aspx?id_hs=' || id as url
                             from hoc_sinh 
                             where id in (" + hoc_sinh + ")";
+                        data = context.Database.SqlQuery<ZaloTraCuuEntity>(strQuery).ToList();
                     }
-                    data = context.Database.SqlQuery<ZaloTraCuuEntity>(strQuery).ToList();
                 }
             }
             return data;
         }
-        public List<ZaloTraCuuEntity> traCuuDanhBaGiaoVien(string fromuid)
+        public List<ZaloTraCuuEntity> traCuuDanhBaGiaoVien(string fromuid, short id_nam_hoc)
         {
             List<ZaloTraCuuEntity> data = new List<ZaloTraCuuEntity>();
             var QICache = new DefaultCacheProvider();
@@ -131,7 +183,7 @@ namespace OneEduDataAccess.BO
                     string hoc_sinh = "";
                     for (int i = 0; i < lstHocSinh.Count; i++)
                     {
-                        HOC_SINH detail = detail = hocSinhBO.getHocSinhByMa(lstHocSinh[i].MA_HOC_SINH);
+                        HOC_SINH detail = detail = hocSinhBO.getHocSinhByMaAndNamHoc(lstHocSinh[i].MA_HOC_SINH, id_nam_hoc);
                         if (detail != null) hoc_sinh += detail.ID + ",";
                     }
                     hoc_sinh = hoc_sinh.TrimEnd(',');
@@ -141,14 +193,14 @@ namespace OneEduDataAccess.BO
                             'https://edu.onesms.vn/TraCuuDanhBaGV.aspx?id_lop=' || hs.id_lop as url,'oa.open.url' as type
                             from hoc_sinh hs 
                             join lop l on hs.id_truong=l.id_truong and l.id=hs.id_lop
-                            where hs.id_nam_hoc=2018 and hs.id in (" + hoc_sinh + ")";
+                            where hs.id in (" + hoc_sinh + ")";
+                        data = context.Database.SqlQuery<ZaloTraCuuEntity>(strQuery).ToList();
                     }
-                    data = context.Database.SqlQuery<ZaloTraCuuEntity>(strQuery).ToList();
                 }
             }
             return data;
         }
-        public List<ZaloTraCuuEntity> traCuuDanhBaChiHoiPhuHuynh(string fromuid)
+        public List<ZaloTraCuuEntity> traCuuDanhBaChiHoiPhuHuynh(string fromuid, short id_nam_hoc)
         {
             List<ZaloTraCuuEntity> data = new List<ZaloTraCuuEntity>();
             var QICache = new DefaultCacheProvider();
@@ -161,7 +213,7 @@ namespace OneEduDataAccess.BO
                     string hoc_sinh = "";
                     for (int i = 0; i < lstHocSinh.Count; i++)
                     {
-                        HOC_SINH detail = detail = hocSinhBO.getHocSinhByMa(lstHocSinh[i].MA_HOC_SINH);
+                        HOC_SINH detail = detail = hocSinhBO.getHocSinhByMaAndNamHoc(lstHocSinh[i].MA_HOC_SINH, id_nam_hoc);
                         if (detail != null) hoc_sinh += detail.ID + ",";
                     }
                     hoc_sinh = hoc_sinh.TrimEnd(',');
@@ -172,14 +224,14 @@ namespace OneEduDataAccess.BO
                             'oa.open.url' as type
                             from hoc_sinh hs 
                             join lop l on hs.id_truong=l.id_truong and l.id=hs.id_lop
-                            where hs.id_nam_hoc=2018 and hs.id in (" + hoc_sinh + ")";
+                            where hs.id in (" + hoc_sinh + ")";
+                        data = context.Database.SqlQuery<ZaloTraCuuEntity>(strQuery).ToList();
                     }
-                    data = context.Database.SqlQuery<ZaloTraCuuEntity>(strQuery).ToList();
                 }
             }
             return data;
         }
-        public List<ZaloTraCuuEntity> traCuuThoiKhoaBieuLop(string fromuid)
+        public List<ZaloTraCuuEntity> traCuuThoiKhoaBieuLop(string fromuid, short id_nam_hoc)
         {
             List<ZaloTraCuuEntity> data = new List<ZaloTraCuuEntity>();
             var QICache = new DefaultCacheProvider();
@@ -192,25 +244,25 @@ namespace OneEduDataAccess.BO
                     string hoc_sinh = "";
                     for (int i = 0; i < lstHocSinh.Count; i++)
                     {
-                        HOC_SINH detail = detail = hocSinhBO.getHocSinhByMa(lstHocSinh[i].MA_HOC_SINH);
+                        HOC_SINH detail = detail = hocSinhBO.getHocSinhByMaAndNamHoc(lstHocSinh[i].MA_HOC_SINH, id_nam_hoc);
                         if (detail != null) hoc_sinh += detail.ID + ",";
                     }
                     hoc_sinh = hoc_sinh.TrimEnd(',');
                     if (!string.IsNullOrEmpty(hoc_sinh))
                     {
                         strQuery = @"select distinct hs.id_lop, 'Lớp ' || l.ten as title,
-                            'http://edu.onesms.vn/ThoiKhoaBieuLop.aspx?id_lop=' || hs.id_lop as url,
+                            'https://edu.onesms.vn/TraCuu/ThoiKhoaBieuLop.aspx?id_lop=' || hs.id_lop as url,
                             'oa.open.url' as type
                             from hoc_sinh hs 
                             join lop l on hs.id_truong=l.id_truong and l.id=hs.id_lop
-                            where hs.id_nam_hoc=2018 and hs.id in (" + hoc_sinh + ")";
+                            where hs.id in (" + hoc_sinh + ")";
+                        data = context.Database.SqlQuery<ZaloTraCuuEntity>(strQuery).ToList();
                     }
-                    data = context.Database.SqlQuery<ZaloTraCuuEntity>(strQuery).ToList();
                 }
             }
             return data;
         }
-        public List<ZaloTraCuuEntity> traCuuTinTucTheoUser(string fromuid)
+        public List<ZaloTraCuuEntity> traCuuTinTucTheoUser(string fromuid, short id_nam_hoc)
         {
             List<ZaloTraCuuEntity> data = new List<ZaloTraCuuEntity>();
             var QICache = new DefaultCacheProvider();
@@ -222,15 +274,100 @@ namespace OneEduDataAccess.BO
                     string strQuery = "";
                     for (int i = 0; i < lstHocSinh.Count; i++)
                     {
-                        HOC_SINH detail = detail = hocSinhBO.getHocSinhByMa(lstHocSinh[i].MA_HOC_SINH);
+                        //HOC_SINH detail = detail = hocSinhBO.getHocSinhByMa(lstHocSinh[i].MA_HOC_SINH);
+                        HOC_SINH detail = detail = hocSinhBO.getHocSinhByMaAndNamHoc(lstHocSinh[i].MA_HOC_SINH, id_nam_hoc); ;
                         if (detail != null)
                         {
-                            strQuery = @"select * from (select TIEU_DE as title, NOI_DUNG_TOM_TAT as subtitle, LINK as url, 'oa.open.url' as type, 'https://edu.onesms.vn' || substr(ANH_DAI_DIEN, 2, length(ANH_DAI_DIEN)) as image_url from tin_tuc where id_truong=" + detail.ID_TRUONG + " and MA_CAP_HOC='" + detail.MA_CAP_HOC + "' and ID_NAM_HOC=2018 order by ngay_su_kien desc) where rownum < 6";
+                            strQuery = @"select * from (select TIEU_DE as title, NOI_DUNG_TOM_TAT as subtitle, LINK as url, 'oa.open.url' as type, 'https://edu.onesms.vn' || substr(ANH_DAI_DIEN, 2, length(ANH_DAI_DIEN)) as image_url from tin_tuc where id_truong=" + detail.ID_TRUONG + " and MA_CAP_HOC='" + detail.MA_CAP_HOC + "' order by ngay_su_kien desc) where rownum < 6";
+                            data = context.Database.SqlQuery<ZaloTraCuuEntity>(strQuery).ToList();
                             break;
                         }
                     }
-                    data = context.Database.SqlQuery<ZaloTraCuuEntity>(strQuery).ToList();
                 }
+            }
+            return data;
+        }
+        public List<ZaloTraCuuEntity> traLichThiLop(string fromuid, short id_nam_hoc)
+        {
+            List<ZaloTraCuuEntity> data = new List<ZaloTraCuuEntity>();
+            var QICache = new DefaultCacheProvider();
+            using (oneduEntities context = new oneduEntities())
+            {
+                List<MAP_PH_HS> lstHocSinh = getHocSinhByUserZaloID(fromuid);
+                if (lstHocSinh.Count > 0)
+                {
+                    string strQuery = "";
+                    string hoc_sinh = "";
+                    for (int i = 0; i < lstHocSinh.Count; i++)
+                    {
+                        HOC_SINH detail = hocSinhBO.getHocSinhByMaAndNamHoc(lstHocSinh[i].MA_HOC_SINH, id_nam_hoc);
+                        if (detail != null) hoc_sinh += detail.ID + ",";
+                    }
+                    hoc_sinh = hoc_sinh.TrimEnd(',');
+                    if (!string.IsNullOrEmpty(hoc_sinh))
+                    {
+                        strQuery = @"select distinct hs.id_lop, 'Lớp ' || l.ten as title,
+                            'https://edu.onesms.vn/LichThiLop.aspx?id_lop=' || hs.id_lop as url,
+                            'oa.open.url' as type
+                            from hoc_sinh hs 
+                            join lop l on hs.id_truong=l.id_truong and l.id=hs.id_lop
+                            where hs.id in (" + hoc_sinh + ")";
+                        data = context.Database.SqlQuery<ZaloTraCuuEntity>(strQuery).ToList();
+                    }
+                }
+            }
+            return data;
+        }
+        public List<ZaloTraCuuEntity> traThongBaoTruong(string fromuid, short id_nam_hoc, short loai_tb)
+        {
+            List<ZaloTraCuuEntity> data = new List<ZaloTraCuuEntity>();
+            var QICache = new DefaultCacheProvider();
+            using (oneduEntities context = new oneduEntities())
+            {
+                List<MAP_PH_HS> lstHocSinh = getHocSinhByUserZaloID(fromuid);
+                if (lstHocSinh.Count > 0)
+                {
+                    string strQuery = "";
+                    List<long> listTruongID = new List<long>();
+                    List<string> listCapHoc = new List<string>();
+                    string strTruong = "";
+                    string strCapHoc = "";
+                    for (int i = 0; i < lstHocSinh.Count; i++)
+                    {
+                        HOC_SINH detail = hocSinhBO.getHocSinhByMaAndNamHoc(lstHocSinh[i].MA_HOC_SINH, id_nam_hoc);
+                        if (detail != null)
+                        {
+                            if (!listTruongID.Contains(detail.ID_TRUONG)) strTruong += detail.ID_TRUONG + ",";
+                            if (!listCapHoc.Contains(detail.MA_CAP_HOC)) strCapHoc += "'" + detail.MA_CAP_HOC + "',";
+                        }
+                    }
+                    strTruong = strTruong.TrimEnd(',');
+                    strCapHoc = strCapHoc.TrimEnd(',');     
+                    if (!string.IsNullOrEmpty(strTruong) && !string.IsNullOrEmpty(strCapHoc))
+                    {
+                        strQuery = @"select distinct t.id as id_truong, t.ten as title,
+                            'https://edu.onesms.vn/TinTuc/ViewThongBao.aspx?id_truong=' || tb.id_truong || '&' || 'ma_cap_hoc=' || tb.cap_hoc || '&' || 'loai_tb=' || tb.loai_thong_bao as url,
+                            'oa.open.url' as type
+                            from thong_bao_nha_truong tb
+                            join truong t on tb.id_truong = t.id
+                            where tb.id_truong in (" + strTruong + ") and tb.cap_hoc in (" + strCapHoc + ")  and tb.id_nam_hoc=" + id_nam_hoc + " and loai_thong_bao=" + loai_tb;
+                        data = context.Database.SqlQuery<ZaloTraCuuEntity>(strQuery).ToList();
+                    }
+                }
+            }
+            return data;
+        }
+        public List<ZaloTraCuuEntity> huongDanDangKy(string userType)
+        {
+            List<ZaloTraCuuEntity> data = new List<ZaloTraCuuEntity>();
+            var QICache = new DefaultCacheProvider();
+            using (oneduEntities context = new oneduEntities())
+            {
+                string strQuery = string.Format(@"select 'Xem hướng dẫn' as title,
+                            'https://edu.onesms.vn/TraCuu/HuongDanZalo.aspx?user_type=' || {0} as url,
+                            'oa.open.url' as type
+                            from dual", userType);
+                data = context.Database.SqlQuery<ZaloTraCuuEntity>(strQuery).ToList();
             }
             return data;
         }
@@ -245,7 +382,7 @@ namespace OneEduDataAccess.BO
             }
             return data;
         }
-        public List<ZaloTraCuuEntity> viewBaiTapVeNha(string fromuid, string ngay_btvn)
+        public List<ZaloTraCuuEntity> viewBaiTapVeNha(string fromuid, short id_nam_hoc)
         {
             List<ZaloTraCuuEntity> data = new List<ZaloTraCuuEntity>();
             var QICache = new DefaultCacheProvider();
@@ -258,20 +395,20 @@ namespace OneEduDataAccess.BO
                     string hoc_sinh = "";
                     for (int i = 0; i < lstHocSinh.Count; i++)
                     {
-                        HOC_SINH detail = detail = hocSinhBO.getHocSinhByMa(lstHocSinh[i].MA_HOC_SINH);
+                        HOC_SINH detail = detail = hocSinhBO.getHocSinhByMaAndNamHoc(lstHocSinh[i].MA_HOC_SINH, id_nam_hoc);
                         if (detail != null) hoc_sinh += detail.ID + ",";
                     }
                     hoc_sinh = hoc_sinh.TrimEnd(',');
                     if (!string.IsNullOrEmpty(hoc_sinh))
                     {
                         strQuery = string.Format(@"select distinct hs.id_lop, 'Lớp ' || l.ten as title,
-                            'http://edu.onesms.vn/ViewBaiTapVeNha.aspx?id_lop=' || hs.id_lop || '&' || 'ngay_bai_tap=' || {0} as url,
+                            'https://edu.onesms.vn/ViewBaiTapVeNha.aspx?id_lop=' || hs.id_lop as url,
                             'oa.open.url' as type
                             from hoc_sinh hs 
                             join lop l on hs.id_truong=l.id_truong and l.id=hs.id_lop
-                            where hs.id_nam_hoc=2018 and hs.id in (" + hoc_sinh + ")", ngay_btvn);
+                            where hs.id in (" + hoc_sinh + ")");
+                        data = context.Database.SqlQuery<ZaloTraCuuEntity>(strQuery).ToList();
                     }
-                    data = context.Database.SqlQuery<ZaloTraCuuEntity>(strQuery).ToList();
                 }
             }
             return data;

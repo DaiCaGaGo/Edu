@@ -531,6 +531,44 @@ namespace OneEduDataAccess.BO
             }
             return res;
         }
+        public ResultEntity copyLichHocTheoKy(long id_truong, short id_nam_hoc, long id_lop)
+        {
+            ResultEntity res = new ResultEntity();
+            res.Res = true;
+            res.Msg = "Thành công";
+            try
+            {
+                using (var context = new oneduEntities())
+                {
+                    for (int i = 1; i < 11; i++)
+                    {
+                        string query = string.Format(@"UPDATE ca_hoc T1
+                           SET T1.tiet     = {0},
+                               T1.id_mon_2 =
+                               (SELECT T2.id_mon_2
+                                  FROM ca_hoc T2
+                                 WHERE t2.id_truong = {1}
+                                   and t2.ma_nam_hoc = {2}
+                                   and t2.id_lop = {3}
+                                   and t2.id_hoc_ky = 1
+                                   and t2.tiet = {0})
+                         WHERE T1.id IN (SELECT T2.id FROM ca_hoc T2 WHERE t2.id_truong = {1}
+                                   and t2.ma_nam_hoc = {2}
+                                   and t2.id_lop = {3}
+                                   and t2.id_hoc_ky = 2 and t2.tiet = {0})", i, id_truong, id_nam_hoc, id_lop);
+                        context.Database.ExecuteSqlCommand(query);
+                    }
+                }
+                var QICache = new DefaultCacheProvider();
+                QICache.RemoveByFirstName("CA_HOC");
+            }
+            catch (Exception ex)
+            {
+                res.Res = false;
+                res.Msg = "Có lỗi xãy ra";
+            }
+            return res;
+        }
         #endregion
     }
 }

@@ -44,6 +44,8 @@ namespace OneEduDataAccess.Model
         public Nullable<short> THU_TU { get; set; }
         public Nullable<short> ID_CHUC_VU { get; set; }
         public string ZALO_CODE { get; set; }
+        public Nullable<System.DateTime> NGAY_GUI_OTP { get; set; }
+        public Nullable<short> OTP_COUNTER { get; set; }
     
         public virtual DM_CHUC_VU DM_CHUC_VU { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -26,6 +26,7 @@
     <EntitySet Name="DM_DON_VI_TINH" EntityType="oneduModel.DM_DON_VI_TINH" />
     <EntitySet Name="DM_KHU_VUC" EntityType="oneduModel.DM_KHU_VUC" />
     <EntitySet Name="DM_LOAI_NX" EntityType="oneduModel.DM_LOAI_NX" />
+    <EntitySet Name="DM_MA_NX" EntityType="oneduModel.DM_MA_NX" />
     <EntitySet Name="DM_NGAN_HANG" EntityType="oneduModel.DM_NGAN_HANG" />
     <EntitySet Name="DM_NHA_CUNG_CAP_THUC_PHAM" EntityType="oneduModel.DM_NHA_CUNG_CAP_THUC_PHAM" />
     <EntitySet Name="DM_NHOM_THUC_PHAM" EntityType="oneduModel.DM_NHOM_THUC_PHAM" />
@@ -54,11 +55,13 @@
     <EntitySet Name="KHOA_SO_THEO_TRUONG" EntityType="oneduModel.KHOA_SO_THEO_TRUONG" />
     <EntitySet Name="KHOIs" EntityType="oneduModel.KHOI" />
     <EntitySet Name="LICH_AN" EntityType="oneduModel.LICH_AN" />
+    <EntitySet Name="LICH_THI" EntityType="oneduModel.LICH_THI" />
     <EntitySet Name="LOAI_LOP_GDTX" EntityType="oneduModel.LOAI_LOP_GDTX" />
     <EntitySet Name="LOG_USER" EntityType="oneduModel.LOG_USER" />
     <EntitySet Name="LOPs" EntityType="oneduModel.LOP" />
     <EntitySet Name="LOP_MON" EntityType="oneduModel.LOP_MON" />
     <EntitySet Name="MA_NX_DINH_KY" EntityType="oneduModel.MA_NX_DINH_KY" />
+    <EntitySet Name="MA_NXHN" EntityType="oneduModel.MA_NXHN" />
     <EntitySet Name="MAP_PH_HS" EntityType="oneduModel.MAP_PH_HS" />
     <EntitySet Name="MENUs" EntityType="oneduModel.MENU" />
     <EntitySet Name="MON_HOC" EntityType="oneduModel.MON_HOC" />
@@ -82,10 +85,12 @@
     <EntitySet Name="SUAT_AN" EntityType="oneduModel.SUAT_AN" />
     <EntitySet Name="SUAT_AN_CHI_TIET" EntityType="oneduModel.SUAT_AN_CHI_TIET" />
     <EntitySet Name="TIN_NHAN" EntityType="oneduModel.TIN_NHAN" />
+    <EntitySet Name="TIN_NHAN_CU" EntityType="oneduModel.TIN_NHAN_CU" />
     <EntitySet Name="TIN_TUC" EntityType="oneduModel.TIN_TUC" />
     <EntitySet Name="TO_GIAO_VIEN" EntityType="oneduModel.TO_GIAO_VIEN" />
     <EntitySet Name="TO_GIAO_VIEN_GV" EntityType="oneduModel.TO_GIAO_VIEN_GV" />
     <EntitySet Name="TONG_HOP_NHAN_XET_HANG_NGAY" EntityType="oneduModel.TONG_HOP_NHAN_XET_HANG_NGAY" />
+    <EntitySet Name="THONG_KE_HS_THANG" EntityType="oneduModel.THONG_KE_HS_THANG" />
     <EntitySet Name="THU_TRONG_TUAN" EntityType="oneduModel.THU_TRONG_TUAN" />
     <EntitySet Name="THUC_DON" EntityType="oneduModel.THUC_DON" />
     <EntitySet Name="THUC_DON_CHI_TIET" EntityType="oneduModel.THUC_DON_CHI_TIET" />
@@ -95,6 +100,10 @@
     <AssociationSet Name="BAI_TAP_VE_NHA_CHI_TIET_FK1" Association="oneduModel.BAI_TAP_VE_NHA_CHI_TIET_FK1">
       <End Role="BAI_TAP_VE_NHA" EntitySet="BAI_TAP_VE_NHA" />
       <End Role="BAI_TAP_VE_NHA_CHI_TIET" EntitySet="BAI_TAP_VE_NHA_CHI_TIET" />
+    </AssociationSet>
+    <AssociationSet Name="BAI_TAP_VE_NHA_FK1" Association="oneduModel.BAI_TAP_VE_NHA_FK1">
+      <End Role="LOP" EntitySet="LOPs" />
+      <End Role="BAI_TAP_VE_NHA" EntitySet="BAI_TAP_VE_NHA" />
     </AssociationSet>
     <AssociationSet Name="CA_HOC_CAU_HINH_CA_HOC_FK1" Association="oneduModel.CA_HOC_CAU_HINH_CA_HOC_FK1">
       <End Role="CAU_HINH_CA_HOC" EntitySet="CAU_HINH_CA_HOC" />
@@ -204,6 +213,18 @@
       <End Role="DM_BUA_AN" EntitySet="DM_BUA_AN" />
       <End Role="DANG_KY_AN" EntitySet="DANG_KY_AN" />
     </AssociationSet>
+    <AssociationSet Name="DANH_GIA_DINH_KY_MON_TH_FK1" Association="oneduModel.DANH_GIA_DINH_KY_MON_TH_FK1">
+      <End Role="LOP" EntitySet="LOPs" />
+      <End Role="DANH_GIA_DINH_KY_MON_TH" EntitySet="DANH_GIA_DINH_KY_MON_TH" />
+    </AssociationSet>
+    <AssociationSet Name="DANH_GIA_DINH_KY_MON_TH_FK2" Association="oneduModel.DANH_GIA_DINH_KY_MON_TH_FK2">
+      <End Role="HOC_SINH" EntitySet="HOC_SINH" />
+      <End Role="DANH_GIA_DINH_KY_MON_TH" EntitySet="DANH_GIA_DINH_KY_MON_TH" />
+    </AssociationSet>
+    <AssociationSet Name="DANH_GIA_DINH_KY_MON_TH_FK3" Association="oneduModel.DANH_GIA_DINH_KY_MON_TH_FK3">
+      <End Role="MON_HOC_TRUONG" EntitySet="MON_HOC_TRUONG" />
+      <End Role="DANH_GIA_DINH_KY_MON_TH" EntitySet="DANH_GIA_DINH_KY_MON_TH" />
+    </AssociationSet>
     <AssociationSet Name="DANH_GIA_DINH_KY_TH_FK1" Association="oneduModel.DANH_GIA_DINH_KY_TH_FK1">
       <End Role="TRUONG" EntitySet="TRUONGs" />
       <End Role="DANH_GIA_DINH_KY_TH" EntitySet="DANH_GIA_DINH_KY_TH" />
@@ -218,6 +239,10 @@
     </AssociationSet>
     <AssociationSet Name="DANH_GIA_DINH_KY_TH_FK4" Association="oneduModel.DANH_GIA_DINH_KY_TH_FK4">
       <End Role="HOC_SINH" EntitySet="HOC_SINH" />
+      <End Role="DANH_GIA_DINH_KY_TH" EntitySet="DANH_GIA_DINH_KY_TH" />
+    </AssociationSet>
+    <AssociationSet Name="DANH_GIA_DINH_KY_TH_FK5" Association="oneduModel.DANH_GIA_DINH_KY_TH_FK5">
+      <End Role="KY_DG_TH" EntitySet="KY_DG_TH" />
       <End Role="DANH_GIA_DINH_KY_TH" EntitySet="DANH_GIA_DINH_KY_TH" />
     </AssociationSet>
     <AssociationSet Name="DCT_HS" Association="oneduModel.DCT_HS">
@@ -424,9 +449,17 @@
       <End Role="DOI_TAC" EntitySet="DOI_TAC" />
       <End Role="TRUONG" EntitySet="TRUONGs" />
     </AssociationSet>
+    <AssociationSet Name="QUY_TIN_FK1" Association="oneduModel.QUY_TIN_FK1">
+      <End Role="GOI_TIN" EntitySet="GOI_TIN" />
+      <End Role="QUY_TIN" EntitySet="QUY_TIN" />
+    </AssociationSet>
     <AssociationSet Name="SMS_GOI_TIN" Association="oneduModel.SMS_GOI_TIN">
       <End Role="GOI_TIN" EntitySet="GOI_TIN" />
       <End Role="TIN_NHAN" EntitySet="TIN_NHAN" />
+    </AssociationSet>
+    <AssociationSet Name="TRUONG_FK2" Association="oneduModel.TRUONG_FK2">
+      <End Role="GOI_TIN" EntitySet="GOI_TIN" />
+      <End Role="TRUONG" EntitySet="TRUONGs" />
     </AssociationSet>
     <AssociationSet Name="GVLM_GV" Association="oneduModel.GVLM_GV">
       <End Role="GIAO_VIEN" EntitySet="GIAO_VIEN" />
@@ -608,6 +641,10 @@
       <End Role="LOP" EntitySet="LOPs" />
       <End Role="LOP_MON" EntitySet="LOP_MON" />
     </AssociationSet>
+    <AssociationSet Name="LOP_FK2" Association="oneduModel.LOP_FK2">
+      <End Role="NAM_HOC" EntitySet="NAM_HOC" />
+      <End Role="LOP" EntitySet="LOPs" />
+    </AssociationSet>
     <AssociationSet Name="LOP_TRUONG" Association="oneduModel.LOP_TRUONG">
       <End Role="TRUONG" EntitySet="TRUONGs" />
       <End Role="LOP" EntitySet="LOPs" />
@@ -631,6 +668,10 @@
     <AssociationSet Name="NHOM_QUYEN_MENU_FK2" Association="oneduModel.NHOM_QUYEN_MENU_FK2">
       <End Role="MENU" EntitySet="MENUs" />
       <End Role="NHOM_QUYEN_MENU" EntitySet="NHOM_QUYEN_MENU" />
+    </AssociationSet>
+    <AssociationSet Name="MON_HOC_TRUONG_FK1" Association="oneduModel.MON_HOC_TRUONG_FK1">
+      <End Role="MON_HOC" EntitySet="MON_HOC" />
+      <End Role="MON_HOC_TRUONG" EntitySet="MON_HOC_TRUONG" />
     </AssociationSet>
     <AssociationSet Name="SUAT_AN_FK4" Association="oneduModel.SUAT_AN_FK4">
       <End Role="NAM_HOC" EntitySet="NAM_HOC" />
@@ -756,37 +797,9 @@
       <End Role="TRUONG" EntitySet="TRUONGs" />
       <End Role="THUC_DON_CHI_TIET" EntitySet="THUC_DON_CHI_TIET" />
     </AssociationSet>
-    <EntitySet Name="DM_MA_NX" EntityType="oneduModel.DM_MA_NX" />
-    <EntitySet Name="TIN_NHAN_CU" EntityType="oneduModel.TIN_NHAN_CU" />
-    <EntitySet Name="MA_NXHN" EntityType="oneduModel.MA_NXHN" />
-    <AssociationSet Name="BAI_TAP_VE_NHA_FK1" Association="oneduModel.BAI_TAP_VE_NHA_FK1">
-      <End Role="LOP" EntitySet="LOPs" />
-      <End Role="BAI_TAP_VE_NHA" EntitySet="BAI_TAP_VE_NHA" />
-    </AssociationSet>
-    <AssociationSet Name="DANH_GIA_DINH_KY_MON_TH_FK1" Association="oneduModel.DANH_GIA_DINH_KY_MON_TH_FK1">
-      <End Role="LOP" EntitySet="LOPs" />
-      <End Role="DANH_GIA_DINH_KY_MON_TH" EntitySet="DANH_GIA_DINH_KY_MON_TH" />
-    </AssociationSet>
-    <AssociationSet Name="DANH_GIA_DINH_KY_MON_TH_FK2" Association="oneduModel.DANH_GIA_DINH_KY_MON_TH_FK2">
-      <End Role="HOC_SINH" EntitySet="HOC_SINH" />
-      <End Role="DANH_GIA_DINH_KY_MON_TH" EntitySet="DANH_GIA_DINH_KY_MON_TH" />
-    </AssociationSet>
-    <AssociationSet Name="DANH_GIA_DINH_KY_MON_TH_FK3" Association="oneduModel.DANH_GIA_DINH_KY_MON_TH_FK3">
-      <End Role="MON_HOC_TRUONG" EntitySet="MON_HOC_TRUONG" />
-      <End Role="DANH_GIA_DINH_KY_MON_TH" EntitySet="DANH_GIA_DINH_KY_MON_TH" />
-    </AssociationSet>
-    <AssociationSet Name="DANH_GIA_DINH_KY_TH_FK5" Association="oneduModel.DANH_GIA_DINH_KY_TH_FK5">
-      <End Role="KY_DG_TH" EntitySet="KY_DG_TH" />
-      <End Role="DANH_GIA_DINH_KY_TH" EntitySet="DANH_GIA_DINH_KY_TH" />
-    </AssociationSet>
-    <AssociationSet Name="QUY_TIN_FK1" Association="oneduModel.QUY_TIN_FK1">
-      <End Role="GOI_TIN" EntitySet="GOI_TIN" />
-      <End Role="QUY_TIN" EntitySet="QUY_TIN" />
-    </AssociationSet>
-    <AssociationSet Name="TRUONG_FK2" Association="oneduModel.TRUONG_FK2">
-      <End Role="GOI_TIN" EntitySet="GOI_TIN" />
-      <End Role="TRUONG" EntitySet="TRUONGs" />
-    </AssociationSet>
+    <EntitySet Name="QUOTAREMAINBYDAYs" EntityType="oneduModel.QUOTAREMAINBYDAY" />
+    <EntitySet Name="MAP_ZALO_GV" EntityType="oneduModel.MAP_ZALO_GV" />
+    <EntitySet Name="THONG_BAO_NHA_TRUONG" EntityType="oneduModel.THONG_BAO_NHA_TRUONG" />
   </EntityContainer>
   <EntityType Name="BAI_TAP_VE_NHA">
     <Key>
@@ -912,7 +925,7 @@
     <Property Name="THOI_GIAN_TIET13" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="THOI_GIAN_TIET14" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="THOI_GIAN_TIET15" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="MUA" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MUA" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="CA_HOC" Relationship="oneduModel.CA_HOC_CAU_HINH_CA_HOC_FK1" FromRole="CAU_HINH_CA_HOC" ToRole="CA_HOC" />
     <NavigationProperty Name="TRUONG" Relationship="oneduModel.CHCH_TRUONG" FromRole="CAU_HINH_CA_HOC" ToRole="TRUONG" />
   </EntityType>
@@ -1432,6 +1445,16 @@
     <Property Name="THU_TU" Type="Int16" />
     <NavigationProperty Name="MA_NX_DINH_KY" Relationship="oneduModel.MA_NX_DINH_KY_FK2" FromRole="DM_LOAI_NX" ToRole="MA_NX_DINH_KY" />
   </EntityType>
+  <EntityType Name="DM_MA_NX">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="MA" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NOI_DUNG" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="THU_TU" Type="Int16" />
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="MA_CAP_HOC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
   <EntityType Name="DM_NGAN_HANG">
     <Key>
       <PropertyRef Name="ID" />
@@ -1672,8 +1695,8 @@
     <Property Name="SO_TIN_THONG_BAO_HS" Type="Int64" />
     <Property Name="SO_TIN_HE_HS" Type="Int64" />
     <Property Name="TEN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="TIN_NHAN" Relationship="oneduModel.SMS_GOI_TIN" FromRole="GOI_TIN" ToRole="TIN_NHAN" />
     <NavigationProperty Name="QUY_TIN" Relationship="oneduModel.QUY_TIN_FK1" FromRole="GOI_TIN" ToRole="QUY_TIN" />
+    <NavigationProperty Name="TIN_NHAN" Relationship="oneduModel.SMS_GOI_TIN" FromRole="GOI_TIN" ToRole="TIN_NHAN" />
     <NavigationProperty Name="TRUONGs" Relationship="oneduModel.TRUONG_FK2" FromRole="GOI_TIN" ToRole="TRUONG" />
   </EntityType>
   <EntityType Name="GV_LOP_MON">
@@ -1727,6 +1750,8 @@
     <NavigationProperty Name="PHIEU_NHAP_KHO" Relationship="oneduModel.PHIEU_NHAP_KHO_FK2" FromRole="GIAO_VIEN" ToRole="PHIEU_NHAP_KHO" />
     <NavigationProperty Name="PHIEU_XUAT_KHO" Relationship="oneduModel.PHIEU_XUAT_KHO_FK2" FromRole="GIAO_VIEN" ToRole="PHIEU_XUAT_KHO" />
     <NavigationProperty Name="TO_GIAO_VIEN_GV" Relationship="oneduModel.TO_GIAO_VIEN_GV_FK1" FromRole="GIAO_VIEN" ToRole="TO_GIAO_VIEN_GV" />
+    <Property Name="NGAY_GUI_OTP" Type="DateTime" Precision="6" />
+    <Property Name="OTP_COUNTER" Type="Int16" />
   </EntityType>
   <EntityType Name="GIOI_TINH">
     <Key>
@@ -1891,6 +1916,7 @@
     <NavigationProperty Name="CHAM_AN" Relationship="oneduModel.CHAM_AN_FK4" FromRole="HOC_SINH" ToRole="CHAM_AN" />
     <NavigationProperty Name="CHUYEN_CAN" Relationship="oneduModel.CHUYEN_CAN_HS" FromRole="HOC_SINH" ToRole="CHUYEN_CAN" />
     <NavigationProperty Name="DANG_KY_AN" Relationship="oneduModel.DANG_KY_AN_FK4" FromRole="HOC_SINH" ToRole="DANG_KY_AN" />
+    <NavigationProperty Name="DANH_GIA_DINH_KY_MON_TH" Relationship="oneduModel.DANH_GIA_DINH_KY_MON_TH_FK2" FromRole="HOC_SINH" ToRole="DANH_GIA_DINH_KY_MON_TH" />
     <NavigationProperty Name="DANH_GIA_DINH_KY_TH" Relationship="oneduModel.DANH_GIA_DINH_KY_TH_FK4" FromRole="HOC_SINH" ToRole="DANH_GIA_DINH_KY_TH" />
     <NavigationProperty Name="DIEM_CHI_TIET" Relationship="oneduModel.DCT_HS" FromRole="HOC_SINH" ToRole="DIEM_CHI_TIET" />
     <NavigationProperty Name="DIEM_TONG_KET" Relationship="oneduModel.DTK_HS" FromRole="HOC_SINH" ToRole="DIEM_TONG_KET" />
@@ -1907,7 +1933,8 @@
     <NavigationProperty Name="TRUONG" Relationship="oneduModel.HOC_SINH_FK2" FromRole="HOC_SINH" ToRole="TRUONG" />
     <NavigationProperty Name="LOP" Relationship="oneduModel.HS_LOP" FromRole="HOC_SINH" ToRole="LOP" />
     <NavigationProperty Name="NHAN_XET_HANG_NGAY" Relationship="oneduModel.NHAN_XET_HANG_NGAY_HOC_SI_FK1" FromRole="HOC_SINH" ToRole="NHAN_XET_HANG_NGAY" />
-    <NavigationProperty Name="DANH_GIA_DINH_KY_MON_TH" Relationship="oneduModel.DANH_GIA_DINH_KY_MON_TH_FK2" FromRole="HOC_SINH" ToRole="DANH_GIA_DINH_KY_MON_TH" />
+    <Property Name="NGAY_GUI_OTP" Type="DateTime" Precision="6" />
+    <Property Name="OTP_COUNTER" Type="Int16" />
   </EntityType>
   <EntityType Name="KY_DG_TH">
     <Key>
@@ -2083,6 +2110,27 @@
     <NavigationProperty Name="TRUONG" Relationship="oneduModel.LICH_AN_FK2" FromRole="LICH_AN" ToRole="TRUONG" />
     <NavigationProperty Name="NAM_HOC" Relationship="oneduModel.LICH_AN_FK3" FromRole="LICH_AN" ToRole="NAM_HOC" />
   </EntityType>
+  <EntityType Name="LICH_THI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="ID_TRUONG" Type="Int64" Nullable="false" />
+    <Property Name="ID_KHOI" Type="Int16" Nullable="false" />
+    <Property Name="ID_NAM_HOC" Type="Int16" Nullable="false" />
+    <Property Name="HOC_KY" Type="Int16" Nullable="false" />
+    <Property Name="ID_LOP" Type="Int64" Nullable="false" />
+    <Property Name="ID_MON_TRUONG" Type="Int64" />
+    <Property Name="TIME_1T" Type="DateTime" Precision="6" />
+    <Property Name="TIME_GK" Type="DateTime" Precision="6" />
+    <Property Name="TIME_HK" Type="DateTime" Precision="6" />
+    <Property Name="NGAY_TAO" Type="DateTime" Precision="6" />
+    <Property Name="NGUOI_TAO" Type="Int64" />
+    <Property Name="NGAY_SUA" Type="DateTime" Precision="6" />
+    <Property Name="NGUOI_SUA" Type="Int64" />
+    <Property Name="THOI_GIAN_LAM_BAI" Type="Int16" />
+    <Property Name="TIME_15P" Type="DateTime" Precision="6" />
+  </EntityType>
   <EntityType Name="LOAI_LOP_GDTX">
     <Key>
       <PropertyRef Name="MA" />
@@ -2128,10 +2176,12 @@
     <Property Name="IS_DELETE" Type="Boolean" />
     <Property Name="LOAI_CHEN_TIN" Type="Int16" />
     <Property Name="TIEN_TO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BAI_TAP_VE_NHA" Relationship="oneduModel.BAI_TAP_VE_NHA_FK1" FromRole="LOP" ToRole="BAI_TAP_VE_NHA" />
     <NavigationProperty Name="CA_HOC" Relationship="oneduModel.CA_HOC_LOP_FK1" FromRole="LOP" ToRole="CA_HOC" />
     <NavigationProperty Name="CHAM_AN" Relationship="oneduModel.CHAM_AN_FK3" FromRole="LOP" ToRole="CHAM_AN" />
     <NavigationProperty Name="CHUYEN_CAN" Relationship="oneduModel.CHUYEN_CAN_LOP" FromRole="LOP" ToRole="CHUYEN_CAN" />
     <NavigationProperty Name="DANG_KY_AN" Relationship="oneduModel.DANG_KY_AN_FK3" FromRole="LOP" ToRole="DANG_KY_AN" />
+    <NavigationProperty Name="DANH_GIA_DINH_KY_MON_TH" Relationship="oneduModel.DANH_GIA_DINH_KY_MON_TH_FK1" FromRole="LOP" ToRole="DANH_GIA_DINH_KY_MON_TH" />
     <NavigationProperty Name="DANH_GIA_DINH_KY_TH" Relationship="oneduModel.DANH_GIA_DINH_KY_TH_FK3" FromRole="LOP" ToRole="DANH_GIA_DINH_KY_TH" />
     <NavigationProperty Name="DIEM_CHI_TIET" Relationship="oneduModel.DCT_LOP" FromRole="LOP" ToRole="DIEM_CHI_TIET" />
     <NavigationProperty Name="DIEM_TONG_KET" Relationship="oneduModel.DTK_LOP" FromRole="LOP" ToRole="DIEM_TONG_KET" />
@@ -2142,9 +2192,8 @@
     <NavigationProperty Name="HOC_SINH" Relationship="oneduModel.HS_LOP" FromRole="LOP" ToRole="HOC_SINH" />
     <NavigationProperty Name="KHOI" Relationship="oneduModel.LOP_KHOI" FromRole="LOP" ToRole="KHOI" />
     <NavigationProperty Name="LOP_MON" Relationship="oneduModel.LM_LOP" FromRole="LOP" ToRole="LOP_MON" />
+    <NavigationProperty Name="NAM_HOC" Relationship="oneduModel.LOP_FK2" FromRole="LOP" ToRole="NAM_HOC" />
     <NavigationProperty Name="TRUONG" Relationship="oneduModel.LOP_TRUONG" FromRole="LOP" ToRole="TRUONG" />
-    <NavigationProperty Name="BAI_TAP_VE_NHA" Relationship="oneduModel.BAI_TAP_VE_NHA_FK1" FromRole="LOP" ToRole="BAI_TAP_VE_NHA" />
-    <NavigationProperty Name="DANH_GIA_DINH_KY_MON_TH" Relationship="oneduModel.DANH_GIA_DINH_KY_MON_TH_FK1" FromRole="LOP" ToRole="DANH_GIA_DINH_KY_MON_TH" />
   </EntityType>
   <EntityType Name="LOP_MON">
     <Key>
@@ -2190,6 +2239,22 @@
     <Property Name="ID_TRUONG" Type="Int64" Nullable="false" />
     <NavigationProperty Name="DM_LOAI_NX" Relationship="oneduModel.MA_NX_DINH_KY_FK2" FromRole="MA_NX_DINH_KY" ToRole="DM_LOAI_NX" />
     <NavigationProperty Name="TRUONG" Relationship="oneduModel.MA_NX_DINH_KY_FK1" FromRole="MA_NX_DINH_KY" ToRole="TRUONG" />
+  </EntityType>
+  <EntityType Name="MA_NXHN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="ID_TRUONG" Type="Int64" Nullable="false" />
+    <Property Name="MA" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOI_DUNG" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="THU_TU" Type="Int64" />
+    <Property Name="NGUOI_TAO" Type="Int64" />
+    <Property Name="NGAY_TAO" Type="DateTime" Precision="6" />
+    <Property Name="NGUOI_SUA" Type="Int64" />
+    <Property Name="NGAY_SUA" Type="DateTime" Precision="6" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="MA_CAP_HOC" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="MAP_PH_HS">
     <Key>
@@ -2262,6 +2327,7 @@
     <NavigationProperty Name="DIEM_CHI_TIET" Relationship="oneduModel.DCT_MON" FromRole="MON_HOC" ToRole="DIEM_CHI_TIET" />
     <NavigationProperty Name="GV_LOP_MON" Relationship="oneduModel.GVLM_MON" FromRole="MON_HOC" ToRole="GV_LOP_MON" />
     <NavigationProperty Name="LOP_MON" Relationship="oneduModel.LM_MON" FromRole="MON_HOC" ToRole="LOP_MON" />
+    <NavigationProperty Name="MON_HOC_TRUONG" Relationship="oneduModel.MON_HOC_TRUONG_FK1" FromRole="MON_HOC" ToRole="MON_HOC_TRUONG" />
   </EntityType>
   <EntityType Name="MON_HOC_TRUONG">
     <Key>
@@ -2294,9 +2360,10 @@
     <Property Name="IS_MON_CHUYEN" Type="Boolean" />
     <Property Name="ID_TRUONG" Type="Int64" Nullable="false" />
     <Property Name="ID_NAM_HOC" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="DANH_GIA_DINH_KY_MON_TH" Relationship="oneduModel.DANH_GIA_DINH_KY_MON_TH_FK3" FromRole="MON_HOC_TRUONG" ToRole="DANH_GIA_DINH_KY_MON_TH" />
     <NavigationProperty Name="DIEM_CHI_TIET" Relationship="oneduModel.DIEM_CHI_TIET_FK2" FromRole="MON_HOC_TRUONG" ToRole="DIEM_CHI_TIET" />
     <NavigationProperty Name="LOP_MON" Relationship="oneduModel.LOP_MON_FK2" FromRole="MON_HOC_TRUONG" ToRole="LOP_MON" />
-    <NavigationProperty Name="DANH_GIA_DINH_KY_MON_TH" Relationship="oneduModel.DANH_GIA_DINH_KY_MON_TH_FK3" FromRole="MON_HOC_TRUONG" ToRole="DANH_GIA_DINH_KY_MON_TH" />
+    <NavigationProperty Name="MON_HOC" Relationship="oneduModel.MON_HOC_TRUONG_FK1" FromRole="MON_HOC_TRUONG" ToRole="MON_HOC" />
   </EntityType>
   <EntityType Name="NAM_HOC">
     <Key>
@@ -2313,6 +2380,7 @@
     <NavigationProperty Name="HOC_PHI_DOT_THU_LOP" Relationship="oneduModel.HOC_PHI_DOT_THU_LOP_FK5" FromRole="NAM_HOC" ToRole="HOC_PHI_DOT_THU_LOP" />
     <NavigationProperty Name="HOC_PHI_PHIEU_THU_HOC_SINH" Relationship="oneduModel.HOC_PHI_PHIEU_THU_HOC_SIN_FK5" FromRole="NAM_HOC" ToRole="HOC_PHI_PHIEU_THU_HOC_SINH" />
     <NavigationProperty Name="LICH_AN" Relationship="oneduModel.LICH_AN_FK3" FromRole="NAM_HOC" ToRole="LICH_AN" />
+    <NavigationProperty Name="LOPs" Relationship="oneduModel.LOP_FK2" FromRole="NAM_HOC" ToRole="LOP" />
     <NavigationProperty Name="SUAT_AN" Relationship="oneduModel.SUAT_AN_FK4" FromRole="NAM_HOC" ToRole="SUAT_AN" />
     <NavigationProperty Name="TIN_TUC" Relationship="oneduModel.TIN_TUC_FK2" FromRole="NAM_HOC" ToRole="TIN_TUC" />
   </EntityType>
@@ -2743,6 +2811,46 @@
     <NavigationProperty Name="GOI_TIN" Relationship="oneduModel.SMS_GOI_TIN" FromRole="TIN_NHAN" ToRole="GOI_TIN" />
     <NavigationProperty Name="TRUONG" Relationship="oneduModel.TN_TRUONG" FromRole="TIN_NHAN" ToRole="TRUONG" />
   </EntityType>
+  <EntityType Name="TIN_NHAN_CU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="SMS_ID" Type="Int64" Nullable="false" />
+    <Property Name="ID_TRUONG" Type="Int64" />
+    <Property Name="ID_NGUOI_NHAN" Type="Int64" />
+    <Property Name="LOAI_NGUOI_NHAN" Type="Int16" />
+    <Property Name="BRAND_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SDT_NHAN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MA_GOI_TIN" Type="Int16" />
+    <Property Name="NOI_DUNG" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="NOI_DUNG_KHONG_DAU" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="SO_TIN" Type="Int64" />
+    <Property Name="TRANG_THAI" Type="Int16" />
+    <Property Name="THOI_GIAN_GUI" Type="DateTime" Precision="6" />
+    <Property Name="NGUOI_GUI" Type="Int64" />
+    <Property Name="THOI_GIAN_NHAN" Type="DateTime" Precision="6" />
+    <Property Name="ID_DOI_TAC" Type="Int16" />
+    <Property Name="LOAI_NHA_MANG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KIEU_GUI" Type="Int16" />
+    <Property Name="IS_UNICODE" Type="Boolean" />
+    <Property Name="IS_DA_NHAN" Type="Boolean" />
+    <Property Name="SEND_NUMBER" Type="Int16" />
+    <Property Name="NGAY_TAO" Type="DateTime" Precision="6" />
+    <Property Name="NGUOI_TAO" Type="Int64" />
+    <Property Name="NGAY_SUA" Type="DateTime" Precision="6" />
+    <Property Name="NGUOI_SUA" Type="Int64" />
+    <Property Name="ID_NHAN_XET_HANG_NGAY" Type="Int64" />
+    <Property Name="ID_TONG_HOP_NXHN" Type="Int64" />
+    <Property Name="LOAI_TIN" Type="Int16" />
+    <Property Name="ID_THONG_BAO" Type="Int64" />
+    <Property Name="NAM_GUI" Type="Int16" />
+    <Property Name="THANG_GUI" Type="Int16" />
+    <Property Name="TUAN_GUI" Type="Int16" />
+    <Property Name="CP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RES_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_SMS_ZALO_OTP" Type="Boolean" />
+  </EntityType>
   <EntityType Name="TIN_TUC">
     <Key>
       <PropertyRef Name="ID" />
@@ -2765,6 +2873,7 @@
     <Property Name="ID_NAM_HOC" Type="Int16" Nullable="false" />
     <NavigationProperty Name="NAM_HOC" Relationship="oneduModel.TIN_TUC_FK2" FromRole="TIN_TUC" ToRole="NAM_HOC" />
     <NavigationProperty Name="TRUONG" Relationship="oneduModel.TIN_TUC_FK1" FromRole="TIN_TUC" ToRole="TRUONG" />
+    <Property Name="NOI_DUNG" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="TO_GIAO_VIEN">
     <Key>
@@ -2815,6 +2924,20 @@
     <Property Name="NGAY_SUA" Type="DateTime" Precision="6" />
     <Property Name="ID_TRUONG" Type="Int64" />
     <Property Name="ID_LOP" Type="Int64" />
+  </EntityType>
+  <EntityType Name="THONG_KE_HS_THANG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="ID_TRUONG" Type="Int64" Nullable="false" />
+    <Property Name="ID_KHOI" Type="Int16" Nullable="false" />
+    <Property Name="ID_NAM_HOC" Type="Int64" Nullable="false" />
+    <Property Name="ID_LOP" Type="Int64" Nullable="false" />
+    <Property Name="THANG" Type="Int16" Nullable="false" />
+    <Property Name="TONG_SO" Type="Int16" />
+    <Property Name="DANG_KY" Type="Int16" />
+    <Property Name="KHONG_DANG_KY" Type="Int16" />
   </EntityType>
   <EntityType Name="THU_TRONG_TUAN">
     <Key>
@@ -2963,6 +3086,7 @@
     <NavigationProperty Name="DM_TINH_THANH" Relationship="oneduModel.TRUONG_TINH" FromRole="TRUONG" ToRole="DM_TINH_THANH" />
     <NavigationProperty Name="DM_XA_PHUONG" Relationship="oneduModel.TRUONG_XA" FromRole="TRUONG" ToRole="DM_XA_PHUONG" />
     <NavigationProperty Name="DOI_TAC" Relationship="oneduModel.TRUONG_FK1" FromRole="TRUONG" ToRole="DOI_TAC" />
+    <NavigationProperty Name="GOI_TIN" Relationship="oneduModel.TRUONG_FK2" FromRole="TRUONG" ToRole="GOI_TIN" />
     <NavigationProperty Name="GIAO_VIEN" Relationship="oneduModel.GV_TRUONG" FromRole="TRUONG" ToRole="GIAO_VIEN" />
     <NavigationProperty Name="HOC_PHI_DOT_THU" Relationship="oneduModel.HOC_PHI_DOT_THU_FK1" FromRole="TRUONG" ToRole="HOC_PHI_DOT_THU" />
     <NavigationProperty Name="HOC_PHI_DOT_THU_LOP" Relationship="oneduModel.HOC_PHI_DOT_THU_LOP_FK3" FromRole="TRUONG" ToRole="HOC_PHI_DOT_THU_LOP" />
@@ -2988,7 +3112,6 @@
     <NavigationProperty Name="TO_GIAO_VIEN_GV" Relationship="oneduModel.TO_GIAO_VIEN_GV_FK3" FromRole="TRUONG" ToRole="TO_GIAO_VIEN_GV" />
     <NavigationProperty Name="THUC_DON" Relationship="oneduModel.THUC_DON_FK1" FromRole="TRUONG" ToRole="THUC_DON" />
     <NavigationProperty Name="THUC_DON_CHI_TIET" Relationship="oneduModel.THUC_DON_CHI_TIET_FK4" FromRole="TRUONG" ToRole="THUC_DON_CHI_TIET" />
-    <NavigationProperty Name="GOI_TIN" Relationship="oneduModel.TRUONG_FK2" FromRole="TRUONG" ToRole="GOI_TIN" />
   </EntityType>
   <Association Name="BAI_TAP_VE_NHA_CHI_TIET_FK1">
     <End Type="oneduModel.BAI_TAP_VE_NHA" Role="BAI_TAP_VE_NHA" Multiplicity="1" />
@@ -2999,6 +3122,18 @@
       </Principal>
       <Dependent Role="BAI_TAP_VE_NHA_CHI_TIET">
         <PropertyRef Name="ID_BTVN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BAI_TAP_VE_NHA_FK1">
+    <End Type="oneduModel.LOP" Role="LOP" Multiplicity="1" />
+    <End Type="oneduModel.BAI_TAP_VE_NHA" Role="BAI_TAP_VE_NHA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOP">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BAI_TAP_VE_NHA">
+        <PropertyRef Name="ID_LOP" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -3326,6 +3461,42 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="DANH_GIA_DINH_KY_MON_TH_FK1">
+    <End Type="oneduModel.LOP" Role="LOP" Multiplicity="1" />
+    <End Type="oneduModel.DANH_GIA_DINH_KY_MON_TH" Role="DANH_GIA_DINH_KY_MON_TH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOP">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DANH_GIA_DINH_KY_MON_TH">
+        <PropertyRef Name="ID_LOP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DANH_GIA_DINH_KY_MON_TH_FK2">
+    <End Type="oneduModel.HOC_SINH" Role="HOC_SINH" Multiplicity="1" />
+    <End Type="oneduModel.DANH_GIA_DINH_KY_MON_TH" Role="DANH_GIA_DINH_KY_MON_TH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOC_SINH">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DANH_GIA_DINH_KY_MON_TH">
+        <PropertyRef Name="ID_HOC_SINH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DANH_GIA_DINH_KY_MON_TH_FK3">
+    <End Type="oneduModel.MON_HOC_TRUONG" Role="MON_HOC_TRUONG" Multiplicity="1" />
+    <End Type="oneduModel.DANH_GIA_DINH_KY_MON_TH" Role="DANH_GIA_DINH_KY_MON_TH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MON_HOC_TRUONG">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DANH_GIA_DINH_KY_MON_TH">
+        <PropertyRef Name="ID_MON_TRUONG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="DANH_GIA_DINH_KY_TH_FK1">
     <End Type="oneduModel.TRUONG" Role="TRUONG" Multiplicity="1" />
     <End Type="oneduModel.DANH_GIA_DINH_KY_TH" Role="DANH_GIA_DINH_KY_TH" Multiplicity="*" />
@@ -3371,6 +3542,18 @@
       </Principal>
       <Dependent Role="DANH_GIA_DINH_KY_TH">
         <PropertyRef Name="ID_HOC_SINH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DANH_GIA_DINH_KY_TH_FK5">
+    <End Type="oneduModel.KY_DG_TH" Role="KY_DG_TH" Multiplicity="1" />
+    <End Type="oneduModel.DANH_GIA_DINH_KY_TH" Role="DANH_GIA_DINH_KY_TH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KY_DG_TH">
+        <PropertyRef Name="MA" />
+      </Principal>
+      <Dependent Role="DANH_GIA_DINH_KY_TH">
+        <PropertyRef Name="MA_KY_DG" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -3986,6 +4169,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="QUY_TIN_FK1">
+    <End Type="oneduModel.GOI_TIN" Role="GOI_TIN" Multiplicity="1" />
+    <End Type="oneduModel.QUY_TIN" Role="QUY_TIN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GOI_TIN">
+        <PropertyRef Name="MA" />
+      </Principal>
+      <Dependent Role="QUY_TIN">
+        <PropertyRef Name="MA_GOI_TIN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="SMS_GOI_TIN">
     <End Type="oneduModel.GOI_TIN" Role="GOI_TIN" Multiplicity="0..1" />
     <End Type="oneduModel.TIN_NHAN" Role="TIN_NHAN" Multiplicity="*" />
@@ -3994,6 +4189,18 @@
         <PropertyRef Name="MA" />
       </Principal>
       <Dependent Role="TIN_NHAN">
+        <PropertyRef Name="MA_GOI_TIN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TRUONG_FK2">
+    <End Type="oneduModel.GOI_TIN" Role="GOI_TIN" Multiplicity="0..1" />
+    <End Type="oneduModel.TRUONG" Role="TRUONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GOI_TIN">
+        <PropertyRef Name="MA" />
+      </Principal>
+      <Dependent Role="TRUONG">
         <PropertyRef Name="MA_GOI_TIN" />
       </Dependent>
     </ReferentialConstraint>
@@ -4538,6 +4745,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="LOP_FK2">
+    <End Type="oneduModel.NAM_HOC" Role="NAM_HOC" Multiplicity="1" />
+    <End Type="oneduModel.LOP" Role="LOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NAM_HOC">
+        <PropertyRef Name="MA" />
+      </Principal>
+      <Dependent Role="LOP">
+        <PropertyRef Name="ID_NAM_HOC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="LOP_TRUONG">
     <End Type="oneduModel.TRUONG" Role="TRUONG" Multiplicity="1" />
     <End Type="oneduModel.LOP" Role="LOP" Multiplicity="*" />
@@ -4607,6 +4826,18 @@
       </Principal>
       <Dependent Role="NHOM_QUYEN_MENU">
         <PropertyRef Name="ID_MENU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MON_HOC_TRUONG_FK1">
+    <End Type="oneduModel.MON_HOC" Role="MON_HOC" Multiplicity="0..1" />
+    <End Type="oneduModel.MON_HOC_TRUONG" Role="MON_HOC_TRUONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MON_HOC">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MON_HOC_TRUONG">
+        <PropertyRef Name="ID_MON_HOC" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -4982,154 +5213,50 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityType Name="DM_MA_NX">
+  <EntityType Name="QUOTAREMAINBYDAY">
+    <Key>
+      <PropertyRef Name="ACCOUNT_ID" />
+    </Key>
+    <Property Name="ACCOUNT_ID" Type="Int64" Nullable="false" />
+    <Property Name="LOGIN_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SENDER_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="QUOTA_QC_REMAIN" Type="Int64" />
+    <Property Name="QUOTA_CSKH_REMAIN" Type="Int64" />
+    <Property Name="QUOTA_CSKH_USE" Type="Int64" />
+    <Property Name="QUOTA_QC_USE" Type="Int64" />
+    <Property Name="SMS_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TIME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RESPONSED_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATE_DATE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MAP_ZALO_GV">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="MA" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="NOI_DUNG" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Name="THU_TU" Type="Int16" />
     <Property Name="ID" Type="Int64" Nullable="false" />
-    <Property Name="MA_CAP_HOC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SDT_GV" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ZALO_USER_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IP_ADDRESS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NGAY_TRUY_CAP" Type="DateTime" Precision="6" />
+    <Property Name="ID_VAI_TRO" Type="Int16" />
+    <Property Name="SDT_NHAN_SMS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MA_XAC_NHAN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TRANG_THAI" Type="Boolean" />
   </EntityType>
-  <EntityType Name="TIN_NHAN_CU">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int64" Nullable="false" />
-    <Property Name="SMS_ID" Type="Int64" Nullable="false" />
-    <Property Name="ID_TRUONG" Type="Int64" />
-    <Property Name="ID_NGUOI_NHAN" Type="Int64" />
-    <Property Name="LOAI_NGUOI_NHAN" Type="Int16" />
-    <Property Name="BRAND_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="SDT_NHAN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="MA_GOI_TIN" Type="Int16" />
-    <Property Name="NOI_DUNG" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-    <Property Name="NOI_DUNG_KHONG_DAU" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-    <Property Name="SO_TIN" Type="Int64" />
-    <Property Name="TRANG_THAI" Type="Int16" />
-    <Property Name="THOI_GIAN_GUI" Type="DateTime" Precision="6" />
-    <Property Name="NGUOI_GUI" Type="Int64" />
-    <Property Name="THOI_GIAN_NHAN" Type="DateTime" Precision="6" />
-    <Property Name="ID_DOI_TAC" Type="Int16" />
-    <Property Name="LOAI_NHA_MANG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="KIEU_GUI" Type="Int16" />
-    <Property Name="IS_UNICODE" Type="Boolean" />
-    <Property Name="IS_DA_NHAN" Type="Boolean" />
-    <Property Name="SEND_NUMBER" Type="Int16" />
-    <Property Name="NGAY_TAO" Type="DateTime" Precision="6" />
-    <Property Name="NGUOI_TAO" Type="Int64" />
-    <Property Name="NGAY_SUA" Type="DateTime" Precision="6" />
-    <Property Name="NGUOI_SUA" Type="Int64" />
-    <Property Name="ID_NHAN_XET_HANG_NGAY" Type="Int64" />
-    <Property Name="ID_TONG_HOP_NXHN" Type="Int64" />
-    <Property Name="LOAI_TIN" Type="Int16" />
-    <Property Name="ID_THONG_BAO" Type="Int64" />
-    <Property Name="NAM_GUI" Type="Int16" />
-    <Property Name="THANG_GUI" Type="Int16" />
-    <Property Name="TUAN_GUI" Type="Int16" />
-    <Property Name="CP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="RES_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="IS_SMS_ZALO_OTP" Type="Boolean" />
-  </EntityType>
-  <EntityType Name="MA_NXHN">
+  <EntityType Name="THONG_BAO_NHA_TRUONG">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int64" Nullable="false" />
     <Property Name="ID_TRUONG" Type="Int64" Nullable="false" />
-    <Property Name="MA" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="NOI_DUNG" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Name="THU_TU" Type="Int64" />
-    <Property Name="NGUOI_TAO" Type="Int64" />
+    <Property Name="ID_NAM_HOC" Type="Int16" Nullable="false" />
+    <Property Name="CAP_HOC" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NOI_DUNG" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ANH_NOI_DUNG" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="NGAY_TAO" Type="DateTime" Precision="6" />
-    <Property Name="NGUOI_SUA" Type="Int64" />
+    <Property Name="NGUOI_TAO" Type="Int64" />
     <Property Name="NGAY_SUA" Type="DateTime" Precision="6" />
-    <Property Name="IS_DELETE" Type="Boolean" />
-    <Property Name="MA_CAP_HOC" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NGUOI_SUA" Type="Int64" />
+    <Property Name="LOAI_THONG_BAO" Type="Int16" />
   </EntityType>
-  <Association Name="BAI_TAP_VE_NHA_FK1">
-    <End Type="oneduModel.LOP" Role="LOP" Multiplicity="1" />
-    <End Type="oneduModel.BAI_TAP_VE_NHA" Role="BAI_TAP_VE_NHA" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="LOP">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="BAI_TAP_VE_NHA">
-        <PropertyRef Name="ID_LOP" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="DANH_GIA_DINH_KY_MON_TH_FK1">
-    <End Type="oneduModel.LOP" Role="LOP" Multiplicity="1" />
-    <End Type="oneduModel.DANH_GIA_DINH_KY_MON_TH" Role="DANH_GIA_DINH_KY_MON_TH" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="LOP">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="DANH_GIA_DINH_KY_MON_TH">
-        <PropertyRef Name="ID_LOP" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="DANH_GIA_DINH_KY_MON_TH_FK2">
-    <End Type="oneduModel.HOC_SINH" Role="HOC_SINH" Multiplicity="1" />
-    <End Type="oneduModel.DANH_GIA_DINH_KY_MON_TH" Role="DANH_GIA_DINH_KY_MON_TH" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="HOC_SINH">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="DANH_GIA_DINH_KY_MON_TH">
-        <PropertyRef Name="ID_HOC_SINH" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="DANH_GIA_DINH_KY_MON_TH_FK3">
-    <End Type="oneduModel.MON_HOC_TRUONG" Role="MON_HOC_TRUONG" Multiplicity="1" />
-    <End Type="oneduModel.DANH_GIA_DINH_KY_MON_TH" Role="DANH_GIA_DINH_KY_MON_TH" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="MON_HOC_TRUONG">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="DANH_GIA_DINH_KY_MON_TH">
-        <PropertyRef Name="ID_MON_TRUONG" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="DANH_GIA_DINH_KY_TH_FK5">
-    <End Type="oneduModel.KY_DG_TH" Role="KY_DG_TH" Multiplicity="1" />
-    <End Type="oneduModel.DANH_GIA_DINH_KY_TH" Role="DANH_GIA_DINH_KY_TH" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="KY_DG_TH">
-        <PropertyRef Name="MA" />
-      </Principal>
-      <Dependent Role="DANH_GIA_DINH_KY_TH">
-        <PropertyRef Name="MA_KY_DG" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="QUY_TIN_FK1">
-    <End Type="oneduModel.GOI_TIN" Role="GOI_TIN" Multiplicity="1" />
-    <End Type="oneduModel.QUY_TIN" Role="QUY_TIN" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="GOI_TIN">
-        <PropertyRef Name="MA" />
-      </Principal>
-      <Dependent Role="QUY_TIN">
-        <PropertyRef Name="MA_GOI_TIN" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="TRUONG_FK2">
-    <End Type="oneduModel.GOI_TIN" Role="GOI_TIN" Multiplicity="0..1" />
-    <End Type="oneduModel.TRUONG" Role="TRUONG" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="GOI_TIN">
-        <PropertyRef Name="MA" />
-      </Principal>
-      <Dependent Role="TRUONG">
-        <PropertyRef Name="MA_GOI_TIN" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
 </Schema>

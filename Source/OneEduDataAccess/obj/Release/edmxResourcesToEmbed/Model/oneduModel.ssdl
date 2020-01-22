@@ -156,7 +156,7 @@ warning 6013: The table/view 'ONEDU.AQUA_EXPLAIN_86517' does not have a primary 
     <Property Name="THOI_GIAN_TIET13" Type="varchar2" MaxLength="20" />
     <Property Name="THOI_GIAN_TIET14" Type="varchar2" MaxLength="20" />
     <Property Name="THOI_GIAN_TIET15" Type="varchar2" MaxLength="20" />
-    <Property Name="MUA" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="MUA" Type="varchar2" MaxLength="100" Nullable="false" />
   </EntityType>
   <EntityType Name="CP_TELCO">
     <Key>
@@ -626,6 +626,7 @@ warning 6013: The table/view 'ONEDU.AQUA_EXPLAIN_86517' does not have a primary 
     <Property Name="NOI_DUNG" Type="varchar2" MaxLength="250" />
     <Property Name="THU_TU" Type="number" Precision="4" Scale="0" />
     <Property Name="ID" Type="number" Precision="19" Scale="0" Nullable="false" />
+    <Property Name="MA_CAP_HOC" Type="varchar2" MaxLength="20" />
   </EntityType>
   <EntityType Name="DM_NGAN_HANG">
     <Key>
@@ -1013,6 +1014,8 @@ warning 6013: The table/view 'ONEDU.AQUA_EXPLAIN_86517' does not have a primary 
     <Property Name="ANH_DAI_DIEN" Type="varchar2" MaxLength="250" />
     <Property Name="IS_HOI_TRUONG_CHPH" Type="number" Precision="1" Scale="0" />
     <Property Name="IS_HOI_PHO_CHPH" Type="number" Precision="1" Scale="0" />
+    <Property Name="NGAY_GUI_OTP" Type="timestamp" Precision="6" />
+    <Property Name="OTP_COUNTER" Type="number" Precision="4" Scale="0" />
   </EntityType>
   <EntityType Name="KY_DG_TH">
     <Key>
@@ -1162,6 +1165,25 @@ warning 6013: The table/view 'ONEDU.AQUA_EXPLAIN_86517' does not have a primary 
     <Property Name="NGAY_SUA" Type="timestamp" Precision="6" />
     <Property Name="NGUOI_SUA" Type="number" Precision="19" Scale="0" />
   </EntityType>
+  <EntityType Name="LICH_THI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="19" Scale="0" Nullable="false" />
+    <Property Name="ID_TRUONG" Type="number" Precision="19" Scale="0" Nullable="false" />
+    <Property Name="ID_KHOI" Type="number" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="ID_NAM_HOC" Type="number" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="HOC_KY" Type="number" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="ID_LOP" Type="number" Precision="19" Scale="0" Nullable="false" />
+    <Property Name="ID_MON_TRUONG" Type="number" Precision="19" Scale="0" />
+    <Property Name="TIME_1T" Type="timestamp" Precision="6" />
+    <Property Name="TIME_GK" Type="timestamp" Precision="6" />
+    <Property Name="TIME_HK" Type="timestamp" Precision="6" />
+    <Property Name="NGAY_TAO" Type="timestamp" Precision="6" />
+    <Property Name="NGUOI_TAO" Type="number" Precision="19" Scale="0" />
+    <Property Name="NGAY_SUA" Type="timestamp" Precision="6" />
+    <Property Name="NGUOI_SUA" Type="number" Precision="19" Scale="0" />
+  </EntityType>
   <EntityType Name="LOAI_LOP_GDTX">
     <Key>
       <PropertyRef Name="MA" />
@@ -1258,6 +1280,7 @@ warning 6013: The table/view 'ONEDU.AQUA_EXPLAIN_86517' does not have a primary 
     <Property Name="NGUOI_SUA" Type="number" Precision="19" Scale="0" />
     <Property Name="NGAY_SUA" Type="timestamp" Precision="6" />
     <Property Name="IS_DELETE" Type="number" Precision="1" Scale="0" />
+    <Property Name="MA_CAP_HOC" Type="varchar2" MaxLength="20" Nullable="false" />
   </EntityType>
   <EntityType Name="MAP_PH_HS">
     <Key>
@@ -1647,6 +1670,24 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
     <Property Name="ID_TRUONG" Type="number" Precision="19" Scale="0" Nullable="false" />
     <Property Name="IS_BO" Type="number" Precision="1" Scale="0" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ONEDU.QUOTAREMAINBYDAY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="QUOTAREMAINBYDAY">
+    <Key>
+      <PropertyRef Name="ACCOUNT_ID" />
+    </Key>
+    <Property Name="ACCOUNT_ID" Type="number" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="LOGIN_NAME" Type="varchar2" MaxLength="200" />
+    <Property Name="SENDER_NAME" Type="varchar2" MaxLength="200" />
+    <Property Name="QUOTA_QC_REMAIN" Type="number" Precision="18" Scale="0" />
+    <Property Name="QUOTA_CSKH_REMAIN" Type="number" Precision="18" Scale="0" />
+    <Property Name="QUOTA_CSKH_USE" Type="number" Precision="18" Scale="0" />
+    <Property Name="QUOTA_QC_USE" Type="number" Precision="18" Scale="0" />
+    <Property Name="SMS_TYPE" Type="varchar2" MaxLength="50" />
+    <Property Name="TIME" Type="varchar2" MaxLength="100" />
+    <Property Name="RESPONSED_CODE" Type="varchar2" MaxLength="50" />
+    <Property Name="CREATE_DATE" Type="varchar2" MaxLength="100" />
+  </EntityType>
   <EntityType Name="QUY_TIN">
     <Key>
       <PropertyRef Name="ID" />
@@ -1761,10 +1802,11 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="number" Precision="19" Scale="0" Nullable="false" />
-    <Property Name="ID_TRUONG" Type="number" Precision="19" Scale="0" Nullable="false" />
+    <Property Name="SMS_ID" Type="number" Precision="19" Scale="0" Nullable="false" />
+    <Property Name="ID_TRUONG" Type="number" Precision="19" Scale="0" />
     <Property Name="ID_NGUOI_NHAN" Type="number" Precision="19" Scale="0" />
-    <Property Name="LOAI_NGUOI_NHAN" Type="number" Precision="4" Scale="0" Nullable="false" />
-    <Property Name="BRAND_NAME_VIETTEL" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="LOAI_NGUOI_NHAN" Type="number" Precision="4" Scale="0" />
+    <Property Name="BRAND_NAME" Type="varchar2" MaxLength="50" />
     <Property Name="SDT_NHAN" Type="varchar2" MaxLength="20" />
     <Property Name="MA_GOI_TIN" Type="number" Precision="4" Scale="0" />
     <Property Name="NOI_DUNG" Type="varchar2" MaxLength="500" />
@@ -1775,7 +1817,7 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
     <Property Name="NGUOI_GUI" Type="number" Precision="19" Scale="0" />
     <Property Name="THOI_GIAN_NHAN" Type="timestamp" Precision="6" />
     <Property Name="ID_DOI_TAC" Type="number" Precision="4" Scale="0" />
-    <Property Name="LOAI_NHA_MANG" Type="number" Precision="4" Scale="0" />
+    <Property Name="LOAI_NHA_MANG" Type="nvarchar2" MaxLength="50" />
     <Property Name="KIEU_GUI" Type="number" Precision="4" Scale="0" />
     <Property Name="IS_UNICODE" Type="number" Precision="1" Scale="0" />
     <Property Name="IS_DA_NHAN" Type="number" Precision="1" Scale="0" />
@@ -1786,21 +1828,14 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
     <Property Name="NGUOI_SUA" Type="number" Precision="19" Scale="0" />
     <Property Name="ID_NHAN_XET_HANG_NGAY" Type="number" Precision="19" Scale="0" />
     <Property Name="ID_TONG_HOP_NXHN" Type="number" Precision="19" Scale="0" />
-    <Property Name="LOAI_TIN" Type="number" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="LOAI_TIN" Type="number" Precision="4" Scale="0" />
     <Property Name="ID_THONG_BAO" Type="number" Precision="19" Scale="0" />
-    <Property Name="NAM_GUI" Type="number" Precision="4" Scale="0" Nullable="false" />
-    <Property Name="THANG_GUI" Type="number" Precision="4" Scale="0" Nullable="false" />
-    <Property Name="TUAN_GUI" Type="number" Precision="4" Scale="0" Nullable="false" />
-    <Property Name="BRAND_NAME_MOBI" Type="varchar2" MaxLength="50" />
-    <Property Name="BRAND_NAME_VINA" Type="varchar2" MaxLength="50" />
-    <Property Name="BRAND_NAME_VNM" Type="varchar2" MaxLength="50" />
-    <Property Name="BRAND_NAME_GTEL" Type="varchar2" MaxLength="50" />
-    <Property Name="CP_VIETTEL" Type="varchar2" MaxLength="20" />
-    <Property Name="CP_MOBI" Type="varchar2" MaxLength="20" />
-    <Property Name="CP_VINA" Type="varchar2" MaxLength="20" />
-    <Property Name="CP_VNM" Type="varchar2" MaxLength="20" />
-    <Property Name="CP_GTEL" Type="varchar2" MaxLength="20" />
+    <Property Name="NAM_GUI" Type="number" Precision="4" Scale="0" />
+    <Property Name="THANG_GUI" Type="number" Precision="4" Scale="0" />
+    <Property Name="TUAN_GUI" Type="number" Precision="4" Scale="0" />
+    <Property Name="CP" Type="varchar2" MaxLength="20" />
     <Property Name="RES_CODE" Type="varchar2" MaxLength="50" />
+    <Property Name="IS_SMS_ZALO_OTP" Type="number" Precision="1" Scale="0" />
   </EntityType>
   <EntityType Name="TIN_TUC">
     <Key>
@@ -1822,6 +1857,7 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
     <Property Name="NGAY_SUA" Type="timestamp" Precision="6" />
     <Property Name="NGUOI_SUA" Type="number" Precision="19" Scale="0" />
     <Property Name="ID_NAM_HOC" Type="number" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="NOI_DUNG" Type="nclob" />
   </EntityType>
   <EntityType Name="TO_GIAO_VIEN">
     <Key>
@@ -1867,6 +1903,20 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
     <Property Name="NGAY_SUA" Type="timestamp" Precision="6" />
     <Property Name="ID_TRUONG" Type="number" Precision="19" Scale="0" />
     <Property Name="ID_LOP" Type="number" Precision="19" Scale="0" />
+  </EntityType>
+  <EntityType Name="THONG_KE_HS_THANG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ID_TRUONG" Type="number" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ID_KHOI" Type="number" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="ID_NAM_HOC" Type="number" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ID_LOP" Type="number" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="THANG" Type="number" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="TONG_SO" Type="number" Precision="4" Scale="0" />
+    <Property Name="DANG_KY" Type="number" Precision="4" Scale="0" />
+    <Property Name="KHONG_DANG_KY" Type="number" Precision="4" Scale="0" />
   </EntityType>
   <EntityType Name="THU_TRONG_TUAN">
     <Key>
@@ -1998,6 +2048,18 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
       </Principal>
       <Dependent Role="BAI_TAP_VE_NHA_CHI_TIET">
         <PropertyRef Name="ID_BTVN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BAI_TAP_VE_NHA_FK1">
+    <End Role="LOP" Type="Self.LOP" Multiplicity="1" />
+    <End Role="BAI_TAP_VE_NHA" Type="Self.BAI_TAP_VE_NHA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOP">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BAI_TAP_VE_NHA">
+        <PropertyRef Name="ID_LOP" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -2325,6 +2387,42 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="DANH_GIA_DINH_KY_MON_TH_FK1">
+    <End Role="LOP" Type="Self.LOP" Multiplicity="1" />
+    <End Role="DANH_GIA_DINH_KY_MON_TH" Type="Self.DANH_GIA_DINH_KY_MON_TH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOP">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DANH_GIA_DINH_KY_MON_TH">
+        <PropertyRef Name="ID_LOP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DANH_GIA_DINH_KY_MON_TH_FK2">
+    <End Role="HOC_SINH" Type="Self.HOC_SINH" Multiplicity="1" />
+    <End Role="DANH_GIA_DINH_KY_MON_TH" Type="Self.DANH_GIA_DINH_KY_MON_TH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOC_SINH">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DANH_GIA_DINH_KY_MON_TH">
+        <PropertyRef Name="ID_HOC_SINH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DANH_GIA_DINH_KY_MON_TH_FK3">
+    <End Role="MON_HOC_TRUONG" Type="Self.MON_HOC_TRUONG" Multiplicity="1" />
+    <End Role="DANH_GIA_DINH_KY_MON_TH" Type="Self.DANH_GIA_DINH_KY_MON_TH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MON_HOC_TRUONG">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DANH_GIA_DINH_KY_MON_TH">
+        <PropertyRef Name="ID_MON_TRUONG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="DANH_GIA_DINH_KY_TH_FK1">
     <End Role="TRUONG" Type="Self.TRUONG" Multiplicity="1" />
     <End Role="DANH_GIA_DINH_KY_TH" Type="Self.DANH_GIA_DINH_KY_TH" Multiplicity="*" />
@@ -2370,6 +2468,18 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
       </Principal>
       <Dependent Role="DANH_GIA_DINH_KY_TH">
         <PropertyRef Name="ID_HOC_SINH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DANH_GIA_DINH_KY_TH_FK5">
+    <End Role="KY_DG_TH" Type="Self.KY_DG_TH" Multiplicity="1" />
+    <End Role="DANH_GIA_DINH_KY_TH" Type="Self.DANH_GIA_DINH_KY_TH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KY_DG_TH">
+        <PropertyRef Name="MA" />
+      </Principal>
+      <Dependent Role="DANH_GIA_DINH_KY_TH">
+        <PropertyRef Name="MA_KY_DG" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -3141,6 +3251,18 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="LOP_FK2">
+    <End Role="NAM_HOC" Type="Self.NAM_HOC" Multiplicity="1" />
+    <End Role="LOP" Type="Self.LOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NAM_HOC">
+        <PropertyRef Name="MA" />
+      </Principal>
+      <Dependent Role="LOP">
+        <PropertyRef Name="ID_NAM_HOC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="LOP_KHOI">
     <End Role="KHOI" Type="Self.KHOI" Multiplicity="1" />
     <End Role="LOP" Type="Self.LOP" Multiplicity="*" />
@@ -3210,6 +3332,18 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
       </Principal>
       <Dependent Role="MA_NX_DINH_KY">
         <PropertyRef Name="MA_LOAI_NX" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MON_HOC_TRUONG_FK1">
+    <End Role="MON_HOC" Type="Self.MON_HOC" Multiplicity="0..1" />
+    <End Role="MON_HOC_TRUONG" Type="Self.MON_HOC_TRUONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MON_HOC">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MON_HOC_TRUONG">
+        <PropertyRef Name="ID_MON_HOC" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -3585,6 +3719,18 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="QUY_TIN_FK1">
+    <End Role="GOI_TIN" Type="Self.GOI_TIN" Multiplicity="1" />
+    <End Role="QUY_TIN" Type="Self.QUY_TIN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GOI_TIN">
+        <PropertyRef Name="MA" />
+      </Principal>
+      <Dependent Role="QUY_TIN">
+        <PropertyRef Name="MA_GOI_TIN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="SMS_DOI_TAC">
     <End Role="DOI_TAC" Type="Self.DOI_TAC" Multiplicity="0..1" />
     <End Role="TIN_NHAN" Type="Self.TIN_NHAN" Multiplicity="*" />
@@ -3945,6 +4091,18 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="TRUONG_FK2">
+    <End Role="GOI_TIN" Type="Self.GOI_TIN" Multiplicity="0..1" />
+    <End Role="TRUONG" Type="Self.TRUONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GOI_TIN">
+        <PropertyRef Name="MA" />
+      </Principal>
+      <Dependent Role="TRUONG">
+        <PropertyRef Name="MA_GOI_TIN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="TRUONG_HUYEN">
     <End Role="DM_QUAN_HUYEN" Type="Self.DM_QUAN_HUYEN" Multiplicity="0..1" />
     <End Role="TRUONG" Type="Self.TRUONG" Multiplicity="*" />
@@ -4042,6 +4200,7 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
     <EntitySet Name="KHOA_SO_THEO_TRUONG" EntityType="Self.KHOA_SO_THEO_TRUONG" Schema="ONEDU" store:Type="Tables" />
     <EntitySet Name="KHOI" EntityType="Self.KHOI" Schema="ONEDU" store:Type="Tables" />
     <EntitySet Name="LICH_AN" EntityType="Self.LICH_AN" Schema="ONEDU" store:Type="Tables" />
+    <EntitySet Name="LICH_THI" EntityType="Self.LICH_THI" Schema="ONEDU" store:Type="Tables" />
     <EntitySet Name="LOAI_LOP_GDTX" EntityType="Self.LOAI_LOP_GDTX" Schema="ONEDU" store:Type="Tables" />
     <EntitySet Name="LOG_USER" EntityType="Self.LOG_USER" Schema="ONEDU" store:Type="Tables" />
     <EntitySet Name="LOP" EntityType="Self.LOP" Schema="ONEDU" store:Type="Tables" />
@@ -4076,15 +4235,35 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
     <EntitySet Name="TO_GIAO_VIEN" EntityType="Self.TO_GIAO_VIEN" Schema="ONEDU" store:Type="Tables" />
     <EntitySet Name="TO_GIAO_VIEN_GV" EntityType="Self.TO_GIAO_VIEN_GV" Schema="ONEDU" store:Type="Tables" />
     <EntitySet Name="TONG_HOP_NHAN_XET_HANG_NGAY" EntityType="Self.TONG_HOP_NHAN_XET_HANG_NGAY" Schema="ONEDU" store:Type="Tables" />
+    <EntitySet Name="THONG_KE_HS_THANG" EntityType="Self.THONG_KE_HS_THANG" Schema="ONEDU" store:Type="Tables" />
     <EntitySet Name="THU_TRONG_TUAN" EntityType="Self.THU_TRONG_TUAN" Schema="ONEDU" store:Type="Tables" />
     <EntitySet Name="THUC_DON" EntityType="Self.THUC_DON" Schema="ONEDU" store:Type="Tables" />
     <EntitySet Name="THUC_DON_CHI_TIET" EntityType="Self.THUC_DON_CHI_TIET" Schema="ONEDU" store:Type="Tables" />
     <EntitySet Name="TRANG_THAI_GV" EntityType="Self.TRANG_THAI_GV" Schema="ONEDU" store:Type="Tables" />
     <EntitySet Name="TRANG_THAI_HS" EntityType="Self.TRANG_THAI_HS" Schema="ONEDU" store:Type="Tables" />
     <EntitySet Name="TRUONG" EntityType="Self.TRUONG" Schema="ONEDU" store:Type="Tables" />
+    <EntitySet Name="QUOTAREMAINBYDAY" EntityType="Self.QUOTAREMAINBYDAY" store:Type="Tables" store:Schema="ONEDU">
+      <DefiningQuery>SELECT 
+"QUOTAREMAINBYDAY"."ACCOUNT_ID" AS "ACCOUNT_ID", 
+"QUOTAREMAINBYDAY"."LOGIN_NAME" AS "LOGIN_NAME", 
+"QUOTAREMAINBYDAY"."SENDER_NAME" AS "SENDER_NAME", 
+"QUOTAREMAINBYDAY"."QUOTA_QC_REMAIN" AS "QUOTA_QC_REMAIN", 
+"QUOTAREMAINBYDAY"."QUOTA_CSKH_REMAIN" AS "QUOTA_CSKH_REMAIN", 
+"QUOTAREMAINBYDAY"."QUOTA_CSKH_USE" AS "QUOTA_CSKH_USE", 
+"QUOTAREMAINBYDAY"."QUOTA_QC_USE" AS "QUOTA_QC_USE", 
+"QUOTAREMAINBYDAY"."SMS_TYPE" AS "SMS_TYPE", 
+"QUOTAREMAINBYDAY"."TIME" AS "TIME", 
+"QUOTAREMAINBYDAY"."RESPONSED_CODE" AS "RESPONSED_CODE", 
+"QUOTAREMAINBYDAY"."CREATE_DATE" AS "CREATE_DATE"
+FROM "ONEDU"."QUOTAREMAINBYDAY" "QUOTAREMAINBYDAY"</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="BAI_TAP_VE_NHA_CHI_TIET_FK1" Association="Self.BAI_TAP_VE_NHA_CHI_TIET_FK1">
       <End Role="BAI_TAP_VE_NHA" EntitySet="BAI_TAP_VE_NHA" />
       <End Role="BAI_TAP_VE_NHA_CHI_TIET" EntitySet="BAI_TAP_VE_NHA_CHI_TIET" />
+    </AssociationSet>
+    <AssociationSet Name="BAI_TAP_VE_NHA_FK1" Association="Self.BAI_TAP_VE_NHA_FK1">
+      <End Role="LOP" EntitySet="LOP" />
+      <End Role="BAI_TAP_VE_NHA" EntitySet="BAI_TAP_VE_NHA" />
     </AssociationSet>
     <AssociationSet Name="CA_HOC_CAU_HINH_CA_HOC_FK1" Association="Self.CA_HOC_CAU_HINH_CA_HOC_FK1">
       <End Role="CAU_HINH_CA_HOC" EntitySet="CAU_HINH_CA_HOC" />
@@ -4194,6 +4373,18 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
       <End Role="DM_BUA_AN" EntitySet="DM_BUA_AN" />
       <End Role="DANG_KY_AN" EntitySet="DANG_KY_AN" />
     </AssociationSet>
+    <AssociationSet Name="DANH_GIA_DINH_KY_MON_TH_FK1" Association="Self.DANH_GIA_DINH_KY_MON_TH_FK1">
+      <End Role="LOP" EntitySet="LOP" />
+      <End Role="DANH_GIA_DINH_KY_MON_TH" EntitySet="DANH_GIA_DINH_KY_MON_TH" />
+    </AssociationSet>
+    <AssociationSet Name="DANH_GIA_DINH_KY_MON_TH_FK2" Association="Self.DANH_GIA_DINH_KY_MON_TH_FK2">
+      <End Role="HOC_SINH" EntitySet="HOC_SINH" />
+      <End Role="DANH_GIA_DINH_KY_MON_TH" EntitySet="DANH_GIA_DINH_KY_MON_TH" />
+    </AssociationSet>
+    <AssociationSet Name="DANH_GIA_DINH_KY_MON_TH_FK3" Association="Self.DANH_GIA_DINH_KY_MON_TH_FK3">
+      <End Role="MON_HOC_TRUONG" EntitySet="MON_HOC_TRUONG" />
+      <End Role="DANH_GIA_DINH_KY_MON_TH" EntitySet="DANH_GIA_DINH_KY_MON_TH" />
+    </AssociationSet>
     <AssociationSet Name="DANH_GIA_DINH_KY_TH_FK1" Association="Self.DANH_GIA_DINH_KY_TH_FK1">
       <End Role="TRUONG" EntitySet="TRUONG" />
       <End Role="DANH_GIA_DINH_KY_TH" EntitySet="DANH_GIA_DINH_KY_TH" />
@@ -4208,6 +4399,10 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
     </AssociationSet>
     <AssociationSet Name="DANH_GIA_DINH_KY_TH_FK4" Association="Self.DANH_GIA_DINH_KY_TH_FK4">
       <End Role="HOC_SINH" EntitySet="HOC_SINH" />
+      <End Role="DANH_GIA_DINH_KY_TH" EntitySet="DANH_GIA_DINH_KY_TH" />
+    </AssociationSet>
+    <AssociationSet Name="DANH_GIA_DINH_KY_TH_FK5" Association="Self.DANH_GIA_DINH_KY_TH_FK5">
+      <End Role="KY_DG_TH" EntitySet="KY_DG_TH" />
       <End Role="DANH_GIA_DINH_KY_TH" EntitySet="DANH_GIA_DINH_KY_TH" />
     </AssociationSet>
     <AssociationSet Name="DCT_HS" Association="Self.DCT_HS">
@@ -4466,6 +4661,10 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
       <End Role="GIAO_VIEN" EntitySet="GIAO_VIEN" />
       <End Role="LOP" EntitySet="LOP" />
     </AssociationSet>
+    <AssociationSet Name="LOP_FK2" Association="Self.LOP_FK2">
+      <End Role="NAM_HOC" EntitySet="NAM_HOC" />
+      <End Role="LOP" EntitySet="LOP" />
+    </AssociationSet>
     <AssociationSet Name="LOP_KHOI" Association="Self.LOP_KHOI">
       <End Role="KHOI" EntitySet="KHOI" />
       <End Role="LOP" EntitySet="LOP" />
@@ -4489,6 +4688,10 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
     <AssociationSet Name="MA_NX_DINH_KY_FK2" Association="Self.MA_NX_DINH_KY_FK2">
       <End Role="DM_LOAI_NX" EntitySet="DM_LOAI_NX" />
       <End Role="MA_NX_DINH_KY" EntitySet="MA_NX_DINH_KY" />
+    </AssociationSet>
+    <AssociationSet Name="MON_HOC_TRUONG_FK1" Association="Self.MON_HOC_TRUONG_FK1">
+      <End Role="MON_HOC" EntitySet="MON_HOC" />
+      <End Role="MON_HOC_TRUONG" EntitySet="MON_HOC_TRUONG" />
     </AssociationSet>
     <AssociationSet Name="NANG_LUONG_TRONG_NGAY_KHOI" Association="Self.NANG_LUONG_TRONG_NGAY_KHOI">
       <End Role="KHOI" EntitySet="KHOI" />
@@ -4614,6 +4817,10 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
       <End Role="GIAO_VIEN" EntitySet="GIAO_VIEN" />
       <End Role="PHIEU_XUAT_KHO" EntitySet="PHIEU_XUAT_KHO" />
     </AssociationSet>
+    <AssociationSet Name="QUY_TIN_FK1" Association="Self.QUY_TIN_FK1">
+      <End Role="GOI_TIN" EntitySet="GOI_TIN" />
+      <End Role="QUY_TIN" EntitySet="QUY_TIN" />
+    </AssociationSet>
     <AssociationSet Name="SMS_DOI_TAC" Association="Self.SMS_DOI_TAC">
       <End Role="DOI_TAC" EntitySet="DOI_TAC" />
       <End Role="TIN_NHAN" EntitySet="TIN_NHAN" />
@@ -4732,6 +4939,10 @@ warning 6013: The table/view 'ONEDU.MT_SENT' does not have a primary key defined
     </AssociationSet>
     <AssociationSet Name="TRUONG_FK1" Association="Self.TRUONG_FK1">
       <End Role="DOI_TAC" EntitySet="DOI_TAC" />
+      <End Role="TRUONG" EntitySet="TRUONG" />
+    </AssociationSet>
+    <AssociationSet Name="TRUONG_FK2" Association="Self.TRUONG_FK2">
+      <End Role="GOI_TIN" EntitySet="GOI_TIN" />
       <End Role="TRUONG" EntitySet="TRUONG" />
     </AssociationSet>
     <AssociationSet Name="TRUONG_HUYEN" Association="Self.TRUONG_HUYEN">

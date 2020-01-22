@@ -20,6 +20,7 @@ namespace OneEduDataAccess.Model
             this.DIEM_CHI_TIET = new HashSet<DIEM_CHI_TIET>();
             this.GV_LOP_MON = new HashSet<GV_LOP_MON>();
             this.LOP_MON = new HashSet<LOP_MON>();
+            this.MON_HOC_TRUONG = new HashSet<MON_HOC_TRUONG>();
         }
     
         public short ID { get; set; }
@@ -52,5 +53,7 @@ namespace OneEduDataAccess.Model
         public virtual ICollection<GV_LOP_MON> GV_LOP_MON { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LOP_MON> LOP_MON { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MON_HOC_TRUONG> MON_HOC_TRUONG { get; set; }
     }
 }

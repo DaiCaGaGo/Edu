@@ -607,6 +607,7 @@
     <EntitySetMapping Name="DM_MA_NX">
       <EntityTypeMapping TypeName="oneduModel.DM_MA_NX">
         <MappingFragment StoreEntitySet="DM_MA_NX">
+          <ScalarProperty Name="MA_CAP_HOC" ColumnName="MA_CAP_HOC" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="THU_TU" ColumnName="THU_TU" />
           <ScalarProperty Name="NOI_DUNG" ColumnName="NOI_DUNG" />
@@ -961,6 +962,8 @@
     <EntitySetMapping Name="HOC_SINH">
       <EntityTypeMapping TypeName="oneduModel.HOC_SINH">
         <MappingFragment StoreEntitySet="HOC_SINH">
+          <ScalarProperty Name="OTP_COUNTER" ColumnName="OTP_COUNTER" />
+          <ScalarProperty Name="NGAY_GUI_OTP" ColumnName="NGAY_GUI_OTP" />
           <ScalarProperty Name="IS_HOI_PHO_CHPH" ColumnName="IS_HOI_PHO_CHPH" />
           <ScalarProperty Name="IS_HOI_TRUONG_CHPH" ColumnName="IS_HOI_TRUONG_CHPH" />
           <ScalarProperty Name="ANH_DAI_DIEN" ColumnName="ANH_DAI_DIEN" />
@@ -1177,6 +1180,26 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="LICH_THI">
+      <EntityTypeMapping TypeName="oneduModel.LICH_THI">
+        <MappingFragment StoreEntitySet="LICH_THI">
+          <ScalarProperty Name="NGUOI_SUA" ColumnName="NGUOI_SUA" />
+          <ScalarProperty Name="NGAY_SUA" ColumnName="NGAY_SUA" />
+          <ScalarProperty Name="NGUOI_TAO" ColumnName="NGUOI_TAO" />
+          <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+          <ScalarProperty Name="TIME_HK" ColumnName="TIME_HK" />
+          <ScalarProperty Name="TIME_GK" ColumnName="TIME_GK" />
+          <ScalarProperty Name="TIME_1T" ColumnName="TIME_1T" />
+          <ScalarProperty Name="ID_MON_TRUONG" ColumnName="ID_MON_TRUONG" />
+          <ScalarProperty Name="ID_LOP" ColumnName="ID_LOP" />
+          <ScalarProperty Name="HOC_KY" ColumnName="HOC_KY" />
+          <ScalarProperty Name="ID_NAM_HOC" ColumnName="ID_NAM_HOC" />
+          <ScalarProperty Name="ID_KHOI" ColumnName="ID_KHOI" />
+          <ScalarProperty Name="ID_TRUONG" ColumnName="ID_TRUONG" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="LOAI_LOP_GDTX">
       <EntityTypeMapping TypeName="oneduModel.LOAI_LOP_GDTX">
         <MappingFragment StoreEntitySet="LOAI_LOP_GDTX">
@@ -1267,6 +1290,7 @@
     <EntitySetMapping Name="MA_NXHN">
       <EntityTypeMapping TypeName="oneduModel.MA_NXHN">
         <MappingFragment StoreEntitySet="MA_NXHN">
+          <ScalarProperty Name="MA_CAP_HOC" ColumnName="MA_CAP_HOC" />
           <ScalarProperty Name="IS_DELETE" ColumnName="IS_DELETE" />
           <ScalarProperty Name="NGAY_SUA" ColumnName="NGAY_SUA" />
           <ScalarProperty Name="NGUOI_SUA" ColumnName="NGUOI_SUA" />
@@ -1780,16 +1804,9 @@
     <EntitySetMapping Name="TIN_NHAN_CU">
       <EntityTypeMapping TypeName="oneduModel.TIN_NHAN_CU">
         <MappingFragment StoreEntitySet="TIN_NHAN_CU">
+          <ScalarProperty Name="IS_SMS_ZALO_OTP" ColumnName="IS_SMS_ZALO_OTP" />
           <ScalarProperty Name="RES_CODE" ColumnName="RES_CODE" />
-          <ScalarProperty Name="CP_GTEL" ColumnName="CP_GTEL" />
-          <ScalarProperty Name="CP_VNM" ColumnName="CP_VNM" />
-          <ScalarProperty Name="CP_VINA" ColumnName="CP_VINA" />
-          <ScalarProperty Name="CP_MOBI" ColumnName="CP_MOBI" />
-          <ScalarProperty Name="CP_VIETTEL" ColumnName="CP_VIETTEL" />
-          <ScalarProperty Name="BRAND_NAME_GTEL" ColumnName="BRAND_NAME_GTEL" />
-          <ScalarProperty Name="BRAND_NAME_VNM" ColumnName="BRAND_NAME_VNM" />
-          <ScalarProperty Name="BRAND_NAME_VINA" ColumnName="BRAND_NAME_VINA" />
-          <ScalarProperty Name="BRAND_NAME_MOBI" ColumnName="BRAND_NAME_MOBI" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
           <ScalarProperty Name="TUAN_GUI" ColumnName="TUAN_GUI" />
           <ScalarProperty Name="THANG_GUI" ColumnName="THANG_GUI" />
           <ScalarProperty Name="NAM_GUI" ColumnName="NAM_GUI" />
@@ -1816,10 +1833,11 @@
           <ScalarProperty Name="NOI_DUNG" ColumnName="NOI_DUNG" />
           <ScalarProperty Name="MA_GOI_TIN" ColumnName="MA_GOI_TIN" />
           <ScalarProperty Name="SDT_NHAN" ColumnName="SDT_NHAN" />
-          <ScalarProperty Name="BRAND_NAME_VIETTEL" ColumnName="BRAND_NAME_VIETTEL" />
+          <ScalarProperty Name="BRAND_NAME" ColumnName="BRAND_NAME" />
           <ScalarProperty Name="LOAI_NGUOI_NHAN" ColumnName="LOAI_NGUOI_NHAN" />
           <ScalarProperty Name="ID_NGUOI_NHAN" ColumnName="ID_NGUOI_NHAN" />
           <ScalarProperty Name="ID_TRUONG" ColumnName="ID_TRUONG" />
+          <ScalarProperty Name="SMS_ID" ColumnName="SMS_ID" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -1827,6 +1845,7 @@
     <EntitySetMapping Name="TIN_TUC">
       <EntityTypeMapping TypeName="oneduModel.TIN_TUC">
         <MappingFragment StoreEntitySet="TIN_TUC">
+          <ScalarProperty Name="NOI_DUNG" ColumnName="NOI_DUNG" />
           <ScalarProperty Name="ID_NAM_HOC" ColumnName="ID_NAM_HOC" />
           <ScalarProperty Name="NGUOI_SUA" ColumnName="NGUOI_SUA" />
           <ScalarProperty Name="NGAY_SUA" ColumnName="NGAY_SUA" />
@@ -1890,6 +1909,21 @@
           <ScalarProperty Name="NOI_DUNG_NX" ColumnName="NOI_DUNG_NX" />
           <ScalarProperty Name="ID_NHAN_XET_HN" ColumnName="ID_NHAN_XET_HN" />
           <ScalarProperty Name="ID_HOC_SINH" ColumnName="ID_HOC_SINH" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THONG_KE_HS_THANG">
+      <EntityTypeMapping TypeName="oneduModel.THONG_KE_HS_THANG">
+        <MappingFragment StoreEntitySet="THONG_KE_HS_THANG">
+          <ScalarProperty Name="KHONG_DANG_KY" ColumnName="KHONG_DANG_KY" />
+          <ScalarProperty Name="DANG_KY" ColumnName="DANG_KY" />
+          <ScalarProperty Name="TONG_SO" ColumnName="TONG_SO" />
+          <ScalarProperty Name="THANG" ColumnName="THANG" />
+          <ScalarProperty Name="ID_LOP" ColumnName="ID_LOP" />
+          <ScalarProperty Name="ID_NAM_HOC" ColumnName="ID_NAM_HOC" />
+          <ScalarProperty Name="ID_KHOI" ColumnName="ID_KHOI" />
+          <ScalarProperty Name="ID_TRUONG" ColumnName="ID_TRUONG" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -2018,6 +2052,23 @@
           <ScalarProperty Name="TEN" ColumnName="TEN" />
           <ScalarProperty Name="MA" ColumnName="MA" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QUOTAREMAINBYDAYs">
+      <EntityTypeMapping TypeName="oneduModel.QUOTAREMAINBYDAY">
+        <MappingFragment StoreEntitySet="QUOTAREMAINBYDAY">
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="RESPONSED_CODE" ColumnName="RESPONSED_CODE" />
+          <ScalarProperty Name="TIME" ColumnName="TIME" />
+          <ScalarProperty Name="SMS_TYPE" ColumnName="SMS_TYPE" />
+          <ScalarProperty Name="QUOTA_QC_USE" ColumnName="QUOTA_QC_USE" />
+          <ScalarProperty Name="QUOTA_CSKH_USE" ColumnName="QUOTA_CSKH_USE" />
+          <ScalarProperty Name="QUOTA_CSKH_REMAIN" ColumnName="QUOTA_CSKH_REMAIN" />
+          <ScalarProperty Name="QUOTA_QC_REMAIN" ColumnName="QUOTA_QC_REMAIN" />
+          <ScalarProperty Name="SENDER_NAME" ColumnName="SENDER_NAME" />
+          <ScalarProperty Name="LOGIN_NAME" ColumnName="LOGIN_NAME" />
+          <ScalarProperty Name="ACCOUNT_ID" ColumnName="ACCOUNT_ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

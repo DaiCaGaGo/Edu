@@ -25,6 +25,7 @@ namespace OneEduDataAccess.Model
             this.HOC_PHI_DOT_THU_LOP = new HashSet<HOC_PHI_DOT_THU_LOP>();
             this.HOC_PHI_PHIEU_THU_HOC_SINH = new HashSet<HOC_PHI_PHIEU_THU_HOC_SINH>();
             this.LICH_AN = new HashSet<LICH_AN>();
+            this.LOPs = new HashSet<LOP>();
             this.SUAT_AN = new HashSet<SUAT_AN>();
             this.TIN_TUC = new HashSet<TIN_TUC>();
         }
@@ -49,6 +50,8 @@ namespace OneEduDataAccess.Model
         public virtual ICollection<HOC_PHI_PHIEU_THU_HOC_SINH> HOC_PHI_PHIEU_THU_HOC_SINH { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LICH_AN> LICH_AN { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LOP> LOPs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SUAT_AN> SUAT_AN { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

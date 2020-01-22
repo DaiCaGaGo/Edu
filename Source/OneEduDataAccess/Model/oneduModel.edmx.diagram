@@ -5,98 +5,104 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="78591cfa22424dc68ea2dae988a5aef6" Name="Diagram1" ZoomLevel="108">
-        <EntityTypeShape EntityType="oneduModel.BAI_TAP_VE_NHA" Width="1.5" PointX="7.75" PointY="1" />
-        <EntityTypeShape EntityType="oneduModel.BAI_TAP_VE_NHA_CHI_TIET" Width="1.5" PointX="10" PointY="1" />
-        <EntityTypeShape EntityType="oneduModel.CA_HOC" Width="1.5" PointX="7.5" PointY="217.75" />
-        <EntityTypeShape EntityType="oneduModel.CAP_TIN_DOI_TAC" Width="1.5" PointX="3" PointY="158.125" />
-        <EntityTypeShape EntityType="oneduModel.CAP_TIN_TRUONG" Width="1.5" PointX="8.25" PointY="118.375" />
-        <EntityTypeShape EntityType="oneduModel.CAU_HINH_CA_HOC" Width="1.5" PointX="5.25" PointY="217.25" />
-        <EntityTypeShape EntityType="oneduModel.CP_TELCO" Width="1.5" PointX="7.75" PointY="5.75" />
-        <EntityTypeShape EntityType="oneduModel.CUSTOMER" Width="1.5" PointX="5.25" PointY="232" />
-        <EntityTypeShape EntityType="oneduModel.CUSTOMER_TO" Width="1.5" PointX="5.25" PointY="224.25" />
-        <EntityTypeShape EntityType="oneduModel.CUSTOMER_TO_CUSTOMER" Width="1.5" PointX="7.5" PointY="172.125" />
-        <EntityTypeShape EntityType="oneduModel.CHAM_AN" Width="1.5" PointX="13.25" PointY="122.5" />
-        <EntityTypeShape EntityType="oneduModel.CHUYEN_CAN" Width="1.5" PointX="13.25" PointY="104.625" />
-        <EntityTypeShape EntityType="oneduModel.CHUYEN_MANG_GIU_SO" Width="1.5" PointX="7.75" PointY="8.75" />
-        <EntityTypeShape EntityType="oneduModel.DANG_KY_AN" Width="1.5" PointX="5.25" PointY="103.875" />
-        <EntityTypeShape EntityType="oneduModel.DANH_GIA_DINH_KY_MON_TH" Width="1.5" PointX="9.75" PointY="5.75" />
-        <EntityTypeShape EntityType="oneduModel.DANH_GIA_DINH_KY_TH" Width="1.5" PointX="5.25" PointY="124.75" />
-        <EntityTypeShape EntityType="oneduModel.DIEM_CHI_TIET" Width="1.5" PointX="16.25" PointY="120.5" />
-        <EntityTypeShape EntityType="oneduModel.DIEM_TONG_KET" Width="1.5" PointX="19.25" PointY="107.625" />
-        <EntityTypeShape EntityType="oneduModel.DM_BUA_AN" Width="1.5" PointX="19.25" PointY="115.875" />
-        <EntityTypeShape EntityType="oneduModel.DM_CHUC_VU" Width="1.5" PointX="6" PointY="145.875" />
-        <EntityTypeShape EntityType="oneduModel.DM_DAN_TOC" Width="1.5" PointX="22.5" PointY="138.125" />
-        <EntityTypeShape EntityType="oneduModel.DM_DOI_TUONG_CHINH_SACH" Width="1.5" PointX="22.5" PointY="135.625" />
-        <EntityTypeShape EntityType="oneduModel.DM_DON_VI_TINH" Width="1.5" PointX="6" PointY="86.375" />
-        <EntityTypeShape EntityType="oneduModel.DM_KHU_VUC" Width="1.5" PointX="22.5" PointY="143.375" />
-        <EntityTypeShape EntityType="oneduModel.DM_LOAI_NX" Width="1.5" PointX="3" PointY="133.125" />
+        <EntityTypeShape EntityType="oneduModel.BAI_TAP_VE_NHA" Width="1.5" PointX="27.75" PointY="170.5" />
+        <EntityTypeShape EntityType="oneduModel.BAI_TAP_VE_NHA_CHI_TIET" Width="1.5" PointX="30" PointY="170.625" />
+        <EntityTypeShape EntityType="oneduModel.CA_HOC" Width="1.5" PointX="13.5" PointY="232.75" />
+        <EntityTypeShape EntityType="oneduModel.CAP_TIN_DOI_TAC" Width="1.5" PointX="3" PointY="164" />
+        <EntityTypeShape EntityType="oneduModel.CAP_TIN_TRUONG" Width="1.5" PointX="3" PointY="118.25" />
+        <EntityTypeShape EntityType="oneduModel.CAU_HINH_CA_HOC" Width="1.5" PointX="11.25" PointY="232.25" />
+        <EntityTypeShape EntityType="oneduModel.CP_TELCO" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="oneduModel.CUSTOMER" Width="1.5" PointX="11.25" PointY="154.625" />
+        <EntityTypeShape EntityType="oneduModel.CUSTOMER_TO" Width="1.5" PointX="11.25" PointY="239.25" />
+        <EntityTypeShape EntityType="oneduModel.CUSTOMER_TO_CUSTOMER" Width="1.5" PointX="13.5" PointY="178" />
+        <EntityTypeShape EntityType="oneduModel.CHAM_AN" Width="1.5" PointX="22.5" PointY="120.375" />
+        <EntityTypeShape EntityType="oneduModel.CHUYEN_CAN" Width="1.5" PointX="14.25" PointY="128.5" />
+        <EntityTypeShape EntityType="oneduModel.CHUYEN_MANG_GIU_SO" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="oneduModel.DANG_KY_AN" Width="1.5" PointX="25.5" PointY="123.625" />
+        <EntityTypeShape EntityType="oneduModel.DANH_GIA_DINH_KY_MON_TH" Width="1.5" PointX="39" PointY="125.5" />
+        <EntityTypeShape EntityType="oneduModel.DANH_GIA_DINH_KY_TH" Width="1.5" PointX="11.25" PointY="115.5" />
+        <EntityTypeShape EntityType="oneduModel.DIEM_CHI_TIET" Width="1.5" PointX="20.25" PointY="115.375" />
+        <EntityTypeShape EntityType="oneduModel.DIEM_TONG_KET" Width="1.5" PointX="23.25" PointY="132.375" />
+        <EntityTypeShape EntityType="oneduModel.DM_BUA_AN" Width="1.5" PointX="17.25" PointY="121.75" />
+        <EntityTypeShape EntityType="oneduModel.DM_CHUC_VU" Width="1.5" PointX="12" PointY="107.75" />
+        <EntityTypeShape EntityType="oneduModel.DM_DAN_TOC" Width="1.5" PointX="34.5" PointY="139.5" />
+        <EntityTypeShape EntityType="oneduModel.DM_DOI_TUONG_CHINH_SACH" Width="1.5" PointX="34.5" PointY="112.875" />
+        <EntityTypeShape EntityType="oneduModel.DM_DON_VI_TINH" Width="1.5" PointX="28.5" PointY="134.5" />
+        <EntityTypeShape EntityType="oneduModel.DM_KHU_VUC" Width="1.5" PointX="34.5" PointY="134.375" />
+        <EntityTypeShape EntityType="oneduModel.DM_LOAI_NX" Width="1.5" PointX="9" PointY="135.875" />
+        <EntityTypeShape EntityType="oneduModel.DM_MA_NX" Width="1.5" PointX="7.75" PointY="6.75" />
         <EntityTypeShape EntityType="oneduModel.DM_NGAN_HANG" Width="1.5" PointX="2.75" PointY="1.625" />
         <EntityTypeShape EntityType="oneduModel.DM_NHA_CUNG_CAP_THUC_PHAM" Width="1.5" PointX="5" PointY="1" />
-        <EntityTypeShape EntityType="oneduModel.DM_NHOM_THUC_PHAM" Width="1.5" PointX="6" PointY="81.25" />
-        <EntityTypeShape EntityType="oneduModel.DM_QUAN_HUYEN" Width="1.5" PointX="0.75" PointY="123.375" />
-        <EntityTypeShape EntityType="oneduModel.DM_QUOC_TICH" Width="1.5" PointX="22.5" PointY="140.875" />
+        <EntityTypeShape EntityType="oneduModel.DM_NHOM_THUC_PHAM" Width="1.5" PointX="28.5" PointY="138.375" />
+        <EntityTypeShape EntityType="oneduModel.DM_QUAN_HUYEN" Width="1.5" PointX="6.75" PointY="134.75" />
+        <EntityTypeShape EntityType="oneduModel.DM_QUOC_TICH" Width="1.5" PointX="34.5" PointY="136.875" />
         <EntityTypeShape EntityType="oneduModel.DM_SACH" Width="1.5" PointX="0.75" PointY="3.875" />
         <EntityTypeShape EntityType="oneduModel.DM_SACH_CHI_TIET" Width="1.5" PointX="5.25" PointY="6.125" />
         <EntityTypeShape EntityType="oneduModel.DM_SACH_NOI_DUNG" Width="1.5" PointX="3" PointY="8.875" />
-        <EntityTypeShape EntityType="oneduModel.DM_TINH_THANH" Width="1.5" PointX="1.5" PointY="129.5" />
-        <EntityTypeShape EntityType="oneduModel.DM_THUC_PHAM" Width="1.5" PointX="6" PointY="91" />
-        <EntityTypeShape EntityType="oneduModel.DM_XA_PHUONG" Width="1.5" PointX="0.75" PointY="113.875" />
-        <EntityTypeShape EntityType="oneduModel.DOI_TAC" Width="1.5" PointX="0.75" PointY="118" />
-        <EntityTypeShape EntityType="oneduModel.GOI_TIN" Width="1.5" PointX="3" PointY="106.125" />
-        <EntityTypeShape EntityType="oneduModel.GV_LOP_MON" Width="1.5" PointX="12.75" PointY="134.25" />
-        <EntityTypeShape EntityType="oneduModel.GIAO_VIEN" Width="1.5" PointX="8.25" PointY="126.75" />
-        <EntityTypeShape EntityType="oneduModel.GIOI_TINH" Width="1.5" PointX="6" PointY="143.125" />
-        <EntityTypeShape EntityType="oneduModel.HOC_KY" Width="1.5" PointX="5.75" PointY="11.75" />
-        <EntityTypeShape EntityType="oneduModel.HOC_PHI_DOT_THU" Width="1.5" PointX="16.25" PointY="109.25" />
-        <EntityTypeShape EntityType="oneduModel.HOC_PHI_DOT_THU_LOP" Width="1.5" PointX="27.5" PointY="124" />
-        <EntityTypeShape EntityType="oneduModel.HOC_PHI_PHIEU_THU_HOC_SINH" Width="1.5" PointX="21.5" PointY="110.75" />
-        <EntityTypeShape EntityType="oneduModel.HOC_SINH" Width="1.5" PointX="24.75" PointY="126.5" />
-        <EntityTypeShape EntityType="oneduModel.KY_DG_TH" Width="1.5" PointX="7.75" PointY="11.75" />
-        <EntityTypeShape EntityType="oneduModel.KHO_THUC_PHAM" Width="1.5" PointX="8.25" PointY="104.875" />
-        <EntityTypeShape EntityType="oneduModel.KHOA_SO_THEO_LOP" Width="1.5" PointX="11.75" PointY="8.75" />
-        <EntityTypeShape EntityType="oneduModel.KHOA_SO_THEO_MON" Width="1.5" PointX="12.75" PointY="0.75" />
-        <EntityTypeShape EntityType="oneduModel.KHOA_SO_THEO_TRUONG" Width="1.5" PointX="9.75" PointY="12.75" />
-        <EntityTypeShape EntityType="oneduModel.KHOI" Width="1.5" PointX="8.25" PointY="137.5" />
-        <EntityTypeShape EntityType="oneduModel.LICH_AN" Width="1.5" PointX="24.5" PointY="114.875" />
-        <EntityTypeShape EntityType="oneduModel.LOAI_LOP_GDTX" Width="1.5" PointX="6" PointY="139.625" />
-        <EntityTypeShape EntityType="oneduModel.LOG_USER" Width="1.5" PointX="10.25" PointY="122.5" />
-        <EntityTypeShape EntityType="oneduModel.LOP" Width="1.5" PointX="10.5" PointY="126.75" />
-        <EntityTypeShape EntityType="oneduModel.LOP_MON" Width="1.5" PointX="20.75" PointY="129.625" />
-        <EntityTypeShape EntityType="oneduModel.MA_NX_DINH_KY" Width="1.5" PointX="5.25" PointY="132.125" />
-        <EntityTypeShape EntityType="oneduModel.MAP_PH_HS" Width="1.5" PointX="0.75" PointY="13.75" />
-        <EntityTypeShape EntityType="oneduModel.MENU" Width="1.5" PointX="9" PointY="98.25" />
-        <EntityTypeShape EntityType="oneduModel.MON_HOC" Width="1.5" PointX="18.5" PointY="135.5" />
-        <EntityTypeShape EntityType="oneduModel.MON_HOC_TRUONG" Width="1.5" PointX="18.5" PointY="142.25" />
-        <EntityTypeShape EntityType="oneduModel.NAM_HOC" Width="1.5" PointX="3" PointY="90.125" />
-        <EntityTypeShape EntityType="oneduModel.NANG_LUONG_TRONG_NGAY" Width="1.5" PointX="10.5" PointY="139.25" />
-        <EntityTypeShape EntityType="oneduModel.NGUOI_DUNG" Width="1.5" PointX="8" PointY="110.875" />
-        <EntityTypeShape EntityType="oneduModel.NGUOI_DUNG_MENU" Width="1.5" PointX="11.25" PointY="116.375" />
-        <EntityTypeShape EntityType="oneduModel.NGUOI_DUNG_TRUONG" Width="1.5" PointX="14.25" PointY="116.25" />
-        <EntityTypeShape EntityType="oneduModel.NHAN_XET_HANG_NGAY" Width="1.5" PointX="27" PointY="132.375" />
-        <EntityTypeShape EntityType="oneduModel.NHOM_QUYEN" Width="1.5" PointX="5.75" PointY="99.375" />
-        <EntityTypeShape EntityType="oneduModel.NHOM_QUYEN_MENU" Width="1.5" PointX="11.25" PointY="98.5" />
-        <EntityTypeShape EntityType="oneduModel.NHOM_TUOI_MN" Width="1.5" PointX="17" PointY="116.5" />
-        <EntityTypeShape EntityType="oneduModel.NHU_CAU_NANG_LUONG" Width="1.5" PointX="27.25" PointY="137.375" />
-        <EntityTypeShape EntityType="oneduModel.NHU_CAU_NANG_LUONG_TRUONG" Width="1.5" PointX="10.25" PointY="110.5" />
-        <EntityTypeShape EntityType="oneduModel.PHIEU_NHAP_KHO" Width="1.5" PointX="18.5" PointY="130.125" />
-        <EntityTypeShape EntityType="oneduModel.PHIEU_NHAP_KHO_DETAIL" Width="1.5" PointX="29.75" PointY="124.25" />
-        <EntityTypeShape EntityType="oneduModel.PHIEU_XUAT_KHO" Width="1.5" PointX="18.5" PointY="125.25" />
-        <EntityTypeShape EntityType="oneduModel.PHIEU_XUAT_KHO_DETAIL" Width="1.5" PointX="21.75" PointY="123.875" />
-        <EntityTypeShape EntityType="oneduModel.QUY_TIN" Width="1.5" PointX="2.75" PointY="13.75" />
-        <EntityTypeShape EntityType="oneduModel.SUAT_AN" Width="1.5" PointX="26.75" PointY="117" />
-        <EntityTypeShape EntityType="oneduModel.SUAT_AN_CHI_TIET" Width="1.5" PointX="29" PointY="117.125" />
-        <EntityTypeShape EntityType="oneduModel.TIN_NHAN" Width="1.5" PointX="5.25" PointY="115.875" />
-        <EntityTypeShape EntityType="oneduModel.TIN_TUC" Width="1.5" PointX="5.25" PointY="109.75" />
-        <EntityTypeShape EntityType="oneduModel.TO_GIAO_VIEN" Width="1.5" PointX="5.25" PointY="228.125" />
-        <EntityTypeShape EntityType="oneduModel.TO_GIAO_VIEN_GV" Width="1.5" PointX="10.5" PointY="169.625" />
-        <EntityTypeShape EntityType="oneduModel.TONG_HOP_NHAN_XET_HANG_NGAY" Width="1.5" PointX="14.75" PointY="0.75" />
-        <EntityTypeShape EntityType="oneduModel.THU_TRONG_TUAN" Width="1.5" PointX="4.75" PointY="14.75" />
-        <EntityTypeShape EntityType="oneduModel.THUC_DON" Width="1.5" PointX="21.5" PointY="117.125" />
-        <EntityTypeShape EntityType="oneduModel.THUC_DON_CHI_TIET" Width="1.5" PointX="26.75" PointY="110.125" />
-        <EntityTypeShape EntityType="oneduModel.TRANG_THAI_GV" Width="1.5" PointX="6.75" PointY="14.75" />
-        <EntityTypeShape EntityType="oneduModel.TRANG_THAI_HS" Width="1.5" PointX="15.75" PointY="5.75" />
-        <EntityTypeShape EntityType="oneduModel.TRUONG" Width="1.5" PointX="3" PointY="111.125" />
+        <EntityTypeShape EntityType="oneduModel.DM_TINH_THANH" Width="1.5" PointX="4.5" PointY="134.75" />
+        <EntityTypeShape EntityType="oneduModel.DM_THUC_PHAM" Width="1.5" PointX="28.5" PointY="102.25" />
+        <EntityTypeShape EntityType="oneduModel.DM_XA_PHUONG" Width="1.5" PointX="6.75" PointY="131.25" />
+        <EntityTypeShape EntityType="oneduModel.DOI_TAC" Width="1.5" PointX="0.75" PointY="123.875" />
+        <EntityTypeShape EntityType="oneduModel.GOI_TIN" Width="1.5" PointX="6.75" PointY="116.375" />
+        <EntityTypeShape EntityType="oneduModel.GV_LOP_MON" Width="1.5" PointX="27.75" PointY="122.625" />
+        <EntityTypeShape EntityType="oneduModel.GIAO_VIEN" Width="1.5" PointX="14.25" PointY="112.625" />
+        <EntityTypeShape EntityType="oneduModel.GIOI_TINH" Width="1.5" PointX="12" PointY="112" />
+        <EntityTypeShape EntityType="oneduModel.HOC_KY" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="oneduModel.HOC_PHI_DOT_THU" Width="1.5" PointX="17.25" PointY="115.125" />
+        <EntityTypeShape EntityType="oneduModel.HOC_PHI_DOT_THU_LOP" Width="1.5" PointX="33.75" PointY="128.25" />
+        <EntityTypeShape EntityType="oneduModel.HOC_PHI_PHIEU_THU_HOC_SINH" Width="1.5" PointX="30.75" PointY="130.125" />
+        <EntityTypeShape EntityType="oneduModel.HOC_SINH" Width="1.5" PointX="36.75" PointY="119.625" />
+        <EntityTypeShape EntityType="oneduModel.KY_DG_TH" Width="1.5" PointX="9" PointY="106.875" />
+        <EntityTypeShape EntityType="oneduModel.KHO_THUC_PHAM" Width="1.5" PointX="11.25" PointY="134.625" />
+        <EntityTypeShape EntityType="oneduModel.KHOA_SO_THEO_LOP" Width="1.5" PointX="9.75" PointY="3.75" />
+        <EntityTypeShape EntityType="oneduModel.KHOA_SO_THEO_MON" Width="1.5" PointX="9.75" PointY="7.75" />
+        <EntityTypeShape EntityType="oneduModel.KHOA_SO_THEO_TRUONG" Width="1.5" PointX="11.75" PointY="0.75" />
+        <EntityTypeShape EntityType="oneduModel.KHOI" Width="1.5" PointX="23.25" PointY="141" />
+        <EntityTypeShape EntityType="oneduModel.LICH_AN" Width="1.5" PointX="28.5" PointY="110.75" />
+        <EntityTypeShape EntityType="oneduModel.LICH_THI" Width="1.5" PointX="11.75" PointY="5.75" />
+        <EntityTypeShape EntityType="oneduModel.LOAI_LOP_GDTX" Width="1.5" PointX="21" PointY="143.125" />
+        <EntityTypeShape EntityType="oneduModel.LOG_USER" Width="1.5" PointX="14.25" PointY="124.5" />
+        <EntityTypeShape EntityType="oneduModel.LOP" Width="1.5" PointX="25.5" PointY="129" />
+        <EntityTypeShape EntityType="oneduModel.LOP_MON" Width="1.5" PointX="33.75" PointY="116" />
+        <EntityTypeShape EntityType="oneduModel.MA_NX_DINH_KY" Width="1.5" PointX="11.25" PointY="130" />
+        <EntityTypeShape EntityType="oneduModel.MA_NXHN" Width="1.5" PointX="5.75" PointY="11.75" />
+        <EntityTypeShape EntityType="oneduModel.MAP_PH_HS" Width="1.5" PointX="11.75" PointY="10.75" />
+        <EntityTypeShape EntityType="oneduModel.MENU" Width="1.5" PointX="9" PointY="110.25" />
+        <EntityTypeShape EntityType="oneduModel.MON_HOC" Width="1.5" PointX="25.5" PointY="106.25" />
+        <EntityTypeShape EntityType="oneduModel.MON_HOC_TRUONG" Width="1.5" PointX="31.5" PointY="109" />
+        <EntityTypeShape EntityType="oneduModel.NAM_HOC" Width="1.5" PointX="23.25" PointY="148.625" />
+        <EntityTypeShape EntityType="oneduModel.NANG_LUONG_TRONG_NGAY" Width="1.5" PointX="25.5" PointY="142.75" />
+        <EntityTypeShape EntityType="oneduModel.NGUOI_DUNG" Width="1.5" PointX="3" PointY="122.75" />
+        <EntityTypeShape EntityType="oneduModel.NGUOI_DUNG_MENU" Width="1.5" PointX="11.25" PointY="123.375" />
+        <EntityTypeShape EntityType="oneduModel.NGUOI_DUNG_TRUONG" Width="1.5" PointX="14.25" PointY="120.25" />
+        <EntityTypeShape EntityType="oneduModel.NHAN_XET_HANG_NGAY" Width="1.5" PointX="39" PointY="113.625" />
+        <EntityTypeShape EntityType="oneduModel.NHOM_QUYEN" Width="1.5" PointX="0.75" PointY="119.25" />
+        <EntityTypeShape EntityType="oneduModel.NHOM_QUYEN_MENU" Width="1.5" PointX="17.25" PointY="109.125" />
+        <EntityTypeShape EntityType="oneduModel.NHOM_TUOI_MN" Width="1.5" PointX="15" PointY="108.375" />
+        <EntityTypeShape EntityType="oneduModel.NHU_CAU_NANG_LUONG" Width="1.5" PointX="31.5" PointY="137" />
+        <EntityTypeShape EntityType="oneduModel.NHU_CAU_NANG_LUONG_TRUONG" Width="1.5" PointX="17.25" PointY="131.375" />
+        <EntityTypeShape EntityType="oneduModel.PHIEU_NHAP_KHO" Width="1.5" PointX="25.5" PointY="113.625" />
+        <EntityTypeShape EntityType="oneduModel.PHIEU_NHAP_KHO_DETAIL" Width="1.5" PointX="30.75" PointY="116.75" />
+        <EntityTypeShape EntityType="oneduModel.PHIEU_XUAT_KHO" Width="1.5" PointX="25.5" PointY="118.75" />
+        <EntityTypeShape EntityType="oneduModel.PHIEU_XUAT_KHO_DETAIL" Width="1.5" PointX="33.75" PointY="122.5" />
+        <EntityTypeShape EntityType="oneduModel.QUY_TIN" Width="1.5" PointX="9" PointY="101.125" />
+        <EntityTypeShape EntityType="oneduModel.SUAT_AN" Width="1.5" PointX="30.75" PointY="122.875" />
+        <EntityTypeShape EntityType="oneduModel.SUAT_AN_CHI_TIET" Width="1.5" PointX="39" PointY="119" />
+        <EntityTypeShape EntityType="oneduModel.TIN_NHAN" Width="1.5" PointX="6" PointY="121.75" />
+        <EntityTypeShape EntityType="oneduModel.TIN_NHAN_CU" Width="1.5" PointX="7.75" PointY="12.75" />
+        <EntityTypeShape EntityType="oneduModel.TIN_TUC" Width="1.5" PointX="23.25" PointY="114.625" />
+        <EntityTypeShape EntityType="oneduModel.TO_GIAO_VIEN" Width="1.5" PointX="11.25" PointY="228.375" />
+        <EntityTypeShape EntityType="oneduModel.TO_GIAO_VIEN_GV" Width="1.5" PointX="16.5" PointY="170.375" />
+        <EntityTypeShape EntityType="oneduModel.TONG_HOP_NHAN_XET_HANG_NGAY" Width="1.5" PointX="13.75" PointY="0.75" />
+        <EntityTypeShape EntityType="oneduModel.THONG_KE_HS_THANG" Width="1.5" PointX="0.75" PointY="13.75" />
+        <EntityTypeShape EntityType="oneduModel.THU_TRONG_TUAN" Width="1.5" PointX="2.75" PointY="13.75" />
+        <EntityTypeShape EntityType="oneduModel.THUC_DON" Width="1.5" PointX="28.5" PointY="128" />
+        <EntityTypeShape EntityType="oneduModel.THUC_DON_CHI_TIET" Width="1.5" PointX="39.75" PointY="132" />
+        <EntityTypeShape EntityType="oneduModel.TRANG_THAI_GV" Width="1.5" PointX="13.75" PointY="5.75" />
+        <EntityTypeShape EntityType="oneduModel.TRANG_THAI_HS" Width="1.5" PointX="13.75" PointY="8.75" />
+        <EntityTypeShape EntityType="oneduModel.TRUONG" Width="1.5" PointX="9" PointY="117" />
         <AssociationConnector Association="oneduModel.BAI_TAP_VE_NHA_CHI_TIET_FK1" />
+        <AssociationConnector Association="oneduModel.BAI_TAP_VE_NHA_FK1" />
         <AssociationConnector Association="oneduModel.CA_HOC_CAU_HINH_CA_HOC_FK1" />
         <AssociationConnector Association="oneduModel.CA_HOC_LOP_FK1" />
         <AssociationConnector Association="oneduModel.CAP_TIN_DOI_TAC_FK1" />
@@ -124,10 +130,14 @@
         <AssociationConnector Association="oneduModel.DANG_KY_AN_FK3" />
         <AssociationConnector Association="oneduModel.DANG_KY_AN_FK4" />
         <AssociationConnector Association="oneduModel.DANG_KY_AN_FK5" />
+        <AssociationConnector Association="oneduModel.DANH_GIA_DINH_KY_MON_TH_FK1" />
+        <AssociationConnector Association="oneduModel.DANH_GIA_DINH_KY_MON_TH_FK2" />
+        <AssociationConnector Association="oneduModel.DANH_GIA_DINH_KY_MON_TH_FK3" />
         <AssociationConnector Association="oneduModel.DANH_GIA_DINH_KY_TH_FK1" />
         <AssociationConnector Association="oneduModel.DANH_GIA_DINH_KY_TH_FK2" />
         <AssociationConnector Association="oneduModel.DANH_GIA_DINH_KY_TH_FK3" />
         <AssociationConnector Association="oneduModel.DANH_GIA_DINH_KY_TH_FK4" />
+        <AssociationConnector Association="oneduModel.DANH_GIA_DINH_KY_TH_FK5" />
         <AssociationConnector Association="oneduModel.DCT_HS" />
         <AssociationConnector Association="oneduModel.DCT_LOP" />
         <AssociationConnector Association="oneduModel.DCT_MON" />
@@ -179,7 +189,9 @@
         <AssociationConnector Association="oneduModel.NGUOI_DUNG_FK2" />
         <AssociationConnector Association="oneduModel.SMS_DOI_TAC" />
         <AssociationConnector Association="oneduModel.TRUONG_FK1" />
+        <AssociationConnector Association="oneduModel.QUY_TIN_FK1" />
         <AssociationConnector Association="oneduModel.SMS_GOI_TIN" />
+        <AssociationConnector Association="oneduModel.TRUONG_FK2" />
         <AssociationConnector Association="oneduModel.GVLM_GV" />
         <AssociationConnector Association="oneduModel.GVLM_LOP" />
         <AssociationConnector Association="oneduModel.GVLM_MON" />
@@ -225,12 +237,14 @@
         <AssociationConnector Association="oneduModel.LOG_USER_NGUOI_DUNG" />
         <AssociationConnector Association="oneduModel.LOG_USER_TRUONG" />
         <AssociationConnector Association="oneduModel.LM_LOP" />
+        <AssociationConnector Association="oneduModel.LOP_FK2" />
         <AssociationConnector Association="oneduModel.LOP_TRUONG" />
         <AssociationConnector Association="oneduModel.LM_MON" />
         <AssociationConnector Association="oneduModel.LOP_MON_FK2" />
         <AssociationConnector Association="oneduModel.MA_NX_DINH_KY_FK1" />
         <AssociationConnector Association="oneduModel.NDM_MENU" />
         <AssociationConnector Association="oneduModel.NHOM_QUYEN_MENU_FK2" />
+        <AssociationConnector Association="oneduModel.MON_HOC_TRUONG_FK1" />
         <AssociationConnector Association="oneduModel.SUAT_AN_FK4" />
         <AssociationConnector Association="oneduModel.TIN_TUC_FK2" />
         <AssociationConnector Association="oneduModel.NDM_USER" />
@@ -262,16 +276,9 @@
         <AssociationConnector Association="oneduModel.THUC_DON_CHI_TIET_FK3" />
         <AssociationConnector Association="oneduModel.THUC_DON_FK1" />
         <AssociationConnector Association="oneduModel.THUC_DON_CHI_TIET_FK4" />
-        <EntityTypeShape EntityType="oneduModel.DM_MA_NX" Width="1.5" PointX="16.375" PointY="8.75" />
-        <EntityTypeShape EntityType="oneduModel.TIN_NHAN_CU" Width="1.5" PointX="12.375" PointY="12.75" />
-        <EntityTypeShape EntityType="oneduModel.MA_NXHN" Width="1.5" PointX="14.375" PointY="11.75" />
-        <AssociationConnector Association="oneduModel.BAI_TAP_VE_NHA_FK1" />
-        <AssociationConnector Association="oneduModel.DANH_GIA_DINH_KY_MON_TH_FK1" />
-        <AssociationConnector Association="oneduModel.DANH_GIA_DINH_KY_MON_TH_FK2" />
-        <AssociationConnector Association="oneduModel.DANH_GIA_DINH_KY_MON_TH_FK3" />
-        <AssociationConnector Association="oneduModel.DANH_GIA_DINH_KY_TH_FK5" />
-        <AssociationConnector Association="oneduModel.QUY_TIN_FK1" />
-        <AssociationConnector Association="oneduModel.TRUONG_FK2" />
+        <EntityTypeShape EntityType="oneduModel.QUOTAREMAINBYDAY" Width="1.5" PointX="10.375" PointY="14.75" />
+        <EntityTypeShape EntityType="oneduModel.MAP_ZALO_GV" Width="1.5" PointX="14.375" PointY="11.75" />
+        <EntityTypeShape EntityType="oneduModel.THONG_BAO_NHA_TRUONG" Width="1.5" PointX="12.375" PointY="15.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

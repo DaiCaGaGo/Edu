@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -84,6 +85,33 @@ namespace OneEduDataAccess.BO
                 using (oneduEntities context = new oneduEntities())
                 {
                     data = (from p in context.HOC_SINH where p.MA.Equals(ma_hs) && p.IS_DELETE != true select p).FirstOrDefault();
+                    QICache.Set(strKeyCache, data, 300000);
+                }
+            }
+            else
+            {
+                try
+                {
+                    data = QICache.Get(strKeyCache) as HOC_SINH;
+                }
+                catch
+                {
+                    QICache.Invalidate(strKeyCache);
+                }
+            }
+            return data;
+        }
+
+        public HOC_SINH getHocSinhByMaAndNamHoc(string ma_hs, short id_nam_hoc)
+        {
+            HOC_SINH data = new HOC_SINH();
+            var QICache = new DefaultCacheProvider();
+            string strKeyCache = QICache.BuildCachedKey("HOC_SINH", "getHocSinhByMaAndNamHoc", ma_hs, id_nam_hoc);
+            if (!QICache.IsSet(strKeyCache))
+            {
+                using (oneduEntities context = new oneduEntities())
+                {
+                    data = (from p in context.HOC_SINH where p.MA.Equals(ma_hs) && p.ID_NAM_HOC == id_nam_hoc && p.IS_DELETE != true select p).FirstOrDefault();
                     QICache.Set(strKeyCache, data, 300000);
                 }
             }
@@ -928,6 +956,37 @@ where hs.id_truong=:0 and hs.ma_cap_hoc=:1 and hs.id_nam_hoc=:2");
             }
             return data;
         }
+        public List<HOC_SINH> getHocSinhMapZalo(string sdt, short id_nam_hoc)
+        {
+            List<HOC_SINH> data = new List<HOC_SINH>();
+            var QICache = new DefaultCacheProvider();
+            string strKeyCache = QICache.BuildCachedKey("HOC_SINH", "getHocSinhMapZalo", sdt, id_nam_hoc);
+            if (!QICache.IsSet(strKeyCache))
+            {
+                using (oneduEntities context = new oneduEntities())
+                {
+                    var tmp = (from p in context.HOC_SINH
+                               where p.SDT_NHAN_TIN == sdt && p.ID_NAM_HOC == id_nam_hoc && p.IS_DELETE != true
+                               select p);
+                    tmp.OrderBy(x => x.TEN).ThenBy(x => x.HO_DEM).ThenBy(x => x.THU_TU);
+                    data = tmp.ToList();
+
+                    QICache.Set(strKeyCache, data, 300000);
+                }
+            }
+            else
+            {
+                try
+                {
+                    data = QICache.Get(strKeyCache) as List<HOC_SINH>;
+                }
+                catch
+                {
+                    QICache.Invalidate(strKeyCache);
+                }
+            }
+            return data;
+        }
         public List<HocSinhEntity> getHocSinhByTruongAndPhone(long? id_truong, short id_nam_hoc, string sdt)
         {
             List<HocSinhEntity> data = new List<HocSinhEntity>();
@@ -1129,6 +1188,8 @@ where hs.id_truong=:0 and hs.ma_cap_hoc=:1 and hs.id_nam_hoc=:2");
 
                                 detail.IS_HOI_PHO_CHPH = detail_in.IS_HOI_PHO_CHPH;
                                 detail.IS_HOI_TRUONG_CHPH = detail_in.IS_HOI_TRUONG_CHPH;
+                                detail.NGAY_GUI_OTP = detail_in.NGAY_GUI_OTP;
+                                detail.OTP_COUNTER = detail_in.OTP_COUNTER;
 
                                 context.SaveChanges();
                                 res.ResObject = detail;
@@ -1659,5 +1720,57 @@ where hs.id_truong=:0 and hs.ma_cap_hoc=:1 and hs.id_nam_hoc=:2");
             return data;
         }
         #endregion
+
+        public List<HocSinhEntity> getHocSinhByPhoneDangKyZalo(string phone, short id_nam_hoc, string maHocSinh)
+        {
+            List<HocSinhEntity> data = new List<HocSinhEntity>();
+            var QICache = new DefaultCacheProvider();
+            string strKeyCache = QICache.BuildCachedKey("HOC_SINH", "getHocSinhByPhoneDangKyZalo", phone, id_nam_hoc, maHocSinh);
+            if (!QICache.IsSet(strKeyCache))
+            {
+                using (oneduEntities context = new oneduEntities())
+                {
+                    string tmp = string.Format(@"select * from HOC_SINH where ID_NAM_HOC={0} and SDT_NHAN_TIN = '{1}'", id_nam_hoc, phone);
+                    if (!string.IsNullOrEmpty(maHocSinh))
+                        tmp += string.Format(@" and MA not in ({0})", maHocSinh);
+                    tmp += " and (is_delete is null or is_delete=0)";
+                    data = context.Database.SqlQuery<HocSinhEntity>(tmp).ToList();
+                    QICache.Set(strKeyCache, data, 300000);
+                }
+            }
+            else
+            {
+                try
+                {
+                    data = QICache.Get(strKeyCache) as List<HocSinhEntity>;
+                }
+                catch
+                {
+                    QICache.Invalidate(strKeyCache);
+                }
+            }
+            return data;
+        }
+
+        public void ghilog(string nameFile, string msg)
+        {
+            try
+            {
+                string path = "";
+                DateTime dt = new DateTime();
+                dt = DateTime.Now;
+                string foldername = dt.ToString();
+                path = "D:/LogEduZalo/" + dt.Year.ToString() + dt.Month.ToString() + dt.Day.ToString() + dt.Hour.ToString() + nameFile + ".txt";
+                using (StreamWriter sw = new StreamWriter(path, true))
+                {
+                    string str = msg;
+                    sw.WriteLine(str);
+                }
+            }
+            catch
+            {
+
+            }
+        }
     }
 }

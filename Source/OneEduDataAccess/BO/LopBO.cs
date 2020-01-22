@@ -39,6 +39,35 @@ namespace OneEduDataAccess.BO
             }
             return data;
         }
+        public long? getIdLopByTen(long id_truong, short id_nam_hoc, string ten)
+        {
+            long? data = null;
+            var QICache = new DefaultCacheProvider();
+            string strKeyCache = QICache.BuildCachedKey("LOP", "getIdLopByTen", id_truong, id_nam_hoc, ten);
+            if (!QICache.IsSet(strKeyCache))
+            {
+                using (oneduEntities context = new oneduEntities())
+                {
+                    var sql = @"select id from lop 
+                        where id_truong=:0 and ID_NAM_HOC=:1 and ten=:2
+                        and not (IS_DELETE is not null and IS_DELETE = 1)";
+                    data = context.Database.SqlQuery<long?>(sql, id_truong, id_nam_hoc, ten).FirstOrDefault();
+                    QICache.Set(strKeyCache, data, 300000);
+                }
+            }
+            else
+            {
+                try
+                {
+                    data = QICache.Get(strKeyCache) as long?;
+                }
+                catch
+                {
+                    QICache.Invalidate(strKeyCache);
+                }
+            }
+            return data;
+        }
         #endregion
         #region get tat ca cac LOP
         public List<LOP> getAllLop(bool is_all = false, short id_all = 0, string text_all = "Chọn tất cả")
@@ -532,9 +561,9 @@ namespace OneEduDataAccess.BO
                                 strQuery += " and not (a.ID_KHOI != 13 and a.ID_KHOI != 14)";
                             else if (ma_cap_hoc == SYS_Cap_Hoc.TH)
                                 strQuery += " and not (a.ID_KHOI != 1 and a.ID_KHOI != 2 and a.ID_KHOI != 3 and a.ID_KHOI != 4 and a.ID_KHOI != 5)";
-                            else if (ma_cap_hoc==SYS_Cap_Hoc.THCS)
+                            else if (ma_cap_hoc == SYS_Cap_Hoc.THCS)
                                 strQuery += " and not (a.ID_KHOI != 6 and a.ID_KHOI != 7 and a.ID_KHOI != 8 and a.ID_KHOI != 9)";
-                            else if (ma_cap_hoc==SYS_Cap_Hoc.THPT)
+                            else if (ma_cap_hoc == SYS_Cap_Hoc.THPT)
                                 strQuery += " and not (a.ID_KHOI != 10 and a.ID_KHOI != 11 and a.ID_KHOI != 12";
                         }
                         #endregion
@@ -555,6 +584,55 @@ namespace OneEduDataAccess.BO
                 try
                 {
                     data = QICache.Get(strKeyCache) as List<LopMonEntity>;
+                }
+                catch
+                {
+                    QICache.Invalidate(strKeyCache);
+                }
+            }
+            return data;
+        }
+        public LOP getLopByGVCN(short id_nam_hoc, long id_gvcn)
+        {
+            LOP data = new LOP();
+            using (oneduEntities context = new oneduEntities())
+            {
+                data = (from p in context.LOPs
+                        where p.ID_NAM_HOC == id_nam_hoc && p.ID_GVCN == id_gvcn && p.IS_DELETE != true
+                        select p).FirstOrDefault();
+            }
+            return data;
+        }
+        public List<LopEntity> getLopGVCNByTruongCapNamHoc(string ma_cap_hoc, long idTruong, short id_nam_hoc)
+        {
+            List<LopEntity> data = new List<LopEntity>();
+            var QICache = new DefaultCacheProvider();
+            string strKeyCache = QICache.BuildCachedKey("LOP", "getLopGVCNByTruongCapNamHoc", ma_cap_hoc, idTruong, id_nam_hoc);
+            if (!QICache.IsSet(strKeyCache))
+            {
+                using (oneduEntities context = new oneduEntities())
+                {
+                    string sql = string.Format(@"select l.id as id_lop, l.ten as TEN_LOP, l.id_khoi, l.id_truong, gv.sdt as SDT_GVCN, gv.ten as TEN_GVCN, l.id_gvcn from lop l
+                        left join giao_vien gv on l.id_gvcn = gv.id
+                        where l.id_truong = {0} and l.id_nam_hoc = {1} and not(l.is_delete is not null and l.is_delete = 1)", idTruong, id_nam_hoc);
+                    if (ma_cap_hoc == SYS_Cap_Hoc.TH)
+                        sql += " and l.id_khoi >=1 and l.id_khoi <=5";
+                    else if (ma_cap_hoc == SYS_Cap_Hoc.THCS)
+                        sql += " and l.id_khoi >=6 and l.id_khoi <=9";
+                    else if (ma_cap_hoc == SYS_Cap_Hoc.THPT)
+                        sql += " and l.id_khoi >=10 and l.id_khoi <=12";
+                    else if (ma_cap_hoc == SYS_Cap_Hoc.MN)
+                        sql += " and l.id_khoi > 12";
+                    data = context.Database.SqlQuery<LopEntity>(sql).ToList();
+
+                    QICache.Set(strKeyCache, data, 300000);
+                }
+            }
+            else
+            {
+                try
+                {
+                    data = QICache.Get(strKeyCache) as List<LopEntity>;
                 }
                 catch
                 {
@@ -759,44 +837,5 @@ namespace OneEduDataAccess.BO
         }
         #endregion
         #endregion
-
-        public List<LopEntity> getLopGVCNByTruongCapNamHoc(string ma_cap_hoc, long idTruong, short id_nam_hoc)
-        {
-            List<LopEntity> data = new List<LopEntity>();
-            var QICache = new DefaultCacheProvider();
-            string strKeyCache = QICache.BuildCachedKey("LOP", "getLopGVCNByTruongCapNamHoc", ma_cap_hoc, idTruong, id_nam_hoc);
-            if (!QICache.IsSet(strKeyCache))
-            {
-                using (oneduEntities context = new oneduEntities())
-                {
-                    string sql = string.Format(@"select l.id as id_lop, l.ten as TEN_LOP, l.id_khoi, l.id_truong, gv.sdt as SDT_GVCN, gv.ten as TEN_GVCN, l.id_gvcn from lop l
-                        left join giao_vien gv on l.id_gvcn = gv.id
-                        where l.id_truong = {0} and l.id_nam_hoc = {1} and not(l.is_delete is not null and l.is_delete = 1)", idTruong, id_nam_hoc);
-                    if (ma_cap_hoc == SYS_Cap_Hoc.TH)
-                        sql += " and l.id_khoi >=1 and l.id_khoi <=5";
-                    else if (ma_cap_hoc == SYS_Cap_Hoc.THCS)
-                        sql += " and l.id_khoi >=6 and l.id_khoi <=9";
-                    else if (ma_cap_hoc == SYS_Cap_Hoc.THPT)
-                        sql += " and l.id_khoi >=10 and l.id_khoi <=12";
-                    else if (ma_cap_hoc == SYS_Cap_Hoc.MN)
-                        sql += " and l.id_khoi > 12";
-                    data = context.Database.SqlQuery<LopEntity>(sql).ToList();
-
-                    QICache.Set(strKeyCache, data, 300000);
-                }
-            }
-            else
-            {
-                try
-                {
-                    data = QICache.Get(strKeyCache) as List<LopEntity>;
-                }
-                catch
-                {
-                    QICache.Invalidate(strKeyCache);
-                }
-            }
-            return data;
-        }
     }
 }

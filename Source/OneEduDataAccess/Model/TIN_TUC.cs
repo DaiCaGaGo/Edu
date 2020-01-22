@@ -30,6 +30,7 @@ namespace OneEduDataAccess.Model
         public Nullable<System.DateTime> NGAY_SUA { get; set; }
         public Nullable<long> NGUOI_SUA { get; set; }
         public short ID_NAM_HOC { get; set; }
+        public string NOI_DUNG { get; set; }
     
         public virtual NAM_HOC NAM_HOC { get; set; }
         public virtual TRUONG TRUONG { get; set; }

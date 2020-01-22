@@ -17,8 +17,8 @@ namespace OneEduDataAccess.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public GOI_TIN()
         {
-            this.TIN_NHAN = new HashSet<TIN_NHAN>();
             this.QUY_TIN = new HashSet<QUY_TIN>();
+            this.TIN_NHAN = new HashSet<TIN_NHAN>();
             this.TRUONGs = new HashSet<TRUONG>();
         }
     
@@ -37,9 +37,9 @@ namespace OneEduDataAccess.Model
         public string TEN { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TIN_NHAN> TIN_NHAN { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<QUY_TIN> QUY_TIN { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TIN_NHAN> TIN_NHAN { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TRUONG> TRUONGs { get; set; }
     }

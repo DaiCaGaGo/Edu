@@ -57,8 +57,36 @@ namespace OneEduDataAccess.BO
                 LopBO lopBO = new LopBO();
                 if (id_lop != null)
                     detailLop = lopBO.getLopById(id_lop.Value);
+                string tien_to = "''";
+                if (detailLop != null)
+                {
+                    if (detailLop.LOAI_CHEN_TIN == 1) tien_to = "hs.HO_TEN";
+                    else if (detailLop.LOAI_CHEN_TIN == 2) tien_to = "hs.TEN";
+                    else if (detailLop.LOAI_CHEN_TIN == 3)
+                    {
+                        tien_to = !string.IsNullOrEmpty(detailLop.TIEN_TO) ? detailLop.TIEN_TO : "''";
+                    }
+                }
+
                 using (oneduEntities context = new oneduEntities())
                 {
+                    //string strQuery = string.Format(@"select hs.ID as ID_HS, hs.MA as MA_HS,hs.HO_TEN as TEN_HS
+                    //    ,hs.TEN as TEN_LAST,hs.NGAY_SINH,hs.IS_GUI_BO_ME, hs.IS_DK_KY1, hs.IS_DK_KY2
+                    //    ,hs.IS_MIEN_GIAM_KY1, hs.IS_MIEN_GIAM_KY2, hs.IS_CON_GV,hs.ID_KHOI as MA_KHOI, hs.ID_LOP as ID_LOP
+                    //    ,hs.SDT_NHAN_TIN as SDT, hs.SDT_NHAN_TIN2 as SDT_KHAC, nxhn.*
+                    //    ,{0} as TIEN_TO
+                    //    from hoc_sinh hs 
+                    //    left join nhan_xet_hang_ngay nxhn on hs.id = nxhn.id_hoc_sinh {1}
+                    //    where not ( hs.is_delete is not null and hs.is_delete = 1)
+                    //    and hs.id_truong = :0 and hs.id_khoi= :1
+                    //    and hs.id_lop = :2 and hs.ID_NAM_HOC = :3 {2} {3}
+                    //    order by nvl(hs.THU_TU, 0),NLSSORT(hs.ten,'NLS_SORT=vietnamese'),NLSSORT(hs.ho_dem,'NLS_SORT=vietnamese')",
+                    //    detailLop != null && detailLop.LOAI_CHEN_TIN != null ? (detailLop.LOAI_CHEN_TIN == 1 ? "hs.HO_TEN" :
+                    //        (detailLop.LOAI_CHEN_TIN == 2 ? "hs.TEN" : "'" + detailLop.TIEN_TO + "'")) : "''",
+                    //    " and extract(year from NGAY_NX)=" + nam_gui + " and extract(month from NGAY_NX)=" + thang_gui +
+                    //        " and extract(day from NGAY_NX)=" + ngay_gui,
+                    //    ma_hoc_ky == 1 ? " and hs.TRANG_THAI_HOC in (1,2,3,8,9,10)" : " and hs.TRANG_THAI_HOC in (1,2,3,6,7,10)",
+                    //    ma_hoc_ky == 1 ? " and ((hs.is_dk_ky1 is not null and hs.is_dk_ky1 = 1) or (hs.is_mien_giam_ky1 is not null and hs.is_mien_giam_ky1 = 1))" : " and ((hs.is_dk_ky2 is not null and hs.is_dk_ky2 = 1) or (hs.is_mien_giam_ky2 is not null and hs.is_mien_giam_ky2 = 1))");
                     string strQuery = string.Format(@"select hs.ID as ID_HS, hs.MA as MA_HS,hs.HO_TEN as TEN_HS
                         ,hs.TEN as TEN_LAST,hs.NGAY_SINH,hs.IS_GUI_BO_ME, hs.IS_DK_KY1, hs.IS_DK_KY2
                         ,hs.IS_MIEN_GIAM_KY1, hs.IS_MIEN_GIAM_KY2, hs.IS_CON_GV,hs.ID_KHOI as MA_KHOI, hs.ID_LOP as ID_LOP
@@ -69,10 +97,8 @@ namespace OneEduDataAccess.BO
                         where not ( hs.is_delete is not null and hs.is_delete = 1)
                         and hs.id_truong = :0 and hs.id_khoi= :1
                         and hs.id_lop = :2 and hs.ID_NAM_HOC = :3 {2} {3}
-                        order by nvl(hs.THU_TU, 0),NLSSORT(hs.ten,'NLS_SORT=vietnamese'),NLSSORT(hs.ho_dem,'NLS_SORT=vietnamese')",
-                        detailLop != null && detailLop.LOAI_CHEN_TIN != null ? (detailLop.LOAI_CHEN_TIN == 1 ? "hs.HO_TEN" : 
-                            (detailLop.LOAI_CHEN_TIN == 2 ? "hs.TEN" : "'" + detailLop.TIEN_TO + "'")) : "''",
-                        " and extract(year from NGAY_NX)=" + nam_gui + " and extract(month from NGAY_NX)=" + thang_gui + 
+                        order by nvl(hs.THU_TU, 0),NLSSORT(hs.ten,'NLS_SORT=vietnamese'),NLSSORT(hs.ho_dem,'NLS_SORT=vietnamese')", tien_to,
+                        " and extract(year from NGAY_NX)=" + nam_gui + " and extract(month from NGAY_NX)=" + thang_gui +
                             " and extract(day from NGAY_NX)=" + ngay_gui,
                         ma_hoc_ky == 1 ? " and hs.TRANG_THAI_HOC in (1,2,3,8,9,10)" : " and hs.TRANG_THAI_HOC in (1,2,3,6,7,10)",
                         ma_hoc_ky == 1 ? " and ((hs.is_dk_ky1 is not null and hs.is_dk_ky1 = 1) or (hs.is_mien_giam_ky1 is not null and hs.is_mien_giam_ky1 = 1))" : " and ((hs.is_dk_ky2 is not null and hs.is_dk_ky2 = 1) or (hs.is_mien_giam_ky2 is not null and hs.is_mien_giam_ky2 = 1))");

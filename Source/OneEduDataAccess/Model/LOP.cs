@@ -17,10 +17,12 @@ namespace OneEduDataAccess.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LOP()
         {
+            this.BAI_TAP_VE_NHA = new HashSet<BAI_TAP_VE_NHA>();
             this.CA_HOC = new HashSet<CA_HOC>();
             this.CHAM_AN = new HashSet<CHAM_AN>();
             this.CHUYEN_CAN = new HashSet<CHUYEN_CAN>();
             this.DANG_KY_AN = new HashSet<DANG_KY_AN>();
+            this.DANH_GIA_DINH_KY_MON_TH = new HashSet<DANH_GIA_DINH_KY_MON_TH>();
             this.DANH_GIA_DINH_KY_TH = new HashSet<DANH_GIA_DINH_KY_TH>();
             this.DIEM_CHI_TIET = new HashSet<DIEM_CHI_TIET>();
             this.DIEM_TONG_KET = new HashSet<DIEM_TONG_KET>();
@@ -29,8 +31,6 @@ namespace OneEduDataAccess.Model
             this.HOC_PHI_PHIEU_THU_HOC_SINH = new HashSet<HOC_PHI_PHIEU_THU_HOC_SINH>();
             this.HOC_SINH = new HashSet<HOC_SINH>();
             this.LOP_MON = new HashSet<LOP_MON>();
-            this.BAI_TAP_VE_NHA = new HashSet<BAI_TAP_VE_NHA>();
-            this.DANH_GIA_DINH_KY_MON_TH = new HashSet<DANH_GIA_DINH_KY_MON_TH>();
         }
     
         public long ID { get; set; }
@@ -50,6 +50,8 @@ namespace OneEduDataAccess.Model
         public string TIEN_TO { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BAI_TAP_VE_NHA> BAI_TAP_VE_NHA { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CA_HOC> CA_HOC { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHAM_AN> CHAM_AN { get; set; }
@@ -57,6 +59,8 @@ namespace OneEduDataAccess.Model
         public virtual ICollection<CHUYEN_CAN> CHUYEN_CAN { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DANG_KY_AN> DANG_KY_AN { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DANH_GIA_DINH_KY_MON_TH> DANH_GIA_DINH_KY_MON_TH { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DANH_GIA_DINH_KY_TH> DANH_GIA_DINH_KY_TH { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -75,10 +79,7 @@ namespace OneEduDataAccess.Model
         public virtual KHOI KHOI { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LOP_MON> LOP_MON { get; set; }
+        public virtual NAM_HOC NAM_HOC { get; set; }
         public virtual TRUONG TRUONG { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BAI_TAP_VE_NHA> BAI_TAP_VE_NHA { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DANH_GIA_DINH_KY_MON_TH> DANH_GIA_DINH_KY_MON_TH { get; set; }
     }
 }

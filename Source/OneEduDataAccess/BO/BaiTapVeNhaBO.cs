@@ -67,6 +67,34 @@ namespace OneEduDataAccess.BO
             }
             return data;
         }
+        public BAI_TAP_VE_NHA getBaiTapVeNhaByNgay(long id_truong, short id_nam_hoc, long id_lop, string ngay_bai_tap)
+        {
+            BAI_TAP_VE_NHA data = new BAI_TAP_VE_NHA();
+            var QICache = new DefaultCacheProvider();
+            string strKeyCache = QICache.BuildCachedKey("BAI_TAP_VE_NHA", "getBaiTapVeNhaByNgay", id_truong, id_nam_hoc, id_lop, ngay_bai_tap);
+            if (!QICache.IsSet(strKeyCache))
+            {
+                using (oneduEntities context = new oneduEntities())
+                {
+                    string strQuery = string.Format(@"select * from BAI_TAP_VE_NHA where id_truong={0} and id_nam_hoc={1}
+                        and id_lop ={2} and to_char(ngay_btvn, 'YYYYMMDD') = {3} and not (is_delete is not null and is_delete=1)", id_truong, id_nam_hoc, id_lop, ngay_bai_tap);
+                    data = context.Database.SqlQuery<BAI_TAP_VE_NHA>(strQuery).FirstOrDefault();
+                    QICache.Set(strKeyCache, data, 300000);
+                }
+            }
+            else
+            {
+                try
+                {
+                    data = QICache.Get(strKeyCache) as BAI_TAP_VE_NHA;
+                }
+                catch
+                {
+                    QICache.Invalidate(strKeyCache);
+                }
+            }
+            return data;
+        }
         #endregion
         #region set
         public ResultEntity update(BAI_TAP_VE_NHA detail_in, long? nguoi)

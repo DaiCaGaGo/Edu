@@ -17,9 +17,9 @@ namespace OneEduDataAccess.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public MON_HOC_TRUONG()
         {
+            this.DANH_GIA_DINH_KY_MON_TH = new HashSet<DANH_GIA_DINH_KY_MON_TH>();
             this.DIEM_CHI_TIET = new HashSet<DIEM_CHI_TIET>();
             this.LOP_MON = new HashSet<LOP_MON>();
-            this.DANH_GIA_DINH_KY_MON_TH = new HashSet<DANH_GIA_DINH_KY_MON_TH>();
         }
     
         public long ID { get; set; }
@@ -51,10 +51,11 @@ namespace OneEduDataAccess.Model
         public short ID_NAM_HOC { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DANH_GIA_DINH_KY_MON_TH> DANH_GIA_DINH_KY_MON_TH { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DIEM_CHI_TIET> DIEM_CHI_TIET { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LOP_MON> LOP_MON { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DANH_GIA_DINH_KY_MON_TH> DANH_GIA_DINH_KY_MON_TH { get; set; }
+        public virtual MON_HOC MON_HOC { get; set; }
     }
 }

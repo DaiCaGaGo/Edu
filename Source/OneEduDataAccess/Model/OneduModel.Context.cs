@@ -50,6 +50,7 @@ namespace OneEduDataAccess.Model
         public virtual DbSet<DM_DON_VI_TINH> DM_DON_VI_TINH { get; set; }
         public virtual DbSet<DM_KHU_VUC> DM_KHU_VUC { get; set; }
         public virtual DbSet<DM_LOAI_NX> DM_LOAI_NX { get; set; }
+        public virtual DbSet<DM_MA_NX> DM_MA_NX { get; set; }
         public virtual DbSet<DM_NGAN_HANG> DM_NGAN_HANG { get; set; }
         public virtual DbSet<DM_NHA_CUNG_CAP_THUC_PHAM> DM_NHA_CUNG_CAP_THUC_PHAM { get; set; }
         public virtual DbSet<DM_NHOM_THUC_PHAM> DM_NHOM_THUC_PHAM { get; set; }
@@ -78,11 +79,13 @@ namespace OneEduDataAccess.Model
         public virtual DbSet<KHOA_SO_THEO_TRUONG> KHOA_SO_THEO_TRUONG { get; set; }
         public virtual DbSet<KHOI> KHOIs { get; set; }
         public virtual DbSet<LICH_AN> LICH_AN { get; set; }
+        public virtual DbSet<LICH_THI> LICH_THI { get; set; }
         public virtual DbSet<LOAI_LOP_GDTX> LOAI_LOP_GDTX { get; set; }
         public virtual DbSet<LOG_USER> LOG_USER { get; set; }
         public virtual DbSet<LOP> LOPs { get; set; }
         public virtual DbSet<LOP_MON> LOP_MON { get; set; }
         public virtual DbSet<MA_NX_DINH_KY> MA_NX_DINH_KY { get; set; }
+        public virtual DbSet<MA_NXHN> MA_NXHN { get; set; }
         public virtual DbSet<MAP_PH_HS> MAP_PH_HS { get; set; }
         public virtual DbSet<MENU> MENUs { get; set; }
         public virtual DbSet<MON_HOC> MON_HOC { get; set; }
@@ -106,18 +109,20 @@ namespace OneEduDataAccess.Model
         public virtual DbSet<SUAT_AN> SUAT_AN { get; set; }
         public virtual DbSet<SUAT_AN_CHI_TIET> SUAT_AN_CHI_TIET { get; set; }
         public virtual DbSet<TIN_NHAN> TIN_NHAN { get; set; }
+        public virtual DbSet<TIN_NHAN_CU> TIN_NHAN_CU { get; set; }
         public virtual DbSet<TIN_TUC> TIN_TUC { get; set; }
         public virtual DbSet<TO_GIAO_VIEN> TO_GIAO_VIEN { get; set; }
         public virtual DbSet<TO_GIAO_VIEN_GV> TO_GIAO_VIEN_GV { get; set; }
         public virtual DbSet<TONG_HOP_NHAN_XET_HANG_NGAY> TONG_HOP_NHAN_XET_HANG_NGAY { get; set; }
+        public virtual DbSet<THONG_KE_HS_THANG> THONG_KE_HS_THANG { get; set; }
         public virtual DbSet<THU_TRONG_TUAN> THU_TRONG_TUAN { get; set; }
         public virtual DbSet<THUC_DON> THUC_DON { get; set; }
         public virtual DbSet<THUC_DON_CHI_TIET> THUC_DON_CHI_TIET { get; set; }
         public virtual DbSet<TRANG_THAI_GV> TRANG_THAI_GV { get; set; }
         public virtual DbSet<TRANG_THAI_HS> TRANG_THAI_HS { get; set; }
         public virtual DbSet<TRUONG> TRUONGs { get; set; }
-        public virtual DbSet<DM_MA_NX> DM_MA_NX { get; set; }
-        public virtual DbSet<TIN_NHAN_CU> TIN_NHAN_CU { get; set; }
-        public virtual DbSet<MA_NXHN> MA_NXHN { get; set; }
+        public virtual DbSet<QUOTAREMAINBYDAY> QUOTAREMAINBYDAYs { get; set; }
+        public virtual DbSet<MAP_ZALO_GV> MAP_ZALO_GV { get; set; }
+        public virtual DbSet<THONG_BAO_NHA_TRUONG> THONG_BAO_NHA_TRUONG { get; set; }
     }
 }

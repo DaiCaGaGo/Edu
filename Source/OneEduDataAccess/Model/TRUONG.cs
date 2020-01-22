@@ -130,6 +130,7 @@ namespace OneEduDataAccess.Model
         public virtual DM_TINH_THANH DM_TINH_THANH { get; set; }
         public virtual DM_XA_PHUONG DM_XA_PHUONG { get; set; }
         public virtual DOI_TAC DOI_TAC { get; set; }
+        public virtual GOI_TIN GOI_TIN { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GIAO_VIEN> GIAO_VIEN { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -180,6 +181,5 @@ namespace OneEduDataAccess.Model
         public virtual ICollection<THUC_DON> THUC_DON { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<THUC_DON_CHI_TIET> THUC_DON_CHI_TIET { get; set; }
-        public virtual GOI_TIN GOI_TIN { get; set; }
     }
 }

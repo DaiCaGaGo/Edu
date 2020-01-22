@@ -84,60 +84,18 @@ namespace OneEduDataAccess.BO
             }
             return data;
         }
-        public List<MON_HOC_TRUONG> getMonHocByLop(long id_truong, short id_nam_hoc, short? ma_khoi)
+        public List<MON_HOC_TRUONG> getMonHocByTruongAndMaCapHoc(long id_truong, string ma_cap_hoc, short id_nam_hoc)
         {
             List<MON_HOC_TRUONG> data = new List<MON_HOC_TRUONG>();
             var QICache = new DefaultCacheProvider();
-            string strKeyCache = QICache.BuildCachedKey("MON_HOC_TRUONG", "getMonHocByLop", id_truong, id_nam_hoc, ma_khoi);
+            string strKeyCache = QICache.BuildCachedKey("MON_HOC_TRUONG", "getMonHocByTruongAndMaCapHoc", id_truong, ma_cap_hoc, id_nam_hoc);
             if (!QICache.IsSet(strKeyCache))
             {
                 using (oneduEntities context = new oneduEntities())
                 {
                     var temp = (from p in context.MON_HOC_TRUONG
-                                where p.IS_DELETE != true && p.ID_TRUONG == id_truong && p.ID_NAM_HOC == id_nam_hoc
+                                where p.IS_DELETE != true && p.ID_TRUONG == id_truong && p.MA_CAP_HOC == ma_cap_hoc && p.ID_NAM_HOC == id_nam_hoc
                                 select p);
-                    if (ma_khoi != null)
-                    {
-                        switch (ma_khoi)
-                        {
-                            case 1:
-                                temp = temp.Where(p => p.IS_1 == true);
-                                break;
-                            case 2:
-                                temp = temp.Where(p => p.IS_2 == true);
-                                break;
-                            case 3:
-                                temp = temp.Where(p => p.IS_3 == true);
-                                break;
-                            case 4:
-                                temp = temp.Where(p => p.IS_4 == true);
-                                break;
-                            case 5:
-                                temp = temp.Where(p => p.IS_5 == true);
-                                break;
-                            case 6:
-                                temp = temp.Where(p => p.IS_6 == true);
-                                break;
-                            case 7:
-                                temp = temp.Where(p => p.IS_7 == true);
-                                break;
-                            case 8:
-                                temp = temp.Where(p => p.IS_8 == true);
-                                break;
-                            case 9:
-                                temp = temp.Where(p => p.IS_9 == true);
-                                break;
-                            case 10:
-                                temp = temp.Where(p => p.IS_10 == true);
-                                break;
-                            case 11:
-                                temp = temp.Where(p => p.IS_11 == true);
-                                break;
-                            case 12:
-                                temp = temp.Where(p => p.IS_12 == true);
-                                break;
-                        }
-                    }
                     temp = temp.OrderBy(p => p.THU_TU).ThenBy(p => p.TEN);
                     data = temp.ToList();
                     QICache.Set(strKeyCache, data, 300000);

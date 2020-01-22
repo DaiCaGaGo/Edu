@@ -180,7 +180,7 @@ namespace OneEduDataAccess.BO
             {
                 using (oneduEntities context = new oneduEntities())
                 {
-                    data = (from p in context.GIAO_VIEN where p.ID_TRUONG == idTruong && p.MA_TRANG_THAI == 1 && p.IS_DELETE != true select p).ToList();
+                    data = (from p in context.GIAO_VIEN where p.ID_TRUONG == idTruong && p.MA_TRANG_THAI == 1 && p.IS_DELETE != true orderby p.ID_CHUC_VU select p).ToList();
                     if (is_all)
                     {
                         if (data == null) data = new List<GIAO_VIEN>();
@@ -551,6 +551,32 @@ namespace OneEduDataAccess.BO
             }
             return data;
         }
+        public List<GIAO_VIEN> getGiaoVienByPhone(string sdt)
+        {
+            List<GIAO_VIEN> data = new List<GIAO_VIEN>();
+            var QICache = new DefaultCacheProvider();
+            string strKeyCache = QICache.BuildCachedKey("GIAO_VIEN", "getGiaoVienByPhone", sdt);
+            if (!QICache.IsSet(strKeyCache))
+            {
+                using (oneduEntities context = new oneduEntities())
+                {
+                    data = (from p in context.GIAO_VIEN where p.SDT == sdt && p.IS_DELETE != true orderby p.NGAY_TAO descending select p).ToList();
+                    QICache.Set(strKeyCache, data, 300000);
+                }
+            }
+            else
+            {
+                try
+                {
+                    data = QICache.Get(strKeyCache) as List<GIAO_VIEN>;
+                }
+                catch
+                {
+                    QICache.Invalidate(strKeyCache);
+                }
+            }
+            return data;
+        }
         #endregion
         #region set
         public ResultEntity update(long id, string ten, string sdt, DateTime? ngay_sinh, short? gioi_tinh, short? id_chuc_vu, short? ma_trang_thai, string dia_chi, string email, long id_truong, long? nguoi, short? thu_tu, string ho_dem, string ho_ten)
@@ -576,7 +602,50 @@ namespace OneEduDataAccess.BO
             }
             return res;
         }
-
+        public ResultEntity update(GIAO_VIEN detail_in, long? nguoi)
+        {
+            GIAO_VIEN detail = new GIAO_VIEN();
+            ResultEntity res = new ResultEntity();
+            res.Res = true;
+            res.Msg = "Thành công";
+            try
+            {
+                using (var context = new oneduEntities())
+                {
+                    detail = (from p in context.GIAO_VIEN where p.ID == detail_in.ID select p).FirstOrDefault();
+                    if (detail != null)
+                    {
+                        detail.TEN = detail_in.TEN;
+                        detail.HO_DEM = detail_in.HO_DEM;
+                        detail.HO_TEN = detail_in.HO_TEN;
+                        detail.SDT = detail_in.SDT;
+                        detail.NGAY_SINH = detail_in.NGAY_SINH;
+                        detail.MA_GIOI_TINH = detail_in.MA_GIOI_TINH;
+                        detail.DIA_CHI = detail_in.DIA_CHI;
+                        detail.EMAIL = detail_in.EMAIL;
+                        detail.ID_TRUONG = detail_in.ID_TRUONG;
+                        detail.MA_TRANG_THAI = detail_in.MA_TRANG_THAI;
+                        detail.THU_TU = detail_in.THU_TU;
+                        detail.ID_CHUC_VU = detail_in.ID_CHUC_VU;
+                        detail.ZALO_CODE = detail_in.ZALO_CODE;
+                        detail.NGAY_GUI_OTP = detail_in.NGAY_GUI_OTP;
+                        detail.OTP_COUNTER = detail_in.OTP_COUNTER;
+                        detail.NGAY_SUA = DateTime.Now;
+                        detail.NGUOI_SUA = nguoi;
+                        context.SaveChanges();
+                        res.ResObject = detail;
+                    }
+                }
+                var QICache = new DefaultCacheProvider();
+                QICache.RemoveByFirstName("GIAO_VIEN");
+            }
+            catch (Exception ex)
+            {
+                res.Res = false;
+                res.Msg = "Có lỗi xãy ra";
+            }
+            return res;
+        }
         public ResultEntity insert(GIAO_VIEN detail_in, long? nguoi)
         {
             GIAO_VIEN detail = new GIAO_VIEN();
@@ -590,8 +659,6 @@ namespace OneEduDataAccess.BO
                     detail_in.ID = context.Database.SqlQuery<long>("SELECT GIAO_VIEN_SEQ1.NEXTVAL FROM SYS.DUAL").FirstOrDefault();
                     detail_in.NGAY_TAO = DateTime.Now;
                     detail_in.NGUOI_TAO = nguoi;
-                    detail_in.NGAY_SUA = DateTime.Now;
-                    detail_in.NGUOI_SUA = nguoi;
                     detail_in = context.GIAO_VIEN.Add(detail_in);
                     context.SaveChanges();
                 }

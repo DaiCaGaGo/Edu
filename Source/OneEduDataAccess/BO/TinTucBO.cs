@@ -120,6 +120,7 @@ namespace OneEduDataAccess.BO
                         detail.NGAY_SU_KIEN = detail_in.NGAY_SU_KIEN;
                         detail.NGAY_HIEU_LUC = detail_in.NGAY_HIEU_LUC;
                         detail.THU_TU = detail_in.THU_TU;
+                        detail.NOI_DUNG = detail_in.NOI_DUNG;
                         detail.NGAY_SUA = DateTime.Now;
                         detail.NGUOI_SUA = nguoi;
                         context.SaveChanges();
@@ -145,8 +146,14 @@ namespace OneEduDataAccess.BO
             {
                 using (var context = new oneduEntities())
                 {
+                    long newID = context.Database.SqlQuery<long>("SELECT TIN_TUC_SEQ.NEXTVAL FROM SYS.DUAL").FirstOrDefault();
+                    detail_in.ID = newID;
                     detail_in.NGAY_TAO = DateTime.Now;
                     detail_in.NGUOI_TAO = nguoi;
+                    if (!string.IsNullOrEmpty(detail_in.NOI_DUNG) && detail_in.LINK.Contains("https://demo.1sms.vn/TinTuc/ViewPost.aspx"))
+                    {
+                        detail_in.LINK += "?id=" + newID;
+                    }
                     detail_in = context.TIN_TUC.Add(detail_in);
                     context.SaveChanges();
                 }
