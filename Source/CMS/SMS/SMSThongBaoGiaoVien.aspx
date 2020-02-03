@@ -40,7 +40,7 @@
                 }
             }
             function change(el) {
-                var max_len = 306;
+                var max_len = 459;
                 if (el.value.length > max_len) {
                     el.value = el.value.substr(0, max_len);
                 }
@@ -55,18 +55,50 @@
                 }
                 if (el.value.length > 0 && el.value.length <= 160) {
                     document.getElementById('numberSMSConfirm').innerHTML = '1';
-                } else if (el.value.length > 160 && el.value.length < 307) {
+                } else if (el.value.length > 160 && el.value.length <= 306) {
                     document.getElementById('numberSMSConfirm').innerHTML = '2';
+                } else if (el.value.length > 306 && el.value.length <= 459) {
+                    document.getElementById('numberSMSConfirm').innerHTML = '3';
                 }
+
+                var str;
+                if (eval(el))
+                    str = eval(el).value;
+                else
+                    str = el;
+                str = str.replace(/á|à|ạ|ả|ã|â|ấ|ầ|ậ|ẩ|ẫ|ă|ắ|ằ|ặ|ẳ|ẵ/g, "a");
+                str = str.replace(/Á|À|Ạ|Ả|Ã|Â|Ấ|Ầ|Ậ|Ẩ|Ẫ|Ă|Ắ|Ằ|Ặ|Ẳ|Ẵ/g, "A");
+                str = str.replace(/é|è|ẹ|ẻ|ẽ|ê|ế|ề|ệ|ể|ễ/g, "e");
+                str = str.replace(/É|È|Ẹ|Ẻ|Ẽ|Ê|Ế|Ề|Ệ|Ể|Ễ/g, "E");
+                str = str.replace(/í|ì|ị|ỉ|ĩ/g, "i");
+                str = str.replace(/Í|Ì|Ị|Ỉ|Ĩ/g, "I");
+                str = str.replace(/ó|ò|ọ|ỏ|õ|ô|ố|ồ|ộ|ổ|ỗ|ơ|ớ|ờ|ợ|ở|ỡ/g, "o");
+                str = str.replace(/Ó|Ò|Ọ|Ỏ|Õ|Ô|Ố|Ồ|Ộ|Ổ|Ỗ|Ơ|Ớ|Ờ|Ợ|Ở|Ỡ/g, "O");
+                str = str.replace(/ú|ù|ụ|ủ|ũ|ư|ứ|ừ|ự|ử|ữ/g, "u");
+                str = str.replace(/Ú|Ù|Ụ|Ủ|Ũ|Ư|Ứ|Ừ|Ự|Ử|Ữ/g, "U");
+                str = str.replace(/ý|ỳ|ỵ|ỷ|ỹ/g, "y");
+                str = str.replace(/Ý|Ỳ|Ỵ|Ỷ|Ỹ/g, "Y");
+                str = str.replace(/đ|₫/g, "d");
+                str = str.replace(/Đ/g, "D");
+
+                str = str.replace("–", "-")
+                .replace("‘", "'")
+                .replace("’", "'")
+                .replace("“", "\"")
+                .replace("”", "\"")
+                    .replace("》", ">");
+
+                eval(el).value = str;
+
                 countSMSDuTinh();
             }
             function countSMSByText(value) {
                 var count = value.length;
                 if (count > 0 && count <= 160) {
                     return 1;
-                } else if (count > 160 && count < 307) {
+                } else if (count > 160 && count <= 306) {
                     return 2;
-                }
+                } else if (count > 306 && count < 460) return 3;
                 return 0;
             }
             var cell;
@@ -97,7 +129,7 @@
             }
             function btCopyClick(sender, args) {
                 grid = $find("<%=RadGrid1.ClientID%>");
-                var max_len = 306;
+                var max_len = 459;
                 var ndth = $('#tbNoiDung').val();
                 var countCheck = (grid == null && grid.get_masterTableView().get_selectedItems() == null) ? 0 : grid.get_masterTableView().get_selectedItems().length;
                 var chenThem = $('#rcbChenThem:checked').length > 0;
@@ -168,10 +200,10 @@
                 countSMSDuTinh();
             }
             $(document).on("keyup", ".nd-nx-nl", function (event) {
-                var max_len = 306;
+                var max_len = 459;
                 if ($(this).val().length > max_len) {
                     $(this).val($(this).val().substr(0, max_len));
-                    notification('warning', 'Nội dung nhận xét không nhập quá 306 ký tự');
+                    notification('warning', 'Nội dung nhận xét không nhập quá 459 ký tự');
                 }
                 var nextTd = $(this).closest('td').next().find('.view-length').first();
                 if ($(this).val().length == 0) $(nextTd).html('');
@@ -184,6 +216,31 @@
                     $(nextTd).css('background', 'none');
                     $(nextTd).css('color', 'black');
                 }
+
+                var str = $(this).val();
+                str = str.replace(/á|à|ạ|ả|ã|â|ấ|ầ|ậ|ẩ|ẫ|ă|ắ|ằ|ặ|ẳ|ẵ/g, "a");
+                str = str.replace(/Á|À|Ạ|Ả|Ã|Â|Ấ|Ầ|Ậ|Ẩ|Ẫ|Ă|Ắ|Ằ|Ặ|Ẳ|Ẵ/g, "A");
+                str = str.replace(/é|è|ẹ|ẻ|ẽ|ê|ế|ề|ệ|ể|ễ/g, "e");
+                str = str.replace(/É|È|Ẹ|Ẻ|Ẽ|Ê|Ế|Ề|Ệ|Ể|Ễ/g, "E");
+                str = str.replace(/í|ì|ị|ỉ|ĩ/g, "i");
+                str = str.replace(/Í|Ì|Ị|Ỉ|Ĩ/g, "I");
+                str = str.replace(/ó|ò|ọ|ỏ|õ|ô|ố|ồ|ộ|ổ|ỗ|ơ|ớ|ờ|ợ|ở|ỡ/g, "o");
+                str = str.replace(/Ó|Ò|Ọ|Ỏ|Õ|Ô|Ố|Ồ|Ộ|Ổ|Ỗ|Ơ|Ớ|Ờ|Ợ|Ở|Ỡ/g, "O");
+                str = str.replace(/ú|ù|ụ|ủ|ũ|ư|ứ|ừ|ự|ử|ữ/g, "u");
+                str = str.replace(/Ú|Ù|Ụ|Ủ|Ũ|Ư|Ứ|Ừ|Ự|Ử|Ữ/g, "U");
+                str = str.replace(/ý|ỳ|ỵ|ỷ|ỹ/g, "y");
+                str = str.replace(/Ý|Ỳ|Ỵ|Ỷ|Ỹ/g, "Y");
+                str = str.replace(/đ|₫/g, "d");
+                str = str.replace(/Đ/g, "D");
+
+                str = str.replace("–", "-")
+                .replace("‘", "'")
+                .replace("’", "'")
+                .replace("“", "\"")
+                .replace("”", "\"")
+                    .replace("》", ">");
+
+                $(this).val(str);
             });
             $(document).on("keydown", ".nd-nx-nl", function (event) {
                 var code = event.keyCode || event.which;
@@ -268,7 +325,7 @@
                         <div class="form-group">
                             <div class="col-sm-6">
                                 <asp:TextBox ID="tbNoiDung" ClientIDMode="Static" runat="server" placeholder="Nhập nội dung tin nhắn vào đây" CssClass="form-control text-box nd-nx-nl" TextMode="MultiLine" Rows="3" onkeyup="change(this);" onkeydown="change(this);" onchange="change(this);"></asp:TextBox>
-                                <span style="position: absolute; padding-top: 5px">Nội dung tin nhắn (<span id="numberCharConfirm">0</span> ký tự) (<span id="numberSMSConfirm">0</span>/2 tin)</span>
+                                <span style="position: absolute; padding-top: 5px">Nội dung tin nhắn (<span id="numberCharConfirm">0</span> ký tự) (<span id="numberSMSConfirm">0</span>/3 tin)</span>
                             </div>
                             <div class="col-sm-2">
                                 <div class="one-checkbox col-sm-12">
@@ -327,7 +384,7 @@
                         </telerik:GridBoundColumn>
                         <telerik:GridTemplateColumn HeaderText="Nội dung thông báo" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" UniqueName="NOI_DUNG_TB" ItemStyle-CssClass="grid-control">
                             <ItemTemplate>
-                                <asp:TextBox ID="tbNoiDungTB" runat="server" CssClass="form-control text-box nd-nx-nl" TextMode="MultiLine" Rows="2" ClientIDMode="Static" onkeyup="changeNoiDungRow(this);" onkeydown="changeNoiDungRow(this);" onchange="changeNoiDungRow(this);" MaxLength="306"></asp:TextBox>
+                                <asp:TextBox ID="tbNoiDungTB" runat="server" CssClass="form-control text-box nd-nx-nl" TextMode="MultiLine" Rows="2" ClientIDMode="Static" onkeyup="changeNoiDungRow(this);" onkeydown="changeNoiDungRow(this);" onchange="changeNoiDungRow(this);" MaxLength="459"></asp:TextBox>
                                 <asp:HiddenField ID="hdNoiDungTB" runat="server" />
                             </ItemTemplate>
                         </telerik:GridTemplateColumn>

@@ -102,7 +102,7 @@
                 <div class="row" style="margin-top: 15px;">
                     <div class="col-sm-6">
                         <asp:TextBox ID="tbNoiDung" ClientIDMode="Static" runat="server" placeholder="Nhập nội dung tin nhắn vào đây" CssClass="form-control text-box nd-nx-nl" TextMode="MultiLine" Rows="3" onkeyup="change(this);" onkeydown="change(this);" onchange="change(this);"></asp:TextBox>
-                        <span style="position: absolute; padding-top: 5px">Nội dung tin nhắn (<span id="numberCharConfirm">0</span> ký tự) (<span id="numberSMSConfirm">0</span>/2 tin)</span>
+                        <span style="position: absolute; padding-top: 5px">Nội dung tin nhắn (<span id="numberCharConfirm">0</span> ký tự) (<span id="numberSMSConfirm">0</span>/3 tin)</span>
                     </div>
                     <div class="col-sm-4">
                         <asp:TextBox ID="tbListSDT" ClientIDMode="Static" runat="server" placeholder="Nhập SĐT gửi kèm" CssClass="form-control text-box nd-nx-nl" TextMode="MultiLine" Rows="3"></asp:TextBox>
@@ -134,7 +134,8 @@
                 }
             }
             function change(el) {
-                var max_len = 306;
+                //var max_len = 306;
+                var max_len = 459;
                 if (el.value.length > max_len) {
                     el.value = el.value.substr(0, max_len);
                 }
@@ -149,9 +150,40 @@
                 }
                 if (el.value.length > 0 && el.value.length <= 160) {
                     document.getElementById('numberSMSConfirm').innerHTML = '1';
-                } else if (el.value.length > 160 && el.value.length < 307) {
+                } else if (el.value.length > 160 && el.value.length <= 306) {
                     document.getElementById('numberSMSConfirm').innerHTML = '2';
+                } else if (el.value.length > 306 && el.value.length < 460) {
+                    document.getElementById('numberSMSConfirm').innerHTML = '3';
                 }
+
+                var str;
+                if (eval(el))
+                    str = eval(el).value;
+                else
+                    str = el;
+                str = str.replace(/á|à|ạ|ả|ã|â|ấ|ầ|ậ|ẩ|ẫ|ă|ắ|ằ|ặ|ẳ|ẵ/g, "a");
+                str = str.replace(/Á|À|Ạ|Ả|Ã|Â|Ấ|Ầ|Ậ|Ẩ|Ẫ|Ă|Ắ|Ằ|Ặ|Ẳ|Ẵ/g, "A");
+                str = str.replace(/é|è|ẹ|ẻ|ẽ|ê|ế|ề|ệ|ể|ễ/g, "e");
+                str = str.replace(/É|È|Ẹ|Ẻ|Ẽ|Ê|Ế|Ề|Ệ|Ể|Ễ/g, "E");
+                str = str.replace(/í|ì|ị|ỉ|ĩ/g, "i");
+                str = str.replace(/Í|Ì|Ị|Ỉ|Ĩ/g, "I");
+                str = str.replace(/ó|ò|ọ|ỏ|õ|ô|ố|ồ|ộ|ổ|ỗ|ơ|ớ|ờ|ợ|ở|ỡ/g, "o");
+                str = str.replace(/Ó|Ò|Ọ|Ỏ|Õ|Ô|Ố|Ồ|Ộ|Ổ|Ỗ|Ơ|Ớ|Ờ|Ợ|Ở|Ỡ/g, "O");
+                str = str.replace(/ú|ù|ụ|ủ|ũ|ư|ứ|ừ|ự|ử|ữ/g, "u");
+                str = str.replace(/Ú|Ù|Ụ|Ủ|Ũ|Ư|Ứ|Ừ|Ự|Ử|Ữ/g, "U");
+                str = str.replace(/ý|ỳ|ỵ|ỷ|ỹ/g, "y");
+                str = str.replace(/Ý|Ỳ|Ỵ|Ỷ|Ỹ/g, "Y");
+                str = str.replace(/đ|₫/g, "d");
+                str = str.replace(/Đ/g, "D");
+
+                str = str.replace("–", "-")
+                .replace("‘", "'")
+                .replace("’", "'")
+                .replace("“", "\"")
+                .replace("”", "\"")
+                    .replace("》", ">");
+
+                eval(el).value = str;
             }
         </script>
         <style>
