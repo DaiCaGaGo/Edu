@@ -6,6 +6,7 @@ using OneEduDataAccess.BO;
 using OneEduDataAccess.Model;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -536,7 +537,8 @@ namespace CMS
         {
             HttpWebRequest req = null;
             HttpWebResponse res = null;
-            req = (HttpWebRequest)WebRequest.Create("https://openapi.zalo.me/v2.0/oa/message?access_token=UHaCG824G55s7Gz2Z8H0KtiT3aA4cWKfSc4nPekPBpCRGW5qijy8A2G_FI2HsWDaDHaeR8FYC2iF9XXcaVSG17DpFapax2eV1ZTYJuRdLXa08KbwjUzFFafqSd3kjtXWOsPH4l-MLtPlQde6pf0pJ4zGF2tKg3W-QL1yVU2wP6mOHrK1jQbQTY0p4cM6o0qd0I05JvZlC0GD9JLiihG0FnGmAa-Mm64v3YPxHFJgS1bhDc9mb_CfPmu53J6RnY4vB1qCTuxT7m8CHL9mpwby9OMUH5G");
+            //req = (HttpWebRequest)WebRequest.Create("https://openapi.zalo.me/v2.0/oa/message?access_token=nqbyCPOoXYN8JNypcZA69yLDVZEIBF9_mWvs3DGbza_UCqGvZ2hHRQSdBNwQEByIpnasUFXkjGp0QpXzqdku4yDT0LYHOw4MfKSzUeymdpl56cDuvMEGDD14QNt2QVKjq7PHIC89w37fTX9yp57r2_qdT63D1OugpJvqIEL4-2_QL44wYo_iQBemVog4I_CoaqnzKB4wyXQZBKnEY3khEueU6McQ7By4fmSRG9ebdo_BCmPvxWpxBj4CG6dv9-Oyz3WLHkKykmN8Fp0GM4ndJyeWaoY280");
+            req = (HttpWebRequest)WebRequest.Create(ConfigurationManager.AppSettings["tokenOA"]);
             req.Method = "POST";
             req.ContentType = "application/json";
 
@@ -564,7 +566,7 @@ namespace CMS
         {
             HttpWebRequest req = null;
             HttpWebResponse res = null;
-            req = (HttpWebRequest)WebRequest.Create("https://openapi.zalo.me/v2.0/oa/message?access_token=UHaCG824G55s7Gz2Z8H0KtiT3aA4cWKfSc4nPekPBpCRGW5qijy8A2G_FI2HsWDaDHaeR8FYC2iF9XXcaVSG17DpFapax2eV1ZTYJuRdLXa08KbwjUzFFafqSd3kjtXWOsPH4l-MLtPlQde6pf0pJ4zGF2tKg3W-QL1yVU2wP6mOHrK1jQbQTY0p4cM6o0qd0I05JvZlC0GD9JLiihG0FnGmAa-Mm64v3YPxHFJgS1bhDc9mb_CfPmu53J6RnY4vB1qCTuxT7m8CHL9mpwby9OMUH5G");
+            req = (HttpWebRequest)WebRequest.Create(ConfigurationManager.AppSettings["tokenPH"]);
             req.Method = "POST";
             req.ContentType = "application/json";
 
