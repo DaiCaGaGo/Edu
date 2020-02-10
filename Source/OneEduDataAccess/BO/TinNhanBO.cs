@@ -764,6 +764,44 @@ namespace OneEduDataAccess.BO
             }
             return data;
         }
+
+        public List<TinNhanEntity> getTinNhanHenGio(long? id_truong, string noi_dung)
+        {
+            List<TinNhanEntity> data = new List<TinNhanEntity>();
+            var QICache = new DefaultCacheProvider();
+            string strKeyCache = QICache.BuildCachedKey("TIN_NHAN", "getTinNhanHenGio", id_truong, noi_dung);
+            if (!QICache.IsSet(strKeyCache))
+            {
+                using (oneduEntities context = new oneduEntities())
+                {
+                    string strQuery = string.Format(@"SELECT * FROM VW_TIN_NHAN WHERE THOI_GIAN_GUI >= sysdate");
+                    if (id_truong != null)
+                    {
+                        strQuery += " and ID_TRUONG=" + id_truong;
+                    }
+                    if (!string.IsNullOrEmpty(noi_dung))
+                    {
+                        strQuery += " and NOI_DUNG like N'%" + noi_dung + "%'";
+                    }
+                    strQuery += " order by ID_TRUONG, THOI_GIAN_GUI desc";
+                    data = context.Database.SqlQuery<TinNhanEntity>(strQuery).ToList();
+                    QICache.Set(strKeyCache, data, 300000);
+                }
+            }
+            else
+            {
+                try
+                {
+                    data = QICache.Get(strKeyCache) as List<TinNhanEntity>;
+                }
+                catch
+                {
+                    QICache.Invalidate(strKeyCache);
+                }
+            }
+            return data;
+        }
+
         public TIN_NHAN checkExistsHocSinhByMaAndSDTAndNoiDung(long? id_nguoi_nhan, short loai_nguoi_nhan, string sdt, short loai_tb, DateTime? henGio, double subMinutes, string noi_dung_khong_dau)
         {
             TIN_NHAN data = new TIN_NHAN();
@@ -2049,5 +2087,61 @@ namespace OneEduDataAccess.BO
             return index_sdt;
         }
         #endregion
+
+        public ResultEntity deleteTinHenGio(List<TIN_NHAN> lst_tin_nhan, long? nguoi)
+        {
+            ResultEntity res = new ResultEntity();
+            res.Res = true;
+            res.Msg = "Thành công";
+            try
+            {
+                using (var context = new oneduEntities())
+                {
+                    long tin_moi_ll = 0;
+                    long tin_moi_tb = 0;
+                    string strDeleteID = "";
+
+                    foreach (var item in lst_tin_nhan)
+                    {
+                        if (item.LOAI_TIN == SYS_Loai_Tin.Tin_Lien_Lac)
+                            tin_moi_ll += item.SO_TIN == null ? 0 : item.SO_TIN.Value;
+                        if (item.LOAI_TIN == SYS_Loai_Tin.Tin_Thong_Bao)
+                            tin_moi_tb += item.SO_TIN == null ? 0 : item.SO_TIN.Value;
+                        strDeleteID += item.ID + ",";
+                    }
+                    if (strDeleteID != "")
+                    {
+                        strDeleteID = strDeleteID.TrimEnd(',');
+                        var sql = string.Format(@"Delete TIN_NHAN where ID in ({0})", strDeleteID);
+                        context.Database.ExecuteSqlCommand(sql);
+                        var QICache = new DefaultCacheProvider();
+                        QICache.RemoveByFirstName("TIN_NHAN");
+
+                        #region update quỹ tin
+                        QuyTinBO quyTinBO = new QuyTinBO();
+                        short nam_gui = Convert.ToInt16(Convert.ToDateTime(lst_tin_nhan[0].THOI_GIAN_GUI).Year);
+                        short thang_gui = Convert.ToInt16(Convert.ToDateTime(lst_tin_nhan[0].THOI_GIAN_GUI).Month);
+                        long id_truong = Convert.ToInt64(lst_tin_nhan[0].ID_TRUONG);
+                        if (tin_moi_ll > 0)
+                        {
+                            res = quyTinBO.cap_nhat_quy_tin(nam_gui, thang_gui,
+                                id_truong, SYS_Loai_Tin.Tin_Lien_Lac, nguoi, null, (0 - tin_moi_ll));
+                        }
+                        if (tin_moi_tb > 0)
+                        {
+                            res = quyTinBO.cap_nhat_quy_tin(nam_gui, thang_gui,
+                                id_truong, SYS_Loai_Tin.Tin_Thong_Bao, nguoi, null, (0 - tin_moi_tb));
+                        }
+                        #endregion
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                res.Res = false;
+                res.Msg = "Có lỗi xãy ra";
+            }
+            return res;
+        }
     }
 }
